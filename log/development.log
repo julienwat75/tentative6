@@ -2782,3 +2782,173 @@ Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +02
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
+
+
+Started GET "/authors" for 127.0.0.1 at 2013-10-11 00:25:32 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.9ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (65.1ms)
+Completed 200 OK in 544ms (Views: 515.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 00:25:33 +0200
+
+
+Started GET "/login" for 127.0.0.1 at 2013-10-11 00:25:38 +0200
+Processing by AuthorSessionsController#new as HTML
+  Rendered author_sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-10-11 00:26:10 +0200
+Processing by AuthorSessionsController#new as HTML
+  Rendered author_sessions/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/author_sessions" for 127.0.0.1 at 2013-10-11 00:26:18 +0200
+Processing by AuthorSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EB0sY0D446VSQFQeD3UaeiXucK/xQNRaHF5aAshXeQs=", "username"=>"jule", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mAuthor Load (2.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE (username = 'jule') ORDER BY "authors"."id" ASC LIMIT 1[0m
+  Rendered author_sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 167ms (Views: 7.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:19 +0200
+
+
+Started POST "/author_sessions" for 127.0.0.1 at 2013-10-11 00:26:33 +0200
+Processing by AuthorSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EB0sY0D446VSQFQeD3UaeiXucK/xQNRaHF5aAshXeQs=", "username"=>"jule", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mAuthor Load (1.2ms)[0m  SELECT "authors".* FROM "authors" WHERE (username = 'jule') ORDER BY "authors"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 159ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2013-10-11 00:26:33 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (2.4ms)
+  [1m[35mAuthor Load (3.3ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 00:26:34 +0200
