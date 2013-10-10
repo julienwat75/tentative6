@@ -1,7 +1,7 @@
 MyApp::Application.routes.draw do
 
   resources :profils
-
+  resources :offres
 
 
   get "welcome/index"
