@@ -8,20 +8,7 @@
 </head>
 <body>
 
-<div id="container">
-    <div id="content">
-      <%= yield %>
-      <hr>
-      <h6>
-        <% if logged_in? %>
-          <%= "Logged in as #{current_user.username}" %>
-        <% else %>
-          Logged out
-        <% end %>
-      </h6>
-    </div>
-  </div>
-
+<%= yield %>
 
 </body>
 </html>

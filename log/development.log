@@ -2689,3 +2689,96 @@ Processing by AuthorsController#show as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
   Rendered authors/show.html.erb within layouts/application (1.2ms)
 Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-10 23:43:30 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 95ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-10 23:43:31 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-10 23:43:31 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-10 23:43:31 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-10 23:43:31 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-10 23:43:31 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-10 23:43:31 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-10 23:43:31 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-10 23:43:31 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-10 23:43:31 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-10 23:43:31 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-10 23:43:31 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-10 23:43:31 +0200
+
+
+Started GET "/profils" for 127.0.0.1 at 2013-10-10 23:43:37 +0200
+Processing by ProfilsController#index as HTML
+  [1m[35mProfil Load (0.7ms)[0m  SELECT "profils".* FROM "profils"
+  Rendered profils/index.html.erb within layouts/application (65.7ms)
+Completed 200 OK in 74ms (Views: 67.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 39ms (Views: 27.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-10 23:44:00 +0200
