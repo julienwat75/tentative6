@@ -10,6 +10,7 @@ class AuthorsController < ApplicationController
   # GET /authors/1
   # GET /authors/1.json
   def show
+     @authors = Author.find(params[:id]) #reccupere l'id de l url
   end
 
   # GET /authors/new
@@ -23,19 +24,22 @@ class AuthorsController < ApplicationController
 
   # POST /authors
   # POST /authors.json
-  def create
-    @author = Author.new(author_params)
+  
 
-    respond_to do |format|
-      if @author.save
-        format.html { redirect_to @author, notice: 'Author was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @author }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @author.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+
+def create              # le submit va chercher la methode create
+  @authors = Author.new(author_params)
+  @authors.username = params[:author][:username]  # on reccupere le nom du form
+  @authors.email = params[:author][:email] # on reccupere le body du form 
+  @authors.password = params[:author][:password] # on reccupere le body du form 
+  @authors.password_confirmation = params[:author][:password_confirmation] # on reccupere le body du form 
+  
+  @authors.save   #on sauvegarde
+   redirect_to authors_path     # redirection vers l'index
+
+end
+
+
 
   # PATCH/PUT /authors/1
   # PATCH/PUT /authors/1.json
