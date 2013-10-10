@@ -1,0 +1,8 @@
+class CreateOffres < ActiveRecord::Migration
+  def change
+    create_table :offres do |t|
+
+      t.timestamps
+    end
+  end
+end
