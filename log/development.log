@@ -3572,3 +3572,34 @@ Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-11 16:12:51 +02
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-11 16:12:51 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20131011143807)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (205.4ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "author_name" character varying(255), "body" text, "author_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "comments" already exists
+: CREATE TABLE "comments" ("id" serial primary key, "author_name" character varying(255), "body" text, "author_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20131011143807)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "author_name" character varying(255), "body" text, "author_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+PG::DuplicateTable: ERROR:  relation "comments" already exists
+: CREATE TABLE "comments" ("id" serial primary key, "author_name" character varying(255), "body" text, "author_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCommentaires (20131011145010)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (300.7ms)[0m  [1mCREATE TABLE "commentaires" ("id" serial primary key, "author_name" character varying(255), "body" text, "author_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (41.9ms)[0m  CREATE INDEX "index_commentaires_on_author_id" ON "commentaires" ("author_id")
+  [1m[36mSQL (25.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131011145010"]]
+  [1m[35m (29.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (41.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mAuthor Load (1.3ms)[0m  [1mSELECT "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (8.6ms)[0m  [1mINSERT INTO "commentaires" ("author_id", "author_name", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["author_id", 1], ["author_name", "jean"], ["body", "super soirée"], ["created_at", Fri, 11 Oct 2013 15:12:12 UTC +00:00], ["updated_at", Fri, 11 Oct 2013 15:12:12 UTC +00:00]]
+  [1m[35m (23.6ms)[0m  COMMIT
+  [1m[36mAuthor Load (0.9ms)[0m  [1mSELECT "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT 1[0m
+  [1m[35mCommentaire Load (3.1ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.3ms)[0m  INSERT INTO "commentaires" ("author_id", "author_name", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["author_id", 1], ["author_name", "pierre"], ["body", "yep génial la sortie"], ["created_at", Fri, 11 Oct 2013 15:17:28 UTC +00:00], ["updated_at", Fri, 11 Oct 2013 15:17:28 UTC +00:00]]
+  [1m[36m (25.4ms)[0m  [1mCOMMIT[0m

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131010174312) do
+ActiveRecord::Schema.define(version: 20131011145010) do
 
   create_table "authors", force: true do |t|
     t.string   "username",         null: false
@@ -21,6 +21,16 @@ ActiveRecord::Schema.define(version: 20131010174312) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "commentaires", force: true do |t|
+    t.string   "author_name"
+    t.text     "body"
+    t.integer  "author_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "commentaires", ["author_id"], name: "index_commentaires_on_author_id", using: :btree
 
   create_table "comments", force: true do |t|
     t.string   "auteur"
