@@ -20,5 +20,14 @@
   <%= @author.password_confirmation %>
 </p>
 
+
+<h3>Comments</h3>
+<%= render partial: 'authors/authors/commentaire', collection: @authors.commentaires %>  <!--créer un objet commentaire  liée à Author--> 
+
+<%= render partial: 'authors/commentaire/form' %>
+
+
+
+
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>

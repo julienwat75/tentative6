@@ -2,7 +2,11 @@ MyApp::Application.routes.draw do
 
   resources :profils
   resources :offres
-   resources :authors
+
+   resources :authors do
+  resources :commentaires
+ end
+
 
    resources :author_sessions, only: [ :new, :create, :destroy ]
 

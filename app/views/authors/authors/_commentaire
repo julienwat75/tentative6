@@ -1,0 +1,6 @@
+<div>
+
+  <h4>Commenter par <%= commentaire.author_name %></h4>  <!-- fait défiler toute la base de donnée commentaires -->
+  <p class="comment"><%= commentaire.body %></p>
+</div>
+

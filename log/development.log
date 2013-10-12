@@ -3603,3 +3603,1856 @@ Migrating to CreateCommentaires (20131011145010)
   [1m[36m (0.6ms)[0m  [1mBEGIN[0m
   [1m[35mSQL (3.3ms)[0m  INSERT INTO "commentaires" ("author_id", "author_name", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["author_id", 1], ["author_name", "pierre"], ["body", "yep génial la sortie"], ["created_at", Fri, 11 Oct 2013 15:17:28 UTC +00:00], ["updated_at", Fri, 11 Oct 2013 15:17:28 UTC +00:00]]
   [1m[36m (25.4ms)[0m  [1mCOMMIT[0m
+  [1m[36mAuthor Load (104.2ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.9ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCommentaire Load (53.8ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 1]]
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-12 21:06:51 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (7.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 410ms (Views: 385.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 21:06:52 +0200
+
+
+Started GET "/profils" for 127.0.0.1 at 2013-10-12 21:06:54 +0200
+Processing by ProfilsController#index as HTML
+  [1m[35mProfil Load (10.8ms)[0m  SELECT "profils".* FROM "profils"
+  Rendered profils/index.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 65ms (Views: 34.4ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2013-10-12 21:07:04 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (35.9ms)
+Completed 200 OK in 61ms (Views: 38.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:05 +0200
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 21:07:12 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (1.4ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :no_sessions rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-10-12 21:07:12 +0200
+Processing by AuthorSessionsController#new as HTML
+  Rendered author_sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/author_sessions" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+Processing by AuthorSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XHNBOyDbGGVTelmJAXoWAzRrv/sCLrw4fHKM0SzHLlc=", "username"=>"david", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mAuthor Load (1.8ms)[0m  SELECT "authors".* FROM "authors" WHERE (username = 'david') ORDER BY "authors"."id" ASC LIMIT 1
+  Rendered author_sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 18ms (Views: 12.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:23 +0200
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 21:07:40 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.8ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "authors"
+Redirected to http://localhost:3000/login
+Filter chain halted as :no_sessions rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-10-12 21:07:40 +0200
+Processing by AuthorSessionsController#new as HTML
+  Rendered author_sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/author_sessions" for 127.0.0.1 at 2013-10-12 21:07:46 +0200
+Processing by AuthorSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XHNBOyDbGGVTelmJAXoWAzRrv/sCLrw4fHKM0SzHLlc=", "username"=>"jule", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE (username = 'jule') ORDER BY "authors"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 148ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.8ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (3.0ms)
+  [1m[36mAuthor Load (2.3ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 21:07:47 +0200
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 21:07:55 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered authors/show.html.erb within layouts/application (24.0ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (undefined method `commentaires' for nil:NilClass):
+    22: 
+    23: 
+    24: <h3>Comments</h3>
+    25: <%= render partial: 'authors/com/comment', collection: @Author.commentaires %>  <!--créer un objet commentaire  liée à Author--> 
+    26: 
+    27: 
+    28: 
+  app/views/authors/show.html.erb:25:in `_app_views_authors_show_html_erb__391848235288189891_69843687257580'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.6ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 21:07:55 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.7ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered authors/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `commentaires' for nil:NilClass):
+    22: 
+    23: 
+    24: <h3>Comments</h3>
+    25: <%= render partial: 'authors/com/comment', collection: @Author.commentaires %>  <!--créer un objet commentaire  liée à Author--> 
+    26: 
+    27: 
+    28: 
+  app/views/authors/show.html.erb:25:in `_app_views_authors_show_html_erb__391848235288189891_69843688249000'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 21:10:00 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.9ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCommentaire Load (1.6ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843688687100 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843688687100 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/com/_comment (13.5ms)
+  Rendered authors/show.html.erb within layouts/application (116.1ms)
+Completed 500 Internal Server Error in 125ms
+
+ActionView::Template::Error (undefined local variable or method `commentaire' for #<#<Class:0x0000000533e0c8>:0x007f0b80821eb8>):
+    1: <div>
+    2:   <h4>Comment by <%= commentaire.author_name %></h4>  <!-- fait défiler toute la base de donnée commentaires -->
+    3:   <p class="comment"><%= commentaire.body %></p>
+    4: </div>
+  app/views/authors/com/_comment:2:in `_app_views_authors_com__comment___4135343552656044794_37910820'
+  app/views/authors/show.html.erb:25:in `_app_views_authors_show_html_erb__391848235288189891_69843688687100'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 21:18:39 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.9ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.6ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCommentaire Load (0.7ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843686339680 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843686339680 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/com/_comment (57.1ms)
+  Rendered authors/show.html.erb within layouts/application (61.6ms)
+Completed 500 Internal Server Error in 69ms
+
+ActionView::Template::Error (undefined local variable or method `commentaires' for #<#<Class:0x0000000533e0c8>:0x007f0b803a7ce8>):
+    1: <div>
+    2:   <h4>Comment by <%= commentaires.author_name %></h4>  <!-- fait défiler toute la base de donnée commentaires -->
+    3:   <p class="comment"><%= commentaires.body %></p>
+    4: </div>
+  app/views/authors/com/_comment:2:in `_app_views_authors_com__comment___4135343552656044794_69843686416520'
+  app/views/authors/show.html.erb:25:in `_app_views_authors_show_html_erb__391848235288189891_69843686339680'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 21:18:39 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.7ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCommentaire Load (0.8ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843688687100 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843688687100 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/com/_comment (18.8ms)
+  Rendered authors/show.html.erb within layouts/application (23.4ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined local variable or method `commentaires' for #<#<Class:0x0000000533e0c8>:0x00000004fb1ef0>):
+    1: <div>
+    2:   <h4>Comment by <%= commentaires.author_name %></h4>  <!-- fait défiler toute la base de donnée commentaires -->
+    3:   <p class="comment"><%= commentaires.body %></p>
+    4: </div>
+  app/views/authors/com/_comment:2:in `_app_views_authors_com__comment___4135343552656044794_42711900'
+  app/views/authors/show.html.erb:25:in `_app_views_authors_show_html_erb__391848235288189891_69843688687100'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 21:19:21 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.8ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mCommentaire Load (0.6ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843686339680 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/com/_comment (0.0ms)
+  Rendered authors/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 16ms (Views: 8.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 21:21:48 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.9ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.7ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCommentaire Load (0.7ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843686339680 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843686339680 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/com/_comment (13.9ms)
+  Rendered authors/show.html.erb within layouts/application (19.1ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (undefined local variable or method `commentaires' for #<#<Class:0x0000000533e0c8>:0x0000000317fa68>):
+    1: <div>
+    2:   <h4>Comment by <%= commentaires.author_name %></h4>  <!-- fait défiler toute la base de donnée commentaires -->
+    3:   <p class="comment"><%= commentaires.body %></p>
+    4: </div>
+  app/views/authors/com/_comment:2:in `_app_views_authors_com__comment___4135343552656044794_69843686416520'
+  app/views/authors/show.html.erb:25:in `_app_views_authors_show_html_erb__391848235288189891_69843686339680'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 21:21:48 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.9ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.6ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCommentaire Load (0.8ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843688687100 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843688687100 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/com/_comment (18.0ms)
+  Rendered authors/show.html.erb within layouts/application (23.3ms)
+Completed 500 Internal Server Error in 35ms
+
+ActionView::Template::Error (undefined local variable or method `commentaires' for #<#<Class:0x0000000533e0c8>:0x0000000537bf90>):
+    1: <div>
+    2:   <h4>Comment by <%= commentaires.author_name %></h4>  <!-- fait défiler toute la base de donnée commentaires -->
+    3:   <p class="comment"><%= commentaires.body %></p>
+    4: </div>
+  app/views/authors/com/_comment:2:in `_app_views_authors_com__comment___4135343552656044794_42711900'
+  app/views/authors/show.html.erb:25:in `_app_views_authors_show_html_erb__391848235288189891_69843688687100'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 21:40:19 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCommentaire Load (0.5ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843688687100 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843688687100 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/com/_comment (12.7ms)
+  Rendered authors/show.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined local variable or method `commentaires' for #<#<Class:0x0000000533e0c8>:0x00000004d70b50>):
+    1: <div>
+    2:   <h4>Comment by <%= commentaires.author_name %></h4>  <!-- fait défiler toute la base de donnée commentaires -->
+    3:   <p class="comment"><%= commentaires.body %></p>
+    4: </div>
+  app/views/authors/com/_comment:2:in `_app_views_authors_com__comment___4135343552656044794_40746320'
+  app/views/authors/show.html.erb:25:in `_app_views_authors_show_html_erb__391848235288189891_69843688687100'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 21:46:09 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.6ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCommentaire Load (0.8ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843686339680 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843686339680 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/com/_comment (12.1ms)
+  Rendered authors/show.html.erb within layouts/application (17.4ms)
+Completed 500 Internal Server Error in 74ms
+
+ActionView::Template::Error (undefined local variable or method `commentaires' for #<#<Class:0x00000004fd4310>:0x00000004fe3040>):
+    1: <div>
+    2:   <h4>Comment by <%= commentaires.author_name %></h4>  <!-- fait défiler toute la base de donnée commentaires -->
+    3:   <p class="comment"><%= commentaires.body %></p>
+    4: </div>
+  app/views/authors/com/_comment:2:in `_app_views_authors_com__comment___4135343552656044794_43210500'
+  app/views/authors/show.html.erb:25:in `_app_views_authors_show_html_erb__391848235288189891_69843686339680'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 21:46:09 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.8ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCommentaire Load (0.6ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843688687100 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb__391848235288189891_69843688687100 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/com/_comment (57.0ms)
+  Rendered authors/show.html.erb within layouts/application (61.2ms)
+Completed 500 Internal Server Error in 69ms
+
+ActionView::Template::Error (undefined local variable or method `commentaires' for #<#<Class:0x00000004fd4310>:0x007f0b7006b698>):
+    1: <div>
+    2:   <h4>Comment by <%= commentaires.author_name %></h4>  <!-- fait défiler toute la base de donnée commentaires -->
+    3:   <p class="comment"><%= commentaires.body %></p>
+    4: </div>
+  app/views/authors/com/_comment:2:in `_app_views_authors_com__comment___4135343552656044794_40746320'
+  app/views/authors/show.html.erb:25:in `_app_views_authors_show_html_erb__391848235288189891_69843688687100'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+  [1m[36mAuthor Load (5.6ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCommentaire Load (1.3ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 1]]
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-12 21:55:32 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+  [1m[35mAuthor Load (3.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 141ms (Views: 117.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 21:55:32 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 21:55:32 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 21:55:32 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 21:55:32 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 21:55:32 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 21:55:32 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:32 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:32 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:33 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:33 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:33 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:33 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:33 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:33 +0200
+
+
+Started GET "/authors" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.9ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (6.6ms)
+  [1m[35mAuthor Load (0.7ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 21:55:39 +0200
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 21:55:42 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.8ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mCommentaire Load (1.2ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_70022162868540 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/com/_comment (0.0ms)
+  Rendered authors/show.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 41ms (Views: 29.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCommentaire Load (2.1ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_70022163282680 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/com/_comment (0.0ms)
+  Rendered authors/show.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 62ms (Views: 54.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 21:56:35 +0200
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 21:58:09 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mCommentaire Load (0.6ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/com/_comment did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_70022163282680 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/com/_comment (0.0ms)
+  Rendered authors/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 21ms (Views: 13.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 21:58:09 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 21:58:09 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 21:58:09 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 21:58:09 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 21:58:09 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 21:58:09 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 21:58:09 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 21:58:09 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 21:58:09 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 21:58:09 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 21:58:10 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 21:58:10 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 21:58:10 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 21:58:10 +0200
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCommentaire Load (0.7ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_70022163053040 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.1ms)
+  Rendered authors/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:41 +0200
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mCommentaire Load (0.5ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_70022163053040 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.0ms)
+  Rendered authors/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:43 +0200
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.8ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCommentaire Load (0.7ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_70022163053040 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.0ms)
+  Rendered authors/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 21ms (Views: 13.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:45 +0200
+
+
+Started GET "/authors/" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.9ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (4.8ms)
+  [1m[35mAuthor Load (0.7ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 22:06:50 +0200
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 22:06:53 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mCommentaire Load (0.7ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_70022162117840 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.0ms)
+  Rendered authors/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 16ms (Views: 10.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 22:07:08 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.9ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCommentaire Load (0.7ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_70022162117840 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.9ms)
+  Rendered authors/show.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 46ms (Views: 36.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 22:15:42 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCommentaire Load (0.7ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_70022163049940 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.8ms)
+  Rendered authors/authors/_form.html.erb (3.0ms)
+  Rendered authors/show.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h3>Post a Comment</h3>
+    2: <%= form_for [ @author, @comment ] do |f| %>
+    3:   <p>
+    4:     <%= f.label :author_name %><br/>
+    5:     <%= f.text_field :author_name %>
+  app/views/authors/authors/_form.html.erb:2:in `_app_views_authors_authors__form_html_erb___2321054925341623383_70022163087560'
+  app/views/authors/show.html.erb:27:in `_app_views_authors_show_html_erb___3315747364535181549_70022163049940'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 22:20:33 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.7ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCommentaire Load (0.5ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_70022163049940 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.2ms)
+  Rendered authors/authors/_form.html.erb (38.6ms)
+  Rendered authors/show.html.erb within layouts/application (44.1ms)
+Completed 500 Internal Server Error in 100ms
+
+ActionView::Template::Error (undefined method `author_commentaires_path' for #<#<Class:0x000000038cba38>:0x000000038c9a58>):
+    1: <h3>Post a Comment</h3>
+    2: <%= form_for [ @authors, @commentaires ] do |f| %>
+    3:   <p>
+    4:     <%= f.label :author_name %><br/>
+    5:     <%= f.text_field :author_name %>
+  app/views/authors/authors/_form.html.erb:2:in `_app_views_authors_authors__form_html_erb___2321054925341623383_30753180'
+  app/views/authors/show.html.erb:27:in `_app_views_authors_show_html_erb___3315747364535181549_70022163049940'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.6ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 22:22:46 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.7ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mCommentaire Load (0.7ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_31232780 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.0ms)
+  Rendered authors/authors/_form.html.erb (13.2ms)
+  Rendered authors/show.html.erb within layouts/application (18.7ms)
+Completed 500 Internal Server Error in 74ms
+
+ActionView::Template::Error (undefined method `author_commentaires_path' for #<#<Class:0x00000003ad2458>:0x00000003ad0f68>):
+    1: <h3>Post a Comment</h3>
+    2: <%= form_for [ @authors, @commentaires ] do |f| %>
+    3:   <p>
+    4:     <%= f.label :author_name %><br/>
+    5:     <%= f.text_field :author_name %>
+  app/views/authors/authors/_form.html.erb:2:in `_app_views_authors_authors__form_html_erb___2321054925341623383_31637080'
+  app/views/authors/show.html.erb:27:in `_app_views_authors_show_html_erb___3315747364535181549_31232780'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.4ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 22:22:47 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.8ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCommentaire Load (0.7ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_70022163049940 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.0ms)
+  Rendered authors/authors/_form.html.erb (56.4ms)
+  Rendered authors/show.html.erb within layouts/application (61.8ms)
+Completed 500 Internal Server Error in 71ms
+
+ActionView::Template::Error (undefined method `author_commentaires_path' for #<#<Class:0x00000003ad2458>:0x007f5e88058910>):
+    1: <h3>Post a Comment</h3>
+    2: <%= form_for [ @authors, @commentaires ] do |f| %>
+    3:   <p>
+    4:     <%= f.label :author_name %><br/>
+    5:     <%= f.text_field :author_name %>
+  app/views/authors/authors/_form.html.erb:2:in `_app_views_authors_authors__form_html_erb___2321054925341623383_30753180'
+  app/views/authors/show.html.erb:27:in `_app_views_authors_show_html_erb___3315747364535181549_70022163049940'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 22:30:10 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.8ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mCommentaire Load (0.7ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_31317880 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.0ms)
+  Rendered authors/commentaire/_form.html.erb (17.6ms)
+  Rendered authors/show.html.erb within layouts/application (24.5ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `author_commentaires_path' for #<#<Class:0x00000003ad2458>:0x00000003b93428>):
+    1: <h3>Post a Comment</h3>
+    2: <%= form_for [ @authors, @commentaires ] do |f| %>
+    3:   <p>
+    4:     <%= f.label :author_name %><br/>
+    5:     <%= f.text_field :author_name %>
+  app/views/authors/commentaire/_form.html.erb:2:in `_app_views_authors_commentaire__form_html_erb__4433681772692266928_31620960'
+  app/views/authors/show.html.erb:27:in `_app_views_authors_show_html_erb___3315747364535181549_31317880'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 22:30:10 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.4ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCommentaire Load (0.6ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_13427000 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.0ms)
+  Rendered authors/commentaire/_form.html.erb (13.6ms)
+  Rendered authors/show.html.erb within layouts/application (18.1ms)
+Completed 500 Internal Server Error in 65ms
+
+ActionView::Template::Error (undefined method `author_commentaires_path' for #<#<Class:0x00000003ad2458>:0x0000000198cb40>):
+    1: <h3>Post a Comment</h3>
+    2: <%= form_for [ @authors, @commentaires ] do |f| %>
+    3:   <p>
+    4:     <%= f.label :author_name %><br/>
+    5:     <%= f.text_field :author_name %>
+  app/views/authors/commentaire/_form.html.erb:2:in `_app_views_authors_commentaire__form_html_erb__4433681772692266928_13715040'
+  app/views/authors/show.html.erb:27:in `_app_views_authors_show_html_erb___3315747364535181549_13427000'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 22:34:08 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mCommentaire Load (0.4ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_13427000 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.0ms)
+  Rendered authors/commentaire/_form.html.erb (1.6ms)
+  Rendered authors/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <<h3>Post a Comment</h3>
+    2: <%= form_for [ @author, @comment ] do |f| %>
+    3:   <p>
+    4:     <%= f.label :author_name %><br/>
+    5:     <%= f.text_field :author_name %>
+  app/views/authors/commentaire/_form.html.erb:2:in `_app_views_authors_commentaire__form_html_erb__4433681772692266928_31809460'
+  app/views/authors/show.html.erb:27:in `_app_views_authors_show_html_erb___3315747364535181549_13427000'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.2ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 22:34:37 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.9ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.8ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCommentaire Load (0.8ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_13427000 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.0ms)
+  Rendered authors/commentaire/_form.html.erb (2.3ms)
+  Rendered authors/show.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 22ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <<h3>Post a Comment</h3>
+    2: <%= form_for [ @authors, @comment ] do |f| %>
+    3:   <p>
+    4:     <%= f.label :author_name %><br/>
+    5:     <%= f.text_field :author_name %>
+  app/views/authors/commentaire/_form.html.erb:2:in `_app_views_authors_commentaire__form_html_erb__4433681772692266928_70021992863980'
+  app/views/authors/show.html.erb:27:in `_app_views_authors_show_html_erb___3315747364535181549_13427000'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 22:34:57 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mCommentaire Load (0.5ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_13427000 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.0ms)
+  Rendered authors/commentaire/_form.html.erb (1.7ms)
+  Rendered authors/show.html.erb within layouts/application (49.5ms)
+Completed 500 Internal Server Error in 56ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <<h3>Post a Comment</h3>
+    2: <%= form_for [ @authors, @commentaire ] do |f| %>
+    3:   <p>
+    4:     <%= f.label :author_name %><br/>
+    5:     <%= f.text_field :author_name %>
+  app/views/authors/commentaire/_form.html.erb:2:in `_app_views_authors_commentaire__form_html_erb__4433681772692266928_5793320'
+  app/views/authors/show.html.erb:27:in `_app_views_authors_show_html_erb___3315747364535181549_13427000'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 22:35:30 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.9ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.9ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCommentaire Load (0.8ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_13427000 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.0ms)
+  Rendered authors/commentaire/_form.html.erb (16.6ms)
+  Rendered authors/show.html.erb within layouts/application (22.3ms)
+Completed 500 Internal Server Error in 35ms
+
+ActionView::Template::Error (undefined method `author_commentaires_path' for #<#<Class:0x00000003ad2458>:0x000000038698d8>):
+    1: <<h3>Post a Comment</h3>
+    2: <%= form_for [ @authors, @commentaires ] do |f| %>
+    3:   <p>
+    4:     <%= f.label :author_name %><br/>
+    5:     <%= f.text_field :author_name %>
+  app/views/authors/commentaire/_form.html.erb:2:in `_app_views_authors_commentaire__form_html_erb__4433681772692266928_29711240'
+  app/views/authors/show.html.erb:27:in `_app_views_authors_show_html_erb___3315747364535181549_13427000'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 22:40:12 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.6ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCommentaire Load (0.7ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3315747364535181549_31317880 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.2ms)
+  Rendered authors/commentaire/_form.html.erb (104.3ms)
+  Rendered authors/show.html.erb within layouts/application (111.0ms)
+Completed 200 OK in 217ms (Views: 120.3ms | ActiveRecord: 9.4ms)
+
+
+Started POST "/authors/1/commentaires" for 127.0.0.1 at 2013-10-12 22:40:32 +0200
+
+ActionController::RoutingError (uninitialized constant CommentairesController):
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__4020552717479278593__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/julienlinux/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/julienlinux/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/julienlinux/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.8ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (67.3ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 22:59:39 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (1.9ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (40.4ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCommentaire Load (1.2ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3990797029759374960_25620340 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.7ms)
+  Rendered authors/commentaire/_form.html.erb (12.4ms)
+  Rendered authors/show.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 657ms (Views: 534.9ms | ActiveRecord: 50.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/commentaires.css?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/commentaires.js?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 22:59:40 +0200
+
+
+Started POST "/authors/1/commentaires" for 127.0.0.1 at 2013-10-12 22:59:57 +0200
+Processing by CommentairesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XHNBOyDbGGVTelmJAXoWAzRrv/sCLrw4fHKM0SzHLlc=", "commentaire"=>{"author_name"=>"robert", "body"=>"coucou"}, "commit"=>"Submit", "author_id"=>"1"}
+Completed 500 Internal Server Error in 7ms
+
+NameError (undefined local variable or method `commentaires' for #<CommentairesController:0x007f68906c7078>):
+  app/controllers/commentaires_controller.rb:3:in `create'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (69.3ms)
+
+
+Started POST "/authors/1/commentaires" for 127.0.0.1 at 2013-10-12 23:00:39 +0200
+Processing by CommentairesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XHNBOyDbGGVTelmJAXoWAzRrv/sCLrw4fHKM0SzHLlc=", "commentaire"=>{"author_name"=>"robert", "body"=>"coucou"}, "commit"=>"Submit", "author_id"=>"1"}
+Completed 500 Internal Server Error in 4ms
+
+NameError (undefined local variable or method `commentaires' for #<CommentairesController:0x007f689032bdd8>):
+  app/controllers/commentaires_controller.rb:3:in `create'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.6ms)
+
+
+Started POST "/authors/1/commentaires" for 127.0.0.1 at 2013-10-12 23:02:11 +0200
+Processing by CommentairesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XHNBOyDbGGVTelmJAXoWAzRrv/sCLrw4fHKM0SzHLlc=", "commentaire"=>{"author_name"=>"robert", "body"=>"coucou"}, "commit"=>"Submit", "author_id"=>"1"}
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant CommentairesController::Commentaires):
+  app/controllers/commentaires_controller.rb:3:in `create'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.4ms)
+
+
+Started POST "/authors/1/commentaires" for 127.0.0.1 at 2013-10-12 23:02:31 +0200
+Processing by CommentairesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XHNBOyDbGGVTelmJAXoWAzRrv/sCLrw4fHKM0SzHLlc=", "commentaire"=>{"author_name"=>"robert", "body"=>"coucou"}, "commit"=>"Submit", "author_id"=>"1"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (undefined local variable or method `commentaire_params' for #<CommentairesController:0x007f68905a2558>):
+  app/controllers/commentaires_controller.rb:3:in `create'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.6ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (27.4ms)
+  [1m[35mAuthor Load (0.9ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 41ms (Views: 31.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/commentaires.css?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/commentaires.js?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 23:04:23 +0200
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-10-12 23:04:29 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.6ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCommentaire Load (0.6ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3990797029759374960_70043539131640 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.8ms)
+  Rendered authors/commentaire/_form.html.erb (3.4ms)
+  Rendered authors/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 46ms (Views: 19.8ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/authors/1/commentaires" for 127.0.0.1 at 2013-10-12 23:04:37 +0200
+Processing by CommentairesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XHNBOyDbGGVTelmJAXoWAzRrv/sCLrw4fHKM0SzHLlc=", "commentaire"=>{"author_name"=>"sdsxsxs", "body"=>"sxsxsxsxs"}, "commit"=>"Submit", "author_id"=>"1"}
+Completed 500 Internal Server Error in 57ms
+
+NameError (undefined local variable or method `commentaire_params' for #<CommentairesController:0x007f6890c57290>):
+  app/controllers/commentaires_controller.rb:5:in `create'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.9ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 23:10:20 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCommentaire Load (0.7ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3990797029759374960_70043539131640 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.0ms)
+  Rendered authors/commentaire/_form.html.erb (3.1ms)
+  Rendered authors/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 122ms (Views: 14.3ms | ActiveRecord: 9.3ms)
+
+
+Started POST "/authors/2/commentaires" for 127.0.0.1 at 2013-10-12 23:10:27 +0200
+Processing by CommentairesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XHNBOyDbGGVTelmJAXoWAzRrv/sCLrw4fHKM0SzHLlc=", "commentaire"=>{"author_name"=>"sxsxsxs", "body"=>"xsxsxsxs"}, "commit"=>"Submit", "author_id"=>"2"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (undefined local variable or method `commentaire_params' for #<CommentairesController:0x00000002fdfd98>):
+  app/controllers/commentaires_controller.rb:5:in `create'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.6ms)
+
+
+Started POST "/authors/2/commentaires" for 127.0.0.1 at 2013-10-12 23:13:34 +0200
+Processing by CommentairesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XHNBOyDbGGVTelmJAXoWAzRrv/sCLrw4fHKM0SzHLlc=", "commentaire"=>{"author_name"=>"sxsxsxs", "body"=>"xsxsxsxs"}, "commit"=>"Submit", "author_id"=>"2"}
+Completed 500 Internal Server Error in 50ms
+
+NameError (undefined local variable or method `commentaire_params' for #<CommentairesController:0x007f689074b418>):
+  app/controllers/commentaires_controller.rb:3:in `create'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.2ms)
+
+
+Started POST "/authors/2/commentaires" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+Processing by CommentairesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XHNBOyDbGGVTelmJAXoWAzRrv/sCLrw4fHKM0SzHLlc=", "commentaire"=>{"author_name"=>"sxsxsxs", "body"=>"xsxsxsxs"}, "commit"=>"Submit", "author_id"=>"2"}
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (91.0ms)[0m  INSERT INTO "commentaires" ("author_id", "author_name", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["author_id", 2], ["author_name", "sxsxsxs"], ["body", "xsxsxsxs"], ["created_at", Sat, 12 Oct 2013 21:17:58 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 21:17:58 UTC +00:00]]
+  [1m[36m (141.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/authors/2
+Completed 302 Found in 261ms (ActiveRecord: 236.7ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCommentaire Load (0.6ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3990797029759374960_25620340 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.2ms)
+  Rendered authors/commentaire/_form.html.erb (3.2ms)
+  Rendered authors/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 95ms (Views: 14.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/commentaires.css?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/commentaires.js?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 23:17:58 +0200
+
+
+Started POST "/authors/2/commentaires" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+Processing by CommentairesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XHNBOyDbGGVTelmJAXoWAzRrv/sCLrw4fHKM0SzHLlc=", "commentaire"=>{"author_name"=>"shhhhhhhhhh", "body"=>"ouf"}, "commit"=>"Submit", "author_id"=>"2"}
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "commentaires" ("author_id", "author_name", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["author_id", 2], ["author_name", "shhhhhhhhhh"], ["body", "ouf"], ["created_at", Sat, 12 Oct 2013 21:18:13 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 21:18:13 UTC +00:00]]
+  [1m[36m (13.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/authors/2
+Completed 302 Found in 20ms (ActiveRecord: 14.4ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.8ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCommentaire Load (0.8ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3990797029759374960_25620340 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.2ms)
+  Rendered authors/commentaire/_form.html.erb (3.7ms)
+  Rendered authors/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 28ms (Views: 19.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/commentaires.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/commentaires.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:13 +0200
+
+
+Started POST "/authors/2/commentaires" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+Processing by CommentairesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XHNBOyDbGGVTelmJAXoWAzRrv/sCLrw4fHKM0SzHLlc=", "commentaire"=>{"author_name"=>"jule", "body"=>"hey"}, "commit"=>"Submit", "author_id"=>"2"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "commentaires" ("author_id", "author_name", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["author_id", 2], ["author_name", "jule"], ["body", "hey"], ["created_at", Sat, 12 Oct 2013 21:18:37 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 21:18:37 UTC +00:00]]
+  [1m[36m (5.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/authors/2
+Completed 302 Found in 11ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCommentaire Load (0.6ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3990797029759374960_25620340 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.2ms)
+  Rendered authors/commentaire/_form.html.erb (2.0ms)
+  Rendered authors/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 17ms (Views: 11.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/commentaires.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/commentaires.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200

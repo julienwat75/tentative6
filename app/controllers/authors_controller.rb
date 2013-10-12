@@ -31,6 +31,10 @@ end
   # GET /authors/1.json
   def show
      @authors = Author.find(params[:id]) #reccupere l'id de l url
+     @commentaires = Commentaire.new
+     @commentaires.author_id = @authors.id
+
+     
   end
 
   # GET /authors/new
