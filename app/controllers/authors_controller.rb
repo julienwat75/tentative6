@@ -34,6 +34,8 @@ end
      @commentaires = Commentaire.new
      @commentaires.author_id = @authors.id
 
+     @username=current_user
+
      
   end
 
