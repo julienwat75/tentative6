@@ -20,6 +20,11 @@
   <%= @author.password_confirmation %>
 </p>
 
+<p>
+  <strong>mon id:</strong>
+  <%= @username.id %>
+</p>
+
 
 <h3>Comments</h3>
 <%= render partial: 'authors/authors/commentaire', collection: @authors.commentaires %>  <!--créer un objet commentaire  liée à Author--> 
