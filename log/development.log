@@ -5456,3 +5456,130 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:37
 
 
 Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-12 23:18:37 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+  [1m[35mAuthor Load (3.8ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 180ms (Views: 155.7ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/commentaires.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/commentaires.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:26 +0200
+
+
+Started GET "/authors" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.6ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (4.1ms)
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/profils.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/offres.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/commentaires.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/sceen.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/author_sessions.css?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/author_sessions.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/commentaires.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/offres.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/profils.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-20 16:45:37 +0200
+
+
+Started GET "/authors/2" for 127.0.0.1 at 2013-10-20 16:45:40 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.5ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mCommentaire Load (1.4ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 2]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___953000434815655141_27185680 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:25)
+  Rendered authors/authors/_commentaire (0.8ms)
+  Rendered authors/commentaire/_form.html.erb (12.4ms)
+  Rendered authors/show.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 105ms (Views: 35.8ms | ActiveRecord: 6.7ms)
