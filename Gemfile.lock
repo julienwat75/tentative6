@@ -37,6 +37,7 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     erubis (2.7.0)
+    event-calendar (2.3.3)
     execjs (2.0.2)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
@@ -139,6 +140,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby
   coffee-rails (~> 4.0.0)
+  event-calendar (~> 2.3.3)
   execjs
   jbuilder (~> 1.2)
   jquery-rails

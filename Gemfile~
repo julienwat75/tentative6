@@ -21,8 +21,6 @@ gem 'sqlite3', group: :development
 
 gem 'pg', group: :production
 
-gem "event-calendar", "~> 2.3.3"
-
 gem 'rails_12factor', group: :production
 
 

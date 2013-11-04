@@ -1,0 +1,22 @@
+body {
+
+
+	background:red;
+}
+
+#container{
+	margin:auto;
+	width:700px;
+}
+
+
+#listes{
+	
+	float:left; 
+ 
+	width:700px;
+}
+
+.Degrade {
+background-image:radial-gradient(white, black);
+}
