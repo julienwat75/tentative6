@@ -12777,3 +12777,106 @@ Started GET "/" for 127.0.0.1 at 2013-11-04 19:49:13 +0100
 Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (18.8ms)
 Completed 200 OK in 154ms (Views: 121.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2013-11-04 20:23:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (32.8ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (82.7ms)
+Completed 200 OK in 224ms (Views: 40.2ms | ActiveRecord: 58.3ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-11-04 20:24:05 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (37.7ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "authors"
+Redirected to http://localhost:3000/login
+Filter chain halted as :no_sessions rendered or redirected
+Completed 302 Found in 44ms (ActiveRecord: 38.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-11-04 20:24:06 +0100
+Processing by AuthorSessionsController#new as HTML
+  Rendered author_sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/author_sessions" for 127.0.0.1 at 2013-11-04 20:24:22 +0100
+Processing by AuthorSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3hvrIF2+kbyWXck/Jjc+l/yp59nI63SGz/C5lZB9vt4=", "username"=>"julienwat", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mAuthor Load (1.3ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE (username = 'julienwat') ORDER BY "authors"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 153ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2013-11-04 20:24:22 +0100
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.8ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (3.2ms)
+  [1m[36mAuthor Load (32.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 39ms (Views: 5.6ms | ActiveRecord: 32.9ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-11-04 20:24:32 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.6ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "authors"[0m
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCommentaire Load (36.7ms)[0m  SELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3586657550856708489_70358278502820 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:30)
+  Rendered authors/authors/_commentaire (1.4ms)
+  Rendered authors/commentaire/_form.html.erb (99.9ms)
+  Rendered authors/show.html.erb within layouts/application (235.6ms)
+Completed 500 Internal Server Error in 343ms
+
+ActionView::Template::Error (undefined method `calendar_date_select_tag' for #<#<Class:0x0000000254f4c8>:0x007ffb2063c748>):
+     7:   </p>
+     8: <p>
+     9: 
+    10:  <%= calendar_date_select_tag "no_buttons", nil, :embedded => true, :buttons => false %>
+    11:    
+    12: </p>
+    13:   <p>
+  app/views/authors/commentaire/_form.html.erb:10:in `block in _app_views_authors_commentaire__form_html_erb___3333640215687049451_24645520'
+  app/views/authors/commentaire/_form.html.erb:2:in `_app_views_authors_commentaire__form_html_erb___3333640215687049451_24645520'
+  app/views/authors/show.html.erb:32:in `_app_views_authors_show_html_erb___3586657550856708489_70358278502820'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2013-11-04 20:27:36 +0100
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.7ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "authors"
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCommentaire Load (0.8ms)[0m  [1mSELECT "commentaires".* FROM "commentaires" WHERE "commentaires"."author_id" = $1[0m  [["author_id", 1]]
+DEPRECATION WARNING: The file /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/authors/_commentaire did not specify a template handler. The default is currently ERB, but will change to RAW in the future. (called from _app_views_authors_show_html_erb___3586657550856708489_70358278502820 at /home/julienlinux/Documents/tentative6/tentative6/app/views/authors/show.html.erb:30)
+  Rendered authors/authors/_commentaire (0.3ms)
+  Rendered authors/commentaire/_form.html.erb (3.1ms)
+  Rendered authors/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 17ms (Views: 10.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/authors/bleu3.jpg" for 127.0.0.1 at 2013-11-04 20:27:37 +0100
+Processing by AuthorsController#show as JPEG
+  Parameters: {"id"=>"bleu3"}
+  [1m[35mAuthor Load (0.9ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = $1 LIMIT 1  [["id", "bleu3"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Author with id=bleu3):
+  app/controllers/authors_controller.rb:97:in `set_author'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (40.9ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (67.2ms)
