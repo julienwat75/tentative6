@@ -1,0 +1,30 @@
+<h3>  Page membres </h3>
+
+
+<% @author2.each do |t|  %>
+
+<p>
+<%=  t.username  %>
+
+<%=  t.id  %>
+
+<%= link_to 'Show', t %>
+
+
+</p>
+<% end %>
+
+<% page=0  %>
+
+	<% while page<10 %>
+
+
+
+ 
+<a href="/pagemembres/<%= page %>">  <%= page+1 %> </a> 
+
+ <% page+=1 %>
+ <% end %>
+ 
+
+	</p>

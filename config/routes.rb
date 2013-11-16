@@ -2,6 +2,7 @@ MyApp::Application.routes.draw do
 
   resources :profils
   resources :offres
+   resources :pagemembres
 
    resources :authors do
   resources :commentaires

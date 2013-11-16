@@ -5,7 +5,7 @@ class AuthorSessionsController < ApplicationController
 
   def create
     if login(params[:username], params[:password])
-      redirect_back_or_to(authors_path, message: 'Logged in successfully.')
+      redirect_back_or_to(pagemembres_path, message: 'Logged in successfully.')
     else
       flash.now.alert = "Login failed."
       render action: :new
