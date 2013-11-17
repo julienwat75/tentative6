@@ -17374,3 +17374,196 @@ Processing by OffresController#index as HTML
   Rendered offres/index.html.erb within layouts/application (0.7ms)
   [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 3]]
 Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/invitations" for 127.0.0.1 at 2013-11-17 18:39:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/invitations"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/julienlinux/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/julienlinux/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/julienlinux/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.5ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (38.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-17 18:39:30 +0100
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  [1m[35mAuthor Load (1.9ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 60ms (Views: 40.3ms | ActiveRecord: 2.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProfils (20131001203502)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "profils" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nom" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131001203502"]]
+  [1m[36m (148.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateOffres (20131002212634)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "offres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nom" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131002212634"]]
+  [1m[36m (131.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateInvitations (20131117222302)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "invitations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titre" varchar(255), "description" text, "author_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20131117222302"]]
+  [1m[36m (129.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-17 23:47:11 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (17.0ms)
+  [1m[35mAuthor Load (26.9ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 258ms (Views: 196.3ms | ActiveRecord: 27.6ms)
+
+
+Started GET "/invitations" for 127.0.0.1 at 2013-11-17 23:48:31 +0100
+Processing by InvitationsController#index as HTML
+  [1m[36mInvitation Load (0.1ms)[0m  [1mSELECT "invitations".* FROM "invitations"[0m
+  Rendered invitations/index.html.erb within layouts/application (2.2ms)
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/invitations/new" for 127.0.0.1 at 2013-11-17 23:48:39 +0100
+Processing by InvitationsController#new as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "invitations"[0m
+  Rendered invitations/new.html.erb within layouts/application (122.9ms)
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 168ms (Views: 165.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/invitations/bleu3.jpg" for 127.0.0.1 at 2013-11-17 23:48:39 +0100
+Processing by InvitationsController#show as JPEG
+  Parameters: {"id"=>"bleu3"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "invitations"[0m
+  [1m[35mInvitation Load (0.2ms)[0m  SELECT "invitations".* FROM "invitations" WHERE "invitations"."id" = ? LIMIT 1  [["id", "bleu3"]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Invitation with id=bleu3):
+  app/controllers/invitations_controller.rb:31:in `show'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.6ms)
+
+
+Started POST "/invitations" for 127.0.0.1 at 2013-11-17 23:48:58 +0100
+Processing by InvitationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fSZzYaPq+/Kawx0aaO7OuCyyTf36FVRrqsEOGmDB60w=", "invitation"=>{"titre"=>"bigard", "description"=>"le spectacle de l année"}, "commit"=>"Create Invitation"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "invitations"[0m
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (56.1ms)[0m  INSERT INTO "invitations" ("author_id", "created_at", "description", "titre", "updated_at") VALUES (?, ?, ?, ?, ?)  [["author_id", 3], ["created_at", Sun, 17 Nov 2013 22:48:58 UTC +00:00], ["description", "le spectacle de l année"], ["titre", "bigard"], ["updated_at", Sun, 17 Nov 2013 22:48:58 UTC +00:00]]
+  [1m[36m (146.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/invitations
+Completed 302 Found in 213ms (ActiveRecord: 203.7ms)
+
+
+Started GET "/invitations" for 127.0.0.1 at 2013-11-17 23:48:58 +0100
+Processing by InvitationsController#index as HTML
+  [1m[35mInvitation Load (0.4ms)[0m  SELECT "invitations".* FROM "invitations"
+  Rendered invitations/index.html.erb within layouts/application (3.7ms)
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/invitations/1" for 127.0.0.1 at 2013-11-17 23:49:56 +0100
+Processing by InvitationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "invitations"
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mInvitation Load (0.1ms)[0m  SELECT "invitations".* FROM "invitations" WHERE "invitations"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered invitations/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/invitations/bleu3.jpg" for 127.0.0.1 at 2013-11-17 23:49:56 +0100
+Processing by InvitationsController#show as JPEG
+  Parameters: {"id"=>"bleu3"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "invitations"[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mInvitation Load (0.1ms)[0m  [1mSELECT "invitations".* FROM "invitations" WHERE "invitations"."id" = ? LIMIT 1[0m  [["id", "bleu3"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Invitation with id=bleu3):
+  app/controllers/invitations_controller.rb:31:in `show'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.3ms)
+
+
+Started GET "/invitations/new" for 127.0.0.1 at 2013-11-17 23:50:34 +0100
+Processing by InvitationsController#new as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "invitations"
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered invitations/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/invitations/bleu3.jpg" for 127.0.0.1 at 2013-11-17 23:50:34 +0100
+Processing by InvitationsController#show as JPEG
+  Parameters: {"id"=>"bleu3"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "invitations"
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mInvitation Load (0.1ms)[0m  SELECT "invitations".* FROM "invitations" WHERE "invitations"."id" = ? LIMIT 1  [["id", "bleu3"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Invitation with id=bleu3):
+  app/controllers/invitations_controller.rb:31:in `show'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (65.0ms)
+
+
+Started POST "/invitations" for 127.0.0.1 at 2013-11-17 23:51:10 +0100
+Processing by InvitationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fSZzYaPq+/Kawx0aaO7OuCyyTf36FVRrqsEOGmDB60w=", "invitation"=>{"titre"=>"le pere noel est une ordure", "description"=>"un beau spectacle"}, "commit"=>"Create Invitation"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "invitations"[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "invitations" ("author_id", "created_at", "description", "titre", "updated_at") VALUES (?, ?, ?, ?, ?)  [["author_id", 3], ["created_at", Sun, 17 Nov 2013 22:51:10 UTC +00:00], ["description", "un beau spectacle"], ["titre", "le pere noel est une ordure"], ["updated_at", Sun, 17 Nov 2013 22:51:10 UTC +00:00]]
+  [1m[36m (128.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/invitations
+Completed 302 Found in 135ms (ActiveRecord: 129.5ms)
+
+
+Started GET "/invitations" for 127.0.0.1 at 2013-11-17 23:51:11 +0100
+Processing by InvitationsController#index as HTML
+  [1m[35mInvitation Load (0.4ms)[0m  SELECT "invitations".* FROM "invitations"
+  Rendered invitations/index.html.erb within layouts/application (2.7ms)
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.6ms)

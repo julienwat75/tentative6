@@ -1,0 +1,22 @@
+<h3> Proposer une invitation </h3>
+
+<%= form_for(@invitations) do |f| %>
+  <ul>
+  <% @invitations.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :Titre %><br />
+    <%= f.text_field :titre %>
+  </p>
+  <p>
+    <%= f.label :Description %><br />
+    <%= f.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+

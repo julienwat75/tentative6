@@ -3,6 +3,7 @@ MyApp::Application.routes.draw do
   resources :profils
   resources :offres
    resources :pagemembres
+   resources :invitations
 
    resources :authors do
   resources :commentaires

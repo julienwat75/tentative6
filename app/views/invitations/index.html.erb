@@ -1,0 +1,22 @@
+<h3> Invitations index </h3>
+
+<%= link_to "Ajouter une proposition", new_invitation_path, class: "button" %>
+
+
+
+<% @invitations.each do |t| %>
+<p> 
+
+	<%= t.titre  %>, <%= t.description  %>,<%= t.author_id %>
+	 <%= link_to 'Show', t %>
+
+     
+
+	 </p>
+
+
+
+
+
+<%  end  %>
+
