@@ -42,6 +42,7 @@ def create              # le submit va chercher la methode create
   @invitations = Invitation.new(profil_params)
   @invitations.titre = params[:invitation][:titre]  # on reccupere le nom du form
   @invitations.description = params[:invitation][:description]  # on reccupere le nom du form
+  @invitations.avatar = params[:invitation][:avatar]  # on reccupere le nom du form
   
   @invitations.author_id =current_user.id
   @invitations.save   #on sauvegarde
@@ -50,7 +51,7 @@ def create              # le submit va chercher la methode create
 end
 
 def profil_params
-    params.require(:invitation).permit(:titre,:description)
+    params.require(:invitation).permit(:titre,:description,:avatar)
   end
 
 

@@ -10,11 +10,6 @@
     <%= f.label :Titre %><br />
     <%= f.text_field :titre %>
   </p>
-
-  <div class="field">
-    <%= f.label :avatar %>
-    <%= f.file_field :avatar %>
-  </div>
   <p>
     <%= f.label :Description %><br />
     <%= f.text_area :description %>
