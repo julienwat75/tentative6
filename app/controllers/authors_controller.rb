@@ -58,8 +58,8 @@ def create              # le submit va chercher la methode create
   @authors.username = params[:author][:username]  # on reccupere le nom du form
   @authors.email = params[:author][:email] # on reccupere le body du form 
   @authors.password = params[:author][:password] # on reccupere le body du form 
-  @authors.password_confirmation = params[:author][:password_confirmation] # on reccupere le body du form 
-  
+  @authors.password_confirmation = params[:author][:password_confirmation] # on reccupere le b
+  @authors.avatar = params[:author][:avatar] # on reccupere le body 
   @authors.save   #on sauvegarde
    redirect_to authors_path     # redirection vers l'index
 
@@ -99,6 +99,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def author_params
-      params.require(:author).permit(:username, :email, :password, :password_confirmation)
+      params.require(:author).permit(:username, :email, :password, :password_confirmation, :avatar)
     end
 end

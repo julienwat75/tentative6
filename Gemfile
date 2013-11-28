@@ -13,6 +13,18 @@ gem 'bcrypt-ruby'
 gem 'execjs'
 gem 'therubyracer'
 
+gem 'paperclip'      # gem upload fichier
+
+gem 'protected_attributes'  # gem upload fichier
+
+
+gem 'aws-sdk'   # gem upload fichier
+
+gem 'activeresource'
+
+gem 'railties'
+
+
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 

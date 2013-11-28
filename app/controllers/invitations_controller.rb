@@ -1,5 +1,6 @@
 class InvitationsController < ApplicationController
 
+
 before_filter :zero_authors_or_authenticated, except: [:index]	
 
 
@@ -51,6 +52,8 @@ end
 def profil_params
     params.require(:invitation).permit(:titre,:description)
   end
+
+
 
 
 

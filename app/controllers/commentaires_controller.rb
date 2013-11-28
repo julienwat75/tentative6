@@ -6,6 +6,9 @@ def create              # le submit va chercher la methode create
  
    @commentaires.author_id = params[:author_id]
 
+   @commentaires.body = params[:commentaire][:body]   
+
+
    @commentaires.author_name=current_user.username
   
   @commentaires.save   #on sauvegarde
