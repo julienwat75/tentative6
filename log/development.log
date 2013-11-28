@@ -20131,3 +20131,60 @@ ActiveRecord::RecordNotFound (Couldn't find Invitation with id=bleu3):
   Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (67.6ms)
   Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
   Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (81.4ms)
+
+
+Started GET "/invitations/4" for 127.0.0.1 at 2013-11-28 14:09:36 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by InvitationsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "invitations"
+  [1m[36mAuthor Load (77.2ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mInvitation Load (0.3ms)[0m  SELECT "invitations".* FROM "invitations" WHERE "invitations"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered invitations/show.html.erb within layouts/application (109.5ms)
+Completed 200 OK in 814ms (Views: 255.0ms | ActiveRecord: 78.5ms)
+
+
+Started GET "/invitations/bleu3.jpg" for 127.0.0.1 at 2013-11-28 14:09:38 +0100
+Processing by InvitationsController#show as JPEG
+  Parameters: {"id"=>"bleu3"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "invitations"[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mInvitation Load (0.1ms)[0m  [1mSELECT "invitations".* FROM "invitations" WHERE "invitations"."id" = ? LIMIT 1[0m  [["id", "bleu3"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Invitation with id=bleu3):
+  app/controllers/invitations_controller.rb:32:in `show'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (137.8ms)
+
+
+Started GET "/invitations/4" for 127.0.0.1 at 2013-11-28 14:09:40 +0100
+Processing by InvitationsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "invitations"
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mInvitation Load (0.2ms)[0m  SELECT "invitations".* FROM "invitations" WHERE "invitations"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered invitations/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/invitations/bleu3.jpg" for 127.0.0.1 at 2013-11-28 14:09:40 +0100
+Processing by InvitationsController#show as JPEG
+  Parameters: {"id"=>"bleu3"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "invitations"[0m
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mInvitation Load (0.1ms)[0m  [1mSELECT "invitations".* FROM "invitations" WHERE "invitations"."id" = ? LIMIT 1[0m  [["id", "bleu3"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Invitation with id=bleu3):
+  app/controllers/invitations_controller.rb:32:in `show'
+
+
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/julienlinux/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.5ms)
