@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MyApp</title>
+
+   
+  <%= csrf_meta_tags %>
+ 
+   <%= stylesheet_link_tag   "application" , "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application" %> 
+   <link rel='stylesheet' href='/css/foundation.min.css' >  
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"> 
+ <!-- racine ds public -->
+
+
+
+</head>
+<body>
+
+ <nav class="top-bar">
+    <ul class="title-area" style="position: fixed;">
+      <!-- Title Area -->
+      <li class="name">
+        <h1>
+          <a href="#">
+          jet1vite
+          </a>
+        </h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+    </ul>
+ 
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="#">Main Item 1</a>
+          <ul class="dropdown">
+            <li><label>Section Name</label></li>
+            <li class="has-dropdown">
+              <a href="#" class="">Has Dropdown, Level 1</a>
+              <ul class="dropdown">
+                <li><a href="#">Dropdown Options</a></li>
+                <li><a href="#">Dropdown Options</a></li>
+                <li><a href="#">Level 2</a></li>
+                <li><a href="#">Subdropdown Option</a></li>
+                <li><a href="#">Subdropdown Option</a></li>
+                <li><a href="#">Subdropdown Option</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li class="divider"></li>
+            <li><label>Section Name</label></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li class="divider"></li>
+            <li><a href="#">See all &rarr;</a></li>
+          </ul>
+        </li>
+        <li class="divider"></li>
+        <li><a href="#"><font style="color:white;">Invitations</font></a></li>
+        <li class="divider"></li>
+        <li class="has-dropdown">
+          <a href="#">Main Item 1</a>
+          <ul class="dropdown">
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li><a href="#">Dropdown Option</a></li>
+            <li class="divider"></li>
+            <li><a href="#">See all &rarr;</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+ 
+  <!-- End Top Bar -->
+
+
+  <div class="row">
+    <div class="small-12 columns " >
+ 
+    <!-- Content Slider -->
+ 
+      <div class="row">
+        <div class=" hide-for-small" style="background:white;heigt:100px;background-image:url(bleu3.jpg);background-size:100%;height:50px;">
+
+          
+ 
+          
+              
+              
+            
+ 
+      </div>
+      </div>
+   </div>
+   
+
+  
+
+
+  
+
+   <div class="row">
+     <div class="small-12 columns Degrade" style="margin-top:20px;margin-bottom:20px;border-top:2px solid white;margin-bottom:20px;text-align:center;height:180px;background-image:radial-gradient(white, white);">
+
+       
+      <img src="/bobo.png" height="300" width="300" >
+       
+
+
+     
+
+    </div>
+
+    
+  </div>
+ 
+
+
+   
+
+  <div class="row">
+     <div class="small-12 columns" style="background:white;margin-top:20px;margin-bottom:20px;margin-bottom:20px;border-bottom:2px solid white;text-align:center;">
+
+
+      
+
+      
+     
+     
+
+    </div>
+
+    
+  </div>
+
+    
+
+
+
+	
+ 
+    <!-- End Content Slider -->
+ 
+    <!-- Mobile Header -->
+ 
+      <div class="row">
+        <div class="small-8 columns show-for-small">
+ 
+           <div id="featured"  >
+             <img src="bleu3.jpg" height="200" width="200" alt="slide image">
+            </div>
+
+        </div>
+      </div><br>  <!-- End of row -->
+ 
+    
+ 
+ 
+    
+
+
+ 
+
+
+    
+
+    
+    <!-- End Content Slider -->
+ 
+    <!-- Mobile Header -->
+ 
+      <div class="row">
+        <div class="small-4 columns show-for-small">
+ 
+            <div id="featured" data-orbit >
+             <img src="/bleu3.jpg" height="200" width="200" alt="slide image">
+             </div>
+
+        </div>
+      </div>
+
+ 
+    </div>
+
+   
+ 
+
+
+
+    
+
+
+    <div class="row">
+    <div class="small-12 columns" style="background:white;">
+
+
+     
+  
+    <%= yield  %>
+
+      
+  
+    </div>
+ 
+    </div>
+
+
+    <!-- Footer -->
+ 
+      <footer class="row">
+        <div class="small-12 columns" style="background:white;height:4OOpx;"><hr>
+            <div class="row">
+ 
+              <div class="small-6 columns">
+                  <p>&copy; Copyright jet1vite 2014</p>
+                   <h6>
+        <% if logged_in? %>
+          <%= "Logged in as #{current_user.username}" %>
+            <%= link_to "(logout)", logout_path %>
+        <% else %>
+          <%= link_to "(login)", login_path %>
+        <% end %>
+      </h6>
+              </div>
+
+ 
+            </div>
+        </div>
+      </footer>
+ 
+    <!-- End Footer -->
+  </div>
+ 
+  
+<script>
+  document.write('<script src=/js/vendor/' +
+  ('__proto__' in {} ? 'zepto' : 'jquery') +
+  '.js><\/script>')
+  </script>
+  <script src="/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+
+
+
+
+
+
+</body>
+</html>

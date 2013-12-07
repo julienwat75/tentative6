@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20131128113000) do
   create_table "invitations", force: true do |t|
     t.string   "titre"
     t.text     "description"
+    t.datetime "dateinvitation"
     t.integer  "author_id"
     t.datetime "created_at"
     t.datetime "updated_at"

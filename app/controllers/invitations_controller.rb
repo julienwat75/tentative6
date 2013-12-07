@@ -40,6 +40,13 @@ def create              # le submit va chercher la methode create
 	
 
   @invitations = Invitation.new(profil_params)
+  var = params[:invitation][:dateinvitation]  # on reccupere le nom du form
+  heure=params[:heure1]
+  minute=params[:minute1]
+  seconde="00"
+  var3=var + " " + heure + ":" + minute + ":" + seconde 
+  
+  @invitations.dateinvitation = DateTime.parse(var3)
   @invitations.titre = params[:invitation][:titre]  # on reccupere le nom du form
   @invitations.description = params[:invitation][:description]  # on reccupere le nom du form
   @invitations.avatar = params[:invitation][:avatar]  # on reccupere le nom du form
@@ -51,7 +58,7 @@ def create              # le submit va chercher la methode create
 end
 
 def profil_params
-    params.require(:invitation).permit(:titre,:description,:avatar)
+    params.require(:invitation).permit(:titre,:description,:avatar,:datetime)
   end
 
 

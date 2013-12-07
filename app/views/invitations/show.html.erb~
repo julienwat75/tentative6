@@ -1,12 +1,47 @@
 <h3>Détails invitations </h3>
 
 
+<p>
+<% var=@invitation.avatar.url %>
+<% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
 
-<p><%=  @invitation.titre %> </p>
+</p>
 
- <p><%=  @invitation.description %></p>
+<img src="<%= var %>" alt="arobas" style="width:164px; height:164px;" />
 
-<p><%=  @invitation.author_id %> </p>
+
+
+<p> Titre:<%=  @invitation.titre %> </p>
+
+
+ <p> Description:<%=  @invitation.description %></p>
+
+
+<p> Mois:<%=  @invitation.dateinvitation.day %></p>
+
+
+
+<p> Mois:<%=  @invitation.dateinvitation.month %></p>
+
+
+<p>
+
+année: <%= @invitation.dateinvitation.year  %>
+</p>
+
+
+<p>
+
+heure: <%= @invitation.dateinvitation.hour  %>
+</p>
+
+<p>
+
+Minute: <%= @invitation.dateinvitation.min  %>
+</p>
+
+
+<p>id auteur<%=  @invitation.author_id %> </p>
 
 
 

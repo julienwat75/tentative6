@@ -24,6 +24,22 @@ gem 'activeresource'
 
 gem 'railties'
 
+gem 'jquery-rails'
+
+gem "jquery-ui-rails"
+
+gem 'bootstrap-sass'
+
+
+gem 'bootstrap-will_paginate'
+gem 'bootstrap-datepicker-rails' 
+gem 'rails-i18n'
+
+gem 'turbolinks'
+
+
+
+
 
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'

@@ -11,11 +11,37 @@
 
 
 
-<p><%=  @invitation.titre %> </p>
+<p> Titre:<%=  @invitation.titre %> </p>
 
- <p><%=  @invitation.description %></p>
 
-<p><%=  @invitation.author_id %> </p>
+ <p> Description:<%=  @invitation.description %></p>
+
+
+<p> Jour:<%=  @invitation.dateinvitation.day %></p>
+
+
+
+<p> Mois:<%=  @invitation.dateinvitation.month %></p>
+
+
+<p>
+
+année: <%= @invitation.dateinvitation.year  %>
+</p>
+
+
+<p>
+
+heure: <%= @invitation.dateinvitation.hour  %>
+</p>
+
+<p>
+
+Minute: <%= @invitation.dateinvitation.min  %>
+</p>
+
+
+<p>id auteur<%=  @invitation.author_id %> </p>
 
 
 

@@ -13,6 +13,8 @@ has_attached_file :avatar,
   :s3_credentials => "#{Rails.root}/config/s3.yml",
   :url => "tunes/:style/:id/:filename",
   :path => "tunes/:style/:id/:filename"
+
+
    
 
 end
