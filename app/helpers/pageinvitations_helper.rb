@@ -1,0 +1,2 @@
+module PageinvitationsHelper
+end
