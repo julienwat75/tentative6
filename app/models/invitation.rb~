@@ -2,6 +2,8 @@ class Invitation < ActiveRecord::Base
 
 attr_accessible :avatar
 
+attr_accessible :titre
+
 belongs_to :author
 
 
@@ -15,7 +17,6 @@ has_attached_file :avatar,
   :path => "tunes/:style/:id/:filename"
 
 
-date_field("invitation", "date")
    
 
 end

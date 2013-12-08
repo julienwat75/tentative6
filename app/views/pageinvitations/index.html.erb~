@@ -6,22 +6,24 @@
 
 <% @invitations2.each do |t| %>
 
+<% if t.validation  %>
+
+
+<p> 
+<b><%= t.titre  %></b>, <%= t.description  %>,<%= t.dateinvitation  %>,<%= t.author_id %>
+<%= link_to 'Show', t %>
+</p>
+
 <p>
-<% var=@invitation.avatar.url %>
+<% var=t.avatar.url %>
 <% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
 </p>
 
 <img src="<%= var %>" alt="arobas" style="width:164px; height:164px;" />
 
+<% end  %>
 
-<p> 
-<%= t.titre  %>, <%= t.description  %>,<%= t.dateinvitation  %>,<%= t.author_id %>
-<%= link_to 'Show', t %>
-</p>
-
-
-
-
+<br>
 
 <%  end  %>
 
@@ -34,6 +36,7 @@
 
  
 <a href="/pageinvitations/<%= page %>">  <%= page+1 %> </a> 
+
 
  <% page+=1 %>
  <% end %>

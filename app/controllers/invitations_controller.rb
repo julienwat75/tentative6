@@ -57,6 +57,27 @@ def create              # le submit va chercher la methode create
 
 end
 
+def update
+
+
+@invitations=Invitation.find(params[:id])
+
+@invitations.update_attributes(:validation => 'true')
+
+ redirect_to pageinvitations_path     # redirection vers l'index
+
+
+
+  end
+
+def destroy
+    @invitations=Invitation.find(params[:id])
+
+@invitations.update_attributes(:titre => 'baba')
+
+    end
+
+
 def profil_params
     params.require(:invitation).permit(:titre,:description,:avatar,:datetime)
   end

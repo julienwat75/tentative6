@@ -45,7 +45,7 @@ def create              # le submit va chercher la methode create
   minute=params[:minute1]
   seconde="00"
   var3=var + " " + heure + ":" + minute + ":" + seconde 
-  @invitations.name=var3
+  
   @invitations.dateinvitation = DateTime.parse(var3)
   @invitations.titre = params[:invitation][:titre]  # on reccupere le nom du form
   @invitations.description = params[:invitation][:description]  # on reccupere le nom du form
@@ -56,6 +56,27 @@ def create              # le submit va chercher la methode create
    redirect_to invitations_path     # redirection vers l'index
 
 end
+
+def update
+
+
+@invitations=Invitation.find(params[:id])
+
+@invitations.update_attributes(:validation => true)
+
+ redirect_to pageinvitations_path     # redirection vers l'index
+
+
+
+  end
+
+def destroy
+    @invitations=Invitation.find(params[:id])
+
+@invitations.update_attributes(:titre => 'baba')
+
+    end
+
 
 def profil_params
     params.require(:invitation).permit(:titre,:description,:avatar,:datetime)

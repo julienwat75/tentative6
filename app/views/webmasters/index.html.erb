@@ -1,14 +1,16 @@
-<%= link_to "Ajouter une proposition", new_invitation_path, class: "button" %>
-
+<h3> page webmaster  </h3>
 
 
 <% @invitations2.each do |t| %>
 
-<% if t.validation  %>
+
+<% unless t.validation %>
 
 <p> 
 <b><%= t.titre  %></b>, <%= t.description  %>,<%= t.dateinvitation  %>,<%= t.author_id %>
 <%= link_to 'Show', t %>
+
+<%= link_to 'update', t, method: :put, data: { confirm: 'Are you sure?' } %>
 </p>
 
 <p>
@@ -18,24 +20,11 @@
 
 <img src="<%= var %>" alt="arobas" style="width:164px; height:164px;" />
 
-<% end %>
+<% end  %>
+
 
 <%  end  %>
 
-
-<% page=0  %>
-
-<% while page<10 %>
-
-
-<p>
- 
-<a href="/pageinvitations/<%= page %>">  <%= page+1 %> </a> 
-
-</p>
- <% page+=1 %>
- <% end %>
- 
-
+<br>
 
 
