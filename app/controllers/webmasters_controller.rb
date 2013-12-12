@@ -15,6 +15,14 @@ a=0
 
 end
 
+def show
+
+
+@invitation=Invitation.find(params[:id])
+
+
+end 
+
 
 
 end

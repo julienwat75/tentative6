@@ -1,0 +1,6 @@
+<h1>show</h1>
+
+@invitation.titre
+
+<%= link_to 'Edit', edit_@invitation_path(@invitation) %>
+

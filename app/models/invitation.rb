@@ -1,8 +1,8 @@
 class Invitation < ActiveRecord::Base
 
-attr_accessible :avatar
 
-attr_accessible :validation
+
+attr_accessible :validation, :titre, :description, :avatar, :dateinvitation;
 
 belongs_to :author
 

@@ -57,19 +57,25 @@ def create              # le submit va chercher la methode create
 
 end
 
+def edit
+
+@invitation=Invitation.find(params[:id])
+end
+
 def update
 
-
-@invitations=Invitation.find(params[:id])
-
-@invitations.update_attributes(:validation => true)
-
- redirect_to pageinvitations_path     # redirection vers l'index
-
-
-
+@invitation = Invitation.find params[:id]
+ respond_to do |format|
+      if  @invitation.update(params[:invitation])
+          
+        format.html { redirect_to @invitation, notice: 'User was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: 'edit' }
+        format.json { render json: @invitation.errors, status: :unprocessable_entity }
+      end
+    end
   end
-
 def destroy
     @invitations=Invitation.find(params[:id])
 

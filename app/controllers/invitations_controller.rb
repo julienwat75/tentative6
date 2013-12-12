@@ -57,23 +57,37 @@ def create              # le submit va chercher la methode create
 
 end
 
+def edit
+
+@invitation=Invitation.find(params[:id])
+end
+
 def update
 
+ 
 
-@invitations=Invitation.find(params[:id])
+@invitation = Invitation.find params[:id]
+#@invitation.update_attributes(validation: 'true')
+@invitation.update_attributes(titre: params[:invitation][:titre],description: params[:invitation][:description],validation: 'true',dateinvitation: params[:invitation][:dateinvitation])
+#@invitation.update_attributes(description: params[:invitation][:description])
+#@invitation.update_attributes(avatar: params[:invitation][:avatar])
+ #@invitation.update_attributes(avatar: params[:invitation][:datetime])
 
-@invitations.update_attributes(:validation => 'true')
 
- redirect_to pageinvitations_path     # redirection vers l'index
+ redirect_to webmasters_path 
+           
+           #binding.pry 
+           #raise params.inspect 
 
 
+     
 
   end
+
 
 def destroy
     @invitations=Invitation.find(params[:id])
 
-@invitations.update_attributes(:titre => 'baba')
 
     end
 

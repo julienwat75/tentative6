@@ -9,6 +9,9 @@
 
 	<%= t.titre  %>, <%= t.description  %>,<%= t.dateinvitation  %>,<%= t.author_id %>
 	 <%= link_to 'Show', t %>
+         <%= link_to "Edit", [t], :action => 'edit' %>
+         <%= link_to 'Edit', edit_invitation_path(t) %> 
+
 
      
 

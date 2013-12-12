@@ -9,11 +9,11 @@
     <title>Blog - Business Casual Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
-
+    <!-- <link href="/css/bootstrap.css" rel="stylesheet"> -->
+   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <!-- Add custom CSS here -->
-    <link href="/css/business-casual.css" rel="stylesheet">
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+   <!--  <link href="/css/business-casual.css" rel="stylesheet">  -->
+      
     <%= javascript_include_tag "application" %>
 
   </head>
@@ -42,7 +42,18 @@
             <li><a href="about.html">About</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li>
+           <h6>
+           <% if logged_in? %>
+          <%= "Logged in as #{current_user.username}" %>
+            <%= link_to "(logout)", logout_path %>
+        <% else %>
+          <%= link_to "(login)", login_path %>
+        <% end %>
+          </h6>
+          </li>
           </ul>
+          
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav>
@@ -59,14 +70,14 @@
           <div class="col-lg-12 text-center">
             <img class="img-responsive img-border img-full" src="/img/slide-1.jpg">
             <h2>Post Title<br><small>October 13, 2013</small></h2>
-            <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <%= yield %>
             <a href="#" class="btn btn-default btn-lg">Read More</a>
             <hr>
           </div>
           <div class="col-lg-12 text-center">
             <img class="img-responsive img-border img-full" src="/img/slide-2.jpg">
             <h2>Post Title<br><small>October 13, 2013</small></h2>
-            <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.  <%= yield %>  </p>
+            <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.    </p>
             <a href="#" class="btn btn-default btn-lg">Read More</a>
             <hr>
           </div>

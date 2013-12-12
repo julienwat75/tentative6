@@ -30,6 +30,8 @@ gem "jquery-ui-rails"
 
 gem 'bootstrap-sass'
 
+gem 'pry'
+
 
 gem 'bootstrap-will_paginate'
 gem 'bootstrap-datepicker-rails' 

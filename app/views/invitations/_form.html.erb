@@ -1,0 +1,41 @@
+<%= form_for(@invitation) do |f| %>
+  <% if @invitation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@invitation.errors.count, "error") %> prohibited this author from being saved:</h2>
+
+      <ul>
+      <% @invitation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :Titre %><br />
+    <%= f.text_field :titre %>
+  </p>
+
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+  </div>
+  <p>
+    <%= f.label :Description %><br />
+    <%= f.text_area :description %>
+  </p>
+   <div class="input-append date datepicker" id="datetimepicker" value="2012-05-15 21:05"  data-date="12-12-2013" data-date-format="dd-mm-yyyy"   > 
+    <%= f.text_field :dateinvitation  %>
+   
+    <span class="add-on"><i class="icon-th"></i></span></div>
+  <div class="button" value="valider">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<script type="text/javascript">
+  $('.datepicker').datepicker()
+  $('[data-behaviour~=datepicker]').datepicker();
+</script>
+

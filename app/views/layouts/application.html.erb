@@ -42,7 +42,24 @@
             <li><a href="about.html">About</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
+             
+            
+          
+           <% if logged_in? %>
+      <li><a href="index.html"><%= current_user.username %></a></li>
+        <!-- <li><%= link_to "(logout)", logout_path %> </li>  -->
+         <!--  <li> jkjkljkljl</li>  -->
+        <% else %>
+         <li> <%= link_to "(login)", login_path %>  </li>
+          <% end %>
+
+            <% if logged_in? %>
+          <li> <%= link_to "(logout)", logout_path %>  </li>
+        <% end %>
           </ul>
+          
+          
+          
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav>

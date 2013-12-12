@@ -10,7 +10,11 @@
 <b><%= t.titre  %></b>, <%= t.description  %>,<%= t.dateinvitation  %>,<%= t.author_id %>
 <%= link_to 'Show', t %>
 
-<%= link_to 'Destroy', t, method: :put, data: { confirm: 'Are you sure?' } %>
+<%= link_to "Edit", [t], :action => 'edit' %>
+
+
+
+ 
 </p>
 
 <p>

@@ -9,8 +9,12 @@
 <p> 
 <b><%= t.titre  %></b>, <%= t.description  %>,<%= t.dateinvitation  %>,<%= t.author_id %>
 <%= link_to 'Show', t %>
+ <%= link_to 'Edit', edit_invitation_path(t) %> 
 
-<%= link_to 'update', t, method: :put, data: { confirm: 'Are you sure?' } %>
+
+
+
+ 
 </p>
 
 <p>
