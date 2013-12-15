@@ -1,0 +1,43 @@
+<%= link_to "Ajouter une proposition", new_invitation_path, class: "button" %>
+
+
+
+<% @invitations2.each do |t| %>
+
+<% if t.validation  %>
+
+<p> 
+<b><%= t.titre  %></b>, <%= t.description  %>,<%= t.dateinvitation  %>,<%= t.author_id %>
+<%= link_to 'Show', t %>
+</p>
+
+<p>
+<% var=t.avatar.url %>
+<% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
+</p>
+
+<img src="<%= var %>" alt="arobas" style="width:164px; height:164px;" />
+
+<% end %>
+
+<%  end  %>
+
+<br>
+
+
+<% page=0  %>
+
+<% while page<10 %>
+
+
+
+ 
+<a href="/pageinvitations/<%= page %>">  <%= page+1 %> </a> 
+
+
+ <% page+=1 %>
+ <% end %>
+ 
+
+
+

@@ -1,7 +1,7 @@
 <h2>Invitations gratuites </h2>
 
-<div  class="btn btn-default btn-lg" style="text-decoration:none;margin-bottom:40px;">
-<%= link_to "Ajouter une proposition", new_invitation_path %>
+<div  class="btn btn-default btn-lg" style="text-decoration:none;margin-bottom:40px;background: linear-gradient( #B9121B, #D40031);">
+<%= link_to "Ajouter une proposition", new_invitation_path , class: 'couleurblanche' %>
 </div>
 
 
@@ -78,13 +78,20 @@
 </p>
 </div>
   <div  style="padding-top:50px;"class="col-md-3"> 
-   <div  class="btn btn-default btn-lg" style="text-decoration:none;margin-bottom:40px;align:center;font-size:18px;margin-right:20px;margin-left:10px;color:white;background: linear-gradient( #B9121B, #D40031);">
-<%= link_to "Détails", t  %>
-</div>
- <div class="btn btn-default btn-lg" style="text-decoration:none;margin-bottom:40px;align:center;font-size:18px;color:#ffffff;background: linear-gradient( #B9121B, #D40031)">
-<%= link_to "Réserver", t %>
-</div>
+
+
+     <div  class="btn btn-default btn-lg" style="margin-bottom:40px;align:center;font-size:18px;margin-right:20px;margin-left:10px;color:white;background: linear-gradient( #B9121B, #D40031);">
+     <%= link_to "Détails", t , class: 'couleurblanche ' %>
+     </div>
+ 
+  
+     <div  class="btn btn-default btn-lg " style="margin-bottom:40px;align:center;font-size:18px;margin-left:10px;background: linear-gradient( #B9121B, #D40031);">
+      <%= link_to "Réserver", t , class: 'couleurblanche' %>
+     </div>
+
   </div>
+
+
 </div>
 
 
@@ -94,18 +101,28 @@
 
 <div>
 
+  <div class="row" >
+  <div  class="col-md-12" style="background:linear-gradient( #B9121B, #D40031);margin-top:20px;color:white;font-size:20px;">
+
+
   <% page=0  %>
+
 
 <% while page<10 %>
 
 
 
  
-<a href="/pageinvitations/<%= page %>">  <%= page+1 %> </a> 
+<a href="/pageinvitations/<%= page %>" style="color:white">  <%= page+1 %> </a> 
 
 
  <% page+=1 %>
  <% end %>
+</div>
+</div>  
+
+
+
 
 </div>
  

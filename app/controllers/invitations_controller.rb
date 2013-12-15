@@ -53,7 +53,7 @@ def create              # le submit va chercher la methode create
   
   @invitations.author_id =current_user.id
   @invitations.save   #on sauvegarde
-   redirect_to invitations_path     # redirection vers l'index
+   redirect_to pageinvitations_path     # redirection vers l'index
 
 end
 

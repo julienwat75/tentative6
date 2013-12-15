@@ -49,6 +49,11 @@ body {
   margin: 0;
 }
 
+.couleurblanche{
+
+  color:white;
+}
+
 a {
   background: transparent;
 }
@@ -60,6 +65,12 @@ a:focus {
 a:active,
 a:hover {
   outline: 0;
+}
+
+
+.couleurrouge{
+
+  background: linear-gradient( #B9121B, #D40031);
 }
 
 h1 {
