@@ -54,6 +54,17 @@ body {
   color:black;
 }
 
+.bouton1 {
+display:block;
+background:white;
+color:black;
+text-decoration:none;
+}
+.bouton1:hover {
+/*background:#fffff6;*/
+ background:white;
+}
+
 a {
   background: transparent;
 }
