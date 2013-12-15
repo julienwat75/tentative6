@@ -30,23 +30,32 @@
 
  <% case mois  %>
  <% when "January"  %>
- <%  jour= "Lundi" %> 
+ <%  mois= "Janvier" %> 
  <% when "Febuary"  %>
- <%  jour= "Mardi" %> 
-<% when "Mars"  %>
- <%  jour= "Mercredi" %>
-  <% when "Thursday"  %>
- <%  jour= "Jeudi" %>
-  <% when "Friday"  %>
- <%  jour= "Vendredi" %>
-  <% when "Saturday"  %>
- <%  jour= "Samedi" %> 
-  <% when "Sunday"  %>
- <%  jour= "Dimanche" %> 
+ <%  mois= "Février" %> 
+<% when "March"  %>
+ <%  mois= "Mars" %>
+  <% when "April"  %>
+ <%  mois= "Avril" %>
+  <% when "May"  %>
+ <%  mois= "Mai" %>
+  <% when "June"  %>
+ <%  mois= "Juin" %>
+  <% when "July"  %>
+ <%  mois= "Juillet" %>
+  <% when "August"  %>
+ <%  mois= "Aout" %>
+  <% when "September"  %>
+ <%  mois= "Septembre" %>
+  <% when "October"  %>
+ <%  mois= "Octobre" %>
+   <% when "November"  %>
+ <%  mois= "Novembre" %>
+  <% when "December"  %>
+ <%  mois= "Décembre" %>
 <% else  %>              
  
  <% end %>
-   
 
 
 
@@ -58,10 +67,10 @@
 
 <div class="row">
   
-   <div   class="col-md-4" style="background:pink;"><img src="<%= var %>" alt="arobas" width="100%"; height="400px" /></div>
+   <div   class="col-md-4" ><img src="<%= var %>" alt="arobas" width="100%"; height="400px" /></div>
 
     <div  class="col-md-8" > <p style="color:#5E5759">  <%= jour %>  <%= @invitation.dateinvitation.day %>  <%= mois %> <%= @invitation.dateinvitation.year  %> à <%= @invitation.dateinvitation.hour  %> H <%= @invitation.dateinvitation.min  %></p>
-    	<p style="color:#5E5759"> Theatre du temple 51 rue du temple 75018 paris  </p>
+    	<p style="color:#5E5759"> <%= @invitation.adresse %>  </p>
     	 <p> <%= @invitation.description %>  </p>
     </div>
   </div>

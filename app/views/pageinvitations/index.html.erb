@@ -50,19 +50,29 @@
 
  <% case mois  %>
  <% when "January"  %>
- <%  jour= "Lundi" %> 
+ <%  mois= "Janvier" %> 
  <% when "Febuary"  %>
- <%  jour= "Mardi" %> 
-<% when "Mars"  %>
- <%  jour= "Mercredi" %>
-  <% when "Thursday"  %>
- <%  jour= "Jeudi" %>
-  <% when "Friday"  %>
- <%  jour= "Vendredi" %>
-  <% when "Saturday"  %>
- <%  jour= "Samedi" %> 
-  <% when "Sunday"  %>
- <%  jour= "Dimanche" %> 
+ <%  mois= "Février" %> 
+<% when "March"  %>
+ <%  mois= "Mars" %>
+  <% when "April"  %>
+ <%  mois= "Avril" %>
+  <% when "May"  %>
+ <%  mois= "Mai" %>
+  <% when "June"  %>
+ <%  mois= "Juin" %>
+  <% when "July"  %>
+ <%  mois= "Juillet" %>
+  <% when "August"  %>
+ <%  mois= "Aout" %>
+  <% when "September"  %>
+ <%  mois= "Septembre" %>
+  <% when "October"  %>
+ <%  mois= "Octobre" %>
+   <% when "November"  %>
+ <%  mois= "Novembre" %>
+  <% when "December"  %>
+ <%  mois= "Décembre" %>
 <% else  %>              
  
  <% end %>
@@ -73,9 +83,7 @@
 <p style="color:#5E5759" >  <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %> <%= t.dateinvitation.year  %> à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
 
 </p>
- <p> Theatre du temple , 17 rue republique 75005 Paris  
-
-</p>
+ <p> <%= t.adresse %></p>
 </div>
   <div  style="padding-top:50px;"class="col-md-3"> 
 
