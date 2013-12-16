@@ -1,6 +1,5 @@
-<h2>Invitations gratuites </h2>
-
-<div  class="btn btn-default btn-lg" style="text-decoration:none;margin-bottom:40px;background: linear-gradient( #B9121B, #D40031);">
+<% provide(:title, "Invitations gratuites") %>
+<div  class="btn btn-default btn-lg" style="text-decoration:none;margin-bottom:40px;">
 <%= link_to "Ajouter une proposition", new_invitation_path , class: 'couleurblanche' %>
 </div>
 
@@ -11,7 +10,7 @@
 
 
 <div class="row">
-  <div style="background: linear-gradient( #B9121B, #D40031);color:white;font-size:22px;margin-top:15px;border-radius:50px 10px;"  class="col-md-12"><%= t.titre  %></div>
+  <div style="background:#e5e5e5;color:black;font-size:22px;margin-top:15px;border-radius:50px 10px;"  class="col-md-12"><%= t.titre  %></div>
   </div>
   
 <p>
@@ -48,7 +47,7 @@
  <% puts 'Only single-digit numbers are allowed' %>
  <% end %>
 
-<% case mois  %>
+ <% case mois  %>
  <% when "January"  %>
  <%  mois= "Janvier" %> 
  <% when "Febuary"  %>
@@ -83,19 +82,17 @@
 <p style="color:#5E5759" >  <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %> <%= t.dateinvitation.year  %> à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
 
 </p>
- <p> Theatre du temple , 17 rue republique 75005 Paris  
-
-</p>
+ <p> <%= t.adresse %></p>
 </div>
   <div  style="padding-top:50px;"class="col-md-3"> 
 
 
-     <div  class="btn btn-default btn-lg" style="margin-bottom:40px;align:center;font-size:18px;margin-right:20px;margin-left:10px;color:white;background: linear-gradient( #B9121B, #D40031);">
-     <%= link_to "Détails", t , class: 'couleurblanche ' %>
+     <div  class="btn btn-default btn-lg" style="">
+     <%= link_to "Détails", t , class: 'couleurblanche' %>
      </div>
  
   
-     <div  class="btn btn-default btn-lg " style="margin-bottom:40px;align:center;font-size:18px;margin-left:10px;background: linear-gradient( #B9121B, #D40031);">
+     <div  class="btn btn-default btn-lg" style="margin-left:20px">
       <%= link_to "Réserver", t , class: 'couleurblanche' %>
      </div>
 
@@ -112,7 +109,7 @@
 <div>
 
   <div class="row" >
-  <div  class="col-md-12" style="background:linear-gradient( #B9121B, #D40031);margin-top:20px;color:white;font-size:20px;">
+  <div  class="col-md-12" style="background:#e5e5e5;margin-top:20px;color:white;font-size:20px;">
 
 
   <% page=0  %>
@@ -123,7 +120,7 @@
 
 
  
-<a href="/pageinvitations/<%= page %>" style="color:white">  <%= page+1 %> </a> 
+<a href="/pageinvitations/<%= page %>" style="color:black">  <%= page+1 %> </a> 
 
 
  <% page+=1 %>
@@ -136,10 +133,6 @@
 
 </div>
  
-
-
-
-
 
 
 

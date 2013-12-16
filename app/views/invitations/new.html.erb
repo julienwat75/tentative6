@@ -1,5 +1,5 @@
 
-<h3> Proposer une invitation </h3>
+<% provide(:title, "Proposer une invitation") %>
 
 <%= form_for(@invitations) do |f| %>
   <ul>
@@ -13,7 +13,7 @@
   </p>
 
   <div class="field">
-    <%= f.label :avatar %>
+    <%= f.label :Avatar %>
     <%= f.file_field :avatar %>
   </div>
   <p>
@@ -24,15 +24,17 @@
     <%= f.label :Adresse %><br />
     <%= f.text_area :adresse %>
   </p>
-Date:
-<div class="input-append date datepicker" id="datetimepicker" value="2012-05-15 21:05"  data-date="12-12-2013" data-date-format="dd-mm-yyyy"   > 
+   <p>
+    <%= f.label :Date %><br />
+    <div class="input-append date datepicker" id="datetimepicker" value="2012-05-15 21:05"  data-date="12-12-2013" data-date-format="dd-mm-yyyy"   > 
     <%= f.text_field :dateinvitation  %>
    
     <span class="add-on"><i class="icon-th"></i></span></div>
+  </p>
 
 <br><br>
-
-
+<p>
+ <%= f.label :Heure %><br />
 <SELECT name="heure1">
 		<OPTION VALUE="15">15</OPTION>
 		<OPTION VALUE="16">16</OPTION>
@@ -52,15 +54,18 @@ H
 		<OPTION VALUE="45">45</OPTION>
 		
 	</SELECT>
+</p>
     
 
         
 <br><br>
 
 
-  <p>
+  
+   <div  class="btn btn-default btn-lg">  
     <%= f.submit %>
-  </p>
+  </div>
+  
 <% end %>
 
 
