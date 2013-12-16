@@ -6,6 +6,7 @@ MyApp::Application.routes.draw do
    resources :invitations
    resources :pageinvitations 
     resources :webmasters
+    resources :reservations 
 
    resources :authors do
   resources :commentaires
