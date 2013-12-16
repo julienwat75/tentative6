@@ -1,7 +1,7 @@
 
 <% provide(:title, "Invitations gratuites") %>
 <div  class="btn btn-default btn-lg" style="text-decoration:none;margin-bottom:40px;">
-<%= link_to "Ajouter une proposition", new_invitation_path , class: 'couleurblanche' %>
+<%= link_to "Ajouter une proposition", new_invitation_path  %>
 </div>
 
 
@@ -80,7 +80,7 @@
    
   
 
-<p style="color:#5E5759" >  <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %> <%= t.dateinvitation.year  %> à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
+<p style="color:#5E5759" >  <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
 
 </p>
  <p> <%= t.adresse %></p>
