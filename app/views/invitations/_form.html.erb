@@ -16,10 +16,7 @@
     <%= f.text_field :titre %>
   </p>
 
-  <div class="field">
-    <%= f.label :avatar %>
-    <%= f.file_field :avatar %>
-  </div>
+ 
   <p>
     <%= f.label :Description %><br />
     <%= f.text_area :description %>
@@ -55,8 +52,8 @@ H
 
         
 <br><br>
-  <div class="button" value="valider">
-    <%= f.submit %>
+  <div class="button" style="font-size:22px;" >
+    <%= f.submit 'valider' %>
   </div>
 <% end %>
 

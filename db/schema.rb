@@ -82,14 +82,16 @@ ActiveRecord::Schema.define(version: 20131216094848) do
 
   create_table "reservations", force: true do |t|
     t.integer  "nombreinvitations"
-    t.integer  "user_id"
-    t.string   "user_nom"
     t.string   "titre"
     t.string   "adresse"
     t.datetime "dateinvitation"
+    t.string   "author_nom"
+    t.integer  "author_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "reservations", ["author_id"], name: "index_reservations_on_author_id"
 
   create_table "sas", force: true do |t|
     t.datetime "created_at"

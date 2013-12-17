@@ -4,6 +4,7 @@ class Author < ActiveRecord::Base
   authenticates_with_sorcery!
    has_many :commentaires
    has_many :invitations
+   has_many :reservations
    validates_confirmation_of :password, message: "should match confirmation", if: :password
    
 has_attached_file :avatar,

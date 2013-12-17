@@ -1,0 +1,27 @@
+<% provide(:title, "Réservation") %>
+
+<div class="row" >
+  <div  class="col-md-3"></div>
+
+  <div  class="col-md-6" style="background:#e5e5e5;text-align:center;padding:20px;">
+
+<%= form_for [ @reservation ] do |f| %>
+  <div style="margin-bottom:20px;font-size:20px;">
+  <!-- <%= @invitation.titre %> -->
+  </div>
+  
+ <div style="margin-bottom:20px;font-size:20px;">
+   Nombre de places
+  <%= f.select :nombreinvitations, [['1', 1], 2] %>
+  </div>
+  <div style="font-size:22px;color:blue;">
+    <%= f.submit 'Commander' %>
+  </div>
+<% end %>
+</div>  
+
+  <div  class="col-md-3"></div>
+
+
+</div> <!-- fin du div row -->
+
