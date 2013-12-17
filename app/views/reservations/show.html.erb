@@ -10,6 +10,16 @@
   <%= @invitation.titre %>
   </div>
   
+
+   
+
+   
+   <!-- <%= f.hidden_field :titre, :value => '@invitation.titre' %> -->
+   
+   <input  type="hidden" value="<%=   @invitation.titre  %>" name="titre">
+   <input  type="hidden" value="<%=   @invitation.dateinvitation  %>" name="dateinvitation">
+  
+  
  <div style="margin-bottom:20px;font-size:20px;">
    Nombre de places
   <%= f.select :nombreinvitations, [['1', 1], 2] %>
