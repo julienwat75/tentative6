@@ -2,30 +2,26 @@
 
 
 
-<div class="row" style="background:#e5e5e5;text-align:left;
-
-
-
-">
+<div class="row" style="background:#e5e5e5;text-align:left;">
   
-   <div   class="col-xs-3" style="background:#e5e5e5" > Date </div>
+   <div   class="col-xs-4"  > Date </div>
    <div   class="col-xs-3" > Titre </div>
    <div   class="col-xs-2" > Nom   </div>
    <div   class="col-xs-2" > Code  </div>
-   <div   class="col-xs-2" > Places </div>
+   <div   class="col-xs-1" > Places </div>
 
 
 
 <% @reservations.each do |t| %>
 
-<div class="row">
+<div class="row" >
   
   
-   <div   class="col-xs-3" > <%= t.dateinvitation %> </div>
-   <div   class="col-xs-3" > <%= t.titre %>  </div>
-   <div   class="col-xs-2" > <%= t.id %> </div>
-   <div   class="col-xs-2" > <%= t.id %> </div>
-   <div   class="col-xs-2" > <%= t.nombreinvitations %> </div>
+   <div   class="col-xs-4" style="border-top: solid 1px grey;" > <%= t.dateinvitation.day %>/<%= t.dateinvitation.month %> (<%= t.dateinvitation.hour %>h<%= t.dateinvitation.min %>) </div>
+   <div   class="col-xs-3"  style="border-top: solid 1px grey;"> <%= t.titre %>  </div>
+   <div   class="col-xs-2" style="border-top: solid 1px grey;"> <%= t.id %> </div>
+   <div   class="col-xs-2" style="border-top: solid 1px grey;" > <%= t.id %> </div>
+   <div   class="col-xs-1" style="border-top: solid 1px grey;"> <%= t.nombreinvitations %> </div>
    
      
 
