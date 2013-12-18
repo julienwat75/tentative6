@@ -1,11 +1,35 @@
-<h3>index reservartions </h3>
+<% provide(:title, "Réservation") %>
+
+
+
+<div class="row" style="background:#e5e5e5;text-align:left;
+
+
+
+">
+  
+   <div   class="col-md-3" style="background:#e5e5e5" > Date </div>
+   <div   class="col-md-3" > Titre </div>
+   <div   class="col-md-2" > Nom   </div>
+   <div   class="col-md-2" > Code  </div>
+   <div   class="col-md-2" > Places </div>
+
 
 
 <% @reservations.each do |t| %>
 
-<p> 
-<%= t.id %>, <%= t.nombreinvitations %>,<%= t.titre %>,<%= t.author_id %><%= t.dateinvitation %>
- </p>
+<div class="row">
+  
+  
+   <div   class="col-md-3" > <%= t.dateinvitation %> </div>
+   <div   class="col-md-3" > <%= t.titre %>  </div>
+   <div   class="col-md-2" > <%= t.id %> </div>
+   <div   class="col-md-2" > <%= t.id %> </div>
+   <div   class="col-md-2" > <%= t.nombreinvitations %> </div>
+   
+     
+
+ </div>
 
 <%  end  %>
 
