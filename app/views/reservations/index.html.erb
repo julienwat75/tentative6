@@ -10,11 +10,11 @@
    <div   class="col-xs-2" > Code  </div>
    <div   class="col-xs-2" > Places </div>
 
-
+</div>
 
 <% @reservations.each do |t| %>
 
-<div class="row" >
+<div class="row" style="text-align:left;">
   
   
    <div   class="col-xs-4" style="border-top: solid 1px grey;" > <%= t.dateinvitation.day %>/<%= t.dateinvitation.month %> (<%= t.dateinvitation.hour %>h<%= t.dateinvitation.min %>) </div>
