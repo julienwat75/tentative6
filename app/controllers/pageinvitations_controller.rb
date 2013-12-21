@@ -5,6 +5,9 @@ def index
 a=0
 @page_suivante=a.to_i+1
 
+calcul=Invitation.all.count.to_f/2
+@nombre_pages=calcul.ceil
+
 @invitations2=Invitation.find(:all,
                      :conditions => "",
                       :order      =>  "dateinvitation",
@@ -22,6 +25,8 @@ def show
 
     a=params[:id]
     @page_suivante=a.to_i+1
+    calcul=Invitation.all.count.to_f/2
+    @nombre_pages=calcul.ceil
 
 @invitations2=Invitation.find(:all,
                      :conditions => "",

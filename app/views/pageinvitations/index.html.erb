@@ -116,12 +116,16 @@
   <% page=0  %>
 
 
-<% while page<10 %>
+<% while page< @nombre_pages %>
 
 
 
  
-<a href="/pageinvitations/<%= page %>" style="color:black">  <%= page+1 %> </a> 
+<div style="float:left;margin-right:10px">
+
+  <a href="/pageinvitations/<%= page %>" style="color:black">  <%= page+1 %> </a>
+
+   </div>
 
 
  <% page+=1 %>
@@ -136,12 +140,12 @@
 </div>
 
 
-
-            <ul class="pager">
              
-              <li class="next"><a href="/pageinvitations/<%= @page_suivante %>">Page suivante &rarr;</a></li>
-             </ul>
-
+           <!--  <ul class="pager" style="float:right;">  -->
+             
+             <!-- <li class="previous"><a href="/pageinvitations/<%= @page_suivante %>">Page suivante &rarr;</a></li> -->
+           <!--   </ul> -->
+            
 
 
 
