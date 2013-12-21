@@ -18,8 +18,8 @@ has_attached_file :avatar,
 
   def self.aleatoire
   
-    #1000 + rand(5000) 
-    1000 
+    1000 + rand(5000) 
+    
   end
 
 
