@@ -2,7 +2,7 @@ class PageinvitationsController < ApplicationController
 
 def index
 
-a=0
+a=1
 @page_suivante=a.to_i+1
 
 calcul=Invitation.all.count.to_f/5
@@ -12,7 +12,7 @@ calcul=Invitation.all.count.to_f/5
                      :conditions => "",
                       :order      =>  "dateinvitation",
                       :limit      =>  5,
-                       :offset      =>  a*5)     # numero de page qu on souhaite afficher
+                       :offset      =>  a.to_i*5)     # numero de page qu on souhaite afficher
  
 
 end
