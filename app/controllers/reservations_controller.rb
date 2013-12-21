@@ -1,5 +1,17 @@
 class ReservationsController < ApplicationController
 
+	before_filter :zero_authors_or_authenticated, except: [:index]	
+
+
+
+def zero_authors_or_authenticated
+  unless Invitation.count == 0 || current_user
+    redirect_to login_path
+    return false
+  end
+end
+
+
 def index
 
 	@reservations=Reservation.all
@@ -16,6 +28,8 @@ def new
 	end
 
 	def show
+
+	
 
 
 	@reservation=Reservation.new
@@ -36,12 +50,15 @@ def new
        #raise params.inspect 
 
   #@reservations = Reservation.new(params[:reservation])
+  code1=Invitation.aleatoire
+  
  @reservations = Reservation.new(reservation_params)
  
   @reservations.nombreinvitations=params[:reservation][:nombreinvitations] 
   @reservations.titre=params[:titre]   # ici on recupere directement le champ du form ds l'id car ce n est pas un f.text_field 
   @reservations.dateinvitation=params[:dateinvitation]   
   @reservations.author_id =current_user.id
+  @reservations.code=code1
   @reservations.save   #on sauvegarde
    redirect_to reservations_path   
 
