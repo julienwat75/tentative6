@@ -5,14 +5,14 @@ def index
 a=0
 @page_suivante=a.to_i+1
 
-calcul=Invitation.all.count.to_f/2
+calcul=Invitation.all.count.to_f/5
 @nombre_pages=calcul.ceil
 
 @invitations2=Invitation.find(:all,
                      :conditions => "",
                       :order      =>  "dateinvitation",
-                      :limit      =>  2,
-                       :offset      =>  a*2)     # numero de page qu on souhaite afficher
+                      :limit      =>  5,
+                       :offset      =>  a*5)     # numero de page qu on souhaite afficher
  
 
 end
@@ -25,14 +25,14 @@ def show
 
     a=params[:id]
     @page_suivante=a.to_i+1
-    calcul=Invitation.all.count.to_f/2
+    calcul=Invitation.all.count.to_f/5
     @nombre_pages=calcul.ceil
 
 @invitations2=Invitation.find(:all,
                      :conditions => "",
                       :order      =>  "dateinvitation",
-                      :limit      =>  2,
-                       :offset      =>  a.to_i*2)     # a.to_i converti la string en int
+                      :limit      =>  5,
+                       :offset      =>  a.to_i*5)     # a.to_i converti la string en int
  
 
   end
