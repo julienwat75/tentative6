@@ -2,7 +2,8 @@ class PageinvitationsController < ApplicationController
 
 def index
 
-a=1
+#a=1
+ a=params[:id]
 @page_suivante=a.to_i+1
 
 calcul=Invitation.all.count.to_f/5
