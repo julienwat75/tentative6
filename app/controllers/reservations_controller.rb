@@ -58,6 +58,8 @@ def new
   @reservations.titre=params[:titre]   # ici on recupere directement le champ du form ds l'id car ce n est pas un f.text_field 
   @reservations.dateinvitation=params[:dateinvitation]   
   @reservations.author_id =current_user.id
+  @reservations.author_nom =current_user.nom
+  @reservations.author_prenom =current_user.prenom
   @reservations.code=code1
   @reservations.save   #on sauvegarde
    redirect_to reservations_path   
