@@ -9,6 +9,7 @@ def index
 calcul=Invitation.all.count.to_f/5
 @nombre_pages=calcul.ceil
 
+
 @invitations2=Invitation.find(:all,
                      :conditions => "",
                       :order      =>  "dateinvitation",

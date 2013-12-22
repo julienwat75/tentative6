@@ -22,6 +22,10 @@ has_attached_file :avatar,
     
   end
 
+  def self.late(dates)
+    DateTime.now < dates
+  end
+
 
    
 

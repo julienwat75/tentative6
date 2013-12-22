@@ -6,7 +6,7 @@
 
 <% @invitations2.each do |t| %>
 
-<% if t.validation  %>
+<% if t.validation && Invitation.late(t.dateinvitation) %>
 
 
 <div class="row">
@@ -102,7 +102,11 @@
 </div>
 
 
-   <% end  %>
+   <% else %>
+   
+   <% t.update_attributes(validation: 'false') %>
+
+   <% end %>
 
 <%  end  %>
 
