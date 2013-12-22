@@ -86,6 +86,10 @@
             <ul class="pager">
              <li class="previous"> <%= link_to "<  Invitations", pageinvitations_path  %> </li>
               
+                <% if logged_in? && (current_user.id == 2 || current_user.id == 9 ) %>
+                <li class="next"> <%= link_to "Filtre Invitations", webmasters_path  %> </li>
+              <% end %>
+              
             </ul>
           </div>
         </div>

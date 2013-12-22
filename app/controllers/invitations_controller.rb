@@ -1,7 +1,7 @@
 class InvitationsController < ApplicationController
 
 
-before_filter :zero_authors_or_authenticated, except: [:index]	
+before_filter :zero_authors_or_authenticated, except: [:index,:show]	
 
 
 

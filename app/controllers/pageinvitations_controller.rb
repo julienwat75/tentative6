@@ -3,6 +3,7 @@ class PageinvitationsController < ApplicationController
 def index
 
 #a=1
+@user=current_user
  a=params[:id]
 @page_suivante=a.to_i+1
 
