@@ -2,12 +2,15 @@
 
 
 
+
 <div class="row" style="background:#e5e5e5;text-align:left;">
   
-   <div   class="col-xs-3"  > Date </div>
-   <div   class="col-xs-3" > Titre </div>
-   <div   class="col-xs-2" > Nom   </div>
-   <div   class="col-xs-2" > Code  </div>
+   <div   class="col-xs-3"  > Lieu </div>
+   <div   class="col-xs-3" > Nom </div>
+   <div   class="col-xs-3" > Code  </div>
+   <div   class="col-xs-3" >  </div>
+   
+   
    
 
 </div>
@@ -17,10 +20,12 @@
 <div class="row" style="text-align:left;overflow:hidden;">
   
   
-   <div   class="col-xs-3" style="border-top: solid 1px grey;" > <%= t.dateinvitation.day %>/<%= t.dateinvitation.month %> (<%= t.dateinvitation.hour %>h<%= t.dateinvitation.min %>) </div>
-   <div   class="col-xs-3"  style="border-top: solid 1px grey;"> <%= t.titre %>  </div>
-   <div   class="col-xs-2" style="border-top: solid 1px grey;overflow:hidden;"> <%= t.author_nom %> </div>
-   <div   class="col-xs-2" style="border-top: solid 1px grey;" >  <%= link_to "Détails", t  %> </div>
+   <div   class="col-xs-3" style="border-top: solid 1px grey;" > <%= t.id %> </div>
+   <div   class="col-xs-3"  style="border-top: solid 1px grey;"> <%= t.author_nom %>  </div>
+   <div   class="col-xs-3" style="border-top: solid 1px grey;overflow:hidden;"> <%= t.code %> </div>
+   <div   class="col-xs-3" style="border-top: solid 1px grey;" >  <%= link_to "Détails", detailresa_path(t.id)   %> </div>
+
+   
    
    
      

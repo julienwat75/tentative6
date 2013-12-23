@@ -1,1 +1,45 @@
-<h3> show détails </h3>
+<% provide(:title, "Détails Réservation") %>
+
+<% t=@reservation  %>
+
+
+
+  <div class="field" style="font-size:18px;">
+   <font style="color:black;">  Date: </font>
+    <%= t.dateinvitation.day %>/<%= t.dateinvitation.month %> 
+  </div>
+  <div class="field" style="font-size:18px;">
+   <font style="color:black;"> Heure: </font>
+    <%= t.dateinvitation.hour %>h<%= t.dateinvitation.min %>
+  </div>
+
+  <div class="field" style="font-size:18px;">
+   <font style="color:black;"> Lieu: </font>
+    <%= t.adresse  %> 
+  </div>
+  <div class="field" style="font-size:18px;">
+   <font style="color:black;"> Titre: </font>
+    <%= t.titre  %> 
+  </div>
+  <div class="field" style="font-size:18px;">
+   <font style="color:black;">  Nom:</font>
+    <%= t.author_nom  %> 
+  </div>
+  <div class="field" style="font-size:18px;">
+   <font style="color:black;">  Places: </font>
+    <%= t.nombreinvitations %> 
+  </div>
+  <div class="field" style="font-size:18px;">
+   <font style="color:black;">  Code: </font>
+    <%= t.code %> 
+  </div>
+
+
+
+
+
+
+
+
+
+  
