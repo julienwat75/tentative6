@@ -56,7 +56,7 @@ end
 def create              # le submit va chercher la methode create
   @authors = Author.new(author_params)
    #@authors = Author.new(params[:author]) 
-  #@authors.username = params[:author][:username]  # on reccupere le nom du form
+  @authors.username = params[:author][:username]  # on reccupere le nom du form
   @authors.email = params[:author][:email] # on reccupere le body du form 
   @authors.password = params[:author][:password] # on reccupere le body du form 
   @authors.password_confirmation = params[:author][:password_confirmation] # on reccupere le b
