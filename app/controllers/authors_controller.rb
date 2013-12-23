@@ -57,13 +57,10 @@ def create              # le submit va chercher la methode create
   @authors = Author.new(author_params)
   
   @authors.username = params[:author][:username]  # on reccupere le nom du form
-  #@authors.email = params[:author][:email] # on reccupere le body du form 
+  @authors.email = params[:author][:email] # on reccupere le body du form 
   @authors.password = params[:author][:password] # on reccupere le body du form 
   @authors.password_confirmation = params[:author][:password_confirmation] # on reccupere le b
   @authors.avatar = params[:author][:avatar] # on reccupere le body 
-  @authors.nom = params[:author][:nom]
-  @authors.prenom =  params[:author][:prenom]
-  @authors.sexe =  params[:author][:sexe]
   @authors.save   #on sauvegarde
    redirect_to authors_path     # redirection vers l'index
 
