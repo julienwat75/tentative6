@@ -62,7 +62,7 @@ def create              # le submit va chercher la methode create
   @authors.avatar = params[:author][:avatar] # on reccupere le body 
   @authors.nom = params[:author][:nom]
   @authors.prenom = params[:author][:prenom] 
-  @authors.sexe = params[:author][:sexe]  
+  @authors.sexe = "androgine" 
   @authors.save   #on sauvegarde
    redirect_to authors_path     # redirection vers l'index
 
