@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131223022524) do
+ActiveRecord::Schema.define(version: 20131223220213) do
 
   create_table "authors", force: true do |t|
     t.string   "username",            null: false
@@ -39,6 +39,11 @@ ActiveRecord::Schema.define(version: 20131223022524) do
   end
 
   add_index "commentaires", ["author_id"], name: "index_commentaires_on_author_id"
+
+  create_table "detailresas", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "invitations", force: true do |t|
     t.string   "titre"
