@@ -6,7 +6,8 @@ class ReservationsController < ApplicationController
 
 def zero_authors_or_authenticated
   unless Invitation.count == 0 || current_user
-    redirect_to login_path
+    redirect_to new_author_path
+    #redirect_to login_path
     return false
   end
 end
