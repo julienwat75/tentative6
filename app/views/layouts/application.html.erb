@@ -39,13 +39,13 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to "Invitations", pageinvitations_path %></li>
-            
+            <li><a href="contact.html">Concept</a></li>
             <li><a href="contact.html">Contact</a></li>
              
             
           
            <% if logged_in? %>
-      <li><a href="index.html"><%= current_user.username %></a></li>
+      <li><a href="index.html"><%= current_user.email %></a></li>
         <!-- <li><%= link_to "(logout)", logout_path %> </li>  -->
          <!--  <li> jkjkljkljl</li>  -->
         <% else %>
@@ -85,7 +85,7 @@
             <ul class="pager">
              <li class="previous"> <%= link_to "<  Invitations", pageinvitations_path  %> </li>
               
-                <% if logged_in? && (current_user.id == 2 || current_user.id == 38 ) %>
+                <% if logged_in? && (current_user.id == 3  %>
                 <li class="next"> <%= link_to "Filtre Invitations", webmasters_path  %> </li>
               <% end %>
               
