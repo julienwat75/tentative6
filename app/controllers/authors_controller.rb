@@ -61,7 +61,7 @@ def create              # le submit va chercher la methode create
   @authors.password_confirmation = params[:author][:password_confirmation] # on reccupere le b
   @authors.avatar = params[:author][:avatar] # on reccupere le body 
   @authors.nom = params[:author][:nom]
-  @authors.prenom = "andro"
+  @authors.prenom = "androgine"
   @authors.sexe = "androgine" 
   @authors.save   #on sauvegarde
    redirect_to authors_path     # redirection vers l'index
