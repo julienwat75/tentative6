@@ -38,9 +38,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><%= link_to "Invitations", pageinvitations_path %></li>
+            
             <li><a href="contact.html">Contact</a></li>
              
             
@@ -50,11 +49,11 @@
         <!-- <li><%= link_to "(logout)", logout_path %> </li>  -->
          <!--  <li> jkjkljkljl</li>  -->
         <% else %>
-         <li> <%= link_to "(login)", login_path %>  </li>
+         <li> <%= link_to "(Connexion)", login_path %>  </li>
           <% end %>
 
             <% if logged_in? %>
-          <li> <%= link_to "(logout)", logout_path %>  </li>
+          <li> <%= link_to "(Déconnexion)", logout_path %>  </li>
         <% end %>
           </ul>
           
