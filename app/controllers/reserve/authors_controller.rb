@@ -54,12 +54,17 @@ end
 
 
 def create              # le submit va chercher la methode create
-  @authors = Author.new(author_params)
-  @authors.username = params[:author][:username]  # on reccupere le nom du form
+  #@authors = Author.new(author_params)
+   #@authors = Author.new(params[:author]) 
+  #@authors.username = params[:author][:username]  # on reccupere le nom du form
   @authors.email = params[:author][:email] # on reccupere le body du form 
   @authors.password = params[:author][:password] # on reccupere le body du form 
   @authors.password_confirmation = params[:author][:password_confirmation] # on reccupere le b
   @authors.avatar = params[:author][:avatar] # on reccupere le body 
+  @authors.nom = params[:author][:nom]
+  @authors.prenom = "androgine"
+  @authors.sexe = "androgine" 
+  @authors.nom_resa = "androgine"
   @authors.save   #on sauvegarde
    redirect_to authors_path     # redirection vers l'index
 
@@ -72,7 +77,7 @@ end
   def update
     respond_to do |format|
       if @author.update(author_params)
-        format.html { redirect_to @author, notice: 'Author was successfully updated.' }
+        format.html { redirect_to authors_path, notice: 'Author was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -99,6 +104,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def author_params
-      params.require(:author).permit(:username, :email, :password, :password_confirmation, :avatar)
+      params.require(:author).permit(:username, :email, :password, :password_confirmation, :avatar, :nom , :prenom, :sexe, :nom_resa)
     end
 end
