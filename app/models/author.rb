@@ -1,6 +1,10 @@
 class Author < ActiveRecord::Base
 
-  attr_accessible :username, :email, :avatar, :nom, :prenom, :password, :password_confirmation, :sexe
+  attr_accessible :username, :email, :avatar, :nom, :prenom, :password, :password_confirmation, :sexe, :nom_resa;
+
+  
+
+
   authenticates_with_sorcery!
    has_many :commentaires
    has_many :invitations
