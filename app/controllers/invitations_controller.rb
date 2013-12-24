@@ -49,7 +49,7 @@ def create              # le submit va chercher la methode create
   @invitations.dateinvitation = DateTime.parse(var3)
   @invitations.titre = params[:invitation][:titre]  # on reccupere le nom du form
   @invitations.description = params[:invitation][:description]  # on reccupere le nom du form
-  @invitations.adresse = params[:invitation][:adresse]  # on reccupere le nom du form 
+  @invitations.adresse = params[:adresse]  # on reccupere le nom du form 
   @invitations.avatar = params[:invitation][:avatar]  # on reccupere le nom du form
   
   @invitations.author_id =current_user.id
