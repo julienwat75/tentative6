@@ -42,6 +42,7 @@ end
   # GET /authors/new
   def new
     @author = Author.new
+    @faux=@author.errors.any?
   end
 
   # GET /authors/1/edit
@@ -66,7 +67,9 @@ def create              # le submit va chercher la methode create
   if @authors.save   #on sauvegarde
    redirect_to authors_path     # redirection vers l'index
    else
-     redirect_to new_author_path 
+    @faux=@authors.errors.any?
+     @author = @authors
+     render 'new'
     end
 
 end

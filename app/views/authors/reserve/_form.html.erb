@@ -1,3 +1,7 @@
+
+
+
+
 <%= form_for(@author) do |f| %>
   <% if @author.errors.any? %>
     <div id="error_explanation">
@@ -11,32 +15,26 @@
     </div>
   <% end %>
 
+  
   <div class="field">
-    <%= f.label :username %><br>
+    <%= f.label :Nom   %><br>
+     <%= f.text_field :email  %> 
+    
+  </div>
+  
+  <div class="field">
+    <%= f.label :Email %><br>
     <%= f.text_field :username %>
   </div>
-  <div class="field" style="margin-top:20px;margin-bottom:20px;">
-  <%= f.label :homme %> 
-  <%= f.radio_button :sexe, 'homme', checked: true %>
-  <%= f.label :femme %> 
-  <%= f.radio_button :sexe, 'femme' %>
-  
-  </div>
+ 
   <div class="field">
    
   </div>
 <div class="field">
-    <%= f.label :avatar %>
+    <%= f.label :Photo %>
     <%= f.file_field :avatar %>
   </div>
-  <div class="field">
-    <%= f.label :nom %>(Attention)<br>
-    <%= f.text_field :nom %>
-  </div>
-  <div class="field">
-    <%= f.label :prenom %><br>
-    <%= f.text_field :prenom %>
-  </div>
+  
   <div class="field">
     <%= f.label :password %><br>
     <%= f.password_field :password %>
@@ -45,10 +43,11 @@
     <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation %>
   </div>
-  <div class="actions" style="margin-top:20px;">
-    <%= f.submit %>
+  <div class="actions" style="margin-top:20px;font-size:20px;">
+    <%= f.submit "valider" %>
   </div>
 <% end %>
+
 
 
 
