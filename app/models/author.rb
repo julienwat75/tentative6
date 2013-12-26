@@ -2,6 +2,17 @@ class Author < ActiveRecord::Base
 
   attr_accessible :username, :email, :avatar, :nom, :prenom, :password, :password_confirmation, :sexe, :nom_resa
 
+  validates :email,  presence: true, length: { maximum: 5 }
+
+  validates :password,  presence: true, length: { minimum: 5,maximum: 10 } 
+
+
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+  validates :username, presence: true, format: { with: VALID_EMAIL_REGEX },uniqueness: {case_sensitive: false}
+
+  before_save { self.username = username.downcase }
+
   
 
 
