@@ -60,7 +60,7 @@ def new
   @reservations.dateinvitation=params[:dateinvitation] 
   @reservations.adresse=params[:adresse]   
   @reservations.author_id =current_user.id
-  @reservations.pseudo =current_user.email
+  #@reservations.pseudo =current_user.email
   @reservations.author_nom =current_user.nom
   @reservations.author_prenom =current_user.prenom
   @reservations.sexe =current_user.sexe
