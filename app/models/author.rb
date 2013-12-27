@@ -2,9 +2,13 @@ class Author < ActiveRecord::Base
 
   attr_accessible :username, :email, :avatar, :nom, :prenom, :password, :password_confirmation, :sexe, :nom_resa
 
-  validates :email,  presence: true, length: { maximum: 5 }
+  validates :email,  presence: true, length: { minimum: 5, maximum: 9 } 
 
   validates :password,  presence: true, length: { minimum: 5,maximum: 10 } 
+
+  validates :nom,  presence: true
+
+  validates :prenom,  presence: true
 
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

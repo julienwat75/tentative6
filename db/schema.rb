@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131223220213) do
+ActiveRecord::Schema.define(version: 20131227004145) do
 
   create_table "authors", force: true do |t|
     t.string   "username",            null: false
@@ -100,6 +100,8 @@ ActiveRecord::Schema.define(version: 20131223220213) do
     t.datetime "updated_at"
     t.integer  "code"
     t.string   "author_prenom"
+    t.string   "pseudo"
+    t.string   "sexe"
   end
 
   add_index "reservations", ["author_id"], name: "index_reservations_on_author_id"
