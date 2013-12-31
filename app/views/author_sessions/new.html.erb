@@ -1,5 +1,9 @@
 <% provide(:title, "Se connecter") %>
 
+<div class="row"  >
+  <div  class="col-xs-0  col-md-4" ></div>
+  <div  class="col-xs-12 col-md-4" >
+
 
 <%= form_tag author_sessions_path, method: :post do %>
   <div class="field">
@@ -16,6 +20,10 @@
     <%= submit_tag "Connexion" %>
   </div>
 <% end %>
+
+</div>
+<div  class="col-xs-0  col-md-4" ></div>
+</div>
 
 
 
