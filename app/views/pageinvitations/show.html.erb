@@ -1,7 +1,11 @@
 <% provide(:title, "Invitations gratuites") %>
+
+<% if @user && @user.id == 3  %>
+
 <div  class="btn btn-default btn-lg" style="text-decoration:none;margin-bottom:40px;">
 <%= link_to "Ajouter une proposition", new_invitation_path  %>
 </div>
+<% end %>
 
 
 <% @invitations2.each do |t| %>
@@ -9,22 +13,7 @@
 <% if t.validation && Invitation.late(t.dateinvitation) %>
 
 
-<div class="row">
-  <div style="background:#e5e5e5;color:black;font-size:22px;margin-top:15px;border-radius:50px 10px;"  class="col-md-12"><%= t.titre  %></div>
-  </div>
-  
-<p>
-<% var=t.avatar.url %>
-<% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
-</p>
-
-
-<div class="row" >
-  <div  class="col-md-3"><img src="<%= var %>" alt="arobas" style="width:184px; height:184px;" />
-</div>
-  <div style="padding-top:30px;font-size:16px;" class="col-md-6"><p> 
-
-  <% jour=t.dateinvitation.strftime("%A") %>  
+ <% jour=t.dateinvitation.strftime("%A") %>  
 
   <% mois=t.dateinvitation.strftime("%B")  %>
 
@@ -75,31 +64,60 @@
 <% else  %>              
  
  <% end %>
-   
-   
+
+
+
+<div class="row">
+  <div  class="col-xs-0 col-md-4"></div>
+  <div style="background:grey;margin-top:20px;color:white;font-size:18px;border-radius:10px 10px 0px 0px;"  class="col-xs-12 col-md-4"><div style="font-size:16px;">  <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %></div><b><%= t.adresse %></b></div>
+   <div  class="col-xs-0 col-md-4"></div>
+  </div>
   
 
-<p style="color:#5E5759" >  <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
+<% var=t.avatar.url %>
+<% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
 
-</p>
- <p> <%= t.adresse %></p>
+
+
+<div class="row" >
+  <div  class="col-xs-0  col-md-4" ></div>
+  <div  class="col-xs-12 col-md-4" ><img src="<%= var %>" alt="arobas" style="width:100%;height:230px;" /></div>
+  <div  class="col-xs-0  col-md-4"></div>
+
 </div>
-  <div  style="padding-top:50px;"class="col-md-3"> 
 
 
-     <div  class="btn btn-default btn-lg" style="">
+<div class="row" >
+  <div  class="col-xs-3"></div>
+  <div  class="col-xs-6"></div>
+  <div  class="col-xs-3"></div>
+</div>
+
+
+
+<div class="row"  >
+  <div  class="col-xs-0  col-md-4" ></div>
+  <div  class="col-xs-12 col-md-4" ><div  class="btn btn-default btn-lg" style="width:100%">
      <%= link_to "Détails", t  %>
-     </div>
+     </div></div>
+  <div  class="col-xs-0  col-md-4"></div>
+
+</div>
+
+<div class="row" >
+  <div  class="col-xs-0  col-md-4" ></div>
+  <div  class="col-xs-12 col-md-4" > <div  class="btn btn-default btn-lg" style="width:100%">
+      <%= link_to "Réserver", reservation_path(t.id)   %>
+     </div></div>
+  <div  class="col-xs-0  col-md-4"></div>
+
+</div>
+
+
+ 
  
   
-     <div  class="btn btn-default btn-lg" style="margin-left:20px">
-    <%= link_to "Réserver", reservation_path(t.id)   %>
-     </div>
-
-  </div>
-
-
-</div>
+    
 
 
    <% else %>
@@ -125,21 +143,23 @@
 
  
 
-<a href="/pageinvitations/<%= page %>" style="color:black;margin-right:10px">  <%= page+1 %> </a> 
+
+  <a href="/pageinvitations/<%= page %>" style="color:black;margin-right:10px">  <%= page+1 %> </a>
+
+   
 
 
  <% page+=1 %>
  <% end %>
+
+
+
 </div>
+
+
 </div>  
-
-
-
-
 </div>
- 
-
- 
 
 
+             
 
