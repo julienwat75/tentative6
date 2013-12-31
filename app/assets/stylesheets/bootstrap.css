@@ -53,10 +53,55 @@ body {
      
      
      padding:3px;
+
      box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7); 
      
-      background-image: linear-gradient(#E5E5E5, #CFCFCF);
+      background-color:white;
+
+      margin-top:20px;
+
+      color:black;
+
+      font-size:18px;
+
+      border-radius:1px 1px 0px 0px;
+
         }
+
+        .vignette{
+
+          background:white;
+
+          box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);
+
+          padding-bottom:15px;
+     
+     
+     
+    
+      
+        }
+
+        .monbouton{
+
+        width:100%;
+
+        box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);
+
+        margin-top: 15px;
+
+        }
+
+        .description{
+
+        width:100%;
+         background:white;
+        box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);
+
+        }
+
+
+
 
 .couleurblanche{
 
