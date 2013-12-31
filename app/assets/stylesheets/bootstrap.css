@@ -72,12 +72,15 @@ body {
 
         .vignette{
 
-          background:white;
-
-          box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);
-
+          
+           padding:0px;
+          
           padding-bottom:15px;
-     
+
+           padding-top:15px;
+          
+           box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7); 
+    
      
      
     
@@ -88,7 +91,7 @@ body {
 
         width:100%;
 
-        box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);
+       
 
         margin-top: 15px;
 
@@ -98,8 +101,7 @@ body {
 
         width:100%;
 
-        box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);
-
+        
         margin-top: 5px;
 
         }
