@@ -1,8 +1,6 @@
-<% provide(:title, "Détails invitation") %>
+<% provide(:title, @invitation.titre) %>
 
-<div class="row">
-  <div style="background: #e5e5e5;color:black;font-size:22px;margin-top:15px;border-radius:50px 10px;"  class="col-md-12"><%= @invitation.titre  %></div>
-  </div>
+
 
 
 <% jour=@invitation.dateinvitation.strftime("%A") %>  
@@ -57,27 +55,47 @@
  
  <% end %>
 
+ <div class="row">
+  <div  class="col-xs-0 col-md-4"></div>
+  <div style="background:#5C5858;margin-top:20px;color:white;font-size:18px;border-radius:10px 10px 0px 0px;"  class="col-xs-12 col-md-4"><div style="font-size:16px;">  <%= jour %>  <%= @invitation.dateinvitation.day %>  <%= mois %>  à <%= @invitation.dateinvitation.hour  %> H <%= @invitation.dateinvitation.min  %></div><b><%= @invitation.adresse %></b></div>
+   <div  class="col-xs-0 col-md-4"></div>
+  </div>
+  
 
-
-<p>
 <% var=@invitation.avatar.url %>
 <% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
 
-</p>
 
-<div class="row">
-  
-   <div   class="col-md-4" ><img src="<%= var %>" alt="arobas" width="100%"; height="400px" /></div>
 
-    <div  class="col-md-5" > <p style="color:#5E5759">  <%= jour %>  <%= @invitation.dateinvitation.day %>  <%= mois %>  à <%= @invitation.dateinvitation.hour  %> H <%= @invitation.dateinvitation.min  %></p>
-    	<p style="color:#5E5759"> <%= @invitation.adresse %>  </p>
-    	 <p> <%= @invitation.description %>  </p>
-    </div>
-    <div  class="col-md-3" >   <div  class="btn btn-default btn-lg" >
-     <%= link_to "Réserver", reservation_path(@invitation.id)   %>
-     </div> 
-   </div>
-  </div>
+<div class="row" >
+  <div  class="col-xs-0  col-md-4" ></div>
+  <div  class="col-xs-12 col-md-4" ><img src="<%= var %>" alt="arobas" style="width:100%;height:230px;" /></div>
+  <div  class="col-xs-0  col-md-4"></div>
+
+</div>
+
+
+<div class="row"  >
+  <div  class="col-xs-0  col-md-4" ></div>
+  <div  class="col-xs-12 col-md-4" ><p><%= @invitation.description %></p> </div>
+  <div  class="col-xs-0  col-md-4"></div>
+
+</div>
+
+<div class="row" >
+  <div  class="col-xs-0  col-md-4" ></div>
+  <div  class="col-xs-12 col-md-4" > <div  class="btn btn-default btn-lg" style="width:100%">
+      <%= link_to "Réserver", reservation_path(@invitation.id)   %>
+     </div></div>
+  <div  class="col-xs-0  col-md-4"></div>
+
+</div>
+
+
+
+
+
+
 
 
 
