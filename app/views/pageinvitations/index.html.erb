@@ -140,7 +140,8 @@
 <div>
 
   <div class="row" >
-  <div  class="col-md-12" style="margin-top:20px;color:white;font-size:20px;">
+    <div  class="col-xs-0 col-md-4 col-lg-4"></div> 
+  <div  class="col-xs-12 col-md-4 col-lg-4" style="margin-top:20px;color:white;font-size:20px;align:center;">
 
 
   <% page=0  %>
@@ -153,7 +154,7 @@
  
 
 
-  <a href="/pageinvitations/<%= page %>" style="color:black;margin-right:10px">  <%= page+1 %> </a>
+  <div class="changepage"> <a href="/pageinvitations/<%= page %>" style="color:black">  <%= page+1 %> </a></div>
 
    
 
@@ -161,7 +162,7 @@
  <% page+=1 %>
  <% end %>
 
-
+<div  class="col-xs-0 col-md-4 col-lg-4"></div> 
 
 </div>
 

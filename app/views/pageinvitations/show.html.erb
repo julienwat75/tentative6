@@ -2,8 +2,14 @@
 
 <% if @user && @user.id == 3  %>
 
-<div  class="btn btn-default btn-lg" style="text-decoration:none;margin-bottom:40px;">
+<div class="row">
+  <div  class="col-xs-0 col-md-4"></div>
+  <div  class="col-xs-12 col-md-4 " >
+<div  class="btn btn-default btn-lg" style="text-decoration:none;margin-bottom:40px;align:center;">
 <%= link_to "Ajouter une proposition", new_invitation_path  %>
+</div>
+</div>
+ <div  class="col-xs-0 col-md-4"></div>
 </div>
 <% end %>
 
@@ -107,7 +113,7 @@
 <div class="row" >
   <div  class="col-xs-0  col-md-4" ></div>
   <div  class="col-xs-12 col-md-4" > <div  class="btn btn-default btn-lg monbouton2">
-      <%= link_to "Réserver", reservation_path(t.id),:class => 'couleurnoir'   %>
+      <%= link_to "Réserver", reservation_path(t.id) ,:class => 'couleurnoir'   %>
      </div></div>
   <div  class="col-xs-0  col-md-4"></div>
 
@@ -116,6 +122,8 @@
 
  
  
+
+    
   
     
 
@@ -131,7 +139,8 @@
 <div>
 
   <div class="row" >
-  <div  class="col-md-12" style="margin-top:20px;color:white;font-size:20px;">
+    <div  class="col-xs-0 col-md-4 col-lg-4"></div> 
+  <div  class="col-xs-12 col-md-4 col-lg-4" style="margin-top:20px;color:white;font-size:20px;align:center;">
 
 
   <% page=0  %>
@@ -144,7 +153,7 @@
  
 
 
-  <a href="/pageinvitations/<%= page %>" style="color:black;margin-right:10px">  <%= page+1 %> </a>
+  <div class="changepage"> <a href="/pageinvitations/<%= page %>" style="color:black">  <%= page+1 %> </a></div>
 
    
 
@@ -152,7 +161,7 @@
  <% page+=1 %>
  <% end %>
 
-
+<div  class="col-xs-0 col-md-4 col-lg-4"></div> 
 
 </div>
 
@@ -160,8 +169,6 @@
 </div>  
 </div>
 
-
-             
            <!--  <ul class="pager" style="float:right;">  -->
              
              <!-- <li class="previous"><a href="/pageinvitations/<%= @page_suivante %>">Page suivante &rarr;</a></li> -->
