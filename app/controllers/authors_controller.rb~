@@ -42,6 +42,7 @@ end
   # GET /authors/new
   def new
     @author = Author.new
+    @faux=@author.errors.any?
   end
 
   # GET /authors/1/edit
@@ -55,18 +56,24 @@ end
 
 def create              # le submit va chercher la methode create
   @authors = Author.new(author_params)
-   #@authors = Author.new(params[:author]) 
-  #@authors.username = params[:author][:username]  # on reccupere le nom du form
+  
+  @authors.username = params[:author][:username]  # on reccupere le nom du form
   @authors.email = params[:author][:email] # on reccupere le body du form 
   @authors.password = params[:author][:password] # on reccupere le body du form 
   @authors.password_confirmation = params[:author][:password_confirmation] # on reccupere le b
   @authors.avatar = params[:author][:avatar] # on reccupere le body 
   @authors.nom = params[:author][:nom]
-  @authors.prenom = "androgine"
-  @authors.sexe = "androgine" 
-  @authors.nom_resa = "androgine"
-  @authors.save   #on sauvegarde
+  @authors.prenom = params[:author][:prenom]
+  @authors.sexe = params[:author][:sexe]
+  
+
+  if @authors.save   #on sauvegarde
    redirect_to authors_path     # redirection vers l'index
+   else
+    @faux=@authors.errors.any?
+     @author = @authors
+     render 'new'
+    end
 
 end
 

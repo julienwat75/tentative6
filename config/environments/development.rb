@@ -27,6 +27,15 @@ MyApp::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  user_name:            'billetgratuitparis@gmail.com',
+  password:             'impasse12345',
+  authentication:       'plain',
+  enable_starttls_auto: true  }
+
 config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
