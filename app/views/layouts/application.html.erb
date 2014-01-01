@@ -31,12 +31,22 @@
     <div class="brand" style="color:white">Billet<font style="color:white">gratuit</font><font color="white">.com</font></div>
     <div class="address-bar">Invitations gratuites au théatres</div>
 
-    
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Billet<font color="grey">gratuit</font><font color="#4B4F4E">.com</font></a>
+        </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class=" navbar-ex1-collapse" style="background:black;color:white;">
+        <div class=" navbar-ex1-collapse" style="background:black;">
           <ul class="nav navbar-nav" >
-            <li><%= link_to "Invitations", pageinvitations_path,:class =>'couleurblanche' %></li> 
+            <li><%= link_to "Invitations", pageinvitations_path %></li>
             <li><a href="contact.html">Concept</a></li>
             <li><a href="contact.html">Contact</a></li>
              
