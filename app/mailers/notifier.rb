@@ -7,6 +7,6 @@ class Notifier < ActionMailer::Base
   def send_signup_email(author)
     @authors = author
     mail( :to => 'stewfilm50@yahoo.fr',
-    :subject => 'Ca marche mon pote !!!!' )
+    :subject => 'Votre inscription !!!!' )
   end
 end
