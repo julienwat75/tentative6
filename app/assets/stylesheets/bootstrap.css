@@ -76,7 +76,6 @@ body {
         .vignette{
 
           
-          
         margin-top: 10px;  
      
      
@@ -2390,9 +2389,9 @@ fieldset[disabled] .btn {
 }
 
 .btn-default {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
+  color: white;
+  background-color: #C71585;
+  border-color: white;
 }
 
 .btn-default:hover,
@@ -2400,8 +2399,8 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
-  color: #333333;
-  background-color: #ebebeb;
+  color: white;
+  background-color: #FF69B4;
   border-color: #adadad;
 }
 

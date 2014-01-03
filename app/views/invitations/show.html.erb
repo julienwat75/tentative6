@@ -55,41 +55,57 @@
  
  <% end %>
 
- <div class="row">
-  <div  class="col-xs-0 col-md-3"></div>
-  <div class="horizontal col-xs-12 col-md-6"   class="col-xs-12 col-md-3"><div style="font-size:16px;">  <%= jour %>  <%= @invitation.dateinvitation.day %>  <%= mois %>  à <%= @invitation.dateinvitation.hour  %> H <%= @invitation.dateinvitation.min  %></div><%= @invitation.adresse %></div>
-   <div  class="col-xs-0 col-md-4"></div>
-  </div>
-  
 
-<% var=@invitation.avatar.url %>
+ <% var=@invitation.avatar.url %>
 <% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
 
 
 
-<div class="row" >
-  <div  class="col-xs-0  col-md-3" ></div>
-  <div  class="col-xs-12 col-md-6 vignette"  "><img src="<%= var %>" alt="arobas" style="width:100%;height:300px;" /></div>
-  <div  class="col-xs-0  col-md-3"></div>
 
-</div>
+ 
+  
 
-
-<div class="row"  >
-  <div  class="col-xs-0  col-md-3" ></div>
-  <div  class="col-xs-12 col-md-6  description" ><p><%= @invitation.description %></p> </div>
-  <div  class="col-xs-0  col-md-3"></div>
-
-</div>
 
 <div class="row" >
-  <div  class="col-xs-0  col-md-3" ></div>
-  <div  class="col-xs-12 col-md-6" > <div  class="btn btn-default btn-lg monbouton">
-      <%= link_to "Réserver", reservation_path(@invitation.id) ,:class => 'couleurnoir' %>
-     </div></div>
-  <div  class="col-xs-0  col-md-3"></div>
+
+  <div   class="col-xs-0 col-md-3 col-lg-3 " > </div>
+
+  <div   class="col-xs-12 col-md-6 col-lg-6 horizontal" style="box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2) ">
+
+
+
+    <div style="font-size:16px;">  <%= jour %>  <%= @invitation.dateinvitation.day %>  <%= mois %>  à <%= @invitation.dateinvitation.hour  %> H <%= @invitation.dateinvitation.min  %>
+    </div>
+
+     <div style="font-size:14px;"><%= @invitation.adresse %></div>
+
+     
+
+
+  <a href="<%=  invitation_path(@invitation.id) %>">
+   <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:100%;height:330px;" /></div>
+  </a>
+
+  <div style="margin-top:20px;">  <%= @invitation.description %>  </div>
+
+<a href="<%=  reservation_path(@invitation.id) %>">
+  <div  class="btn btn-default btn-lg monbouton">  Réserver </div>
+</a>
 
 </div>
+
+
+<div   class="col-xs-0 col-md-3 col-lg-3 " > </div>
+
+
+</div> 
+   
+
+
+
+   
+ 
+
 
 
 
