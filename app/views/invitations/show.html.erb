@@ -70,14 +70,14 @@
 
   <div   class="col-xs-0 col-md-3 col-lg-3 " > </div>
 
-  <div   class="col-xs-12 col-md-6 col-lg-6 horizontal" style="box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2) ">
+  <div   class="col-xs-12 col-md-6 col-lg-6 " >
 
+   <div class="invitation" >
 
-
-    <div style="font-size:16px;">  <%= jour %>  <%= @invitation.dateinvitation.day %>  <%= mois %>  à <%= @invitation.dateinvitation.hour  %> H <%= @invitation.dateinvitation.min  %>
+    <div style="font-size:16px;margin-top:5px;margin-left:5px;">  <%= jour %>  <%= @invitation.dateinvitation.day %>  <%= mois %>  à <%= @invitation.dateinvitation.hour  %> H <%= @invitation.dateinvitation.min  %>
     </div>
 
-     <div style="font-size:14px;"><%= @invitation.adresse %></div>
+     <div style="font-size:14px;margin-left:5px;"><%= @invitation.adresse %></div>
 
      
 
@@ -86,11 +86,13 @@
    <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:100%;height:330px;" /></div>
   </a>
 
-  <div style="margin-top:20px;">  <%= @invitation.description %>  </div>
+  <div style="margin-top:20px;margin-left:5px;">  <%= @invitation.description %>  </div>
 
 <a href="<%=  reservation_path(@invitation.id) %>">
   <div  class="btn btn-default btn-lg monbouton">  Réserver </div>
 </a>
+</div>
+
 
 </div>
 
