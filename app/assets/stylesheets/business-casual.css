@@ -1,5 +1,6 @@
 body {
-  background: url(../img/bg3.jpg) no-repeat center center fixed; 
+  /*background: url(../img/bg3.jpg) no-repeat center center fixed;*/
+   background:rgb(60,60,60);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
