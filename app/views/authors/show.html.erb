@@ -71,6 +71,78 @@
 
       </div>
 
+      <!--  ------------------------------------------------------------------------------------------------------------  -->
+
+      <!--  -----------------------------  Pour Mobile  --------------------------------------------------- -->
+
+
+  <div   class="col-xs-12 col-md-4 col-lg-4  hidden-xs" >
+
+
+
+
+
+<!--
+        <p>
+        <% var=@author.avatar.url %>
+        <% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
+
+        </p>
+
+        <img src="<%= var %>" alt="arobas" style="width:164px; height:164px;" />
+
+         <p>
+
+
+ -->    
+         <div class="invitation" >     
+        <p>
+          <strong>Civilité:</strong>
+          <%= @author.sexe %>
+        </p>
+
+
+        <p>
+          <strong>Pseudo:</strong>
+          <%= @author.email %>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <%= @author.username %>
+        </p>
+
+        <p>
+          <strong>Nom:</strong>
+          <%= @author.nom %>
+        </p>
+
+         <p>
+          <strong>Prenom:</strong>
+          <%= @author.prenom %>
+        </p>
+
+
+        <p>
+
+        <%= link_to 'Modifier mon compte', edit_author_path(@author) %> 
+
+        </p>
+        <p>
+
+         <%= link_to 'Supprimer mon compte', @author, method: :delete, data: { confirm: 'Etes vous sur de vouloir supprimer votre compte?' } %>
+        </p>
+
+      </div>
+
+
+      </div>
+
+      <!--  ------------------------------------------------------------------------------------------------------------  -->
+
+      
+
+
         
 
 
