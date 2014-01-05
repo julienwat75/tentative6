@@ -7,8 +7,90 @@
   <div   class="col-xs-0 col-md-4 col-lg-4 " > </div>
 
 
+<!--  -----------------------------  Pour Mobile  --------------------------------------------------- -->
 
-  <div   class="col-xs-0 col-md-4 col-lg-4 " >
+
+  <div   class="col-xs-12   hidden-md hidden-lg" >
+
+<%= form_for(@invitations) do |f| %>
+  <ul>
+  <% @invitations.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p style="color:white;">
+
+    <%= f.label :Titre %><br />
+    <%= f.text_field :titre %>
+  </p>
+
+  <div class="field" style="color:white;">
+    <%= f.label :Avatar %>
+    <%= f.file_field :avatar %>
+  </div>
+  <p style="color:white;">
+    <%= f.label :Description %><br />
+    <%= f.text_area :description %>
+  </p>
+    <p style="color:white;">
+      <%= f.label :Adresse %><br />
+<SELECT name="adresse">
+    <OPTION VALUE="comedie republique">comedie republique</OPTION>
+    <OPTION VALUE="comedie contrescarpe">comedie contrescarpe</OPTION>
+  </SELECT>
+  </p>
+   <p style="color:white;">
+    <%= f.label :Date %><br />
+    <div class="input-append date datepicker" id="datetimepicker" value="2012-05-15 21:05"  data-date="12-12-2013" data-date-format="dd-mm-yyyy"   > 
+    <%= f.text_field :dateinvitation  %>
+   
+    <span class="add-on"><i class="icon-th"></i></span></div>
+  </p>
+
+<br><br>
+<p style="color:white;">
+ <%= f.label :Heure %><br />
+<SELECT name="heure1">
+		<OPTION VALUE="15">15</OPTION>
+		<OPTION VALUE="16">16</OPTION>
+		<OPTION VALUE="17">17</OPTION>
+		<OPTION VALUE="18">18</OPTION>
+		<OPTION VALUE="19">19</OPTION>
+	</SELECT>
+
+H
+
+
+
+<SELECT name="minute1">
+		<OPTION VALUE="00">00</OPTION>
+		<OPTION VALUE="15">15</OPTION>
+		<OPTION VALUE="30">30</OPTION>
+		<OPTION VALUE="45">45</OPTION>
+		
+	</SELECT>
+</p>
+    
+
+        
+<br><br>
+
+
+  
+   <div  class="btn btn-default btn-lg">  
+    <%= f.submit %>
+  </div>
+  
+<% end %>
+
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------  -->
+
+
+<!-- -------------------------------  Pour PC ---------------------------------------------------------------------  -->
+
+<div   class="col-lg-4 col-md-4 hidden-xs " >
 
 <%= form_for(@invitations) do |f| %>
   <ul>
@@ -49,24 +131,24 @@
 <p>
  <%= f.label :Heure %><br />
 <SELECT name="heure1">
-		<OPTION VALUE="15">15</OPTION>
-		<OPTION VALUE="16">16</OPTION>
-		<OPTION VALUE="17">17</OPTION>
-		<OPTION VALUE="18">18</OPTION>
-		<OPTION VALUE="19">19</OPTION>
-	</SELECT>
+    <OPTION VALUE="15">15</OPTION>
+    <OPTION VALUE="16">16</OPTION>
+    <OPTION VALUE="17">17</OPTION>
+    <OPTION VALUE="18">18</OPTION>
+    <OPTION VALUE="19">19</OPTION>
+  </SELECT>
 
 H
 
 
 
 <SELECT name="minute1">
-		<OPTION VALUE="00">00</OPTION>
-		<OPTION VALUE="15">15</OPTION>
-		<OPTION VALUE="30">30</OPTION>
-		<OPTION VALUE="45">45</OPTION>
-		
-	</SELECT>
+    <OPTION VALUE="00">00</OPTION>
+    <OPTION VALUE="15">15</OPTION>
+    <OPTION VALUE="30">30</OPTION>
+    <OPTION VALUE="45">45</OPTION>
+    
+  </SELECT>
 </p>
     
 
@@ -75,13 +157,22 @@ H
 
 
   
-   <div  class="btn btn-default btn-lg">  
-    <%= f.submit %>
-  </div>
+    
+    <%= f.submit "valider" , :class => "grosbouton" %>
+  
   
 <% end %>
 
 </div>
+
+
+
+
+
+
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------  -->
 
 
 
