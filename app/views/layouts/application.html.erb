@@ -74,7 +74,38 @@
 
       <div class="row">
         <div class="box hidden-md hidden-lg" style="background:rgb(60,60,60);">
+
+          <div class="col-lg-12">
+            <hr>
+            <h2 class="intro-text text-center"><strong><font color="white"><%= yield(:title) %></font></strong></h2>
+            <hr>
+          </div>
+          <div class="col-lg-12 text-left">
+            <!-- <img class="img-responsive img-border img-full" src="/img/slide-1.jpg">  -->
+            
+            <%= yield %>
+            
+            <hr>
+          </div>
           
+          
+          <div class="col-lg-12 text-center">
+            <ul class="pager">
+             <li class="previous"> <%= link_to "<  Invitations", pageinvitations_path ,:class => 'couleurnoir'  %> </li>
+              
+                <% if logged_in? && current_user.id == 3  %>
+                <li class="next"> <%= link_to "Filtre Invitations", webmasters_path ,:class => 'couleurnoir'  %> </li>
+              <% end %>
+              
+            </ul>
+          </div>
+        </div>
+
+<!--  ------------------------------------ Format PC -----------------------------------------------------------  -->
+
+
+<div class="row">
+        <div class="box hidden-xs " >
           <div class="col-lg-12">
             <hr>
             <h2 class="intro-text text-center"><strong><%= yield(:title) %></strong></h2>
@@ -100,6 +131,10 @@
             </ul>
           </div>
         </div>
+
+
+<!--  ------------------------------------fin  Format PC -----------------------------------------------------------  -->
+
       </div>
 
     </div><!-- /.container -->
