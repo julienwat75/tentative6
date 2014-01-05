@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-size: 1.25em;
   line-height: 1.6;
-  color: white;
+  color: #000;
 }
 
 hr {
@@ -88,9 +88,7 @@ footer {
 
 
 
-  background: rgb(46, 42, 42);
-
-  width: 100%;
+ /* background: pink;
  /* background: rgba(255,255,255,0.9);*/
 }
 

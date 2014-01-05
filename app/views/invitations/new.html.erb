@@ -1,10 +1,14 @@
 
-<% provide(:title, "Proposer une invitation") %>
+<% provide(:title, "Proposer une invitation 2") %>
+
+
+<div class="row" >
+
+  <div   class="col-xs-0 col-md-4 col-lg-4 " > </div>
 
 
 
-<div style="background:white" >
-
+  <div   class="col-xs-0 col-md-4 col-lg-4 " >
 
 <%= form_for(@invitations) do |f| %>
   <ul>
@@ -13,6 +17,7 @@
   <% end %>
   </ul>
   <p>
+
     <%= f.label :Titre %><br />
     <%= f.text_field :titre %>
   </p>
@@ -76,8 +81,14 @@ H
   
 <% end %>
 
-
 </div>
+
+
+
+
+   <div   class="col-xs-0 col-md-4 col-lg-4 " > </div>
+
+</div>  <!--   fin du div row  -->
 
 
 <script type="text/javascript">
