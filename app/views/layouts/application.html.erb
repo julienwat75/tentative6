@@ -52,7 +52,8 @@
             
           
            <% if logged_in? %>
-      <li><a href="index.html"><%= current_user.email %></a></li>
+         <li><a href="<%= author_path(current_user.id) %>"><%= current_user.email %></a></li>
+         
         <!-- <li><%= link_to "(logout)", logout_path %> </li>  -->
          <!--  <li> jkjkljkljl</li>  -->
         <% else %>
