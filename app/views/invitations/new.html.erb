@@ -1,6 +1,11 @@
 
 <% provide(:title, "Proposer une invitation") %>
 
+
+
+<div style="background:white" >
+
+
 <%= form_for(@invitations) do |f| %>
   <ul>
   <% @invitations.errors.full_messages.each do |error| %>
@@ -70,6 +75,9 @@ H
   </div>
   
 <% end %>
+
+
+</div>
 
 
 <script type="text/javascript">
