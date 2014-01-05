@@ -1,4 +1,84 @@
-<p id="notice"><%= notice %></p>
+
+<% provide(:title, "Mon compte") %>
+
+
+
+
+<div class="row" >
+
+  <div   class="col-xs-0 col-md-4 col-lg-4 " > </div>
+
+
+<!--  -----------------------------  Pour PC  --------------------------------------------------- -->
+
+
+  <div   class="col-xs-12 col-md-4 col-lg-4  hidden-xs" >
+
+
+
+
+
+<!--
+        <p>
+        <% var=@author.avatar.url %>
+        <% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
+
+        </p>
+
+        <img src="<%= var %>" alt="arobas" style="width:164px; height:164px;" />
+
+         <p>
+
+
+ -->         
+        <p>
+          <strong>Civilité:</strong>
+          <%= @author.sexe %>
+        </p>
+
+
+        <p>
+          <strong>Pseudo:</strong>
+          <%= @author.email %>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <%= @author.username %>
+        </p>
+
+        <p>
+          <strong>Nom:</strong>
+          <%= @author.nom %>
+        </p>
+
+         <p>
+          <strong>Prenom:</strong>
+          <%= @author.prenom %>
+        </p>
+
+
+        <p>
+
+        <%= link_to 'Modifier mon compte', edit_author_path(@author) %> 
+
+        </p>
+        <p>
+
+         <%= link_to 'Supprimer mon compte', @author, method: :delete, data: { confirm: 'Etes vous sur de vouloir supprimer votre compte?' } %>
+        </p>
+
+
+      </div>
+
+        
+
+
+       <div   class="col-xs-0 col-md-4 col-lg-4 " > </div>
+
+
+
+</div>  <!--  fin du row  
 
 
 
@@ -6,47 +86,14 @@
 
 
 
-<p>
-<% var=@author.avatar.url %>
-<% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
-
-</p>
-
-<img src="<%= var %>" alt="arobas" style="width:164px; height:164px;" />
-
-<p>
-  <strong>Username:</strong>
-  <%= @author.username %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @author.email %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @author.password %>
-</p>
-
-<p>
-  <strong>Password confirmation:</strong>
-  <%= @author.password_confirmation %>
-</p>
-
-<p>
-  <strong>mon id:</strong>
-  <%= @username.id %>
-</p>
 
 
-<h3>Comments</h3>
-<%= render partial: 'authors/authors/commentaire', collection: @authors.commentaires %>  <!--créer un objet commentaire  liée à Author--> 
+       <!--    <h3>Comments</h3>
+        <%= render partial: 'authors/authors/commentaire', collection: @authors.commentaires %>
 
-<%= render partial: 'authors/commentaire/form' %>
+        <%= render partial: 'authors/commentaire/form' %>
+
+        -->
 
 
-
-
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>
+        

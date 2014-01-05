@@ -6,6 +6,9 @@ class AuthorsController < ApplicationController
 
   before_filter :no_sessions, only: [:show]
 
+
+  before_filter :verify_authenticity_token, :only => [ :new]
+
 def no_sessions
   unless Author.count == 0 || current_user
     redirect_to login_path
