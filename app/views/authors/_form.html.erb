@@ -1,82 +1,99 @@
 
 <div class="row"  >
-  <div  class="col-xs-0  col-md-4" ></div>
-  <div  class="col-xs-12 col-md-4" >
 
-  
+   <div  class="col-xs-0  col-md-4 col-ls-4" ></div>
 
-<%= form_for(@author) do |f| %>
-  <% if @author.errors.any? %>
-    <div id="error_explanation">
-      <h4><font color="red"><%= pluralize(@author.errors.count, "error") %> Erreurs de saisies:</font></h4>
 
-      <ul>
-      <% @author.errors.full_messages.each do |msg| %>
+<!-- --------------------  Partie PC --------------------------------------------  -->
 
-       
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <div  class="col-xs-12 col-md-4 col-ls-4  hidden-xs" >
+     <div align="center">    
+
+        <%= form_for(@author) do |f| %>
+          <% if @author.errors.any? %>
+            <div id="error_explanation">
+              <h4><font color="red"><%= pluralize(@author.errors.count, "error") %> Erreurs de saisies:</font></h4>
+
+              <ul>
+              <% @author.errors.full_messages.each do |msg| %>
+
+               
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+
+           <div class="field" style="margin-top:20px;margin-bottom:20px;">
+          <%= f.label :Civilité %> <br>
+          <%= f.label :Mlle %> 
+          <%= f.radio_button :sexe, 'Mlle' %>
+          <%= f.label :Mme %> 
+          <%= f.radio_button :sexe, 'Mme' %>
+          <%= f.label :M %> 
+          <%= f.radio_button :sexe, 'M' , checked: true %>
+          
+          
+          </div>
+
+          
+          <div class="field">
+            <%= f.label :Pseudo   %><br>
+             <%= f.text_field :email  %> 
+            
+          </div>
+
+          <br>
+          
+          <div class="field">
+            <%= f.label :Email %><br>
+            <%= f.text_field :username %>
+          </div>
+
+          <br>
+         
+          <div class="field">
+            <%= f.label :Nom %><br>
+            <%= f.text_field :nom %>
+          </div>
+
+          <br>
+
+          <div class="field">
+            <%= f.label :Prenom %><br>
+            <%= f.text_field :prenom %>
+          </div>
+
+          <br>
+
+        <!--  <div class="field">
+            <%= f.label :Photo %>
+            <%= f.file_field :avatar %>
+          </div>  -->
+          
+          <div class="field">
+            <%= f.label :password %><br>
+            <%= f.password_field :password %>
+          </div>
+
+          <br>
+
+          <div class="field">
+            <%= f.label :password_confirmation %><br>
+            <%= f.password_field :password_confirmation %>
+          </div>
+          
+          <div class="actions" style="margin-top:20px;font-size:20px;">
+            <%= f.submit "valider" %>
+          </div>
+        <% end %>
+
     </div>
-  <% end %>
-
-
-   <div class="field" style="margin-top:20px;margin-bottom:20px;">
-  <%= f.label :Civilité %> <br>
-  <%= f.label :Mlle %> 
-  <%= f.radio_button :sexe, 'Mlle' %>
-  <%= f.label :Mme %> 
-  <%= f.radio_button :sexe, 'Mme' %>
-  <%= f.label :M %> 
-  <%= f.radio_button :sexe, 'M' , checked: true %>
-  
-  
-  </div>
-
-  
-  <div class="field">
-    <%= f.label :Pseudo   %><br>
-     <%= f.text_field :email  %> 
-    
-  </div>
-  
-  <div class="field">
-    <%= f.label :Email %><br>
-    <%= f.text_field :username %>
-  </div>
- 
-  <div class="field">
-    <%= f.label :Nom %><br>
-    <%= f.text_field :nom %>
-  </div>
-
-  <div class="field">
-    <%= f.label :Prenom %><br>
-    <%= f.text_field :prenom %>
-  </div>
-
-<div class="field">
-    <%= f.label :Photo %>
-    <%= f.file_field :avatar %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="actions" style="margin-top:20px;font-size:20px;">
-    <%= f.submit "valider" %>
-  </div>
-<% end %>
-
-
-
-</div>
-  <div  class="col-xs-0  col-md-4"></div>
 
 </div>
 
+<!--     -----------------------------------------------------------------------------------------------------------------  -->
+
+  <div  class="col-xs-0  col-md-4 col-ls-4" ></div>
+</div>
