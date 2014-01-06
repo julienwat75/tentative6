@@ -18,8 +18,12 @@
               <% @author.errors.full_messages.each do |msg| %>
 
                
-                <li><%= msg %></li>
+                
               <% end %>
+
+              <li><font color="white">Pseudo(entre 5 et 9 caractères )</font></li>
+              <li><font color="white">Password(min 5 caractères)</font></li>
+
               </ul>
             </div>
           <% end %>
@@ -109,12 +113,14 @@
               <ul>
               <% @author.errors.full_messages.each do |msg| %>
 
-               
+            
               <% end %>
 
-
                 <li><font color="white">Pseudo(entre 5 et 9 caractères )</font></li>
-                 <li><font color="white">Password(min 5 caractères)</font></li>
+              <li><font color="white">Password(min 5 caractères)</font></li>
+
+
+             
                  
               </ul>
             </div>
