@@ -83,6 +83,98 @@
             <%= f.label :password_confirmation %><br>
             <%= f.password_field :password_confirmation %>
           </div>
+
+          <div class="actions" style="margin-top:20px;font-size:20px;">
+            <%= f.submit "valider" %>
+          </div>
+        <% end %>
+
+    </div>
+
+</div>
+
+<!--     -----------------------------------------------------------------------------------------------------------------  -->
+
+
+<!-- --------------------  Partie PC --------------------------------------------  -->
+
+  <div  class="col-xs-12 col-md-4 col-ls-4  hidden-md hidden-lg" >
+     <div align="center">    
+
+        <%= form_for(@author) do |f| %>
+          <% if @author.errors.any? %>
+            <div id="error_explanation">
+              <h4><font color="red"><%= pluralize(@author.errors.count, "error") %> Erreurs de saisies:</font></h4>
+
+              <ul>
+              <% @author.errors.full_messages.each do |msg| %>
+
+               
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+
+           <div class="field" style="margin-top:20px;margin-bottom:20px;" style="color:white;">
+          <%= f.label :Civilité %> <br>
+          <%= f.label :Mlle %> 
+          <%= f.radio_button :sexe, 'Mlle' %>
+          <%= f.label :Mme %> 
+          <%= f.radio_button :sexe, 'Mme' %>
+          <%= f.label :M %> 
+          <%= f.radio_button :sexe, 'M' , checked: true %>
+          
+          
+          </div>
+
+          
+          <div class="field" style="color:white;">
+            <%= f.label :Pseudo   %><br>
+             <%= f.text_field :email  %> 
+            
+          </div>
+
+          <br>
+          
+          <div class="field" style="color:white;">
+            <%= f.label :Email %><br>
+            <%= f.text_field :username %>
+          </div>
+
+          <br>
+         
+          <div class="field" style="color:white;">
+            <%= f.label :Nom %><br>
+            <%= f.text_field :nom %>
+          </div>
+
+          <br>
+
+          <div class="field" style="color:white;">
+            <%= f.label :Prenom %><br>
+            <%= f.text_field :prenom %>
+          </div>
+
+          <br>
+
+        <!--  <div class="field">
+            <%= f.label :Photo %>
+            <%= f.file_field :avatar %>
+          </div>  -->
+          
+          <div class="field" style="color:white;">
+            <%= f.label :password %><br>
+            <%= f.password_field :password %>
+          </div>
+
+          <br>
+
+          <div class="field" style="color:white;">
+            <%= f.label :password_confirmation %><br>
+            <%= f.password_field :password_confirmation %>
+          </div>
           
           <div class="actions" style="margin-top:20px;font-size:20px;">
             <%= f.submit "valider" %>
@@ -94,6 +186,7 @@
 </div>
 
 <!--     -----------------------------------------------------------------------------------------------------------------  -->
+
 
   <div  class="col-xs-0  col-md-4 col-ls-4" ></div>
 </div>
