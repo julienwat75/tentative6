@@ -1,5 +1,5 @@
 class Notifier < ActionMailer::Base
-  default from: "stewfilm50@yahoo.fr"
+  default from: "billetgratuitparis@gmail.com"
 
 #default :from => 'any_from_address@example.com'
 
