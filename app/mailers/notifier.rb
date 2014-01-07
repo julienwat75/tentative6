@@ -6,7 +6,7 @@ class Notifier < ActionMailer::Base
   # send a signup email to the user, pass in the user object that   contains the user's email address
   def send_signup_email(author)
     @authors = author
-    mail( :to => 'stewfilm50@yahoo.fr',
+    mail( :to => @authors.username,
     :subject => 'Votre inscription !!!!' )
   end
 end
