@@ -6,19 +6,36 @@ class AuthorsController < ApplicationController
 
   before_filter :no_sessions, only: [:show]
 
+  before_filter :no_webmaster, only: [:index]
+
+
 
   before_filter :verify_authenticity_token, :only => [ :show]
 
 def no_sessions
-  unless Author.count == 0 || current_user
-    redirect_to login_path
+  @author = Author.find(params[:id])
+
+  if  current_user == nil || (current_user && (current_user.id != @author.id) && (current_user.id!=3)) 
+    redirect_to pageinvitations_path
     return false
   end
+
+end
+
+def no_webmaster
+  
+  unless  current_user && current_user.id == 3
+    redirect_to pageinvitations_path
+    return false
+  end
+
 end
 
 
 def zero_authors_or_authenticated
-  if current_user
+
+  
+  if current_user 
     redirect_to root_path
     return false
   end
