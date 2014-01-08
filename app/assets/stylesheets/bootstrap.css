@@ -4824,7 +4824,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: grey;
+  color: lightgrey;
+  
   background-color: transparent;
 }
 

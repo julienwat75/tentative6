@@ -5,20 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css">
     <title>Billetgratuit.com</title>
 
 
     <!-- Bootstrap core CSS -->
     <!-- <link href="/css/bootstrap.css" rel="stylesheet"> -->
-   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+
+
+   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %> 
+
+
     <!-- Add custom CSS here -->
    <!--  <link href="/css/business-casual.css" rel="stylesheet">  -->
+
       
-    <%= javascript_include_tag "application" %>
+      <%= javascript_include_tag "application" %>  
+
+
+
+ 
+
 
   </head>
 
+
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+
+
+  
+   
   <body>
 
     
@@ -27,7 +44,7 @@
     <div class="address-bar">Invitations gratuites au théatres</div>
 
     <nav class="navbar navbar-default" role="navigation">
-      <div class="container" style="background:black;">
+      <div class="container" style="background:rgba(255, 255, 255, 0.5);">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -35,12 +52,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" style="background:black;font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;" href="index.html"><font color="white">Billet</font><font style="font-weight: 200;color:white;">gratuit</font><font color="white">.com</font></a>
+          <a class="navbar-brand" style="font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;" href="index.html"><font color="white">Billet</font><font style="font-weight: 200;color:white;">gratuit</font><font color="white">.com</font></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse" style="background:black;color:white;">
-          <ul class="nav navbar-nav" style="background:black;">
+        <div class="collapse navbar-collapse navbar-ex1-collapse" style="color:white;">
+          <ul class="nav navbar-nav" >
             <li><%= link_to "Invitations", pageinvitations_path,:class => 'couleurblanche' %></li>
 
            <% unless logged_in? %>

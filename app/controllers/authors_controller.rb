@@ -88,8 +88,15 @@ def create              # le submit va chercher la methode create
   
 
   if @authors.save   #on sauvegarde
+
+     login(params[:username], params[:password])
+     
    Notifier.send_signup_email(@authors).deliver
+
+   
+
    redirect_to authors_path     # redirection vers l'index
+   
    else
     @faux=@authors.errors.any?
      @author = @authors
