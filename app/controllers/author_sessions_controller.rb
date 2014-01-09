@@ -11,7 +11,7 @@ class AuthorSessionsController < ApplicationController
       redirect_back_or_to(pageinvitations_path)  
     else
       flash.now.alert = "Login failed."
-      render action: :new
+      redirect_to "/welcome/index"
     end
   end
 
