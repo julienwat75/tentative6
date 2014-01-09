@@ -2431,6 +2431,7 @@ fieldset[disabled] .btn {
   color: white;
   background-color: #FF69B4;
   border-color: #adadad;
+  width:100%;
 }
 
 .btn-default:active,
