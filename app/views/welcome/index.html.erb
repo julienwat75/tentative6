@@ -1,2 +1,131 @@
-<h1>Welcome#index</h1>
-<p>Voir le profils:<%= link_to "profil", profils_path %></p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Billetgratuit.com</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="/css/bootstrap.css" rel="stylesheet"> -->
+   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <!-- Add custom CSS here -->
+   <!--  <link href="/css/business-casual.css" rel="stylesheet">  -->
+      
+    <%= javascript_include_tag "application" %>
+
+  </head>
+
+  <body>
+
+    
+
+    <div class="brand" style="color:white;font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;">Billet<font style="font-weight: 200;color:white;">Gratuit</font><font color="white">.com</font></div>
+    <div class="address-bar">Invitations gratuites au théatres</div>
+
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container" style="background:black;">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" style="background:black;font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;" href="index.html"><font color="white">Billet</font><font style="font-weight: 200;color:white;">gratuit</font><font color="white">.com</font></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+       
+      </div><!-- /.container -->
+    </nav>
+
+
+
+
+
+
+
+<div class="container "  >
+
+  <div class="row" >
+
+     <div class=" col-xs-12 col-md-6 col-lg-6 text-center" > 
+
+         
+     <div style=" border-top:1px solid white; border-bottom:1px solid white;margin-top:5px;padding-bottom:30px;padding-bottom:20px;">
+    <h2 ><small><font color="white"><b>Tous les jours des place de théâtre gratuites proposées par nos partenaires<b> </font></small></h2>
+    </div>
+            
+
+      </div>
+
+      <div class="col-xs-0 col-md-6 col-lg-6 text-center" style="padding-left:130px;padding-right:130px;">
+
+                 <div style="background-color: rgba(255, 255, 255, 0.5);padding:15px;">
+            
+                      <h2 ><small><font color="black">Se connecter</font></small></h2><br>
+
+                      <%= form_tag author_sessions_path, method: :post do %>
+
+                      <div class="">
+                      <%=  text_field_tag :username, "Email"  %>
+                      
+                     </div>
+
+                     <br>
+                    
+                    <div class="field">
+                      
+                     <%= password_field_tag :password, nil, placeholder: "Password"    %>
+
+                    </div>
+
+                     <div style="margin:20px;"> Mot de passe oublié? </div>
+
+
+                      <div style="margin-top:20px;width:100%;"> 
+                      	<%= submit_tag  "Se connecter", :class => 'btn btn-default btn-lg'  %>
+                      </div>
+           
+                 
+
+                     <% end %>
+
+                     <div style="margin:20px;"> Pas encore membre?</div>
+          
+
+                      
+                    <div style="margin-top:20px;width:100%;background:grey;"  <a href="#"  class="btn btn-default btn-lg">S'inscrire</a></div>
+
+              </div>
+
+          </div>
+
+         
+  </div>
+
+</div>
+
+
+
+    </div><!-- /.container -->
+     <footer>
+      <div class="container" >
+        <div class="row" >
+          <div class="col-xs-12 col-md-12  col-lg-12 text-center">
+            <p style="color:white;">Copyright &copy; Billetgratuit.com 2013</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+  </body>
+</html>

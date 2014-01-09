@@ -66,8 +66,8 @@ def new
   @reservations.sexe =current_user.sexe
   @reservations.code=code1
   @reservations.save   #on sauvegarde
-   redirect_to reservations_path   
-
+    
+   redirect_to "/pages/confirmation"
 	end
 
 	def reservation_params

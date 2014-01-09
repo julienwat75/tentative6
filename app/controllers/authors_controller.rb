@@ -89,9 +89,20 @@ def create              # le submit va chercher la methode create
 
   if @authors.save   #on sauvegarde
 
-     login(params[:username], params[:password])
+    
      
    Notifier.send_signup_email(@authors).deliver
+
+
+    if login(params[:author][:username],params[:author][:password])
+
+       flash[:success] = "Welcome to the Sample App!"
+      
+
+    else
+      flash.now.alert = "Login failed."
+      render action: :new
+    end
 
    
 

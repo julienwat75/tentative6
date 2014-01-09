@@ -1,5 +1,6 @@
 MyApp::Application.routes.draw do
 
+  get "pages/confirmation"
   resources :profils
   resources :offres
    resources :pagemembres
