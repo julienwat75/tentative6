@@ -446,6 +446,9 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  color:grey;
+  width:100%;
+  padding:10px;
 }
 
 a {
