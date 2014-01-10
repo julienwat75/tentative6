@@ -9,12 +9,16 @@ belongs_to :author
 
 
 has_attached_file :avatar,
-  :content_type => :image,
+  :content_type => :image, 
   :storage => :s3, 
   :bucket => 'julienwat75', 
   :s3_credentials => "#{Rails.root}/config/s3.yml",
   :url => "tunes/:style/:id/:filename",
-  :path => "tunes/:style/:id/:filename"
+  :path => "tunes/:style/:id/:filename",
+  :styles => {
+      :thumb => "1200x500#",
+      :small  => "1200x500#",
+      :medium => "310x250#" }
 
   def self.aleatoire
   

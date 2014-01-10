@@ -72,6 +72,46 @@ body {
        
         }
 
+        .titre_vignette{
+          font-size:16px;
+          margin-top:5px;
+          margin-left:5px;
+          
+          font-weight: bold;
+         color: rgb(104, 104, 104);
+
+
+
+        }
+
+        .adresse_vignette{
+          font-size:16px;
+          margin-top:5px;
+          margin-left:5px;
+           margin-right:5px;
+
+         text-align:right;
+         color:black;
+          color: rgb(104, 104, 104);
+
+       }
+
+        .date_vignette{
+          font-size:16px;
+          margin-top:5px;
+          margin-left:5px;
+           
+           color: rgb(104, 104, 104);
+
+       }
+
+
+
+
+
+
+
+
         .vignette{
 
           
@@ -86,12 +126,35 @@ body {
          .invitation{
 
           
-        box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        /*box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);*/
         border:1px solid rgba(0, 0, 0, 0.2);
         background: white;
+        margin: 5px;
+        height:400px;
+        overflow: hidden;
+        border-radius:5px 5px 5px 5px;
         
     
         }
+
+         .description{
+
+          
+        /*box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);*/
+        border:1px solid rgba(0, 0, 0, 0.2);
+        background: white;
+        margin: 5px;
+        
+        overflow: hidden;
+        border-radius:5px 5px 5px 5px;
+        margin-top:20px;
+        margin-left:5px;
+        font-size:16px;
+        padding:10px;
+        
+    
+        }
+
 
         .monbouton{
 
