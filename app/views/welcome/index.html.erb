@@ -72,7 +72,7 @@
                       <%= form_tag author_sessions_path, method: :post do %>
 
                       <div class="field">
-                      <%=  text_field_tag :username, "Email"  %>
+                      <%=  text_field_tag :username, "Email",:style =>'padding:10px;color:grey;width:100%;font-size:22px;'  %>
                       
                      </div>
 
@@ -80,7 +80,7 @@
                     
                     <div class="field">
                       
-                     <%= password_field_tag :password, nil, placeholder: "Password"    %>
+                     <%= password_field_tag :password, nil, placeholder: "Password" ,:style =>'padding:10px;color:grey;width:100%;font-size:22px;'   %>
 
                     </div>
 
