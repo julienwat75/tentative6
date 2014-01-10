@@ -120,7 +120,7 @@
 
 <div   class="col-xs-12 col-md-6 col-lg-6 hidden-md hidden-lg" >
 
-   <div class="invitation" style="border-radius:5px 5px 0px 0px;" >
+   <div class="invitation" style="border-radius:5px 5px 0px 0px;overflow:hidden;" >
 
     <div style="font-size:16px;margin-top:5px;margin-left:5px;">  <%= jour %>  <%= @invitation.dateinvitation.day %>  <%= mois %>  à <%= @invitation.dateinvitation.hour  %> H <%= @invitation.dateinvitation.min  %>
     </div>
@@ -131,7 +131,7 @@
 
 
   
-   <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:500px;" /></div>
+   <div class="vignette"><div align="center"><img src="<%= var %>" alt="arobas" style="width:auto;height:500px;" /></div></div>
   
 
  
