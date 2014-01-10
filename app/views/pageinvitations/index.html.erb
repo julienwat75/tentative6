@@ -144,40 +144,31 @@
 
 <!--  ----------------------------------------------------------------------------------------------------------   -->
 
-<div  class="col-xs-12 col-md-4 col-lg-4 hidden-md hidden-lg   " style="height:450px;padding-left:15px !important;padding-right:15px !important;background:rgb(60,60,60);">
 
-  <div class="row" >
+<div class="row" >
 
+   <div  class="col-xs-12  hidden-md hidden-lg   " style="background:pink;height:450px;>
 
+  
 
+         <div  class="invitation" style="border-radius:5px 5px 0px 0px;overflow:hidden;align:center;">
 
+            <div style="font-size:16px;margin-top:5px;margin-left:5px;">  <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
+            </div>
 
-
-<div   class="col-xs-12 col-md-4 col-lg-4 horizontal " style="width:100%;background:rgb(60,60,60);overflow:hidden;">
-
-    <div  class="invitation" style="border-radius:5px 5px 0px 0px;overflow:hidden;align:center;">
-
-         <div style="font-size:16px;margin-top:5px;margin-left:5px;">  <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
-         </div>
-
-          <div style="font-size:14px;margin-left:5px;"><%= t.adresse %></div>
+             <div style="font-size:14px;margin-left:5px;"><%= t.adresse %></div>
 
   
 
 
           <a href="<%=  invitation_path(t.id) %>">
-          <div class="vignette" style="background:rgb(60,60,60);padding-top:10px;padding-bottom:10px;"><div align="center"><img src="<%= var %>" alt="arobas" style="width:auto;height:300px;" /></div></div>
+          <div class="vignette" style="background:rgb(60,60,60);padding-top:10px;padding-bottom:10px;">
+            <div align="center"><img src="<%= var %>" alt="arobas" style="width:auto;height:300px;" /></div>
+          </div>
           </a>
 
-    </div>
 
-</div>
-
-
-
-
-
-</div> 
+   </div> 
    
 </div>
 
