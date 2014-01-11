@@ -207,7 +207,7 @@ body {
         border:1px solid rgba(0, 0, 0, 0.2);
         background: white;
         margin: 5px;
-        height:270px;
+        height:340px;
         overflow: hidden;
         border-radius:5px 5px 5px 5px;
         
@@ -4981,7 +4981,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   font-weight: bold;
   font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .normaltitre{
@@ -4989,7 +4989,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   font-weight: normal;
   font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .navbar-default .navbar-brand:hover,
