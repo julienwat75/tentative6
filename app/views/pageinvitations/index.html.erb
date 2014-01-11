@@ -147,11 +147,11 @@
 
 <div class="row" >
 
-   <div  class="col-xs-12  hidden-md hidden-lg   " style="background:pink;height:450px;overflow:hidden;width:100%;>
+   <div  class="col-xs-12  hidden-md hidden-lg   " style="background:pink;height:450px;>
 
   
 
-         <div  class="invitation" style="border-radius:5px 5px 0px 0px;overflow:hidden;width:100%;background:yellow;">
+         <div  class="invitation" style="border-radius:5px 5px 0px 0px;width:100%;background:yellow;">
 
             <div style="font-size:16px;margin-top:5px;margin-left:5px;">  <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
             </div>
@@ -162,7 +162,7 @@
 
 
           <a href="<%=  invitation_path(t.id) %>">
-          <div class="vignette" style="background:rgb(60,60,60);padding-top:10px;padding-bottom:10px;">
+          <div class="vignette" style="background:rgb(60,60,60);padding-top:10px;padding-bottom:10px;overflow:hidden;">
             <div align="center"><img src="<%= var %>" alt="arobas" style="width:auto;height:300px;" /></div>
           </div>
           </a>
