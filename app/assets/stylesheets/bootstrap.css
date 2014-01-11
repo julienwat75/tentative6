@@ -72,6 +72,16 @@ body {
        
         }
 
+
+        .menumobile{
+         font-size: 18px;
+        font-style: oblique;
+        font-weight: bold;
+        font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+        color:white;
+
+        }
+
         .titre_vignette{
           font-size:16px;
           margin-top:5px;
@@ -4795,6 +4805,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 4px;
+  float:right;
+  width: 10%;
 }
 
 .navbar-toggle .icon-bar {
@@ -4965,12 +4977,24 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-brand {
-  color: #777777;
+  font-style: oblique;
+  font-weight: bold;
+  font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+  color: white;
+  font-size: 14px;
+}
+
+.normaltitre{
+  font-style: italic;
+  font-weight: normal;
+  font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+  color: white;
+  font-size: 14px;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
+  color: white;
   background-color: transparent;
 }
 
