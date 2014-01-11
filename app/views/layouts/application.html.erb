@@ -41,11 +41,12 @@
   <body>
 
     
+    <!-- ---------------------------------- Menue  Version PC ----------------------------------------------- -->
 
-    <div class="brand" style="color:white;font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;">Billet<font style="font-weight: 200;color:white;">Gratuit</font><font color="white">.com</font></div>
-    <div class="address-bar">Invitations gratuites au théatres</div>
+    <div class="brand" style="color:black;font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;">Billet<font style="font-weight: 200;color:black;">Gratuit</font><font style="color:black;">.com</font></div>
+    <div class="address-bar"><font style="color:rgb(212, 4, 40);">Invitations gratuites au théatre</font></div>
 
-    <nav class="navbar navbar-default hidden-xs hidden-sm"  role="navigation">
+    <nav class="navbar navbar-default hidden-xs " style="background-color: rgb(212, 4, 40);" role="navigation">
       <div class="container" >
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -90,10 +91,10 @@
       </div><!-- /.container -->
     </nav>
 
-    <!-- ----------------------------------  Version mobile ----------------------------------------------- -->
+    <!-- ---------------------------------- Menue Version mobile ----------------------------------------------- -->
 
      
-    <nav class="navbar navbar-default hidden-lg hidden-md " style="background:black;font-size:23px;" role="navigation">
+    <nav class="navbar navbar-default   hidden-sm hidden-md hidden-lg  " style="background-color: rgb(212, 4, 40);" role="navigation">
       <div class="container" >
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -102,7 +103,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" style="font-style: oblique;font-weight: bold;font-size:23px;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;" href="index.html"><font color="white">Billet</font><font style="font-weight: 200;color:white;">gratuit</font><font color="white">.com</font></a>
+          <a class="navbar-brand" style="font-style: oblique;font-weight: bold;font-size:18px;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;" href="index.html"><font color="white">Billet</font><font style="font-weight: 200;color:white;">gratuit</font><font color="white">.com</font></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -140,16 +141,16 @@
 
 
 
-    <!-- ---------------------------------------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------- Container Format Mobile  -------------------------------- -->
 
-    <div class="container " style="background:white;" >
+    <div class="container "  >
 
       <div class="row">
-        <div class="box hidden-md hidden-lg" >
+        <div class="box  hidden-sm hidden-md hidden-lg" >
 
           <div class="col-lg-12">
             <hr>
-            <h2 class="intro-text text-center"><strong><font color="white"><%= yield(:title) %></font></strong></h2>
+            <h2 class="intro-text text-center"><strong><%= yield(:title) %></strong></h2>
             <hr>
           </div>
           <div class="col-lg-12 text-left">
@@ -173,7 +174,7 @@
           </div>
         </div>
 
-<!--  ------------------------------------ Format PC -----------------------------------------------------------  -->
+<!--  ------------------------------------Container  Format PC -----------------------------------------------------------  -->
 
 
 <div class="row">
