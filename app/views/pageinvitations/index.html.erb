@@ -147,13 +147,13 @@
 
 <div class="row" >
 
-   <div  class="col-xs-12  hidden-md hidden-lg" style="background:pink;height:450px;">
+   <div  class="col-xs-12  hidden-md hidden-lg" style="background:pink;height:450px;margin-bottom:10px;">
 
   
        
         <div  class="invitation">
 
-              <div class="titre_vignette">  <%=  t.titre %>  </div>
+              <div class="titre_vignette" style="border-radius:5px 5px 5px 5px;">  <%=  t.titre %>  </div>
               <div class="date_vignette"> 
               <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
               </div>
@@ -163,7 +163,7 @@
 
 
                 <a href="<%=  invitation_path(t.id) %>">
-                <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:300px;" /></div>
+                <div class="vignette" style="overflow:hidden;"><img src="<%= var %>" alt="arobas" style="width:auto;height:250px;" /></div>
                 </a>
 
                  <div class="adresse_vignette"><%= t.adresse %></div>
