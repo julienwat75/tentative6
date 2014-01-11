@@ -151,7 +151,27 @@
 
   
        
-     hello !!!!!
+        <div  class="invitation">
+
+              <div class="titre_vignette">  <%=  t.titre %>  </div>
+              <div class="date_vignette"> 
+              <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
+              </div>
+
+               
+        
+
+
+                <a href="<%=  invitation_path(t.id) %>">
+                <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:300px;" /></div>
+                </a>
+
+                 <div class="adresse_vignette"><%= t.adresse %></div>
+
+
+        </div>
+
+
 
 
    </div> 
