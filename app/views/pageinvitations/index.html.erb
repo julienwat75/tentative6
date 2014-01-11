@@ -153,8 +153,8 @@
        
         <div  class="invitation" style="border-radius:5px 5px 5px 5px;">
 
-              <div class="titre_vignette" style="font-size:16px;color: rgb(104, 104, 104); margin-left:5px;" >  <%=  t.titre %>  </div>
-              <div class="date_vignette"> 
+              <div class="titre_vignette" style="font-weight:bold;font-size:16px;color: rgb(104, 104, 104); margin-left:5px;" >  <%=  t.titre %>  </div>
+              <div class="date_vignette" style="font-weight:bold;font-size:16px;color: rgb(104, 104, 104); margin-left:5px;"> 
               <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
               </div>
 
@@ -163,10 +163,16 @@
 
 
                 <a href="<%=  invitation_path(t.id) %>">
-                <div class="vignette" style="overflow:hidden;"><img src="<%= var %>" alt="arobas" style="width:auto;height:250px;" /></div>
+                <div class="vignette" style="overflow:hidden;">
+
+                  <div align="center">
+                  <img src="<%= var %>" alt="arobas" style="width:auto;height:250px;" />
+                  </div>
+
+                </div>
                 </a>
 
-                 <div class="adresse_vignette"><%= t.adresse %></div>
+                 <div class="adresse_vignette" style="text-align:right;font-weight:bold;font-size:16px;color: rgb(104, 104, 104); margin-left:5px;"><%= t.adresse %></div>
 
 
         </div>
