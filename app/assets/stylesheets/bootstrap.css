@@ -84,8 +84,35 @@ body {
 
         }
 
+
+
+        .titre_vignette2{
+          font-size:16px;
+          margin-top:5px;
+          margin-left:5px;
+          
+          font-weight: bold;
+         color: rgb(104, 104, 104);
+
+
+
+        }
+
         .adresse_vignette{
           font-size:16px;
+          margin-top:5px;
+          margin-left:5px;
+           margin-right:5px;
+
+         text-align:right;
+         color:black;
+          color: rgb(104, 104, 104);
+
+       }
+
+
+        .adresse_vignette2{
+          font-size:14px;
           margin-top:5px;
           margin-left:5px;
            margin-right:5px;
@@ -106,6 +133,17 @@ body {
        }
 
 
+       .date_vignette2{
+          font-size:14px;
+          margin-top:5px;
+          margin-left:5px;
+           
+           color: rgb(104, 104, 104);
+
+       }
+
+
+
 
 
 
@@ -124,13 +162,25 @@ body {
       
         }
 
+        .vignette2{
+
+          
+        margin-top: 10px;  
+     
+        text-align:center;
+
+        overflow: hidden;
+    
+      
+        }
+
 
          .invitation{
 
           
         
         border:1px solid rgba(0, 0, 0, 0.2);
-        background: yellow;
+        background: white;
         margin: 5px;
         height:400px;
         overflow: hidden;
@@ -138,6 +188,37 @@ body {
         
     
         }
+
+
+        .invitation2{
+
+          
+        
+        border:1px solid rgba(0, 0, 0, 0.2);
+        background: white;
+        margin: 5px;
+        height:270px;
+        overflow: hidden;
+        border-radius:5px 5px 5px 5px;
+        
+    
+        }
+
+          .invitation3{
+
+          
+        
+        border:1px solid rgba(0, 0, 0, 0.2);
+        background: white;
+        margin: 5px;
+        padding: 5px;
+        overflow: hidden;
+        border-radius:5px 5px 5px 5px;
+        font-size:14px;
+        
+    
+        }
+
 
 
         

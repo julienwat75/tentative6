@@ -15,7 +15,7 @@
 
 
 
-<% if @user && @user.id == 3  %>
+<% if @user && @user.id == 3  %>   <!--   Bouton webmaster -->  
 
 <div class="row">
   <div  class="col-xs-0 col-md-4"></div>
@@ -116,7 +116,7 @@
 
 
 
-    <div  class="invitation">
+    <div  class="invitation hidden-xs">
 
          <div class="titre_vignette">  <%=  t.titre %>  </div>
          <div class="date_vignette"> 
@@ -137,6 +137,37 @@
     </div>
 
 
+    <!--   ------------------- Version mobile ---------------------------------------------------      -->
+
+
+      <div  class="invitation2 hidden-sm hidden-md hidden-lg ">
+
+         <div class="titre_vignette2">  <%=  t.titre %>  </div>
+         <div class="date_vignette2"> 
+          <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
+        </div>
+
+         
+  
+
+
+          <a href="<%=  invitation_path(t.id) %>">
+          <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:170px;" /></div>
+          </a>
+
+           <div class="adresse_vignette2"><%= t.adresse %></div>
+
+
+    </div>
+
+
+
+
+
+
+    <!-- ---------------------------------------------------------------------------------------------   -->
+
+
 
 
 
@@ -146,16 +177,6 @@
    
 </div>
 
-
-
-<!--------------------------------------------------------------------------------------------------------------------------  -->
-
-
-
-
-
-
-<!--------------------------------------------------------------------------------------------------------------------------  -->
 
 
 
@@ -233,26 +254,6 @@
 
 </div>  
 </div>
-
-
-
-
-<!--   ------------------------------------------------------ mon js ------------------------------------  -->
-
-
-
-
-
-
-             
-           <!--  <ul class="pager" style="float:right;">  -->
-             
-             <!-- <li class="previous"><a href="/pageinvitations/<%= @page_suivante %>">Page suivante &rarr;</a></li> -->
-           <!--   </ul> -->
-            
-
-
-
 
 
 

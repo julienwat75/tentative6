@@ -82,20 +82,32 @@
 
   <div   class="col-xs-0 col-md-3 col-lg-3 " > </div>
 
-  <div   class="col-xs-12 col-md-6 col-lg-6 hidden-xs " >
+  <div   class="col-xs-12 col-md-6 col-lg-6  " >
 
-   <div class="invitation" style="height:600px;" >
+   <div class="invitation3"  >
 
-    <div style="font-size:16px;margin-top:5px;margin-left:5px;">  <%= jour %>  <%= @invitation.dateinvitation.day %>  <%= mois %>  à <%= @invitation.dateinvitation.hour  %> H <%= @invitation.dateinvitation.min  %>
+    <div class="date_vignette2">  <%= jour %>  <%= @invitation.dateinvitation.day %>  <%= mois %>  à <%= @invitation.dateinvitation.hour  %> H <%= @invitation.dateinvitation.min  %>
     </div>
 
-     <div style="font-size:14px;margin-left:5px;"><%= @invitation.adresse %></div>
+     <div class="date_vignette2"><%= @invitation.adresse %></div>
 
      
 
 
   
-   <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:500px;" /></div>
+   <div class="vignette hidden-xs"><img src="<%= var %>" alt="arobas" style="width:auto;height:500px;" /></div>
+
+
+   <!--  ------------------------  Mobile  --------------------------------------------  -->
+
+
+   <div class="vignette hidden-sm hidden-md hidden-lg "><img src="<%= var %>" alt="arobas" style="width:auto;height:210px;" /></div>
+  
+   
+
+
+
+   <!-- --------------------------------------------------------------------------------  -->
   
 
  
@@ -114,44 +126,7 @@
 
 
 
-<!--   ---------------------------------------------------Version Mobile ------------------------------------------------------ -->
 
-
-
-<div   class="col-xs-12 col-md-6 col-lg-6 hidden-md hidden-lg" >
-
-   <div class="invitation" style="border-radius:5px 5px 0px 0px;overflow:hidden;" >
-
-    <div style="font-size:16px;margin-top:5px;margin-left:5px;">  <%= jour %>  <%= @invitation.dateinvitation.day %>  <%= mois %>  à <%= @invitation.dateinvitation.hour  %> H <%= @invitation.dateinvitation.min  %>
-    </div>
-
-     <div style="font-size:14px;margin-left:5px;"><%= @invitation.adresse %></div>
-
-     
-
-
-  
-   <div class="vignette"><div align="center"><img src="<%= var %>" alt="arobas" style="width:auto;height:500px;" /></div></div>
-  
-
- 
-
-</div>  <!--  fin div invitation  -->
-
-
- <div class="invitation" style="margin-top:20px;margin-left:5px;font-size:16px;padding:10px;border-radius:5px 5px 5px 5px;"><%= @invitation.description %></div>
-
-<a href="<%=  reservation_path(@invitation.id) %>">
-  <div  class="btn btn-default btn-lg monbouton" style="margin-bottom: 15px;
-">  Réserver </div>
-</a>
-
-</div>
-
-
-
-
-<!--   ------------------------------------------------- fin version Mobile --------------------------------------------------- -->
 
 
 <div   class="col-xs-0 col-md-3 col-lg-3 " > </div>
