@@ -2582,6 +2582,27 @@ fieldset[disabled] .btn {
   width:100%;
 }
 
+
+
+.btn-inscription {
+  color: white;
+  background-color: rgb(85, 85, 85);
+  border-color: white;
+  width:100%;
+}
+
+
+.btn-inscription:hover{
+
+
+  color: white;
+  background-color: rgb(120, 120, 120);
+  border-color: white;
+  width:100%;
+
+
+}
+
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
@@ -2592,6 +2613,8 @@ fieldset[disabled] .btn {
   border-color: #adadad;
   width:100%;
 }
+
+
 
 .btn-default:active,
 .btn-default.active,

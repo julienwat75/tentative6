@@ -96,13 +96,14 @@ def create              # le submit va chercher la methode create
 
     if login(params[:author][:username],params[:author][:password])
 
-       flash[:success] = "Welcome to the Sample App!"
+       flash[:success] = "Welcome to billetgratuit.com!"
       
 
     else
       flash.now.alert = "Login failed."
-      render action: :new
+      redirect_to new_welcome_path
     end
+
 
    
 
@@ -111,7 +112,7 @@ def create              # le submit va chercher la methode create
    else
     @faux=@authors.errors.any?
      @author = @authors
-     render 'new'
+     redirect_to new_welcome_path
     end
 
 end
