@@ -27,6 +27,11 @@ hr {
   max-width: 400px;
 }
 
+.test {
+background: url(../img/slide-3.jpg);  
+
+}
+
 .brand,
 .address-bar {
   display: none;

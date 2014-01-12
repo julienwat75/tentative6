@@ -10,4 +10,23 @@ render :layout => false
 
 
   end
+
+  def inscription
+  
+  render :layout => false
+
+  
+  end
+
+
+  def new 
+   
+   @author=Author.new
+   render :layout => false
+
+
+
+  end
+
+
 end

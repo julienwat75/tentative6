@@ -7402,3 +7402,10 @@ td.visible-print {
     display: none !important;
   }
 }
+
+element {
+    padding: 10px;
+    color: black;
+    width: 100%;
+    font-size: 22px;
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Billetgratuit.com</title>
+
+
+
+
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="/css/bootstrap.css" rel="stylesheet"> -->
+   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <!-- Add custom CSS here -->
+   <!--  <link href="/css/business-casual.css" rel="stylesheet">  -->
+      
+    <%= javascript_include_tag "application" %>
+
+  </head>
+
+  <body class="test">
+
+     
+<div class="brand" style="color:white;font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;">Billet<font style="font-weight: 200;color:white;">Gratuit</font><font style="color:white;">.com</font></div>
+    <div class="address-bar"><font style="color:white;">Invitations gratuites au théatre</font></div>
+
+
+    
+<nav class="navbar navbar-default  " style="background-color: rgb(212, 4, 40);" role="navigation">
+      <div class="container" >
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand"  href="http://billetgratuit.com/pageinvitations.html">Billet<font class="normaltitre">gratuit</font>.com</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        
+      </div><!-- /.container -->
+    </nav>
+
+    
+
+
+
+<div class="container "  >
+
+  <div class="row " >
+
+    <div class="col-xs-0 col-sm-3 col-md-3 col-lg-3 text-center " ></div>
+
+
+     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-center " style="">
+
+                 <div style="background-color: rgba(255, 255, 255, 0.5);padding:15px;">
+            
+                      <h2 ><small><font color="black">Inscription</font></small></h2><br>
+
+                     
+                      
+                     <%= form_for(@author) do |f| %>
+                      <% if @author.errors.any? %>
+                        <div id="error_explanation">
+                          <h4><font color="red"><%= pluralize(@author.errors.count, "error") %> Erreurs de saisies:</font></h4>
+
+                          <ul>
+                          <% @author.errors.full_messages.each do |msg| %>
+
+                           
+                            
+                          <% end %>
+
+                          <li>Pseudo(entre 5 et 9 caractères )</li>
+                          <li>Password(min 5 caractères)</li>
+
+                          </ul>
+                        </div>
+                      <% end %>
+                      
+                     
+
+                     <div class="field">
+                        
+          
+                        
+                      <%= f.label :Mlle %> 
+                      <%= f.radio_button :sexe, 'Mlle' %>
+                      <%= f.label :Mme %> 
+                      <%= f.radio_button :sexe, 'Mme' %>
+                      <%= f.label :M %> 
+                      <%= f.radio_button :sexe, 'M' , checked: true %>
+
+                     </div>
+                     
+
+                      <br>
+
+
+                     <div class="field">
+                      
+                  <%= f.text_field :email  , :placeholder => "Pseudo",:style =>'color:grey;width:100%;font-size:22px;' %>
+                      
+                    </div>
+
+                    <br>
+
+
+                    <div class="field">
+                      
+                  <%= f.text_field :username  , :placeholder => "Email",:style =>'color:grey;width:100%;font-size:22px;' %>
+                 
+                    </div>
+
+                     <br>
+
+
+
+                     <div class="field">
+                      
+                  <%= f.text_field :nom  , :placeholder => "Nom",:style =>'color:grey;width:100%;font-size:22px;' %>
+                 
+                     </div>
+
+                      <br>
+
+
+                     <div class="field">
+                      
+                  <%= f.text_field :prenom  , :placeholder => "Prenom",:style =>'color:grey;width:100%;font-size:22px;' %>
+                 
+                    </div>
+
+                     <br>
+
+
+                    <div class="field">
+                      
+                 <%= f.password_field :password, :placeholder => ' Password', :style =>'color:grey;width:100%;font-size:22px;' %>
+                    </div>
+
+                     <br>
+
+                    <div class="field">
+                      
+                <%= f.password_field :password_confirmation, :placeholder => ' Password confirmation',:style =>'color:grey;width:100%;font-size:22px;' %>
+                 
+                      
+                    </div>
+
+                     <br>
+
+
+
+                    
+                      <div style="margin-top:20px;width:100%;"> 
+                        <%= f.submit  "Valider", :class => 'btn btn-default btn-lg',:style =>'width:100%;'  %>
+                      </div>
+
+                       <br>
+           
+                 
+
+                     <% end %>
+
+                     
+
+                      
+                    
+
+              </div>
+
+
+              <div class="col-xs-0 col-sm-3 col-md-3 col-lg-3 text-center " ></div>
+
+
+          </div>
+
+          <!--     -------------------------- Mobile -------------------------------------------------------------- -->
+
+
+            
+
+
+
+          <!--  -----------------------------------------------------------------------------------------------------  -->
+
+         
+  </div>
+
+</div>
+
+
+
+    </div><!-- /.container -->
+     <footer>
+      <div class="container" >
+        <div class="row" >
+          <div class="col-xs-12 col-md-12  col-lg-12 text-center" style="margin-top:50px;">
+            <p style="color:white;">Copyright &copy; Billetgratuit.com 2013</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+  </body>
+</html>

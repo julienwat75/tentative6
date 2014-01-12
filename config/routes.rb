@@ -9,6 +9,7 @@ MyApp::Application.routes.draw do
     resources :webmasters
     resources :reservations 
     resources :detailresas
+    resources :welcome
 
    resources :authors do
   resources :commentaires
@@ -25,6 +26,7 @@ MyApp::Application.routes.draw do
 
   get "welcome/index"
   get "welcome/help"
+  get "welcome/inscription"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

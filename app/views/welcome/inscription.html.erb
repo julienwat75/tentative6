@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Billetgratuit.com</title>
+
+
+
+
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="/css/bootstrap.css" rel="stylesheet"> -->
+   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <!-- Add custom CSS here -->
+   <!--  <link href="/css/business-casual.css" rel="stylesheet">  -->
+      
+    <%= javascript_include_tag "application" %>
+
+  </head>
+
+  <body class="test">
+
+     
+<div class="brand" style="color:white;font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;">Billet<font style="font-weight: 200;color:white;">Gratuit</font><font style="color:white;">.com</font></div>
+    <div class="address-bar"><font style="color:white;">Invitations gratuites au théatre</font></div>
+
+
+    
+<nav class="navbar navbar-default  " style="background-color: rgb(212, 4, 40);" role="navigation">
+      <div class="container" >
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand"  href="http://billetgratuit.com/pageinvitations.html">Billet<font class="normaltitre">gratuit</font>.com</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        
+      </div><!-- /.container -->
+    </nav>
+
+    
+
+
+
+<div class="container "  >
+
+  <div class="row " >
+
+     <div class=" col-xs-12 col-md-6 col-lg-6 text-center hidden-xs" > 
+
+         
+     <div style=" font-style:oblique; border-top:1px solid white; border-bottom:1px solid white;margin-top:5px;padding-bottom:30px;padding-bottom:20px;margin-bottom:20px;">
+    <h2 ><small><font color="white"><b>Chaque jours des places de théâtre gratuites proposées par nos partenaires<b> </font></small></h2>
+    </div>
+            
+
+      </div>
+
+     <div class="col-xs-0 col-md-6 col-lg-6 text-center hidden-xs" style="padding-left:130px;padding-right:130px;">
+
+                 <div style="background-color: rgba(255, 255, 255, 0.5);padding:15px;">
+            
+                      <h2 ><small><font color="black">S'inscrire</font></small></h2><br>
+
+                     <%= form_for(@author) do |f| %>
+                      <% if @author.errors.any? %>
+                        <div id="error_explanation">
+                          <h4><font color="red"><%= pluralize(@author.errors.count, "error") %> Erreurs de saisies:</font></h4>
+
+                          <ul>
+                          <% @author.errors.full_messages.each do |msg| %>
+
+                           
+                            
+                          <% end %>
+
+                          <li>Pseudo(entre 5 et 9 caractères )</li>
+                          <li>Password(min 5 caractères)</li>
+
+                          </ul>
+                        </div>
+                      <% end %>
+                      
+                      <div class="field">
+                      <%=  text_field_tag :username, "Email",:style =>'color:grey;width:100%;font-size:22px;' %>
+                      
+                     </div>
+
+                     <br>
+                    
+                    <div class="field">
+                      
+                     <%= password_field_tag :password, nil, placeholder: "Password" ,:style =>'padding:10px;color:grey;width:100%;font-size:22px;', :class => 'couleurnoir'   %>
+
+                    </div>
+
+                     <div class="field">
+                        
+                        <%= f.label :Civilité %> <br>
+                        <%= f.label :Mlle %> 
+                        <%= f.radio_button :sexe, 'Mlle' %>
+                        <%= f.label :Mme %> 
+                        <%= f.radio_button :sexe, 'Mme' %>
+                        <%= f.label :M %> 
+                        <%= f.radio_button :sexe, 'M' , checked: true %>
+                        
+
+                     </div>
+
+                     <div style="margin:20px;"> Mot de passe oublié? </div>
+
+
+                      <div style="margin-top:20px;width:100%;"> 
+                        <%= submit_tag  "Se connecter", :class => 'btn btn-default btn-lg',:style =>'width:100%;'  %>
+                      </div>
+           
+                 
+
+                     <% end %>
+
+                     <div style="margin-top:30px;margin-bottom:20px;"> Pas encore membre?</div>
+          
+
+                      
+                    <div style="margin-top:0px;width:100%;background:grey;"  <a href="#"  class="btn btn-default btn-lg">S'inscrire</a></div>
+
+              </div>
+
+          </div>
+
+          <!--     -------------------------- Mobile -------------------------------------------------------------- -->
+
+
+            <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg " >
+
+                 
+            
+                      <h2 ><small><font color="white">Se connecter</font></small></h2><br>
+
+                      <%= form_tag author_sessions_path, method: :post do %>
+
+                      <div class="field">
+                      <%=  text_field_tag :username, "Email",:style =>'padding:5px;color:grey;width:100%;font-size:22px;'  %>
+                      
+                     </div>
+
+                     <br>
+                    
+                    <div class="field">
+                      
+                     <%= password_field_tag :password, nil, placeholder: "Password", :style =>'padding:5px;color:grey;width:100%;font-size:22px;'    %>
+
+                    </div>
+
+                     <div style="margin:20px;color:white;"> Mot de passe oublié? </div>
+
+
+                      <div style="margin-top:20px;width:100%;"> 
+                <%= submit_tag  "Se connecter", :class => 'btn btn-default', :style =>'padding:10px;color:white;width:100%;background:#C71585;font-size:22px;'  %>
+                      </div>
+           
+                 
+
+                     
+
+                     <div style="margin-top:30px;margin-bottom:20px;color:white;"> Pas encore membre?</div>
+          
+
+                      
+                    <div style="margin-top:0px;width:100%;background:grey;font-size:22px;"  <a href="#"  class="btn btn-default btn-lg">S'inscrire</a></div>
+                   <% end %>
+             
+
+          </div>
+
+
+
+
+          <!--  -----------------------------------------------------------------------------------------------------  -->
+
+         
+  </div>
+
+</div>
+
+
+
+    </div><!-- /.container -->
+     <footer>
+      <div class="container" >
+        <div class="row" >
+          <div class="col-xs-12 col-md-12  col-lg-12 text-center" style="margin-top:50px;">
+            <p style="color:white;">Copyright &copy; Billetgratuit.com 2013</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+  </body>
+</html>
