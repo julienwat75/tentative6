@@ -22,7 +22,7 @@ render :layout => false
   def new 
    
    @author=Author.new
-    @faux=@author.errors.any?
+  
    render :layout => false
 
 
