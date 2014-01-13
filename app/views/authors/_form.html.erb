@@ -26,26 +26,23 @@
   <body class="test">
 
      
-<div class="brand2 hidden-xs" style="color:white;font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;">Billet<font style="font-weight: 200;color:white;">Gratuit</font><font style="color:white;">.com</font></div>
-   
-
+<nav class="navbar navbar-default " role="navigation" style="background-color: rgb(212, 4, 40);" >
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
     
-<nav class="navbar navbar-default  " style="background-color: rgb(212, 4, 40);" role="navigation">
-      <div class="container" >
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand"  href="http://billetgratuit.com/pageinvitations.html">Billet<font class="normaltitre">gratuit</font>.com</a>
-        </div>
+     <a class="navbar-brand"  href="#">Billet<font class="normaltitre">gratuit</font>.com</a>
+  </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        
-      </div><!-- /.container -->
-    </nav>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:left;padding-left:10%;">
+    <ul class="nav navbar-nav" >
+      <li class="active" style="color:white;font-style: oblique;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;"><a href="#"><font style="font-weight:bold;">Billet</font>gratuit<font style="font-weight:bold;">.com</font></a></li>
+    
+    </ul>
+    
+    
+  </div><!-- /.navbar-collapse -->
+</nav>
 
     
 
@@ -67,7 +64,8 @@
                      
                       
                      <%= form_for(@author) do |f| %>
-                     
+                      <% if @author.errors.any? %>
+
                       
                         <div id="error_explanation">
                           <h4><font color="red"><%= pluralize(@author.errors.count, "error") %> Erreurs de saisies:</font></h4>
@@ -84,7 +82,8 @@
 
                           </ul>
                         </div>
-                     
+                      <% end %>
+                      
                      
 
                      <div class="field">
