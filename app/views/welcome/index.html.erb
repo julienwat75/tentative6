@@ -22,9 +22,13 @@
   <body class="test">
 
      
-<div class="brand" style="color:white;font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;">Billet<font style="font-weight: 200;color:white;">Gratuit</font><font style="color:white;">.com</font></div>
-    <div class="address-bar"><font style="color:white;">Invitations gratuites au théatre</font></div>
+<div class="brand2" style="color:white;font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;">Billet<font style="font-weight: 200;color:white;">Gratuit</font><font style="color:white;">.com</font>
+  
 
+</div>
+
+
+   
 
     
 <nav class="navbar navbar-default  " style="background-color: rgb(212, 4, 40);" role="navigation">
@@ -48,11 +52,11 @@
 
 
 
-<div class="container "  >
+<div class="container  "  >
 
-  <div class="row " >
+  <div class="row  " >
 
-     <div class=" col-xs-12 col-md-6 col-lg-6 text-center " > 
+     <div class=" col-xs-0 col-md-6 col-lg-6 text-center hidden-xs " > 
 
          
      <div style=" font-style:oblique; border-top:1px solid white; border-bottom:1px solid white;margin-top:5px;padding-bottom:30px;padding-bottom:20px;margin-bottom:20px;">
@@ -62,102 +66,63 @@
 
       </div>
 
-      <div class="col-xs-0 col-md-6 col-lg-6 text-center hidden-xs" style="padding-left:130px;padding-right:130px;">
 
-                 <div style="background-color: rgba(255, 255, 255, 0.5);padding:15px;">
-            
-                      <h2 ><small><font color="black">Se connecter</font></small></h2><br>
-
-                      <%= form_tag author_sessions_path, method: :post do %>
-
-                      <div class="field">
-                      <%=  text_field_tag :username, "Email",:style =>'color:grey;width:100%;font-size:19px;' %>
-                      
-                     </div>
-
-                     <br>
-                    
-                    <div class="field">
-                      
-                     <%= password_field_tag :password, nil, placeholder: "Password" ,:style =>'padding:10px;color:grey;width:100%;font-size:19px;', :class => 'couleurnoir'   %>
-
-                    </div>
-
-                     <div style="margin:20px;"> Mot de passe oublié? </div>
+      <div class=" col-xs-0 col-md-2 col-lg-2 text-center" > </div>
 
 
-                      <div style="margin-top:20px;width:100%;"> 
-                      	<%= submit_tag  "Se connecter", :class => 'btn btn-default btn-lg',:style =>'width:100%;'  %>
-                      </div>
-           
-                 
+      <div class="col-xs-12 col-md-4 col-lg-4 text-center" >
 
-                     <% end %>
+          <div    style="background-color: rgba(255, 255, 255, 0.5);padding:15px;">
 
-                     <div style="margin-top:30px;margin-bottom:20px;"> Pas encore membre?</div>
-          
-
-                      
-                    <div style="margin-top:0px;width:100%;background:grey;"> 
-                      <%= link_to "S'inscrire", new_welcome_path,  :class=>"btn btn-inscription btn-lg" %>
-
-                    </div>
-
-          </div>
-
-          <!--     -------------------------- Mobile -------------------------------------------------------------- -->
-
-
-            <div class="col-xs-12 text-center hidden-sm hidden-md hidden-lg " >
 
                  
-            
-                      <h2 ><small><font color="white">Se connecter</font></small></h2><br>
+                                     <h2 ><small><font color="black">Se connecter</font></small></h2><br>
 
-                      <%= form_tag author_sessions_path, method: :post do %>
+                                    <%= form_tag author_sessions_path, method: :post do %>
 
-                      <div class="field">
-                      <%=  text_field_tag :username, "Email",:style =>'padding:5px;color:grey;width:100%;font-size:22px;'  %>
-                      
-                     </div>
+                                    <div class="field">
+                                    <%=  text_field_tag :username, "Email",:style =>'color:grey;width:100%;font-size:19px;' %>
+                                    
+                                   </div>
 
-                     <br>
-                    
-                    <div class="field">
-                      
-                     <%= password_field_tag :password, nil, placeholder: "Password", :style =>'padding:5px;color:grey;width:100%;font-size:22px;'    %>
+                                   <br>
+                                  
+                                  <div class="field">
+                                    
+                                   <%= password_field_tag :password, nil, placeholder: "Password" ,:style =>'padding:10px;color:grey;width:100%;font-size:19px;', :class => 'couleurnoir'   %>
 
-                    </div>
+                                  </div>
 
-                     <div style="margin:20px;color:white;"> Mot de passe oublié? </div>
-
-
-                      <div style="margin-top:20px;width:100%;"> 
-                <%= submit_tag  "Se connecter", :class => 'btn btn-default', :style =>'padding:10px;color:white;width:100%;background:#C71585;font-size:22px;'  %>
-                      </div>
-           
-                 
-
-                     
-
-                     <div style="margin-top:30px;margin-bottom:20px;color:white;"> Pas encore membre?</div>
-          
-
-                      
-                    <div style="margin-top:0px;width:100%;background:grey;font-size:22px;"  <a href="#"  class="btn btn-default btn-lg">S'inscrire</a></div>
-                   <% end %>
-             
-
-          </div>
+                                   <div style="margin:20px;"> Mot de passe oublié? </div>
 
 
+                                    <div style="margin-top:20px;width:100%;"> 
+                                    	<%= submit_tag  "Se connecter", :class => 'btn btn-default btn-lg',:style =>'width:100%;'  %>
+                                    </div>
+                         
+                               
+
+                                   <% end %>
+
+                                   <div style="margin-top:30px;margin-bottom:20px;"> Pas encore membre?</div>
+                        
+
+                                    
+                                  <div style="margin-top:0px;width:100%;background:grey;"> 
+                                    <%= link_to "S'inscrire", new_welcome_path,  :class=>"btn btn-inscription btn-lg" %>
+
+                                  </div>
 
 
-          <!--  -----------------------------------------------------------------------------------------------------  -->
+           </div>
 
-         
-  </div>
 
+
+        </div>  <!--   fin row -->
+
+  
+
+  
 </div>
 
 
@@ -166,7 +131,7 @@
      <footer>
       <div class="container" >
         <div class="row" >
-          <div class="col-xs-12 col-md-12  col-lg-12 text-center" style="margin-top:50px;">
+          <div class="col-xs-12 col-md-12  col-lg-12 text-center" style="margin-top:200px;">
             <p style="color:white;">Copyright &copy; Billetgratuit.com 2013</p>
           </div>
         </div>

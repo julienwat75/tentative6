@@ -42,11 +42,15 @@
 
     
     
-    <div class="brand" style="color:black;font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;">Billet<font style="font-weight: 200;color:black;">Gratuit</font><font style="color:black;">.com</font></div>
-    <div class="address-bar"><font style="color:rgb(212, 4, 40);">Invitations gratuites au théatre</font></div>
-
+    
 
     <!-- ---------------------------------- Menue  Version PC ----------------------------------------------- -->
+
+    <div class="brand" style="color:black;font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;background:white;text-align:center;">Billet<font style="font-weight: 200;color:black;">Gratuit</font><font style="color:black;">.com</font>
+
+
+</div>
+
 
 
     <nav class="navbar navbar-default  " style="background-color: rgb(212, 4, 40);" role="navigation">
@@ -58,12 +62,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand"  href="http://billetgratuit.com/pageinvitations.html">Billet<font class="normaltitre">gratuit</font>.com</a>
+          <a class="navbar-brand"  href="http://billetgratuit.com/pageinvitations.html">Billet
+            <font class="normaltitre">gratuit</font>.com</a>
         </div>
+
+
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse" style="color:white;">
+            
           <ul class="nav navbar-nav" >
+
+            
             <li><%= link_to "Invitations", pageinvitations_path,:class => 'couleurblanche' %></li>
 
            <% unless logged_in? %>
