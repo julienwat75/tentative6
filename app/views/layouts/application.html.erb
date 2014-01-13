@@ -46,46 +46,35 @@
 
     <!-- ---------------------------------- Menue  Version PC ----------------------------------------------- -->
 
-    <div class="brand" style="color:white;font-style: oblique;font-weight: bold;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;text-align:center;">Billet<font style="font-weight: 200;color:white;">Gratuit</font><font style="color:white;">.com</font>
+     
+    <nav class="navbar-fixed-top navbar-default " role="navigation" style="background-color: rgb(212, 4, 40);" >
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle"  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+     <a class="navbar-brand"  href="http://billetgratuit.com/pageinvitations.html">Billet<font class="normaltitre">gratuit</font>.com</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:left;padding-left:10%;">
+    <ul class="nav navbar-nav" >
+      <li class="active" style="color:white;font-style: oblique;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;"><a href="http://billetgratuit.com/pageinvitations"><font style="font-weight:bold;">Billet</font>gratuit<font style="font-weight:bold;">.com</font></a></li>
+      <li><%= link_to "Invitations", pageinvitations_path %></li>
 
 
-</div>
 
-
-
-    <nav class="navbar navbar-default  " style="background-color: rgb(212, 4, 40);" role="navigation">
-      <div class="container" >
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand"  href="http://billetgratuit.com/pageinvitations.html">Billet
-            <font class="normaltitre">gratuit</font>.com</a>
-        </div>
-
-
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse" style="color:white;">
-            
-          <ul class="nav navbar-nav" >
-
-            
-            <li><%= link_to "Invitations", pageinvitations_path,:class => 'couleurblanche' %></li>
 
            <% unless logged_in? %>
-            <li><%= link_to "Inscription", new_author_path,:class => 'couleurblanche' %></li>
-            <% end %>
-
-            <li><a href="contact.html">Contact</a></li>
-             
-            
-          
-           <% if logged_in? %>
-         <li><a href="<%= author_path(current_user.id) %>"><%= current_user.email %></a></li>
+      <li><%= link_to "Inscription", new_author_path %></li>
+           <% end %>
+       <li><a href="contact.html">Contact</a></li>  
+       
+         <% if logged_in? %>
+        <li><a href="<%= author_path(current_user.id) %>"><%= current_user.email %></a></li>
          
         <!-- <li><%= link_to "(logout)", logout_path %> </li>  -->
          <!--  <li> jkjkljkljl</li>  -->
@@ -93,17 +82,27 @@
          <li> <%= link_to "Connexion", login_path %>  </li>
           <% end %>
 
-            <% if logged_in? %>
+          <% if logged_in? %>
           <li> <%= link_to "Déconnexion", logout_path %>  </li>
         <% end %>
           </ul>
           
-          
-          
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav>
+   
 
+     
+      
+      </li>
+    </ul>
+    
+    
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+
+
+
+
+   
     
      
    
@@ -112,7 +111,7 @@
 
     <!-- ----------------------------------------------- Container Format Mobile  -------------------------------- -->
 
-    <div class="container" style="background:white;"  >
+    <div class="container" style="background:white;margin-top:130px;"  >
 
       <div class="row">
         <div class="box  hidden-sm hidden-md hidden-lg" >
@@ -150,7 +149,7 @@
         <div class="box hidden-xs "   >
           <div class="col-lg-12" >
             <hr>
-            <h2 class="intro-text text-center"><strong><%= yield(:title) %></strong></h2>
+            <h2 class="intro-text text-center"> <strong><%= yield(:title) %></strong></h2>
             <hr>
           </div>
           <div class="col-lg-12 text-left">

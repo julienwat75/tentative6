@@ -63,6 +63,9 @@ end
   def new
     @author = Author.new
     @faux=@author.errors.any?
+    render :layout => false
+
+
   end
 
   # GET /authors/1/edit
@@ -101,7 +104,10 @@ def create              # le submit va chercher la methode create
 
     else
       flash.now.alert = "Login failed."
-      redirect_to new_welcome_path
+
+      
+
+      
     end
 
 
@@ -110,9 +116,12 @@ def create              # le submit va chercher la methode create
    redirect_to authors_path     # redirection vers l'index
    
    else
-    @faux=@authors.errors.any?
-     @author = @authors
-     redirect_to new_welcome_path
+
+    @author=@authors
+    
+    render :new, :layout => false
+
+
     end
 
 end

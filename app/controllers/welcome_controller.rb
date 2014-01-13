@@ -20,7 +20,7 @@ render :layout => false
 
 
   def new 
-   
+   @authors=@author
    @author=Author.new
   
    render :layout => false
