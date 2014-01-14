@@ -40,6 +40,31 @@ def create              # le submit va chercher la methode create
 	
 
   @invitations = Invitation.new(profil_params)
+
+
+   adresse1= params[:adresse]
+
+
+
+ case adresse1 
+
+ when "comedie republique" 
+   vraiadresse= "1 Boulevard St Martin , 75003 Paris"
+ when "comedie contrescarpe" 
+  vraiadresse= "5 rue blainville, 75005 Paris Théâtre de 110 places environ" 
+
+  end
+
+  @invitations.vraiadresse=vraiadresse
+
+
+
+
+
+
+
+
+
   var = params[:invitation][:dateinvitation]  # on reccupere le nom du form
   heure=params[:heure1]
   minute=params[:minute1]
