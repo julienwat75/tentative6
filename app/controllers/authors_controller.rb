@@ -1,7 +1,7 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :edit, :update, :destroy]
 
-  before_action :connect_authors, only: [:new]
+  #before_action :connect_authors, only: [:new]
 
 
   before_filter :no_sessions, only: [:show]
