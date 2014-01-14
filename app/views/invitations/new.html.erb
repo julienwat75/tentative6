@@ -18,7 +18,7 @@
     <li><%= error %></li>
   <% end %>
   </ul>
-  <p style="color:white;">
+  <p>
 
     <%= f.label :Titre %><br />
     <%= f.text_field :titre %>
@@ -28,18 +28,18 @@
     <%= f.label :Avatar %>
     <%= f.file_field :avatar %>
   </div>
-  <p style="color:white;">
+  <p>
     <%= f.label :Description %><br />
     <%= f.text_area :description %>
   </p>
-    <p style="color:white;">
+    <p>
       <%= f.label :Adresse %><br />
 <SELECT name="adresse">
     <OPTION VALUE="comedie republique">comedie republique</OPTION>
     <OPTION VALUE="comedie contrescarpe">comedie contrescarpe</OPTION>
   </SELECT>
   </p>
-   <p style="color:white;">
+   <p>
     <%= f.label :Date %><br />
     <div class="input-append date datepicker" id="datetimepicker" value="2012-05-15 21:05"  data-date="12-12-2013" data-date-format="dd-mm-yyyy"   > 
     <%= f.text_field :dateinvitation  %>
@@ -48,7 +48,26 @@
   </p>
 
 <br><br>
-<p style="color:white;">
+
+<p>
+<%= f.label :place %><br />
+<SELECT name="heure1">
+    <OPTION VALUE="1">1</OPTION>
+    <OPTION VALUE="2">2</OPTION>
+    <OPTION VALUE="3">3</OPTION>
+    <OPTION VALUE="4">4</OPTION>
+    <OPTION VALUE="5">5</OPTION>
+    <OPTION VALUE="6">1</OPTION>
+    <OPTION VALUE="7">2</OPTION>
+    <OPTION VALUE="8">3</OPTION>
+    <OPTION VALUE="4">4</OPTION>
+    <OPTION VALUE="5">5</OPTION>
+  </SELECT> 
+</p>
+
+
+<p>
+
  <%= f.label :Heure %><br />
 <SELECT name="heure1">
 		<OPTION VALUE="15">15</OPTION>
@@ -56,6 +75,10 @@
 		<OPTION VALUE="17">17</OPTION>
 		<OPTION VALUE="18">18</OPTION>
 		<OPTION VALUE="19">19</OPTION>
+    <OPTION VALUE="19">20</OPTION>
+    <OPTION VALUE="19">21</OPTION>
+    <OPTION VALUE="19">22</OPTION>
+    <OPTION VALUE="19">23</OPTION>
 	</SELECT>
 
 H

@@ -1,7 +1,7 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :edit, :update, :destroy]
 
-  before_filter :zero_authors_or_authenticated, only: [:new, :create]
+  #before_filter :zero_authors_or_authenticated, only: [:create]
 
 
   before_filter :no_sessions, only: [:show]
