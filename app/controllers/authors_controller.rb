@@ -1,7 +1,7 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :edit, :update, :destroy]
 
-  #before_filter :zero_authors_or_authenticated, only: [:create]
+  before_action :connect_authors, only: [:new]
 
 
   before_filter :no_sessions, only: [:show]
@@ -33,6 +33,15 @@ end
 
 
 def zero_authors_or_authenticated
+
+  
+  if current_user 
+    redirect_to root_path
+    return false
+  end
+end
+
+def connect_authors
 
   
   if current_user 

@@ -51,6 +51,7 @@ def create              # le submit va chercher la methode create
   @invitations.description = params[:invitation][:description]  # on reccupere le nom du form
   @invitations.adresse = params[:adresse]  # on reccupere le nom du form 
   @invitations.avatar = params[:invitation][:avatar]  # on reccupere le nom du form
+   @invitations.place = params[:place]
   
   @invitations.author_id =current_user.id
   @invitations.save   #on sauvegarde
@@ -99,7 +100,7 @@ def destroy
 
 
 def profil_params
-    params.require(:invitation).permit(:titre,:description,:avatar,:datetime)
+    params.require(:invitation).permit(:titre,:description,:avatar,:datetime,:place)
   end
 
 
