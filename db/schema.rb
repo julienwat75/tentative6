@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131227004145) do
+ActiveRecord::Schema.define(version: 20140114111531) do
 
   create_table "authors", force: true do |t|
     t.string   "username",            null: false
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20131227004145) do
     t.datetime "dateinvitation"
     t.boolean  "validation"
     t.text     "adresse"
+    t.string   "place"
   end
 
   create_table "offres", force: true do |t|
