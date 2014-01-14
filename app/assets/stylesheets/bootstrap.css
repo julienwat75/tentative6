@@ -5040,7 +5040,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: white;
-  background-color: background: rgb(212, 4, 40);
+  background-color:rgb(212, 4, 40);
   font-size: 1em;
 }
 
