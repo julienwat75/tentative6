@@ -39,7 +39,10 @@ gem 'rails-i18n'
 
 gem 'turbolinks'
 
-gem 'font-awesome-rails'
+
+
+gem 'less-rails'
+gem 'less-rails-fontawesome'
 
 
 
