@@ -8,8 +8,8 @@ a=0
 @invitations2=Invitation.find(:all,
                      :conditions => "",
                       :order      =>  "id DESC",
-                      :limit      =>  4,
-                       :offset      =>  a*4)     # numero de page qu on souhaite afficher
+                      :limit      =>  50,
+                       :offset      =>  a*50)     # numero de page qu on souhaite afficher
  
 
 
@@ -22,6 +22,19 @@ def show
 
 
 end 
+
+
+def destroy
+	@invitation=Invitation.find(params[:id])
+
+    @invitation.destroy
+    respond_to do |format|
+      format.html { redirect_to authors_url }
+      format.json { head :no_content }
+    end
+  end
+
+
 
 
 

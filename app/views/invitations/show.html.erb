@@ -116,11 +116,21 @@
 
  <div class="description" ><%= @invitation.vraiadresse %></div>
 
+ <% if @invitation.place.to_i > 0  %>
 
 <a href="<%=  reservation_path(@invitation.id) %>">
-  <div  class="btn btn-default btn-lg monbouton" style="margin-bottom: 15px;
-">  Réserver </div>
+  <div  class="btn btn-default btn-lg monbouton" style="margin-bottom: 15px;">  Réserver </div>
 </a>
+
+ 
+<% else %>
+<div class="epuise" >
+Invitations épuisés
+
+<% end %>
+
+</div>
+
 
 </div>
 

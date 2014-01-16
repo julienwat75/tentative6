@@ -117,11 +117,7 @@ def update
   end
 
 
-def destroy
-    @invitations=Invitation.find(params[:id])
 
-
-    end
 
 
 def profil_params
