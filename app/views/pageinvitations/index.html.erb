@@ -26,7 +26,7 @@
 </div>
 </a>
 </div>
- <div  class="col-xs-0 col-md-4  col-lg-4"></div>
+ <div  class="col-xs-0 col-md-3  col-lg-3"></div>
 </div>
 <% end %>
 
@@ -106,7 +106,7 @@
 
    
 
-<div  class="col-xs-12 col-sm-6 col-md-4 col-lg-4  " style="background:white;">
+<div  class="col-xs-12 col-sm-6 col-md-3 col-lg-3  " >
 
   <div class="row" >
 
@@ -116,22 +116,29 @@
 
 
 
-    <div  class="invitation hidden-xs">
+    <div  class="invitation hidden-xs" style="background:white;">
 
-         <div class="titre_vignette">  <%=  t.titre %>  </div>
-         <div class="date_vignette"> 
-          <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
-        </div>
-
+         
          
   
 
 
           <a href="<%=  invitation_path(t.id) %>">
-          <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:300px;" /></div>
+          <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:200px; border-radius:5px 5px 5px 5px;" /></div>
           </a>
 
-           <div class="adresse_vignette"><%= t.adresse %></div>
+          
+           <div align="center">
+
+
+             <div class="titre_vignette">  <%=  t.titre %>  </div>
+             <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
+
+
+
+
+
+           </div>
 
 
     </div>
@@ -140,27 +147,32 @@
     <!--   ------------------- Version mobile ---------------------------------------------------      -->
 
 
-      <div  class="invitation2 hidden-sm hidden-md hidden-lg ">
+       <div  class="invitation hidden-sm hidden-md hidden-lg" style="background:white;">
 
-         <div class="titre_vignette2">  <%=  t.titre %>  </div>
-         <div class="date_vignette2"> 
-          <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
-        </div>
-
+         
          
   
 
 
           <a href="<%=  invitation_path(t.id) %>">
-          <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:240px;" /></div>
+      <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:200px; border-radius:5px 5px 5px 5px;" /></div>
           </a>
 
-           <div class="adresse_vignette2"><%= t.adresse %></div>
+          
+           <div align="center">
+
+
+             <div class="titre_vignette">  <%=  t.titre %>  </div>
+             <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
+
+
+
+
+
+           </div>
 
 
     </div>
-
-
 
 
 

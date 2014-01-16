@@ -96,14 +96,17 @@ background: url(../img/slide-3.jpg);
 footer {
 
 
-
- /* background: pink;
+ 
+ background: #B9121B;
  /* background: rgba(255,255,255,0.9);*/
 }
 
 footer p {
   margin: 0;
-  padding: 50px 0;
+  padding: 0px 0;
+  padding-bottom: 300px;
+  padding-top: 20px;
+  color:white;
 
 
 }
@@ -201,7 +204,7 @@ footer p {
 }
 
 .nav>li>a {
-  padding: 35px;
+  padding: 20px;
 }
 
 .navbar-nav>li>a {
@@ -213,7 +216,7 @@ footer p {
   margin: 0 auto;
   display: table;
   table-layout: fixed;
-  font-size: 1.25em;
+  font-size: 1.2em;
 }
 
 }

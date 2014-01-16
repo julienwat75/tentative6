@@ -1,7 +1,17 @@
 
 <% provide(:title, "Invitations gratuites") %>
 
-<% if @user && @user.id == 3  %>
+ 
+<!--  <INPUT type="button" value="Cliquez ici" onclick="afficher()">  -->
+
+
+
+
+
+
+
+
+<% if @user && @user.id == 3  %>   <!--   Bouton webmaster -->  
 
 <div class="row">
   <div  class="col-xs-0 col-md-4"></div>
@@ -15,6 +25,13 @@
  <div  class="col-xs-0 col-md-4  col-lg-4"></div>
 </div>
 <% end %>
+
+
+
+
+<!-- --------------------------------------------------------------------------------------------------  -->
+
+
 
 <div class="row">
 <% @invitations2.each do |t| %>
@@ -48,7 +65,7 @@
  <% case mois  %>
  <% when "January"  %>
  <%  mois= "Janvier" %> 
- <% when "Febuary"  %>
+ <% when "February"  %>
  <%  mois= "Février" %> 
 <% when "March"  %>
  <%  mois= "Mars" %>
@@ -74,7 +91,9 @@
  
  <% end %>
 
-<% var=t.avatar.url %>
+
+<% var=t.avatar.url(:medium) %>
+
 <% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
 
 
@@ -83,33 +102,69 @@
 
    
 
-<div  class="col-xs-12 col-md-4 col-lg-4  " style="height:450px;padding-left:55px !important;padding-right:55px !important;">
+<div  class="col-xs-12 col-sm-6 col-md-4 col-lg-4  " >
 
   <div class="row" >
 
 
 
 
+
+
+
+    <div  class="invitation hidden-xs">
+
+         <div class="titre_vignette">  <%=  t.titre %>  </div>
+         <div class="date_vignette"> 
+          <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
+        </div>
+
+         
   
-  <div   class="col-xs-12 col-md-4 col-lg-4 horizontal" style="width:100%;">
 
-    <div  class="invitation">
 
-    <div style="font-size:16px;margin-top:5px;margin-left:5px;">  <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
+          <a href="<%=  invitation_path(t.id) %>">
+          <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:300px;" /></div>
+          </a>
+
+           <div class="adresse_vignette"><%= t.adresse %></div>
+
+
     </div>
 
-     <div style="font-size:14px;margin-left:5px;"><%= t.adresse %></div>
 
+    <!--   ------------------- Version mobile ---------------------------------------------------      -->
+
+
+      <div  class="invitation2 hidden-sm hidden-md hidden-lg ">
+
+         <div class="titre_vignette2">  <%=  t.titre %>  </div>
+         <div class="date_vignette2"> 
+          <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
+        </div>
+
+         
   
 
 
-  <a href="<%=  invitation_path(t.id) %>">
-   <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:100%;height:350px" /></div>
-  </a>
+          <a href="<%=  invitation_path(t.id) %>">
+          <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:240px;" /></div>
+          </a>
 
-</div>
+           <div class="adresse_vignette2"><%= t.adresse %></div>
 
-</div>
+
+    </div>
+
+
+
+
+
+
+    <!-- ---------------------------------------------------------------------------------------------   -->
+
+
+
 
 
 
@@ -117,6 +172,9 @@
 </div> 
    
 </div>
+
+
+
 
 
    
@@ -141,9 +199,26 @@
 
    <% end %>
 
+
+   
+
 <%  end  %>
+
+
+
+
+
+
 </div>
 <div>
+
+
+
+
+
+
+
+
 
   <div class="row" >
     <div  class="col-xs-0 col-md-4 col-lg-4"></div> 
@@ -175,15 +250,6 @@
 
 </div>  
 </div>
-
-
-             
-           <!--  <ul class="pager" style="float:right;">  -->
-             
-             <!-- <li class="previous"><a href="/pageinvitations/<%= @page_suivante %>">Page suivante &rarr;</a></li> -->
-           <!--   </ul> -->
-            
-
 
 
 

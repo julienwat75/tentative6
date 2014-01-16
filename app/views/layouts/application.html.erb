@@ -47,7 +47,9 @@
     <!-- ---------------------------------- Menue  Version PC ----------------------------------------------- -->
 
      
-    <nav class="navbar-fixed-top navbar-default " role="navigation" style="background-color: rgb(212, 4, 40);" >
+   
+     
+    <nav class="navbar-fixed-top navbar-default " role="navigation" style="background-color: rgb(185, 18, 27);" >
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle"  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -102,6 +104,7 @@
 
 
 
+
    
     
      
@@ -111,7 +114,7 @@
 
     <!-- ----------------------------------------------- Container Format Mobile  -------------------------------- -->
 
-    <div class="container" style="background:white;margin-top:140px;"  >
+    <div class="container" style="background:white;margin-top:140px;padding-left:15px;"  >
 
       <div class="row">
         <div class="box  hidden-sm hidden-md hidden-lg" >
@@ -148,11 +151,20 @@
 <div class="row">
         <div class="box hidden-xs "   >
           <div class="col-lg-12" >
-            <hr>
-            <h3 class="intro-text text-center"> <strong><%= yield(:title) %></strong></h3>
-            <hr>
+            
           </div>
           <div class="col-lg-12 text-left">
+
+
+      <div class="row">
+      
+
+          <div class="col-lg-12">
+
+               <div class="montitre">  <%= yield(:title) %></div>
+
+          </div>
+    </div>
             <!-- <img class="img-responsive img-border img-full" src="/img/slide-1.jpg">  -->
             
             <%= yield %>
@@ -181,6 +193,7 @@
     </div><!-- /.container -->
      <footer>
       <div class="container" >
+        
         <div class="row" >
           <div class="col-lg-12 text-center">
             <p>Copyright &copy; Billetgratuit.com 2013</p>
@@ -191,7 +204,7 @@
 
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="/js/bootstrap.js"></script>
 
   </body>
 

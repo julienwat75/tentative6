@@ -39,6 +39,8 @@ gem 'rails-i18n'
 
 gem 'turbolinks'
 
+gem 'font-awesome-rails'
+
 
 
 

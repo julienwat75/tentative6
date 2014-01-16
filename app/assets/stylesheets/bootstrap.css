@@ -83,12 +83,12 @@ body {
         }
 
         .titre_vignette{
-          font-size:16px;
-          margin-top:5px;
-          margin-left:5px;
+          font-size:18px;
           
-          font-weight: bold;
-         color: rgb(104, 104, 104);
+          margin-top: 15px;
+          font-family: Helvetica;
+        
+         color:black;
 
 
 
@@ -122,12 +122,9 @@ body {
 
 
         .adresse_vignette2{
-          font-size:14px;
-          margin-top:5px;
-          margin-left:5px;
-           margin-right:5px;
+          
 
-         text-align:right;
+         text-align:center;
          color:black;
           color: rgb(104, 104, 104);
 
@@ -168,7 +165,7 @@ body {
         text-align:center;
 
         overflow: hidden;
-    
+
       
         }
 
@@ -184,15 +181,28 @@ body {
       
         }
 
+        .montitre{
+
+          
+        
+        border-top:1px solid rgba(0, 0, 0, 0.2);
+        border-bottom:1px solid rgba(0, 0, 0, 0.2);
+        font-family: Helvetica;
+        font-size: 18px;
+        padding: 10px;
+        margin-bottom: 15px;
+        
+    
+        }
+
 
          .invitation{
 
           
         
-        border:1px solid rgba(0, 0, 0, 0.2);
         background: white;
-        margin: 5px;
-        height:400px;
+        margin-bottom: 40px;
+        
         overflow: hidden;
         border-radius:5px 5px 5px 5px;
         
@@ -221,7 +231,7 @@ body {
         border:1px solid rgba(0, 0, 0, 0.2);
         background: white;
         margin: 5px;
-        padding: 5px;
+        padding-bottom: 30px;
         overflow: hidden;
         border-radius:5px 5px 5px 5px;
         font-size:14px;
@@ -1072,6 +1082,7 @@ pre code {
 .container {
   padding-right: 15px;
   padding-left: 15px;
+  border-radius:5px 5px 0px 0px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -3782,10 +3793,13 @@ input[type="button"].btn-block {
 
 .dropdown {
   position: relative;
+  float:right;
+}
 }
 
 .dropdown-toggle:focus {
   outline: 0;
+  float:right;
 }
 
 .dropdown-menu {
@@ -3823,7 +3837,7 @@ input[type="button"].btn-block {
 
 .dropdown-menu > li > a {
   display: block;
-  padding: 3px 20px;
+  padding: 20px 20px;
   clear: both;
   font-weight: normal;
   line-height: 1.428571429;
@@ -5040,7 +5054,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: white;
-  background-color:rgb(212, 4, 40);
+  /*background-color:rgb(212, 4, 40);*/
+    background-color:#B9121B;
   font-size: 1em;
 }
 
