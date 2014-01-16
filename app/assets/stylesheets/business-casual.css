@@ -33,6 +33,11 @@ background: url(../img/slide-3.jpg);
 
 }
 
+.monjaune {
+background: yellow; 
+
+}
+
 .brand,
 .address-bar {
   display: none;

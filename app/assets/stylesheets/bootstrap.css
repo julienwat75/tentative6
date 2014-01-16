@@ -49,6 +49,24 @@ body {
   margin: 0;
 }
 
+.monjaune {
+
+ background-color:yellow;
+ 
+
+}
+
+.monrouge {
+
+ background-color:#B9121B;
+
+}
+
+
+
+
+
+
   .horizontal {
      
      
@@ -2588,7 +2606,7 @@ fieldset[disabled] .btn {
 
 .btn-default {
   color: white;
-  background-color: rgb(212, 4, 40);
+  background-color:#B9121B;
   border-color: white;
   width:100%;
 }
@@ -2620,7 +2638,7 @@ fieldset[disabled] .btn {
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
   color: white;
-  background-color: rgb(255, 4, 40);
+  background-color:#ff121B;
   border-color: #adadad;
   width:100%;
 }
@@ -5055,7 +5073,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a:focus {
   color: white;
   /*background-color:rgb(212, 4, 40);*/
-    background-color:#B9121B;
+   
   font-size: 1em;
 }
 
@@ -7422,6 +7440,10 @@ th.visible-print,
 td.visible-print {
   display: none !important;
 }
+
+
+
+
 
 @media print {
   .visible-print {
