@@ -65,29 +65,43 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:left;padding-left:10%;">
     <ul class="nav navbar-nav" >
       <li class="active" style="color:white;font-style: oblique;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;"><a href="http://billetgratuit.com/pageinvitations"><font style="font-weight:bold;">Billet</font>gratuit<font style="font-weight:bold;">.com</font></a></li>
-      <li><%= link_to "Invitations", pageinvitations_path %></li>
+      
+      <li> <a href="<%= pageinvitations_path %>"> <i class="fa fa-star-o"></i>Invitations </a></li>
 
+     
 
 
 
            <% unless logged_in? %>
-      <li><%= link_to "Inscription", new_author_path %></li>
-           <% end %>
-       <li><a href="contact.html">Contact</a></li>  
        
-         <% if logged_in? %>
-        <li><a href="<%= author_path(current_user.id) %>"><%= current_user.email %></a></li>
+     <li> <a href="<%= new_author_path %>"><i class="fa fa-users"></i> Inscription </a></li>
+           <% end %>
+       <li><a href="contact.html"><i class="fa fa-envelope-o"></i> Contact</a></li>  
+       
+         
+
+          <% if logged_in? %>
+           <li> <a href="<%= logout_path %>"><i class="fa fa-cog"></i> Déconnexion </a></li>
+        <% end %>
+        
+
+        <% if logged_in? %>
+        <li><a href="<%= author_path(current_user.id) %>"><i class="fa fa-user"></i> <%= current_user.email %></a></li>
          
         <!-- <li><%= link_to "(logout)", logout_path %> </li>  -->
          <!--  <li> jkjkljkljl</li>  -->
         <% else %>
-         <li> <%= link_to "Connexion", root_path %>  </li>
+         <li> <a href="<%= root_path %>"><i class="fa fa-cog"></i> Connexion </a></li>
           <% end %>
 
-          <% if logged_in? %>
-          <li> <%= link_to "Déconnexion", logout_path %>  </li>
+          <% if current_user && current_user.id == 3  %>   <!--   Bouton webmaster -->  
+
+         <li><%= link_to "Créer", new_invitation_path %></li>
+
+          
         <% end %>
-          </ul>
+          
+
           
    
 
