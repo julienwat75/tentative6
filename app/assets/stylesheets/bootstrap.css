@@ -62,6 +62,12 @@ body {
 
 }
 
+.monrouge2 {
+
+ background-color:#B9121B;
+
+}
+
 
 
 
@@ -5077,7 +5083,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: white;
+  color: black;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -5090,7 +5096,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: white;
+  color: black;
   /*background-color:rgb(212, 4, 40);*/
    
   font-size: 1em;

@@ -19,10 +19,13 @@
    <input  type="hidden" value="<%=   @invitation.titre  %>" name="titre">
    <input  type="hidden" value="<%=   @invitation.dateinvitation  %>" name="dateinvitation">
    <input  type="hidden" value="<%=   @invitation.adresse  %>" name="adresse">
+   <input  type="hidden" value="<%=   @invitation.place  %>" name="place">
+   <input  type="hidden" value="<%=   @invitation.id  %>" name="idinvitation">
+  
   
   
  <div style="margin-bottom:20px;font-size:20px;">
-   Nombre de places
+  <div style="margin-bottom:15px;"> Nombre de places</div>
   <%= f.select :nombreinvitations, [['1',1], 2] ,:style =>'text-align:center;'  %>
   </div>
   <div style="font-size:22px;color:blue;">

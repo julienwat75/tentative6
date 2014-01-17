@@ -102,7 +102,7 @@ footer {
 
 
  
- background: #B9121B;
+ background:white;
  /* background: rgba(255,255,255,0.9);*/
 }
 
@@ -111,7 +111,7 @@ footer p {
   padding: 0px 0;
   padding-bottom: 300px;
   padding-top: 20px;
-  color:white;
+  color:black;
 
 
 }

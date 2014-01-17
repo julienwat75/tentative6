@@ -54,6 +54,17 @@ def new
   code1=Invitation.aleatoire
   
  @reservations = Reservation.new(reservation_params)
+ id=params[:idinvitation]
+ @invitation=Invitation.find(params[:idinvitation])
+    
+  
+  
+  places_demander=params[:reservation][:nombreinvitations]
+  places_restante=(@invitation.place.to_i)-(places_demander.to_i)   # on soustrait le nombre de place
+  
+
+  @invitation.update_attributes(place: places_restante)
+
  
   @reservations.nombreinvitations=params[:reservation][:nombreinvitations] 
   @reservations.titre=params[:titre]   # ici on recupere directement le champ du form ds l'id car ce n est pas un f.text_field 
@@ -68,7 +79,11 @@ def new
   @reservations.save   #on sauvegarde
     
    redirect_to "/pages/confirmation"
+
 	end
+
+
+
 
 	def reservation_params
     params.require(:reservation).permit(:nombreinvitations)
