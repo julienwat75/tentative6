@@ -5060,7 +5060,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   font-style: oblique;
   font-weight: bold;
   font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
-  color: white;
+  color: black;
   font-size: 16px;
 }
 
@@ -5068,13 +5068,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
   font-style: italic;
   font-weight: normal;
   font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
-  color: white;
+  color: black;
   font-size: 16px;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: white;
+  color: black;
   background-color: transparent;
 }
 
