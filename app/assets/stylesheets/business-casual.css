@@ -8,7 +8,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background: url(../img/slide-3.jpg); 
+  background: rgb(142, 199, 246);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -109,9 +109,10 @@ footer {
 footer p {
   margin: 0;
   padding: 0px 0;
-  padding-bottom: 300px;
+  padding-bottom: 200px;
   padding-top: 20px;
   color:black;
+  text-align: center;
 
 
 }
@@ -209,7 +210,7 @@ footer p {
 }
 
 .nav>li>a {
-  padding: 20px;
+  padding: 15px;
 }
 
 .navbar-nav>li>a {

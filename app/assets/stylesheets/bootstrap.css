@@ -730,7 +730,8 @@ hr {
 }
 
 p {
-  margin: 0 0 10px;
+  
+  background: #F69C00;
 }
 
 .lead {
@@ -1125,7 +1126,7 @@ pre code {
 .container {
   padding-right: 15px;
   padding-left: 15px;
-  border-radius:5px 5px 0px 0px;
+  border-radius:20px 20px 0px 0px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -4948,8 +4949,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -5083,12 +5084,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: black;
+  color:white;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: lightgrey;
+  color: #F69C00;
   
   background-color: transparent;
 }

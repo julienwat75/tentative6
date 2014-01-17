@@ -231,20 +231,24 @@
   <% page=0  %>
 
 
+  <ul class="pagination">
+
+
 <% while page< @nombre_pages %>
 
 
 
- 
+ <li><a href="/pageinvitations/<%= page %>"><%= page+1 %></a></li>
 
-
-  <div class="changepage"> <a href="/pageinvitations/<%= page %>" style="color:black">  <%= page+1 %> </a></div>
 
    
 
 
  <% page+=1 %>
  <% end %>
+
+ </ul>
+
 
 <div  class="col-xs-0 col-md-4 col-lg-4"></div> 
 
