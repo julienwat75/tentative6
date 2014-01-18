@@ -4900,6 +4900,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border-radius: 4px;
   float:right;
   width: 10%;
+  text-align: center;
 }
 
 .navbar-toggle .icon-bar {
