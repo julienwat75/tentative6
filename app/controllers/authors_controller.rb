@@ -72,7 +72,7 @@ end
   def new
     @author = Author.new
     @faux=@author.errors.any?
-    render :layout => false
+    render :layout => true
 
 
   end

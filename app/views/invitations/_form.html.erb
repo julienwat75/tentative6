@@ -1,61 +1,113 @@
-<%= form_for(@invitation) do |f| %>
-  <% if @invitation.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@invitation.errors.count, "error") %> prohibited this author from being saved:</h2>
 
-      <ul>
-      <% @invitation.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+ <div class="row " >
 
-  <p>
-    <%= f.label :Titre %><br />
-    <%= f.text_field :titre %>
-  </p>
-
- 
-  <p>
-    <%= f.label :Description %><br />
-    <%= f.text_area :description %>
-  </p>
-   <div class="input-append date datepicker" id="datetimepicker" value="2012-05-15 21:05"  data-date="12-12-2013" data-date-format="dd-mm-yyyy"   > 
-    <%= f.text_field :dateinvitation  %>
-   
-    <span class="add-on"><i class="icon-th"></i></span></div>
-
-    <br><br>
+    <div class="col-xs-0 col-sm-4 col-md-4 col-lg-4 text-center " ></div>
 
 
-<SELECT name="heure1">
-    <OPTION VALUE="15">15</OPTION>
-    <OPTION VALUE="16">16</OPTION>
-    <OPTION VALUE="17">17</OPTION>
-    <OPTION VALUE="18">18</OPTION>
-    <OPTION VALUE="19">19</OPTION>
-  </SELECT>
-
-H
+     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center " >
 
 
+                                  <%= form_for(@invitation) do |f| %>
+                                    <% if @invitation.errors.any? %>
+                                      <div id="error_explanation">
+                                        <h2><%= pluralize(@invitation.errors.count, "error") %> prohibited this author from being saved:</h2>
 
-<SELECT name="minute1">
-    <OPTION VALUE="00">00</OPTION>
-    <OPTION VALUE="15">15</OPTION>
-    <OPTION VALUE="30">30</OPTION>
-    <OPTION VALUE="45">45</OPTION>
-    
-  </SELECT>
-    
+                                        <ul>
+                                        <% @invitation.errors.full_messages.each do |msg| %>
+                                          <li><%= msg %></li>
+                                        <% end %>
+                                        </ul>
+                                      </div>
+                                    <% end %>
 
-        
-<br><br>
-  <div class="button" style="font-size:22px;" >
-    <%= f.submit 'valider' %>
+                                    <p>
+                                      <%= f.label :Titre %><br />
+                                      <%= f.text_field :titre %>
+                                    </p>
+
+                                   
+                                    <p>
+                                      <%= f.label :Description %><br />
+                                      <%= f.text_area :description %>
+                                    </p>
+
+
+                                    <%= f.label :Date %><br />
+                                     <div class="input-append date datepicker" id="datetimepicker" value="2012-05-15 21:05"  data-date="12-12-2013" data-date-format="dd-mm-yyyy"   > 
+                                      <%= f.text_field :dateinvitation  %>
+                                     
+                                      <span class="add-on"><i class="icon-th"></i></span></div>
+
+                                      <br><br>
+
+                                  <%= f.label :Heure %><br />
+                                  <SELECT name="heure1">
+                                      <OPTION VALUE="15">15</OPTION>
+                                      <OPTION VALUE="16">16</OPTION>
+                                      <OPTION VALUE="17">17</OPTION>
+                                      <OPTION VALUE="18">18</OPTION>
+                                      <OPTION VALUE="19">19</OPTION>
+                                    </SELECT>
+
+                                  H
+
+
+
+                                  <SELECT name="minute1">
+                                      <OPTION VALUE="00">00</OPTION>
+                                      <OPTION VALUE="15">15</OPTION>
+                                      <OPTION VALUE="30">30</OPTION>
+                                      <OPTION VALUE="45">45</OPTION>
+                                      
+                                    </SELECT>
+
+                                    <br><br>
+
+
+                                    <p>
+                                  <%= f.label :places %><br />
+                                  <SELECT name="place">
+                                     <OPTION VALUE="1">1</OPTION>
+                                      <OPTION VALUE="2">2</OPTION>
+                                      <OPTION VALUE="3">3</OPTION>
+                                      <OPTION VALUE="4">4</OPTION>
+                                      <OPTION VALUE="5">5</OPTION>
+                                      <OPTION VALUE="6">6</OPTION>
+                                      <OPTION VALUE="7">7</OPTION>
+                                      <OPTION VALUE="8">8</OPTION>
+                                      <OPTION VALUE="9">9</OPTION>
+                                      <OPTION VALUE="10">10</OPTION>
+                                      <OPTION VALUE="11">11</OPTION>
+                                      <OPTION VALUE="12">12</OPTION>
+                                      <OPTION VALUE="13">13</OPTION>
+                                      <OPTION VALUE="14">14</OPTION>
+                                      <OPTION VALUE="15">15</OPTION>
+                                      <OPTION VALUE="16">16</OPTION>
+                                      <OPTION VALUE="17">17</OPTION>
+                                      <OPTION VALUE="18">18</OPTION>
+                                      <OPTION VALUE="19">19</OPTION>
+                                      <OPTION VALUE="20">20</OPTION>
+                                    </SELECT> 
+                                  </p>
+                                      
+
+                                          
+                                  <br><br>
+                                    <div class="button" style="font-size:22px;" >
+                                      <%= f.submit 'valider' %>
+                                    </div>
+                                  <% end %>
+
+
+              <div class="col-xs-0 col-sm-4 col-md-4 col-lg-4 text-center " ></div>
+
+
+          </div>
+
+         
+
+         
   </div>
-<% end %>
 
 
 <script type="text/javascript">

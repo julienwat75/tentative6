@@ -1,73 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+ 
+<% provide(:title, "Se connecter") %>
 
-    <title>Billetgratuit.com</title>
+<div class="row " >
+
+    <div class="col-xs-0 col-sm-4 col-md-4 col-lg-4 text-center " ></div>
 
 
-    <!-- Bootstrap core CSS -->
-    <!-- <link href="/css/bootstrap.css" rel="stylesheet"> -->
-   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <!-- Add custom CSS here -->
-   <!--  <link href="/css/business-casual.css" rel="stylesheet">  -->
-      
-    <%= javascript_include_tag "application" %>
-
-  </head>
-
-  <body class="test">
-
-     
-   
-    <nav class="navbar navbar-default " role="navigation" style="background-color:white" >
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    
-     <a class="navbar-brand"  href="#">Billet<font class="normaltitre">gratuit</font>.com</a>
-  </div>
-
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:left;padding-left:10%;">
-    <ul class="nav navbar-nav" >
-      <li class="active" style="color:white;font-style: oblique;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;"><a href="#"><font style="font-weight:bold;">Billet</font>gratuit<font style="font-weight:bold;">.com</font></a></li>
-    
-    </ul>
-    
-    
-  </div><!-- /.navbar-collapse -->
-</nav>
+     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center " >
 
 
 
 
-<div class="container  " style="background:blue;" >
+                              <div style="margin-bottom:200px;">
 
-  <div class="row  " >
-
-     <div class=" col-xs-0 col-md-6 col-lg-6 text-center hidden-xs " > 
-
-         
-     <div style=" font-style:oblique; border-top:1px solid white; border-bottom:1px solid white;margin-top:5px;padding-bottom:30px;padding-bottom:20px;margin-bottom:20px;margin-top:100px;">
-    <h3 ><small><font color="white"><b>Chaque jours des places de theatre gratuites proposées par nos partenaires<b> </font></small></h3>
-    </div>
-            
-
-      </div>
-
-
-      <div class=" col-xs-0 col-md-2 col-lg-2 text-center" > </div>
-
-
-      <div class="col-xs-12 col-md-4 col-lg-4 text-center" >
-
-          <div    style="background-color: rgba(255, 255, 255, 0.5);padding:15px;margin-bottom:200px;">
-
-
-                 
                                      <h2 ><small><font color="white">Se connecter</font></small></h2><br>
 
                                     <%= form_tag author_sessions_path, method: :post do %>
@@ -89,7 +34,7 @@
 
 
                                     <div style="margin-top:20px;width:100%;"> 
-                                    	<%= submit_tag  "Se connecter", :class => 'btn btn-default btn-lg',:style =>'width:100%;'  %>
+                                      <%= submit_tag  "Se connecter", :class => 'btn btn-default btn-lg',:style =>'width:100%;'  %>
                                     </div>
                          
                                
@@ -104,35 +49,18 @@
                                     <%= link_to "S'inscrire", new_author_path,  :class=>"btn btn-inscription btn-lg",:style =>'color:white;' %>
 
                                   </div>
-
-
-           </div>
-
-
-
-        </div>  <!--   fin row -->
-
-  
-
-  
-</div>
+                          </div>
 
 
 
-    </div><!-- /.container -->
-     <footer>
-      <div class="container" >
-        <div class="row" >
-          <div class="col-xs-12 col-md-12  col-lg-12 text-center" style="margin-top:10px;">
-            <p style="color:black;">Copyright &copy; Billetgratuit.com 2013</p>
-          </div>
-        </div>
-      </div>
-    </footer>
 
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
 
-  </body>
-</html>
+
+                   </div>
+
+      <div class="col-xs-0 col-sm-4 col-md-4 col-lg-4 text-center " ></div>
+
+ </div>     
+
+
+           

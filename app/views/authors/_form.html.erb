@@ -1,63 +1,15 @@
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Billetgratuit.com</title>
+<% provide(:title, "Inscription") %>
 
 
 
-
-
-    <!-- Bootstrap core CSS -->
-    <!-- <link href="/css/bootstrap.css" rel="stylesheet"> -->
-   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <!-- Add custom CSS here -->
-   <!--  <link href="/css/business-casual.css" rel="stylesheet">  -->
-      
-    <%= javascript_include_tag "application" %>
-
-  </head>
-
-  <body class="test">
-
-     
-<nav class="navbar navbar-default " role="navigation" style="background-color:white;" >
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    
-     <a class="navbar-brand"  href="#">Billet<font class="normaltitre">gratuit</font>.com</a>
-  </div>
-
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="float:left;padding-left:10%;">
-    <ul class="nav navbar-nav" >
-      <li class="active" style="color:white;font-style: oblique;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;"><a href="#"><font style="font-weight:bold;">Billet</font>gratuit<font style="font-weight:bold;">.com</font></a></li>
-    
-    </ul>
-    
-    
-  </div><!-- /.navbar-collapse -->
-</nav>
-
-    
-
-
-
-<div class="container "  >
-
-  <div class="row " >
+ <div class="row " >
 
     <div class="col-xs-0 col-sm-4 col-md-4 col-lg-4 text-center " ></div>
 
 
      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center " >
 
-                 <div style="background-color: rgba(255, 255, 255, 0.5);padding:15px;margin-bottom:200px;">
+                 <div style="margin-bottom:100px;">
             
                       <h2 ><small><font color="white">Inscription</font></small></h2><br>
 
@@ -86,15 +38,15 @@
                       
                      
 
-                     <div class="field">
+                     <div class="field" style="text-align:left;">
                         
           
                         
-                      <%= f.label :Mlle,:style =>'color:white;' %> 
-                      <%= f.radio_button :sexe, 'Mlle' %>
-                      <%= f.label :Mme ,:style =>'color:white;' %> 
-                      <%= f.radio_button :sexe, 'Mme' %>
-                      <%= f.label :M ,:style =>'color:white;' %> 
+                      <%= f.label :Mlle,:style =>'color:black;' %> 
+                      <%= f.radio_button :sexe, 'Mlle' %> &nbsp
+                      <%= f.label :Mme ,:style =>'color:black;' %> 
+                      <%= f.radio_button :sexe, 'Mme' %> &nbsp
+                      <%= f.label :M ,:style =>'color:black;' %> 
                       <%= f.radio_button :sexe, 'M' , checked: true %>
 
                      </div>
@@ -197,25 +149,3 @@
 
          
   </div>
-
-</div>
-
-
-
-    </div><!-- /.container -->
-     <footer>
-      <div class="container" >
-        <div class="row" >
-          <div class="col-xs-12 col-md-12  col-lg-12 text-center" style="margin-top:10px;">
-            <p style="color:black;">Copyright &copy; Billetgratuit.com 2013</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-
-  </body>
-</html>
