@@ -1,6 +1,6 @@
 MyApp::Application.routes.draw do
 
-  get "pages/confirmation"
+
   resources :profils
   resources :offres
    resources :pagemembres
@@ -23,7 +23,8 @@ MyApp::Application.routes.draw do
    get 'logout' => 'author_sessions#destroy'
 
 
-
+  get "pages/confirmation"
+  get "pages/epuise"
   get "welcome/index"
   get "welcome/help"
   get "welcome/inscription"
