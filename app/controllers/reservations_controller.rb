@@ -61,7 +61,13 @@ def new
   
   places_demander=params[:reservation][:nombreinvitations]
   places_restante=(@invitation.place.to_i)-(places_demander.to_i)   # on soustrait le nombre de place
-  
+
+
+  if places_restante < 0 
+
+  redirect_to "/pages/epuise"
+
+  else
 
   @invitation.update_attributes(place: places_restante)
 
@@ -79,6 +85,8 @@ def new
   @reservations.save   #on sauvegarde
     
    redirect_to "/pages/confirmation"
+
+ end
 
 	end
 

@@ -1,0 +1,28 @@
+
+<% provide(:title, "Confirmation de votre réservation") %>
+
+
+<div class="row"  >
+
+   <div  class="col-xs-0  col-md-3 col-ls-3" ></div>
+
+
+<!-- --------------------  Partie PC --------------------------------------------  -->
+
+  <div  class="col-xs-12 col-md-6 col-ls-6 " style="margin-top:50px;" > 
+
+  <p> Votre réservation à bien été enregistrée, le code de votre réservation vient d'être envoyé sur votre boite mail. </p><br>
+  <h5> Bon spectacle </h5>
+
+ </div>
+
+
+
+
+
+  
+
+   <div  class="col-xs-0  col-md-3 col-ls-3" ></div>
+
+
+  </div>
