@@ -3,8 +3,8 @@ task :update_feed => :environment do
   puts "Updating feed..."
   
   puts "done."
-  a=User.find_by_id(1)
-  a.update_attribute(:name,"cedric")
+  a=Author.find_by_id(3)
+  a.update_attribute(:prenom,"cedric")
 
 
 end
