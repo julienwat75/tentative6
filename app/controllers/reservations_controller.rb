@@ -48,10 +48,21 @@ def new
          #params[:reservation].inspects
 
 		#binding.pry 
-       #raise params.inspect 
+    #raise params.inspect 
 
-  #@reservations = Reservation.new(params[:reservation])
+    #@reservations = Reservation.new(params[:reservation])
+
+
+if current_user.limite 
+
+  redirect_to "/pages/limite"
+  return false
+
+  end
+   
+  
   code1=Invitation.aleatoire
+  
   
  @reservations = Reservation.new(reservation_params)
  id=params[:idinvitation]
@@ -62,7 +73,12 @@ def new
   places_demander=params[:reservation][:nombreinvitations]
   places_restante=(@invitation.place.to_i)-(places_demander.to_i)   # on soustrait le nombre de place
 
-  
+  if current_user.limite 
+
+  redirect_to "/pages/limite"
+  return false
+
+  end
 
 
   if places_restante <= 0 
@@ -70,6 +86,10 @@ def new
   redirect_to "/pages/epuise"
 
   else
+
+
+  current_user.update_attribute(:limite, true)
+
 
   @invitation.update_attributes(place: places_restante)
 
