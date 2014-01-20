@@ -16,5 +16,6 @@ task :reset_reservations => :environment do
   #User.send_reminders
     @authors=Author.find_by_id(3)
     @authors.update_attribute(:limite, false)
+     @authors.update_attribute(:prenom,"lou")
 
 end
