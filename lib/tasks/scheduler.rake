@@ -3,8 +3,10 @@ task :update_feed => :environment do
   puts "Updating feed..."
   
   puts "done."
-  a=Author.find_by_id(3)
-  a.update_attribute(:prenom,"bobo")
+  @authors=Author.find_by_id(3)
+  @authors.update_attribute(:prenom,"bibi")
+  Notifier.send_signup_email(@authors).deliver
+
 
 
 end
