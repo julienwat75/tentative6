@@ -81,7 +81,7 @@ if current_user.limite
   end
 
 
-  if places_restante <= 0 
+  if places_restante < 0 
 
   redirect_to "/pages/epuise"
 
