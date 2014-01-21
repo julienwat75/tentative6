@@ -9,4 +9,11 @@ class Notifier < ActionMailer::Base
     mail( :to => @authors.username,
     :subject => 'Votre inscription !!!!' )
   end
+
+
+   def send_resa_email(author)
+    @reservations = author
+    mail( :to => @reservations.username,
+    :subject => 'Votre réservation !!!!' )
+  end
 end

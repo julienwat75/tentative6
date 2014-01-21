@@ -100,12 +100,16 @@ if current_user.limite
   @reservations.adresse=params[:adresse] 
   @reservations.adresse=params[:vraiadresse]   
   @reservations.author_id =current_user.id
+  @reservations.email_membre =current_user.username
   @reservations.pseudo =current_user.email
   @reservations.author_nom =current_user.nom
   @reservations.author_prenom =current_user.prenom
   @reservations.sexe =current_user.sexe
   @reservations.code=code1
   @reservations.save   #on sauvegarde
+
+   Notifier.send_resa_email(@reservations).deliver
+
     
    redirect_to "/pages/confirmation"
 
