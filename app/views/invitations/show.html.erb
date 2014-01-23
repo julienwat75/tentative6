@@ -10,6 +10,12 @@
 <% provide(:title, @invitation.titre) %>
 
 
+<fb:share-button class="meta">
+    <meta name="medium" content="blog"/>
+    <meta name="title" content="Leonidas in All of Us"/>
+    <meta name="description" content="That's the lesson 300 teaches us."/>
+    <link rel="image_src" href="http://jet1vite.com/doigt.jpg"/>
+</fb:share-button>
 
 
 
@@ -126,6 +132,16 @@
  <div class="description" ><%= @invitation.description %></div>
 
  <div class="description" ><%= @invitation.vraiadresse %></div>
+
+ <div class="description" style="text-align:center;" >
+   
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http://guarded-gorge-6338.herokuapp.com/invitations/21" target="_blank">
+  <%= image_tag("facebook.png", :alt => "rss feed",:style => "height:50px;width:50px;") %>
+</a>
+                  </div>
+
+                  <div class="fb-share-button" data-href="http://jet1vite.com/accueil.php?page=detail_invitationx.php&detail_invitation=486" data-type="button_count"></div>
+
 
                      <% if @invitation.place.to_i > 0  %>
 
