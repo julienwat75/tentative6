@@ -1,36 +1,77 @@
 
-
-
-
-
 <% provide(:title, "Invitations gratuites") %>
 
+
+
+
+<div class="row " style="padding-left:15px;padding-right:15px;" >
+         
+         <div class="col-lg-4  hidden-xs " style="float:left;">
+          
+                   <div style="width:100%;padding:10px;">
+                    <!-- ----------------  Carousel ----------------------------------------------------  -->
+
+
+<div align="center">
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" >
+
+    <div class="item active">
+      <img src="https://s3-eu-west-1.amazonaws.com/julienwat75/tunes/medium/47/art_2694.jpg?1389704279" style="border-radius:5px 5px 5px 5px;" >
+      <div class="carousel-caption">
+       
+      </div>
+       Sophie Malerbt
+    </div>
+
+    <div class="item ">
+      <img src="https://s3-eu-west-1.amazonaws.com/julienwat75/tunes/medium/46/vz-eab85067-22da-4e73-9db5-b594802976f3.jpeg?1389394397" style="border-radius:5px 5px 5px 5px;" >
+      <div class="carousel-caption">
+        
+      </div>
+      Marie louise
+    </div>
+    
+</div>
+
+
+
+  <!-- Controls -->
+  
+</div>
+
+</div>
  
-<!--  <INPUT type="button" value="Cliquez ici" onclick="afficher()">  -->
 
 
+<!-- ------------------------------------------------------------------------------------   -->
+
+                   </div> 
+                   <div style="margin-top:10px;padding:10px;width:100%;">
+                     <div align="center">
+                    <div class="fb-like-box" data-href="http://www.facebook.com/FacebookDevelopers" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" data-width="300"></div>
+                     </div>
+                   </div> 
+                   
 
 
+          </div>
 
+           <div  class=" col-xs-12 col-sm-5 col-md-7 col-lg-8" >
+        <% @invitations2.each do |t| %>
 
+        <!--  switch et variable --> 
 
-
-
-
-
-
-
-<!-- --------------------------------------------------------------------------------------------------  -->
-
-
-
-<div class="row">
-<% @invitations2.each do |t| %>
-
-<% if t.validation && Invitation.late(t.dateinvitation) %>
-
-
- <% jour=t.dateinvitation.strftime("%A") %>  
+        <% jour=t.dateinvitation.strftime("%A") %>  
 
   <% mois=t.dateinvitation.strftime("%B")  %>
 
@@ -93,171 +134,133 @@
 
    
 
-<div  class="col-xs-12 col-sm-6 col-md-3 col-lg-3  " >
 
-  <div class="row" >
-
-
-
-
-
-
-
-    <div  class="invitation hidden-xs" style="background:white;">
-
-         
-         
-  
-
-
-          <a href="<%=  invitation_path(t.id) %>">
-          <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:200px; border-radius:5px 5px 5px 5px;" /></div>
-          </a>
+        <!--  fin switch et variable -->
 
           
-           <div align="center">
 
+      
+           <div  >  <!--  -------------------------------- Invitations ---------------------------- --> 
+               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4"  >  <!-- debut premier div ---- -->
+                <!--  Version PC ------------------------------------------------------------------ -->
+                     <div  class="invitation hidden-xs" style="background:white;">
+                          <a href="<%=  invitation_path(t.id) %>">
+                            <div class="vignette">
+                                <img src="<%= var %>" alt="arobas" style="width:auto;height:170px; border-radius:5px 5px 5px 5px;" />
+                              </div>
+                          </a>
+                              <div align="center">
+                                   
+                                    <div class="titre_vignette">  <%=  t.titre %>  </div>
+                                             <%= jour %> 
+                                              <%= t.dateinvitation.day %> 
+                                              <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
+     
+                                     </div>
+                              </div>
+                  <!-- Fin Version PC ------------------------------------------------------------------ --> 
 
-             <div class="titre_vignette">  <%=  t.titre %>  </div>
-             <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
-
-
-
-
-
-           </div>
-
-
-    </div>
-
-
-    <!--   ------------------- Version mobile ---------------------------------------------------      -->
-
-
-       <div  class="invitation hidden-sm hidden-md hidden-lg" style="background:white;">
-
-         
-         
-  
-
-
-          <a href="<%=  invitation_path(t.id) %>">
-      <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:200px; border-radius:5px 5px 5px 5px;" /></div>
-          </a>
-
-          
-           <div align="center">
-
-
-             <div class="titre_vignette">  <%=  t.titre %>  </div>
-             <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
-
-
-
-
-
-           </div>
-
-
-    </div>
+                  <!--  Version Mobile -->  
+                <div  class="invitation hidden-sm hidden-md hidden-lg" style="background:white;">
+                        <a href="<%=  invitation_path(t.id) %>">
+                          <div class="vignette">
+                            <img src="<%= var %>" alt="arobas" style="width:auto;height:200px; border-radius:5px 5px 5px 5px;" />
+                          </div>
+                        </a>
+                       <div align="center">
+                           <div class="titre_vignette">  <%=  t.titre %>  </div>
+                           <%= jour %> 
+                           <%= t.dateinvitation.day %> 
+                           <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
+                           </div>
+                   </div>
+                     <!--  Fin version Mobile -->
 
 
 
-
-    <!-- ---------------------------------------------------------------------------------------------   -->
-
-
+               </div>
+           </div>                         <!--  -------------------------------- Fin Invitations ---------------------------- --> 
 
 
+      <% end %>
 
+       </div>
 
-
-</div> 
-   
 </div>
 
 
 
 
+<script type="text/javascript">
+$('.carousel').carousel()
 
-   
- 
-
-  
-
+</script>
 
 
+<!-- ---------------------------  Paging ---------------------------------- -->
 
 
- 
+ <div class="row" >
+
+
+                  <div  class="col-xs-0 col-md-4 col-lg-4"></div> 
+                         <div  class="col-xs-12 col-md-4 col-lg-4" style="margin-top:20px;color:white;font-size:20px;align:center;">
+
+
+                                    <% page=0  %>
+
+
+                                    <ul class="pagination">
+
+
+                                  <% while page< @nombre_pages %>
+
+
+
+                                   <li><a href="/pageinvitations/<%= page %>"><%= page+1 %></a></li>
+
+
+                                     
+
+
+                                   <% page+=1 %>
+
+                                     <% end %>
+
+                                     </ul>
+
+                            </div>
+
+                   <div  class="col-xs-0 col-md-4 col-lg-4"></div> 
 
     
+
+
+      </div>   <!-- Fin du row  -->
+
+
+
+
+
+
+
+<!-- Fin du paging -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-    
-
-
-   <% else %>
-   
-   <% t.update_attributes(validation: 'false') %>
-
-   <% end %>
-
-
-   
-
-<%  end  %>
-
-
-
-
-
-
-</div>
-<div>
-
-
-
-
-
-
-
-
-
-  <div class="row" >
-    <div  class="col-xs-0 col-md-4 col-lg-4"></div> 
-  <div  class="col-xs-12 col-md-4 col-lg-4" style="margin-top:20px;color:white;font-size:20px;align:center;">
-
-
-  <% page=0  %>
-
-
-  <ul class="pagination">
-
-
-<% while page< @nombre_pages %>
-
-
-
- <li><a href="/pageinvitations/<%= page %>"><%= page+1 %></a></li>
-
-
-   
-
-
- <% page+=1 %>
- <% end %>
-
- </ul>
-
-
-<div  class="col-xs-0 col-md-4 col-lg-4"></div> 
-
-</div>
-
-
-</div>  
-</div>
-
-
-
-

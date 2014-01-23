@@ -672,7 +672,7 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color:grey;
-  width:100%;
+  
   padding:10px;
 }
 
@@ -4900,7 +4900,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border: 1px solid transparent;
   border-radius: 4px;
   float:right;
-  width: 10%;
+  
   text-align: center;
 }
 
