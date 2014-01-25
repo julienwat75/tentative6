@@ -31,6 +31,9 @@ def show
 
 	@invitation=Invitation.find(params[:id])
 
+  render :layout => false
+
+
 
 	end
 
