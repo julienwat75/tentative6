@@ -2,28 +2,20 @@
 
 
 <!DOCTYPE html>
-<html lang="en"
-      xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="http://www.facebook.com/2008/fbml">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html prefix="og: http://ogp.me/ns#">
+<head>
 
 
-  
-    
-    <meta property="og:title" content="les barbe a papa"/>
+    <meta property="og:title" content="<% @invitation.titre %>"/>
     <meta property="og:type" content="movie"/>
-    <meta property="og:url" content="http://www.imdb.com/title/tt0117500/"/>
+    <meta property="og:url" content="http://guarded-gorge-6338.herokuapp.com/invitations/<% @invitation.id %>"/>
     <meta property="og:image" content="http://fr.web.img2.acsta.net/r_640_600/b_1_d6d6d6/pictures/210/604/21060483_20131125114549726.jpg"/>
-    <meta property="og:site_name" content="IMDb"/>
+    <meta property="og:site_name" content="guarded-gorge-6338.herokuapp"/>
     <meta property="fb:admins" content="USER_ID"/>
-    <meta property="og:description"
-          content="bi bi bib bi bi bi."/>
-    
+    <meta property="og:description" content="<% @invitation.description %>"/>
+
+
+
   
     <!-- <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css"> -->
     
@@ -199,11 +191,13 @@
  <div class="description" ><%= @invitation.vraiadresse %></div>
 
  <div class="description" style="text-align:center;" >
-   
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http://guarded-gorge-6338.herokuapp.com/invitations/21" target="_blank">
-  <%= image_tag("facebook.png", :alt => "rss feed",:style => "height:50px;width:50px;") %>
-</a>
-</div>
+
+  <a href="http://www.facebook.com/sharer.php?u=http://sheltered-ridge-4529.herokuapp.com/users/2&t=TITLE"
+   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+   target="_blank" alt="Share on Facebook"> <%= image_tag("facebook.png", :alt => "rss feed",:style => "height:50px;width:50px;") %>
+   </a>
+
+ </div>
 
      
 
