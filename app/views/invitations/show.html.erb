@@ -4,9 +4,18 @@
 
 
 
+
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#">
-<head>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
 
     <meta property="og:type" content="activity" />
     <meta property="og:title" content="<%= @invitation.titre %>"/>
@@ -162,6 +171,191 @@
 
 
             <!-- <img class="img-responsive img-border img-full" src="/img/slide-1.jpg">  -->
+
+            <!--  --------------------------------------------------------------------------------  -->
+
+            <% jour=@invitation.dateinvitation.strftime("%A") %>  
+
+  <% mois=@invitation.dateinvitation.strftime("%B")  %>
+
+<% case jour  %>
+ <% when "Monday"  %>
+ <%  jour= "Lundi" %> 
+ <% when "Tuesday"  %>
+ <%  jour= "Mardi" %> 
+<% when "Wednesday"  %>
+ <%  jour= "Mercredi" %>
+  <% when "Thursday"  %>
+ <%  jour= "Jeudi" %>
+  <% when "Friday"  %>
+ <%  jour= "Vendredi" %>
+  <% when "Saturday"  %>
+ <%  jour= "Samedi" %> 
+  <% when "Sunday"  %>
+ <%  jour= "Dimanche" %> 
+<% else  %>              
+ <% puts 'Only single-digit numbers are allowed' %>
+ <% end %>
+
+ <% case mois  %>
+ <% when "January"  %>
+ <%  mois= "Janvier" %> 
+ <% when "February"  %>
+ <%  mois= "Février" %> 
+<% when "March"  %>
+ <%  mois= "Mars" %>
+  <% when "April"  %>
+ <%  mois= "Avril" %>
+  <% when "May"  %>
+ <%  mois= "Mai" %>
+  <% when "June"  %>
+ <%  mois= "Juin" %>
+  <% when "July"  %>
+ <%  mois= "Juillet" %>
+  <% when "August"  %>
+ <%  mois= "Aout" %>
+  <% when "September"  %>
+ <%  mois= "Septembre" %>
+  <% when "October"  %>
+ <%  mois= "Octobre" %>
+   <% when "November"  %>
+ <%  mois= "Novembre" %>
+  <% when "December"  %>
+ <%  mois= "Décembre" %>
+<% else  %>              
+ 
+ <% end %>
+
+
+ 
+
+
+ 
+  
+
+
+<div class="row" >
+
+  <div   class="col-xs-0 col-md-3 col-lg-3 " > </div>
+
+
+
+
+
+  <div   class="col-xs-12 col-md-6 col-lg-6  " >
+
+                      <div  class="invitation " style="background:white;">
+
+                           
+                           
+                    
+
+
+                            
+                          <div class="vignette"><img src="<%= var %>" alt="arobas" style="width:auto;height:300px; border-radius:5px 5px 5px 5px;" /></div>
+                            
+
+                            
+                             <div align="center">
+
+
+                               <div class="titre_vignette">  <%=  @invitation.titre %>  </div>
+                              <%= jour %>  <%=  @invitation.dateinvitation.day %>  <%= mois %>  à <%=  @invitation.dateinvitation.hour  %> H <%=  @invitation.dateinvitation.min  %>
+
+
+
+
+
+                             </div>
+
+
+                         </div>
+
+
+
+
+
+
+
+
+
+ <div class="description" ><%= @invitation.description %></div>
+
+ <div class="description" ><%= @invitation.vraiadresse %></div>
+
+ <div class="description" style="text-align:center;" >
+
+  <%= request.original_url %>
+
+
+<% monid=request.original_url %>
+
+
+
+
+  
+<%= link_to image_tag('/images/facebook.png', :height => 40 , :alt => '', :title => ''), 'http://www.facebook.com/sharer.php?u='+monid, :target => :blank , :style => 'background:white;'%>
+
+
+<%= link_to image_tag('/images/twitter.png', :height => 40 , :alt => '', :title => ''), 'https://twitter.com/share?url='+monid, :target => :blank , :style => 'background:white;'%>
+
+<a href="https://twitter.com/share?url=http://guarded-gorge-6338.herokuapp.com/invitations/23&via=jet1vite&text=<%= @invitation.description %>"
+   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+   target="_blank" alt="Share on Twitter">share </a>
+
+
+
+
+     
+
+
+ </div>
+
+
+
+    
+
+
+
+
+ 
+  
+
+                
+
+                     <% if @invitation.place.to_i > 0  %>
+
+                    <a href="<%=  reservation_path(@invitation.id) %>">
+                      <div  class="btn btn-default btn-lg monbouton" style="margin-bottom: 15px;">  Réserver </div>
+                    </a>
+
+                     
+                    <% else %>
+                    <div class="epuise" >
+                    Invitations épuisés
+                    </div>
+
+                    <% end %>
+
+
+
+
+    </div>  <!-- fin div miliei  -->
+
+
+
+
+
+
+<div   class="col-xs-0 col-md-3 col-lg-3 " > </div>
+
+
+</div>   <!-- fin du row -->
+
+
+
+
+            <!--  ---------------------------------------------------------------------------------- -->
             
           
             
@@ -247,9 +441,6 @@
 <!--   ---------------------------------------------------------------------------------------------  -->
 
 <div class="montitre" style="background:#00BFF9;color:white;">  <%= @invitation.titre %> </div>
-
-
-<% provide(:title, @invitation.titre) %>
 
 
 
@@ -384,6 +575,11 @@
 
 
 <%= link_to image_tag('/images/twitter.png', :height => 40 , :alt => '', :title => ''), 'https://twitter.com/share?url='+monid, :target => :blank , :style => 'background:white;'%>
+
+<a href="https://twitter.com/share?url=http://guarded-gorge-6338.herokuapp.com/invitations/23&via=jet1vite&text=<%= @invitation.description %>"
+   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+   target="_blank" alt="Share on Twitter">share </a>
+
 
 
 
