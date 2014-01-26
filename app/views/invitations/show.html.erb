@@ -6,13 +6,13 @@
 <head>
 
 
-    <meta property="og:title" content="<% @invitation.titre %>"/>
+    <meta property="og:title" content="<%= @invitation.titre %>"/>
     <meta property="og:type" content="movie"/>
-    <meta property="og:url" content="<% request.original_url %>"/>
-    <meta property="og:image" content="<% @invitation.avatar.url(:medium) %>"/>
+    <meta property="og:url" content="<%= request.original_url %>"/>
+    <meta property="og:image" content="<%= @invitation.avatar.url(:medium) %>"/>
     <meta property="og:site_name" content="guarded-gorge-6338.herokuapp"/>
     <meta property="fb:admins" content="USER_ID"/>
-    <meta property="og:description" content="<% @invitation.description %>"/>
+    <meta property="og:description" content="<%= @invitation.description %>"/>
 
 
 
