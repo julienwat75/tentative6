@@ -284,8 +284,7 @@
 
  <div class="description" style="text-align:center;" >
 
-  <%= request.original_url %>
-
+  Partager
 
 <% monid=request.original_url %>
 
@@ -296,7 +295,7 @@
 <%= link_to image_tag('/images/facebook.png', :height => 40 , :alt => '', :title => ''), 'http://www.facebook.com/sharer.php?u='+monid, :target => :blank , :style => 'background:white;'%>
 
 
-<%= link_to image_tag('/images/twitter.png', :height => 40 , :alt => '', :title => ''), 'https://twitter.com/share?url='+monid, :target => :blank , :style => 'background:white;'%>
+
 
 <a href="https://twitter.com/share?url="+monid+"&text=<%= @invitation.description %>"
    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
@@ -561,9 +560,8 @@
 
  <div class="description" style="text-align:center;" >
 
-  <%= request.original_url %>
-
-
+Partager
+  
 <% monid=request.original_url %>
 
 
@@ -573,7 +571,6 @@
 <%= link_to image_tag('/images/facebook.png', :height => 40 , :alt => '', :title => ''), 'http://www.facebook.com/sharer.php?u='+monid, :target => :blank , :style => 'background:white;'%>
 
 
-<%= link_to image_tag('/images/twitter.png', :height => 40 , :alt => '', :title => ''), 'https://twitter.com/share?url='+monid, :target => :blank , :style => 'background:white;'%>
 
 
 <a href="https://twitter.com/share?url="+monid+"&text=<%= @invitation.description %>"
