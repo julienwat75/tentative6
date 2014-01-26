@@ -1,4 +1,7 @@
 
+<% var=@invitation.avatar.url(:medium) %>
+<% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
+
 
 
 <!DOCTYPE html>
@@ -9,7 +12,7 @@
     <meta property="og:title" content="<%= @invitation.titre %>"/>
     <meta property="og:type" content="movie"/>
     <meta property="og:url" content="<%= request.original_url %>"/>
-    <meta property="og:image" content="https://s3-eu-west-1.amazonaws.com/julienwat75/tunes/medium/15/vz-68cc2beb-44b9-4428-8c76-d274bcbff533.jpeg?AWSAccessKeyId=ASIAIBE5G37RSENLTDOA&Expires=1390745543&Signature=z9/0D/ihRFmccvsiNvBUdvLHfJE%3D&x-amz-security-token=AQoDYXdzEHcawAKQdEXs186Ru/T1fKRcjKi25IQY/57dfAY40u7Ip9c8mOS3E2FKTddSy/rnUAxEK6vTMyPFEnGQA6Ue9vEBRwTsyOA3%2BnE3hYjeHTh0lcu6JWcxsXEP0vV5l7SdG2XTXOYhTF/QTe58X/GOY36p50H1%2BsGKdYnyTv4JtWAeFJYymfms6pvbha5kFVrXZ27Z1todI0tUo%2BW2XEHqRQimCTtA%2Bc6UgJ7u8wT0sXeJ3LDOOACMT1bGGyYTC2CSFi5DUYD%2BHOQULsuqZSfJ0umcRe7ZCz/IAvJ5cZr4HVW3lHBwb0CLqxIhY1vpo8zRKPjqnX5QSFdU6hOPUmplwP5pMihPI3qyymDNEPyoVzAI7s6xqEz%2BqQ2XwLFF/G1tmziyIS9fhQJuH9llxHNnD7pNWh60NdaFEGedshXDmdlUCcPotiCjrJSXBQ%3D%3D"/>
+    <meta property="og:image" content="<%= var %>"/>
     <meta property="og:site_name" content="guarded-gorge-6338.herokuapp"/>
     <meta property="fb:admins" content="USER_ID"/>
     <meta property="og:description" content="<%= @invitation.description %>"/>
@@ -311,10 +314,7 @@
  <% end %>
 
 
- <% var=@invitation.avatar.url(:medium) %>
-<% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
-
-
+ 
 
 
  
