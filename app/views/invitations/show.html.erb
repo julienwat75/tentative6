@@ -65,6 +65,186 @@
 
 
 
+ <!-- ---------------------------------- Menue  Version PC ----------------------------------------------- -->
+
+     
+   
+     
+    <nav class="navbar-fixed-top navbar-default " role="navigation" style="background-color:rgb(0,159,215);" >
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header" style="color:white;background:white;">
+    <button type="button" class="navbar-toggle"  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+     <a class="navbar-brand" style="background:white;"  href="http://billetgratuit.com/pageinvitations.html">
+        <font class="nouveaulogo" style="font-size:20px;">
+        <font style="color:rgb(12, 169, 251);text-align:center;">Billet</font><font style="font-size:20px;">gratuit</font><font style="color:#F69C00;">.com</font>
+      </font>
+     </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="align:center;">
+    <ul class="nav navbar-nav" >
+      <li class="active" style="color:black;font-style: oblique;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;"></li>
+      
+      <li> <a href="<%= pageinvitations_path %>"> <span class="glyphicon glyphicon-star"></span> Invitations</a></li> 
+                                                  
+     
+
+
+
+           <% unless logged_in? %>
+       
+     <li> <a href="<%= new_author_path %>"><span class="glyphicon glyphicon-home"></span> Inscription</span> </a></li>
+           <% end %>
+       <li><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>  
+       
+         
+
+          <% if logged_in? %>
+           <li> <a href="<%= logout_path %>"><span class="glyphicon glyphicon-cog"></span> Déconnexion </a></li>
+        <% end %>
+        
+
+        <% if logged_in? %>
+        <li><a href="<%= author_path(current_user.id) %>"><span class="glyphicon glyphicon-user"></span>
+ <%= current_user.email %></a></li>
+         
+        <!-- <li><%= link_to "(logout)", logout_path %> </li>  -->
+         <!--  <li> jkjkljkljl</li>  -->
+        <% else %>
+         <li> <a href="<%= root_path %>"><span class="glyphicon glyphicon-cog"></span> Connexion </a></li>
+          <% end %>
+
+          <% if current_user && current_user.id == 3  %>   <!--   Bouton webmaster -->  
+
+         <li><%= link_to "Créer", new_invitation_path %></li>
+
+          
+        <% end %>
+          
+
+          
+   
+
+     
+      
+      </li>
+    </ul>
+    
+    
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+
+
+
+<!-- ----------------------------------------------- Container Format Mobile  -------------------------------- -->
+
+    <div class="container" style="background:white;margin-top:140px;padding-left:15px;"  >
+
+      <div class="row">
+        <div class="box  hidden-sm hidden-md hidden-lg" >
+
+          <div class="col-lg-12">
+            <hr>
+
+            <h2 class="intro-text text-center " ><strong><%= yield(:title) %></strong></h2>
+            <hr>
+          </div>
+          <div class="col-lg-12 text-left">
+
+
+            <!-- <img class="img-responsive img-border img-full" src="/img/slide-1.jpg">  -->
+            
+            <%= yield %>
+            
+            
+          </div>
+          
+          
+          <div class="col-lg-12 text-center">
+            <ul class="pager">
+             <li class="previous"> <%= link_to "<  Invitations", pageinvitations_path ,:class => 'couleurnoir'  %> </li>
+              
+                <% if logged_in? && current_user.id == 3  %>
+                <li class="next"> <%= link_to "Filtre Invitations", webmasters_path ,:class => 'couleurnoir'  %> </li>
+              <% end %>
+              
+            </ul>
+          </div>
+        </div>
+
+<!--  ------------------------------------Container  Format PC -----------------------------------------------------------  -->
+
+
+<div class="row">
+        <div class="box hidden-xs "   >
+          <div class="col-lg-12" >
+            
+          </div>
+          <div class="col-lg-12 text-left">
+
+
+  <div class="row">
+      
+
+      <div class="col-lg-4" style="">
+                    <div style="margin-bottom:20px;">      
+
+                  <font class="nouveaulogo" >
+                  <font style="color:rgb(12, 169, 251);font-size:33px;">Billet</font><font style="font-size:33px;">gratuit</font><font style="color:#F69C00;">.com</font></font><div style="margin-left:15px;">Invitation 100% gratuites à des spectacles</div>
+
+                   </div>
+    
+
+        </div>
+
+        <div class="col-lg-5" style="padding-top:15px;">
+         <div style="margin-bottom:20px;color:rgb(112, 191, 0);font-weight:bold;font-size:16px;">      
+
+                  
+                  <a href="#"> <font style="color:rgb(112, 191, 0);">Inscription</font></a>
+                  <a  href="#"><font style="color:rgb(112, 191, 0);margin-left:20px;">Comment ca marche ?</font></a>
+                   
+                
+                 <div  style="float:right;" class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
+                  
+
+                   </div>
+        </div>
+
+
+        <div class="col-lg-3" style="padding-top:15px">
+         <div style="margin-bottom:20px;color:rgb(112, 191, 0);font-weight:bold;font-size:20px;float:right;">      
+
+                
+          <a href="#"> <font style="color:rgb(112, 191, 0);"><%= image_tag("facebook.png", :alt => "rss feed",:style => "height:50px;width:50px;") %></font></a>
+          <a href="#"> <font style="color:rgb(112, 191, 0);"><%= image_tag("twitter.png", :alt => "rss feed",:style => "height:50px;width:50px;") %></font></a>
+                  
+                  
+                 
+
+                   </div>
+        </div>
+
+
+
+
+      
+
+
+  </div>
+
+   
+
+<!--   ---------------------------------------------------------------------------------------------  -->
+
+<div class="montitre" style="background:#00BFF9;color:white;">  <%= @invitation.titre %> </div>
 
 
 <% provide(:title, @invitation.titre) %>
@@ -253,6 +433,49 @@
 
 
 </div>   <!-- fin du row -->
+
+
+
+<!--  --------------------------------------------------------------------------------------  -->
+
+ </div>
+          
+          
+          <div class="col-lg-12 text-center">
+            <ul class="pager">
+             <li class="previous"> <%= link_to "<  Invitations", pageinvitations_path ,:class => 'couleurnoir'  %> </li>
+              
+                <% if logged_in? && current_user.id == 3  %>
+                <li class="next"> <%= link_to "Filtre Invitations", webmasters_path ,:class => 'couleurnoir'  %> </li>
+              <% end %>
+              
+            </ul>
+          </div>
+        </div>
+
+
+<!--  ------------------------------------fin  Format PC -----------------------------------------------------------  -->
+
+      </div>
+
+    </div><!-- /.container -->
+
+
+
+      <footer style="background:blue;align:center;">
+      
+          <p style="background:rgb(0,159,215);color:white;"> Copyright &copy; Billetgratuit.com 2014 </p>
+         
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="/js/bootstrap.js"></script>
+
+
+
+
+<!-- ----------------------------------------------------------------------------------------  -->
 
 
 </body>
