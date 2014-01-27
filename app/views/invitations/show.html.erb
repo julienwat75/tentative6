@@ -573,7 +573,7 @@ Partager
 
 
 
-<a href="https://twitter.com/share?url="+monid+"&text=<%= @invitation.description %>"
+<a href="https://twitter.com/share?url=<%= monid %>&text=Des places gratuites pour le spectacle <%= @invitation.titre %> sont disponibles sur billetgratuit.com"
    onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
    target="_blank" alt="Share on Twitter"> <%= image_tag("twitter.png", :alt => "rss feed",:style => "height:39px;") %></a>
 
