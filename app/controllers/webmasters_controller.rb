@@ -25,11 +25,9 @@ end
 
 
 def destroy
-	@invitation=Invitation.find(params[:id])
-
     @invitation.destroy
     respond_to do |format|
-      format.html { redirect_to authors_url }
+      format.html { redirect_to webmasters_url }
       format.json { head :no_content }
     end
   end

@@ -10,8 +10,7 @@
 <b><%= t.titre  %></b>, <%= t.dateinvitation  %>,<%= t.author_id %>
 <%= link_to 'Show', t %>
  <%= link_to 'Edit', edit_invitation_path(t) %> 
-
-
+  
 
 
  
@@ -139,6 +138,11 @@
             <div><font color="red"> Invitation restante:  <%= t.place %></font>  </div>
 
              <div >   <%= link_to 'Edit', edit_invitation_path(t) %> </div>
+
+             <%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+
 
              
 

@@ -1,7 +1,13 @@
 class InvitationsController < ApplicationController
 
 
-before_filter :zero_authors_or_authenticated, except: [:index,:show]	
+before_filter :zero_authors_or_authenticated, except: [:index,:show, :destroy]	 
+
+skip_before_filter :verify_authenticity_token, :if => Proc.new { |c| c.request.format == 'application/json' }
+
+
+
+ 
 
 
 
@@ -28,6 +34,8 @@ def new
 end
 
 def show
+
+   
 
 	@invitation=Invitation.find(params[:id])
 
@@ -108,8 +116,10 @@ def update
 #@invitation.update_attributes(avatar: params[:invitation][:avatar])
  #@invitation.update_attributes(avatar: params[:invitation][:datetime])
 
-
+ binding.pry
  redirect_to webmasters_path 
+
+
            
            #binding.pry 
            #raise params.inspect 
@@ -117,6 +127,25 @@ def update
 
      
 
+  end
+
+  def destroy
+
+    
+
+    
+
+    
+
+
+@invitation=Invitation.find(params[:id])
+
+@invitation.destroy
+
+    respond_to do |format|
+      format.html { redirect_to webmasters_url }
+      format.json { head :no_content }
+    end
   end
 
 
