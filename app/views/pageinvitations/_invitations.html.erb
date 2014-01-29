@@ -141,10 +141,10 @@
 
       
            <div style=" " >  <!--  -------------------------------- Invitations ---------------------------- --> 
-               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 fondgris"  style="padding-top:20px;height:480px;" >  <!-- debut premier div ---- -->
+               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 fondgris hidden-xs"  style="padding-top:20px;height:480px;" >  <!-- debut premier div ---- -->
                     <div align="center">
                 <!--  Version PC ------------------------------------------------------------------ -->
-                     <div  class="invitation hidden-xs" style=" border:1px solid rgba(0, 0, 0, 0.2);border-top:260px;">
+                     <div  class="invitation " style=" border:1px solid rgba(0, 0, 0, 0.2);border-top:260px;">
                           <a href="<%=  invitation_path(t.id) %>">
                             <div class="vignette">
                                 <img src="<%= var %>" alt="arobas" style="width:100%;" />
@@ -166,6 +166,24 @@
                   <!-- Fin Version PC ------------------------------------------------------------------ --> 
 
                   <!--  Version Mobile -->  
+               
+                     <!--  Fin version Mobile -->
+
+
+
+               </div>
+               </div>
+
+
+
+               <!--  ------------------------------------------------------------------   -->
+
+                <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 fondgris hidden-sm hidden-md hidden-lg"  style="padding-top:20px;" >  <!-- debut premier div ---- -->
+                    <div align="center">
+                
+                  <!-- Fin Version PC ------------------------------------------------------------------ --> 
+
+                  <!--  Version Mobile -->  
                 <div  class="invitation hidden-sm hidden-md hidden-lg" style="background:white;">
                         <a href="<%=  invitation_path(t.id) %>">
                           <div class="vignette">
@@ -184,6 +202,11 @@
 
 
                </div>
+
+
+
+
+               <!--  -------------------------------------------------------------------  -->
 
            </div>                         <!--  -------------------------------- Fin Invitations ---------------------------- --> 
 
