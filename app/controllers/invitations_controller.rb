@@ -116,7 +116,7 @@ def update
 #@invitation.update_attributes(avatar: params[:invitation][:avatar])
  #@invitation.update_attributes(avatar: params[:invitation][:datetime])
 
- binding.pry
+ 
  redirect_to webmasters_path 
 
 

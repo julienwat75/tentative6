@@ -124,7 +124,7 @@
  <% end %>
 
 
-<% var=t.avatar.url(:medium) %>
+<% var=t.avatar.url %>
 
 <% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
 
@@ -141,12 +141,13 @@
 
       
            <div  >  <!--  -------------------------------- Invitations ---------------------------- --> 
-               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4"  >  <!-- debut premier div ---- -->
+               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4"  style="background:white;margin-bottom:10px;height:500px;background: #E3F0EE;padding-top:20px;" >  <!-- debut premier div ---- -->
+       <div align="center">
                 <!--  Version PC ------------------------------------------------------------------ -->
-                     <div  class="invitation hidden-xs" style="background:white;">
+                     <div  class="invitation hidden-xs" style=" border:1px solid rgba(0, 0, 0, 0.2);border-top:260px;">
                           <a href="<%=  invitation_path(t.id) %>">
                             <div class="vignette">
-                                <img src="<%= var %>" alt="arobas" style="width:auto;height:170px; border-radius:5px 5px 5px 5px;" />
+                                <img src="<%= var %>" alt="arobas" style="width:100%;" />
                               </div>
                           </a>
                               <div align="center">
@@ -158,6 +159,7 @@
      
                                      </div>
                               </div>
+                            </div>
                   <!-- Fin Version PC ------------------------------------------------------------------ --> 
 
                   <!--  Version Mobile -->  
