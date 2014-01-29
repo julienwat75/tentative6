@@ -10,6 +10,7 @@ body {
   background-size: cover;
   /*background: rgb(142, 199, 246);*/
   background: #E3F0EE;
+  background:rgb(183, 183, 183)
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -225,7 +226,7 @@ footer p {
   margin: 0 auto;
   display: table;
   table-layout: fixed;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 }

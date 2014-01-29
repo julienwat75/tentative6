@@ -30,10 +30,10 @@
 
   <% if @invitation.place.to_i > 1  %>
 
-  <%= f.select :nombreinvitations, [['1',1], 2] ,:style =>'text-align:center;'  %>
+  <%= f.select :nombreinvitations, [['1',1], 2] ,:style =>'text-align:center;width:100%;'  %>
   <% else  %>
 
-  <%= f.select :nombreinvitations, [['1(Derniere place)',1]] ,:style =>'text-align:center;'  %>
+  <%= f.select :nombreinvitations, [['1(Derniere place)',1]] ,:class =>'grandbouton'  %>
   <%end %>
 
   </div>

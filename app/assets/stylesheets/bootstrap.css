@@ -123,7 +123,7 @@ font-weight:bold;"
           font-size:18px;
           
           margin-top: 15px;
-          font-family: Helvetica;
+          font-family: "Helvetica Neue",Arial,sans-serif;
         
          color:black;
 
@@ -136,9 +136,9 @@ font-weight:bold;"
         .titre_vignette2{
           font-size:16px;
           margin-top:5px;
-          margin-left:5px;
+         
           
-          font-weight: bold;
+          font-family: "Helvetica Neue",Arial,sans-serif;
          color: rgb(104, 104, 104);
 
 
@@ -148,8 +148,7 @@ font-weight:bold;"
         .adresse_vignette{
           font-size:16px;
           margin-top:5px;
-          margin-left:5px;
-           margin-right:5px;
+         
 
          text-align:right;
          color:black;
@@ -167,10 +166,16 @@ font-weight:bold;"
 
        }
 
+       .grandbouton{
+
+         width:500px;
+
+       }
+
         .date_vignette{
           font-size:16px;
           margin-top:5px;
-          margin-left:5px;
+         
            
            color: rgb(104, 104, 104);
 
@@ -180,11 +185,71 @@ font-weight:bold;"
        .date_vignette2{
           font-size:14px;
           margin-top:5px;
-          margin-left:5px;
+         
            
            color: rgb(104, 104, 104);
 
        }
+
+       .ecriturecouleur{
+
+        color: rgb(203, 0, 0);
+
+       }
+
+       .fondcouleur{
+
+        background: rgb(203, 0, 0);
+
+       }
+
+
+        .fondblanc{
+
+        background: white;
+         color: rgb(203, 0, 0);
+
+       }
+
+       .couleurgrise{
+
+         color: rgb(68, 68, 68);
+       }
+
+       .lienpresentation{
+
+        float:left;
+        margin-left: 15px;
+       }
+
+
+       .monlogo{
+
+
+        color: rgb(203, 0, 0);
+        font-size:22px;
+        font-style: oblique;
+        font-weight: bold;
+         margin-bottom: 5px;
+
+
+       }
+
+
+       .fondgris{
+
+        background: rgb(183, 183, 183);
+
+       }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -202,6 +267,8 @@ font-weight:bold;"
         text-align:center;
 
         overflow: hidden;
+
+        font-family: "Helvetica Neue",Arial,sans-serif;
 
       
         }
@@ -222,12 +289,13 @@ font-weight:bold;"
 
           
         
-        border-top:1px solid rgba(0, 0, 0, 0.2);
-        border-bottom:1px solid rgba(0, 0, 0, 0.2);
+        /*border-top:1px solid rgba(0, 0, 0, 0.2);*/
+        /*border-bottom:1px solid rgba(0, 0, 0, 0.2);*/
         font-family: Helvetica;
         font-size: 18px;
         padding: 10px;
         margin-bottom: 15px;
+        background:rgb(183, 183, 183);
         
     
         }
@@ -286,12 +354,11 @@ font-weight:bold;"
         /*box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);*/
         border:1px solid rgba(0, 0, 0, 0.2);
         background: white;
-        margin: 5px;
         
         overflow: hidden;
         border-radius:5px 5px 5px 5px;
         margin-top:20px;
-        margin-left:5px;
+        
         font-size:16px;
         padding:10px;
         
@@ -304,12 +371,12 @@ font-weight:bold;"
         /*box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.2);*/
         color: red;
         background: white;
-        margin: 5px;
+      
         text-align: center;
         overflow: hidden;
         border-radius:5px 5px 5px 5px;
         margin-top:20px;
-        margin-left:5px;
+       
         font-size:20px;
         padding:10px;
         
@@ -2645,7 +2712,7 @@ fieldset[disabled] .btn {
 
 .btn-default {
   color: white;
-  background-color:#ED2A44;
+  background-color: rgb(203, 0, 0);
   border-color: white;
   width:100%;
 }
@@ -2677,7 +2744,7 @@ fieldset[disabled] .btn {
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
   color: white;
-  background-color:#FE5873;
+  background-color: rgb(203, 0, 0);
   border-color: #adadad;
   width:100%;
 }
@@ -5098,12 +5165,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color:white;
+  color:rgb(203, 0, 0);
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #F69C00;
+  color: rgb(203, 50, 100);
   
   background-color: transparent;
 }

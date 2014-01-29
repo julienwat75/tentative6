@@ -103,7 +103,7 @@
      
    
      
-    <nav class="navbar-fixed-top navbar-default " role="navigation" style="background-color:rgb(12, 169, 251);" >
+   <nav class="navbar-fixed-top navbar-default " role="navigation" style="background-color:rgb(12, 169, 251);" >
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header" style="color:white;background:white;">
     <button type="button" class="navbar-toggle"  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -113,14 +113,12 @@
       <span class="icon-bar"></span>
     </button>
      <a class="navbar-brand" style="background:white;"  href="http://billetgratuit.com/pageinvitations.html">
-        <font class="nouveaulogo" style="font-size:20px;">
-        <font style="color:rgb(12, 169, 251);text-align:center;">Billet</font><font style="font-size:20px;">gratuit</font><font style="color:#F69C00;">.com</font>
-      </font>
+        <div class="monlogo" style="font-size:15px;">  BilletGratuit.com  </div>
      </a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="align:center;">
+  <div class="collapse navbar-collapse  fondblanc" id="bs-example-navbar-collapse-1" style="align:center;">
     <ul class="nav navbar-nav" >
       <li class="active" style="color:black;font-style: oblique;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;"></li>
       
@@ -236,12 +234,10 @@
       
 
       <div class="col-lg-4" style="">
-                    <div style="margin-bottom:20px;">      
 
-                  <font class="nouveaulogo" >
-                  <font style="color:rgb(12, 169, 251); font-size:33px;">Billet</font><font style="font-size:33px;color:white;text-shadow:rgb(12, 169, 251) 2px 2px 2px;">Gratuit</font><font style="color:white; font-size:33px;">.com</font></font><div style="margin-left:15px;">Invitation 100% gratuites à des spectacles</div>
-
-                   </div>
+                    <div class="monlogo">  BilletGratuit.com  </div>
+     
+                    <div >Invitations gratuites à des spectacles</div>
     
 
         </div>
@@ -250,8 +246,8 @@
          <div style="margin-bottom:20px;color:rgb(112, 191, 0);font-weight:bold;font-size:16px;">      
 
                   
-                  <a href="#"> <font style="color:rgb(12, 169, 251);">Inscription</font></a>
-                  <a  href="#"><font style="color:rgb(12, 169, 251);margin-left:20px;">Comment ca marche ?</font></a>
+                  <a href="#"> <div class="couleurgrise lienpresentation">Inscription</div></a>
+                  <a  href="#"> <div class="couleurgrise lienpresentation">Comment ca marche ?</div></a>
                    
                 
                  <div  style="float:right;" class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="button_count"></div>
@@ -265,8 +261,8 @@
          <div style="margin-bottom:20px;color:rgb(112, 191, 0);font-weight:bold;font-size:20px;float:right;">      
 
                 
-          <a href="#"> <font style="color:rgb(112, 191, 0);"><%= image_tag("facebook.png", :alt => "rss feed",:style => "height:50px;width:50px;") %></font></a>
-          <a href="#"> <font style="color:rgb(112, 191, 0);"><%= image_tag("twitter.png", :alt => "rss feed",:style => "height:50px;width:50px;") %></font></a>
+          <a href="#"> <font style="color:rgb(112, 191, 0);"><%= image_tag("facebook.png", :alt => "rss feed",:style => "height:40px;width:40px;") %></font></a>
+          <a href="#"> <font style="color:rgb(112, 191, 0);"><%= image_tag("twitter.png", :alt => "rss feed",:style => "height:40px;width:40px;") %></font></a>
                   
                   
                  
@@ -282,7 +278,7 @@
 
   </div>
 
-        <div class="montitre" style="background: #E3F0EE;color:rgb(12, 169, 251);">  <%= yield(:title) %> </div>
+        <div class="montitre">  <%= yield(:title) %> </div>
                
             <!-- <img class="img-responsive img-border img-full" src="/img/slide-1.jpg">  -->
             
@@ -315,7 +311,7 @@
 
       <footer style="align:center;">
       
-          <p style=" border:1px solid rgba(0, 0, 0, 0.2);color:rgb(12, 169, 251);"> Copyright &copy; Billetgratuit.com 2014 </p>
+          <p  class="couleurgrise fondgris"> Copyright &copy; Billetgratuit.com 2014 </p>
          
     </footer>
 
