@@ -5165,12 +5165,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color:rgb(203, 0, 0);
+  color:#660000;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: rgb(203, 50, 100);
+  color:#660000;
   
   background-color: transparent;
 }
