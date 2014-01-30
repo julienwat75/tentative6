@@ -10,6 +10,7 @@ body {
   background-size: cover;
   /*background: rgb(142, 199, 246);*/
   background:#D3DCE1;  
+  background: url(../img/banner.png); 
 }
 
 h1, h2, h3, h4, h5, h6 {

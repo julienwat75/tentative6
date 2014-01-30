@@ -238,7 +238,9 @@ font-weight:bold;"
 
        .fondgris{
 
-        background: #D3DCE1;
+        
+        
+      
 
        }
 
@@ -295,7 +297,11 @@ font-weight:bold;"
         font-size: 18px;
         padding: 10px;
         margin-bottom: 15px;
-        background:#D3DCE1;
+        
+        
+        border-top:1px solid rgba(0, 0, 0, 0.2);
+        border-bottom:1px solid rgba(0, 0, 0, 0.2);
+        color:grey;
         
     
         }
