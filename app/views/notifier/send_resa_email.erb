@@ -4,6 +4,11 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
+
+   <% jour=@reservations.dateinvitation.strftime("%A") %>  
+
+   <% mois=@reservations.dateinvitation.strftime("%B")  %>
+
     <h1>Bonjour <%= @reservations.sexe %> <%= @reservations.author_nom %>!</h1> <br>
     <p>Votre invitation est confirmé pour le spéctacle "<%= @reservations.titre %>"</p>
     <p>Vous devez vous présenter 10 min avant le spectacle avec votre carte d'identité
@@ -12,8 +17,19 @@
 
 <br>
 <p> Code de réservation: <%= @reservations.code %> </p>
-<p> Date du spéctacle: <%= @reservations.dateinvitation %></p>
-<p> Adresse:<%= @reservations.adresse %></p>
+<p> 
+Date du spéctacle:
+ <%= jour %> 
+ <%= @reservations.dateinvitation.day %> 
+ <%= mois %>  à <%= t.dateinvitation.hour  %> H 
+ <%= t.dateinvitation.min  %>
+
+
+
+</p>
+
+
+<p> Adresse:<%= @reservations.vraiadresse %></p>
 
 
 <br>
