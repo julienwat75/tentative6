@@ -167,7 +167,7 @@
 <% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
 
 <% resume=t.description %>
-<% resume=resume[0...50]%>
+<% resume=resume[0...200]%>
 
  
 
@@ -215,7 +215,7 @@
                                          <div style="padding:10px;">  
                                                
                                                 
-                                                <div style="margin-top:15px;">  <%= resume %></div> 
+                                                <div style="margin-top:15px;">  <%= resume %>...</div> 
                                                 <a href="<%=  invitation_path(t.id) %>">  
                                                  <div class="titre_vignette" style="font-family: Helvetica Neue,Arial,sans-serif;padding-left:10px;color:rgb(59, 89, 152);"> 
                                                   Voir l'invitation
