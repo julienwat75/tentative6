@@ -313,15 +313,28 @@ font-weight:bold;"
     
         }
 
+        .piedpage{
+
+         margin-bottom:15px;
+         border-bottom:1px solid rgba(0, 0, 0, 0.2);
+        border-right:1px solid rgba(0, 0, 0, 0.2);
+        border-left:1px solid rgba(0, 0, 0, 0.2);
+        padding:10px;
+
+
+        }
+
 
          .invitation{
 
           
         padding: 0px;
         background: white;
-        margin-bottom: 15px;
+        margin-bottom: 0px;
         
         overflow: hidden;
+        background:  rgb(237, 239, 244);
+
         
         
     
