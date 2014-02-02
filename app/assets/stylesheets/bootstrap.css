@@ -206,7 +206,9 @@ font-weight:bold;"
 
         .fondblanc{
 
-        background: white;
+        /*background: rgb(91, 116, 168);*/
+        background: rgb(142, 199, 246);
+         background: rgb(142, 179, 236);
          color: rgb(203, 0, 0);
 
        }
@@ -263,6 +265,8 @@ font-weight:bold;"
 
         .vignette{
 
+
+
           
         margin-top: 0px;  
      
@@ -271,6 +275,8 @@ font-weight:bold;"
         overflow: hidden;
 
         font-family: "Helvetica Neue",Arial,sans-serif;
+
+        background:  rgb(237, 239, 244);
 
       
         }
@@ -299,9 +305,10 @@ font-weight:bold;"
         margin-bottom: 15px;
         
         
-        border-top:1px solid rgba(0, 0, 0, 0.2);
-        border-bottom:1px solid rgba(0, 0, 0, 0.2);
-        color:grey;
+        border:1px solid rgba(0, 0, 0, 0.2);
+        
+        color:rgb(91, 116, 168);
+        background:rgb(237, 239, 244);
         
     
         }
@@ -310,12 +317,12 @@ font-weight:bold;"
          .invitation{
 
           
-        
+        padding: 0px;
         background: white;
-        margin-bottom: 40px;
+        margin-bottom: 15px;
         
         overflow: hidden;
-        border-radius:5px 5px 5px 5px;
+        
         
     
         }
@@ -1238,8 +1245,7 @@ pre code {
 }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
+
 }
 
 .row:before,
@@ -1880,7 +1886,9 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1000px;
+  
+    
   }
   .col-lg-1,
   .col-lg-2,
@@ -1894,6 +1902,7 @@ pre code {
   .col-lg-10,
   .col-lg-11 {
     float: left;
+    
   }
   .col-lg-12 {
     width: 100%;
@@ -5171,12 +5180,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color:#660000;
+  color:white;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color:#660000;
+  color:yellow;
   
   background-color: transparent;
 }

@@ -1,15 +1,18 @@
 
-<% provide(:title, "Invitations gratuites") %>
 
 
 
 
-<div class="row " style="padding-left:15px;padding-right:15px;" >
-         
-         <div class="col-lg-4  hidden-xs " style="float:left;">
-          
-                   <div style="width:100%;padding:10px;">
-                    <!-- ----------------  Carousel ----------------------------------------------------  -->
+
+
+<div class="montitre hidden-xs">  A l'affiche </div>
+
+
+
+<div class="row" style="background:rgb(237, 239, 244);margin-bottom:15px;">
+   <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 fondgris hidden-xs" style="border:1px solid rgba(0, 0, 0, 0.2);"  >
+    
+          <!-- ----------------  Carousel ----------------------------------------------------  -->
 
 
 <div align="center">
@@ -26,19 +29,27 @@
   <div class="carousel-inner" >
 
     <div class="item active">
-      <img src="https://s3-eu-west-1.amazonaws.com/julienwat75/tunes/medium/27/vz-a86c88ab-dd2b-4a50-85c4-7bbf2a44007f.jpeg?1390897958" style="border-radius:5px 5px 5px 5px;" >
+      <img src="https://s3-eu-west-1.amazonaws.com/julienwat75/tunes/medium/22/vz-460f27e6-6fb4-440c-89cb-6c8462a9cb9f.jpeg?1390308326"  style="border-radius:5px 5px 5px 5px;" >
       <div class="carousel-caption">
-       
-      </div>
-       Le coach
-    </div>
 
+
+        
+      </div>
+
+       <div style="background:white;width:100%;">Tony Montana</div>
+    
+    
+    </div>
     <div class="item ">
       <img src="https://s3-eu-west-1.amazonaws.com/julienwat75/tunes/medium/22/vz-460f27e6-6fb4-440c-89cb-6c8462a9cb9f.jpeg?1390308326"  style="border-radius:5px 5px 5px 5px;" >
       <div class="carousel-caption">
+
+
         
       </div>
-      Kheiron 
+
+      <div style="background:white;width:100%;">Tony Montana</div>
+    
     </div>
     
 </div>
@@ -50,23 +61,47 @@
 </div>
 
 </div>
+
+</div>
  
 
 
 <!-- ------------------------------------------------------------------------------------   -->
 
-                   </div> 
-                   <div style="margin-top:10px;padding:10px;width:100%;">
+<div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 fondgris hidden-xs"  style="border:1px solid rgba(0, 0, 0, 0.2);" >
+
+
+   <div style="width:100%;">
                      <div align="center">
                     <div class="fb-like-box" data-href="http://www.facebook.com/FacebookDevelopers" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" data-width="300"></div>
                      </div>
                    </div> 
-                   
 
 
-          </div>
 
-           <div  class=" col-xs-12 col-sm-5 col-md-7 col-lg-8" >
+
+
+   </div>
+
+   <!-- ------------------------------------  -->
+
+
+
+</div>
+
+        
+
+<div class="row "  >
+
+
+
+ <% provide(:title, "Invitations Gratuites") %>
+ 
+
+
+         
+
+        
         <% @invitations2.each do |t| %>
 
         <!--  switch et variable --> 
@@ -140,54 +175,65 @@
           
 
       
-           <div style=" " >  <!--  -------------------------------- Invitations ---------------------------- --> 
-               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 fondgris hidden-xs"  style="padding-top:20px;height:480px;" >  <!-- debut premier div ---- -->
-                    <div align="center">
+             <!--  -------------------------------- Invitations ---------------------------- --> 
+               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 fondgris hidden-xs"   >  <!-- debut premier div ---- -->
+                  <div align="center">
                 <!--  Version PC ------------------------------------------------------------------ -->
-                     <div  class="invitation " style=" border:1px solid rgba(0, 0, 0, 0.2);">
+                     <div  class="invitation " style=" border:1px solid rgba(0, 0, 0, 0.2);text-align:left; border-radius:15px 15px 15px 15px;"; >
+                         <div> 
+                                   <a href="<%=  invitation_path(t.id) %>">  
+                                   <div class="titre_vignette" style="font-family: Helvetica Neue,Arial,sans-serif;padding-left:10px;"> 
+                                      <%=  t.titre %> 
+
+                                                
+                                    </div>
+                                  </a>
+                                    <div style="padding-left:10px;">
+                                                <%= jour %> 
+                                                <%= t.dateinvitation.day %> 
+                                                <%= mois %>  à <%= t.dateinvitation.hour  %> H 
+                                                <%= t.dateinvitation.min  %>
+                                      </div>          
+
+
+
+                         </div>
+
+
                           <a href="<%=  invitation_path(t.id) %>">
-                            <div class="vignette">
-                                <img src="<%= var %>" alt="arobas" style="width:100%;" />
-                              </div>
-                          </a>
-                              <div align="center">
-                                   
-                                    <div class="titre_vignette" style="font-family: Helvetica Neue,Arial,sans-serif;">  <%=  t.titre %>  </div>
-                                             <%= jour %> 
-                                              <%= t.dateinvitation.day %> 
-                                              <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
-     
-                                     </div>
+                             <div class="vignette" >
+
+                                <div >
+                                    <a href="<%=  invitation_path(t.id) %>">
+                                   <img src="<%= var %>" alt="arobas" style="width:60%;text-align:left;float:left;padding:10px;" />
+                                 </div>
+                                   </a>
+                                         <div style="padding:10px;">  
+                                               
+                                                
+                                                <div style="margin-top:15px;">  <%= t.description %> 
+                                                bla bla bla  bla bla bla  bla bla bla</div> 
 
 
+                                         </div>
+
                               </div>
+                         
                               
-                            </div>
-                  <!-- Fin Version PC ------------------------------------------------------------------ --> 
-
-                  <!--  Version Mobile -->  
-               
-                     <!--  Fin version Mobile -->
 
 
+                      </div>
 
-               </div>
-               </div>
+                    </div>  
+                              
+              </div>
+                  <!-- Fin Version PC -------------------------------------------------  -->
 
-
-
-               <!--  ------------------------------------------------------------------   -->
-
-                <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4  hidden-sm hidden-md hidden-lg"  style="padding-top:20px;" >  <!-- debut premier div ---- -->
-                    <div align="center">
-                
-                  <!-- Fin Version PC ------------------------------------------------------------------ --> 
-
-                  <!--  Version Mobile -->  
-                <div  class="invitation hidden-sm hidden-md hidden-lg" style="background:white; border:1px solid rgba(0, 0, 0, 0.2);">
+                <!--  Version Mobile -->  
+                <div  class="invitation hidden-sm hidden-md hidden-lg" style="background:white; border:1px solid rgba(0, 0, 0, 0.2);border-radius:15px 15px 0px 0px;">
                         <a href="<%=  invitation_path(t.id) %>">
-                          <div class="vignette">
-                            <img src="<%= var %>" alt="arobas" style="width:100%;" />
+                          <div >
+                            <img src="<%= var %>" alt="arobas" style="width:100%;border-radius:15px 15px 0px 0px;" />
                           </div>
                         </a>
                        <div align="center">
@@ -200,22 +246,14 @@
                      <!--  Fin version Mobile -->
 
 
-               
-               </div>
 
-
-
-
-               <!--  -------------------------------------------------------------------  -->
-
-           </div>                         <!--  -------------------------------- Fin Invitations ---------------------------- --> 
 
 
       <% end %>
 
-       </div>
+ </div>
 
-</div>
+
 
 
 
