@@ -9,8 +9,60 @@
 
    <% mois=@reservations.dateinvitation.strftime("%B")  %>
 
+<% case jour  %>
+ <% when "Monday"  %>
+ <%  jour= "Lundi" %> 
+ <% when "Tuesday"  %>
+ <%  jour= "Mardi" %> 
+<% when "Wednesday"  %>
+ <%  jour= "Mercredi" %>
+  <% when "Thursday"  %>
+ <%  jour= "Jeudi" %>
+  <% when "Friday"  %>
+ <%  jour= "Vendredi" %>
+  <% when "Saturday"  %>
+ <%  jour= "Samedi" %> 
+  <% when "Sunday"  %>
+ <%  jour= "Dimanche" %> 
+<% else  %>              
+ <% puts 'Only single-digit numbers are allowed' %>
+ <% end %>
+
+ <% case mois  %>
+ <% when "January"  %>
+ <%  mois= "Janvier" %> 
+ <% when "February"  %>
+ <%  mois= "Février" %> 
+<% when "March"  %>
+ <%  mois= "Mars" %>
+  <% when "April"  %>
+ <%  mois= "Avril" %>
+  <% when "May"  %>
+ <%  mois= "Mai" %>
+  <% when "June"  %>
+ <%  mois= "Juin" %>
+  <% when "July"  %>
+ <%  mois= "Juillet" %>
+  <% when "August"  %>
+ <%  mois= "Aout" %>
+  <% when "September"  %>
+ <%  mois= "Septembre" %>
+  <% when "October"  %>
+ <%  mois= "Octobre" %>
+   <% when "November"  %>
+ <%  mois= "Novembre" %>
+  <% when "December"  %>
+ <%  mois= "Décembre" %>
+<% else  %>              
+ 
+ <% end %>
+
+
+
+
+
     <h1>Bonjour <%= @reservations.sexe %> <%= @reservations.author_nom %>!</h1> <br>
-    <p>Votre invitation est confirmé pour le spéctacle "<%= @reservations.titre %>"</p>
+    <p>Votre invitation est confirmée pour le spéctacle "<%= @reservations.titre %>"</p>
     <p>Vous devez vous présenter 10 min avant le spectacle avec votre carte d'identité
        et le code de votre réservation. 
     </p>
@@ -33,6 +85,7 @@ Date du spéctacle:
 
 
 <br>
+Bon spéctacle
 <br>
 <p>A très bientot sur http://www.billetgratuit.com </p>
 <br>
