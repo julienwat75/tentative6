@@ -4,13 +4,13 @@
 
 
 
-
-<div class="montitre hidden-xs">  A l'affiche </div>
+<% provide(:title, "Invitations Gratuites") %>
+ 
 
 
 
 <div class="row" style="background:rgb(237, 239, 244);margin-bottom:15px;">
-   <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 fondgris hidden-xs" style="border:1px solid rgba(0, 0, 0, 0.2);"  >
+   <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 fondgris hidden-xs" style="border:1px solid rgba(0, 0, 0, 0.2);padding:10px;"  >
     
           <!-- ----------------  Carousel ----------------------------------------------------  -->
 
@@ -68,7 +68,7 @@
 
 <!-- ------------------------------------------------------------------------------------   -->
 
-<div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 fondgris hidden-xs"  style="border:1px solid rgba(0, 0, 0, 0.2);" >
+<div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 fondgris hidden-xs"  style="border:1px solid rgba(0, 0, 0, 0.2);padding:10px;" >
 
 
    <div style="width:100%;">
@@ -95,14 +95,17 @@
 
 
 
- <% provide(:title, "Invitations Gratuites") %>
  
+ <div class="montitre hidden-xs">  A l'affiche </div>
 
 
          
 
         
         <% @invitations2.each do |t| %>
+
+           <% if t.validation && Invitation.late(t.dateinvitation) %>
+
 
         <!--  switch et variable --> 
 
@@ -179,10 +182,10 @@
                <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 fondgris hidden-xs"   >  <!-- debut premier div ---- -->
                   <div align="center">
                 <!--  Version PC ------------------------------------------------------------------ -->
-                     <div  class="invitation " style=" border:1px solid rgba(0, 0, 0, 0.2);text-align:left; border-radius:15px 15px 15px 15px;"; >
+                     <div  class="invitation " style=" border:1px solid rgba(0, 0, 0, 0.2);text-align:left; border-radius:15px 15px 0px 0px;"; >
                          <div> 
                                    <a href="<%=  invitation_path(t.id) %>">  
-                                   <div class="titre_vignette" style="font-family: Helvetica Neue,Arial,sans-serif;padding-left:10px;"> 
+                                   <div class="titre_vignette" style="font-family: Helvetica Neue,Arial,sans-serif;padding-left:10px;color:rgb(59, 89, 152);"> 
                                       <%=  t.titre %> 
 
                                                 
@@ -205,7 +208,7 @@
 
                                 <div >
                                     <a href="<%=  invitation_path(t.id) %>">
-                                   <img src="<%= var %>" alt="arobas" style="width:60%;text-align:left;float:left;padding:10px;" />
+                                   <img src="<%= var %>" alt="arobas" style="width:60%;text-align:left;float:left;" />
                                  </div>
                                    </a>
                                          <div style="padding:10px;">  
@@ -247,6 +250,11 @@
 
 
 
+           <% else %>
+   
+           <% t.update_attributes(validation: 'false') %>
+
+           <% end %>  <!--  Fin du if  -->
 
 
       <% end %>
