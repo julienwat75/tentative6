@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140121130952) do
+ActiveRecord::Schema.define(version: 20140202220447) do
 
   create_table "authors", force: true do |t|
     t.string   "username",            null: false
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20140121130952) do
     t.string   "sexe"
     t.string   "nom_resa"
     t.boolean  "limite"
+    t.boolean  "newsletter"
+    t.boolean  "partenaires"
   end
 
   create_table "commentaires", force: true do |t|

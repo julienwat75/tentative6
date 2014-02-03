@@ -97,7 +97,9 @@ def create              # le submit va chercher la methode create
   @authors.nom = params[:author][:nom]
   @authors.prenom = params[:author][:prenom]
   @authors.sexe = params[:author][:sexe]
-  
+  @authors.newsletter = params[:author][:newsletter]
+  @authors.partenaires = params[:author][:partenaires]
+   
 
   if @authors.save   #on sauvegarde
 

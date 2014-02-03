@@ -89,6 +89,8 @@ def create              # le submit va chercher la methode create
   @invitations.avatar = params[:invitation][:avatar]  # on reccupere le nom du form
    @invitations.place = params[:place]
   
+   
+  
   @invitations.author_id =current_user.id
   @invitations.save   #on sauvegarde
    redirect_to pageinvitations_path     # redirection vers l'index
