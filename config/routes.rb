@@ -22,6 +22,8 @@ MyApp::Application.routes.draw do
    get 'login'  => 'author_sessions#new'
    get 'logout' => 'author_sessions#destroy'
 
+  get "pages/contact"
+  get "pages/fonctionnement"
   get "pages/limite"
   get "pages/confirmation"
   get "pages/epuise"

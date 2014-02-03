@@ -3,4 +3,8 @@ class PagesController < ApplicationController
 
   	
   end
+
+  def fonctionnement
+  end
+  
 end
