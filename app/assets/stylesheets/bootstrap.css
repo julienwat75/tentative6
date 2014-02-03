@@ -208,7 +208,7 @@ font-weight:bold;"
 
         /*background: rgb(91, 116, 168);*/
         
-         background: rgb(142, 179, 236);
+        
          background: rgb(122, 159, 236);
          color: rgb(203, 0, 0);
 
@@ -2741,7 +2741,7 @@ fieldset[disabled] .btn {
 
 .btn-default {
   color: white;
-  background-color: rgb(203, 0, 0);
+  background: rgb(122, 159, 216);
   border-color: white;
   width:100%;
 }
@@ -2773,9 +2773,10 @@ fieldset[disabled] .btn {
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
   color: white;
-  background-color: rgb(203, 0, 0);
+  
   border-color: #adadad;
   width:100%;
+  background: rgb(122, 159, 236);
 }
 
 

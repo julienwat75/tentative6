@@ -126,7 +126,7 @@
         <!-- <li><%= link_to "(logout)", logout_path %> </li>  -->
          <!--  <li> jkjkljkljl</li>  -->
         <% else %>
-         <li> <a href="<%= root_path %>"><span class="glyphicon glyphicon-cog"></span> Connexion </a></li>
+         <li> <a href="<%= login_path %>"><span class="glyphicon glyphicon-cog"></span> Connexion </a></li>
           <% end %>
 
           <% if current_user && current_user.id == 3  %>   <!--   Bouton webmaster -->  

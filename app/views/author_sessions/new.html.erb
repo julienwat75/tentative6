@@ -1,59 +1,65 @@
 <% provide(:title, "Se connecter") %>
 
-<div class="row"  >
-  <div  class="col-xs-0  col-md-4 col-ls-4" ></div>
+<div class="row " >
+
+    <div class="col-xs-0 col-sm-4 col-md-4 col-lg-4 text-center " ></div>
 
 
-<!-- --------------------  Partie PC --------------------------------------------  -->
-
-  <div  class="col-xs-12 col-md-4 col-ls-4  hidden-xs" >
-
-<div align="center">   
-<%= form_tag author_sessions_path, method: :post do %>
-  <div class="field">
-    <%= label_tag :Email %> <br>
-    <%= text_field_tag :username %>
-    <br/>
-  </div>
-  <div class="field">
-    <%= label_tag :password %> <br>
-    <%= password_field_tag :password %>
-    <br/>
-  </div>
-  <div class="actions" style="margin-top:20px;font-size:20px;">
-    <%= submit_tag "Connexion" %>
-  </div>
-<% end %>
-</div>
-</div>
-<!-- ------------------------------------------------------------------------------------------- -->
-
-<!-- --------------------  Partie Mobile --------------------------------------------  -->
-
-  <div  class="col-xs-12 col-md-4 col-ls-4  hidden-md hidden-lg" >
-<div align="center">   
-<%= form_tag author_sessions_path, method: :post  do %>
-  <div class="field" style="color:white;">
-    <%= label_tag :Email %> <br>
-    <%= text_field_tag :username %>
-    <br/>
-  </div>
-  <div class="field" style="color:white;">
-    <%= label_tag :password %> <br>
-    <%= password_field_tag :password %>
-    <br/>
-  </div>
-  <div class="actions" style="margin-top:20px;font-size:20px;">
-    <%= submit_tag "Connexion" %>
-  </div>
-<% end %>
-</div>
-</div>
-<!-- ------------------------------------------------------------------------------------------- -->
-
-
-<div  class="col-xs-0  col-md-4 col-ls-4" ></div>
-</div>
+     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center " >
 
 
 
+
+                              <div style="margin-bottom:200px;">
+
+                                     <h2 ><small><font color="white">Se connecter</font></small></h2><br>
+
+                                    <%= form_tag author_sessions_path, method: :post do %>
+
+                                    <div class="field">
+                                    <%=  text_field_tag :username, "Email",:style =>'color:grey;width:100%;font-size:19px;' %>
+                                    
+                                   </div>
+
+                                   <br>
+                                  
+                                  <div class="field">
+                                    
+                                   <%= password_field_tag :password, nil, placeholder: "Password" ,:style =>'padding:10px;color:grey;width:100%;font-size:19px;', :class => 'couleurnoir'   %>
+
+                                  </div>
+
+                                   <div style="margin:20px;"> Mot de passe oublié? </div>
+
+
+                                    <div style="margin-top:20px;width:100%;"> 
+                                      <%= submit_tag  "Se connecter", :class => 'btn btn-default btn-lg',:style =>'width:100%;'  %>
+                                    </div>
+                         
+                               
+
+                                   <% end %>
+
+                                   <div style="margin-top:30px;margin-bottom:20px;"> Pas encore membre?</div>
+                        
+
+                                    
+                                  <div style="margin-top:0px;width:100%;background:grey;"> 
+                                    <%= link_to "S'inscrire", new_author_path,  :class=>"btn btn-inscription btn-lg",:style =>'color:white;' %>
+
+                                  </div>
+                          </div>
+
+
+
+
+
+
+                   </div>
+
+      <div class="col-xs-0 col-sm-4 col-md-4 col-lg-4 text-center " ></div>
+
+ </div>     
+
+
+           
