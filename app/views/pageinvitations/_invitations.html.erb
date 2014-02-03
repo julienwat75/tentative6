@@ -1,114 +1,20 @@
 
-
-
-
-
-
 <% provide(:title, "Invitations Gratuites") %>
  
 
 
 
-<div class="row" style="background:rgb(237, 239, 244);margin-bottom:15px;height:600px;overflow:hidden;">
-   <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 fondgris hidden-xs" style="padding:10px;"  >
-    
-          <!-- ----------------  Carousel ----------------------------------------------------  -->
 
-
-<div align="center">
-
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" >
-
-    <div class="item active">
-      <img src="https://s3-eu-west-1.amazonaws.com/julienwat75/tunes/original/68/vz-0ad9faed-052c-40a4-b462-15f3567896ec.jpeg?1391200392"  style="border-radius:5px 5px 5px 5px;" >
-      <div class="carousel-caption">
-
-
-        
-      </div>
-
-       <div style="background:white;width:100%;">Tony Montana</div>
-    
-    
-    </div>
-    <div class="item ">
-      <img src="https://s3-eu-west-1.amazonaws.com/julienwat75/tunes/original/69/vz-68cc2beb-44b9-4428-8c76-d274bcbff533.jpeg?1391200516"  style="border-radius:5px 5px 5px 5px;" >
-      <div class="carousel-caption">
-
-
-        
-      </div>
-
-      <div style="background:white;width:100%;">Tony Montana</div>
-    
-    </div>
-    
-</div>
-
-
-
-  <!-- Controls -->
-  
-</div>
-
-</div>
-
-</div>
- 
 
 
 <!-- ------------------------------------------------------------------------------------   -->
 
-<div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 fondgris hidden-xs"  style="padding:10px;" >
-
-
-   <div style="width:100%;background:white;">
-                     <div align="left">
-                    <div class="fb-like-box" data-href="http://www.facebook.com/FacebookDevelopers" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" data-width="300"></div>
-                     </div>
-                   </div> 
-
-                   <div style="width:100%;background:white;">
-                     <div align="left">
-                   
-                     </div>
-                   </div> 
-
-
-
-
-
-
-   </div>
-
-   <!-- ------------------------------------  -->
-
-
-
-</div>
 
         
 
 <div class="row "  >
 
-
-
- 
- <div class="montitre hidden-xs">  A l'affiche </div>
-
-
-         
-
-        
+                
         <% @invitations2.each do |t| %>
 
            <% if t.validation && Invitation.late(t.dateinvitation) %>
@@ -187,19 +93,19 @@
 
       
              <!--  -------------------------------- Invitations ---------------------------- --> 
-               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 fondgris hidden-xs"   >  <!-- debut premier div ---- -->
+               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 fondgris hidden-xs" style=" border:1px solid rgba(0, 0, 0, 0.2);text-align:left;height:400px;overflow:hidden;"    >  <!-- debut premier div ---- -->
                   <div align="center">
                 <!--  Version PC ------------------------------------------------------------------ -->
-                     <div  class="invitation " style=" border:1px solid rgba(0, 0, 0, 0.2);text-align:left; border-radius:5px 5px 0px 0px;height:600px;" >
+                     <div  class=" " >
                          <div> 
                                    <a href="<%=  invitation_path(t.id) %>">  
-                                   <div class="titre_vignette" style="font-family: Helvetica Neue,Arial,sans-serif;padding-left:10px;color:rgb(59, 89, 152);background:white;"> 
+                                   <div class="titre_vignette" style="font-family: Helvetica Neue,Arial,sans-serif;padding-left:10px;color:rgb(59, 89, 152);background:white;text-align:left;"> 
                                       <%=  t.titre %> 
 
                                                 
                                     </div>
                                   </a>
-                                    <div style="padding-left:10px;">
+                                    <div style="padding-left:10px;text-align:left;">
                                                 <%= jour %> 
                                                 <%= t.dateinvitation.day %> 
                                                 <%= mois %>  à <%= t.dateinvitation.hour  %> H 
@@ -228,8 +134,7 @@
                       </div>
 
                     </div>  
-                      <div class="piedpage">  <%= t.adresse %> </div> 
-
+                     
                               
               </div>
                   <!-- Fin Version PC -------------------------------------------------  -->
