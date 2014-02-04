@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140202220447) do
+ActiveRecord::Schema.define(version: 20140203231106) do
 
   create_table "authors", force: true do |t|
     t.string   "username",            null: false
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20140202220447) do
     t.string   "place"
     t.string   "vraiadresse"
     t.boolean  "limite"
+    t.string   "emailpartenaire"
   end
 
   create_table "offres", force: true do |t|
@@ -111,6 +112,8 @@ ActiveRecord::Schema.define(version: 20140202220447) do
     t.integer  "idinvitation"
     t.string   "vraiadresse"
     t.string   "email_membre"
+    t.string   "emailpartenaire"
+    t.boolean  "envoiemail"
   end
 
   add_index "reservations", ["author_id"], name: "index_reservations_on_author_id"

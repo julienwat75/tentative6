@@ -98,7 +98,8 @@ if current_user.limite
   @reservations.titre=params[:titre]   # ici on recupere directement le champ du form ds l'id car ce n est pas un f.text_field 
   @reservations.dateinvitation=params[:dateinvitation] 
   @reservations.adresse=params[:adresse] 
-  @reservations.vraiadresse=params[:vraiadresse]   
+  @reservations.vraiadresse=params[:vraiadresse]  
+   @reservations.emailpartenaire=params[:emailpartenaire]  
   @reservations.author_id =current_user.id
   @reservations.email_membre =current_user.username
   @reservations.pseudo =current_user.email

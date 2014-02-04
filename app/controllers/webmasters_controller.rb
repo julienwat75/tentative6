@@ -2,8 +2,7 @@ class WebmastersController < ApplicationController
 
 def index
 
-   redirect_to "http://www.billetgratuit.com"
-
+   
 a=0
 
 

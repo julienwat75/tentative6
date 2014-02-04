@@ -100,11 +100,12 @@
                          <div> 
                                    <a href="<%=  invitation_path(t.id) %>">  
                                    <div class="titre_vignette" style="font-family: Helvetica Neue,Arial,sans-serif;padding-left:10px;color:rgb(59, 89, 152);background:white;text-align:left;"> 
-                                      <%=  t.titre %> 
+                                    <span class="glyphicon glyphicon-star"></span> 
+                                    <%=  t.titre %> 
 
                                                 
                                     </div>
-                                  </a>
+                                    </a>
                                     <div style="padding-left:10px;text-align:left;">
                                                 <%= jour %> 
                                                 <%= t.dateinvitation.day %> 

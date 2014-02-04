@@ -61,9 +61,10 @@ def create              # le submit va chercher la methode create
 
  when "comedie republique" 
    vraiadresse= "1 Boulevard St Martin , 75003 Paris"
+   emailpartenaire="comedierepubliquexxx@yahoo.fr"
  when "comedie contrescarpe" 
   vraiadresse= "5 rue blainville, 75005 Paris Théâtre de 110 places environ" 
-
+  emailpartenaire="comediecontrescarpexxx@yahoo.fr"
   end
 
   @invitations.vraiadresse=vraiadresse
@@ -87,6 +88,7 @@ def create              # le submit va chercher la methode create
   @invitations.description = params[:invitation][:description]  # on reccupere le nom du form
   @invitations.adresse = params[:adresse]  # on reccupere le nom du form 
   @invitations.avatar = params[:invitation][:avatar]  # on reccupere le nom du form
+  @invitations.emailpartenaire =  emailpartenaire
    @invitations.place = params[:place]
   
    
