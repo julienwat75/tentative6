@@ -107,12 +107,16 @@ end
 def update
 
   var = params[:invitation][:dateinvitation]  # on reccupere le nom du form
+  var=var[0...10]
   heure=params[:heure1]
   minute=params[:minute1]
   seconde="00"
   var3=var + " " + heure + ":" + minute + ":" + seconde 
-  
 
+
+          
+  
+ 
 @invitation = Invitation.find params[:id]
 #@invitation.update_attributes(validation: 'true')
 @invitation.update_attributes(titre: params[:invitation][:titre],description: params[:invitation][:description],validation: 'true',dateinvitation: var3,place: params[:place])

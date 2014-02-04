@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140203231106) do
+ActiveRecord::Schema.define(version: 20140204192701) do
 
   create_table "authors", force: true do |t|
     t.string   "username",            null: false
@@ -114,6 +114,7 @@ ActiveRecord::Schema.define(version: 20140203231106) do
     t.string   "email_membre"
     t.string   "emailpartenaire"
     t.boolean  "envoiemail"
+    t.datetime "heuremailpartenaire"
   end
 
   add_index "reservations", ["author_id"], name: "index_reservations_on_author_id"

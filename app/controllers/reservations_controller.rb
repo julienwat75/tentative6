@@ -87,7 +87,8 @@ if current_user.limite
 
   else
 
-
+  heuremailpartenaire= params[:dateinvitation] - 30.min 
+ 
   current_user.update_attribute(:limite, true)
 
 
@@ -108,6 +109,7 @@ if current_user.limite
   @reservations.sexe =current_user.sexe
   @reservations.code=code1
   @reservations.envoiemail = "true"
+  @reservations.heuremailpartenaire =  heuremailpartenaire
   @reservations.save   #on sauvegarde
 
    Notifier.send_resa_email(@reservations).deliver
