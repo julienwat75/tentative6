@@ -87,7 +87,7 @@ if current_user.limite
 
   else
 
-  heuremailpartenaire= params[:dateinvitation] - 30.min 
+  heuremailpartenaire= params[:dateinvitation] - 30.minutes 
  
   current_user.update_attribute(:limite, true)
 
