@@ -99,7 +99,7 @@ if current_user.limite
   @reservations.dateinvitation=params[:dateinvitation] 
   @reservations.adresse=params[:adresse] 
   @reservations.vraiadresse=params[:vraiadresse]  
-   @reservations.emailpartenaire=params[:emailpartenaire]  
+  @reservations.emailpartenaire=params[:emailpartenaire]  
   @reservations.author_id =current_user.id
   @reservations.email_membre =current_user.username
   @reservations.pseudo =current_user.email
@@ -107,6 +107,7 @@ if current_user.limite
   @reservations.author_prenom =current_user.prenom
   @reservations.sexe =current_user.sexe
   @reservations.code=code1
+  @reservations.envoiemail = "true"
   @reservations.save   #on sauvegarde
 
    Notifier.send_resa_email(@reservations).deliver
