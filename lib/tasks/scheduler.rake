@@ -45,5 +45,7 @@ task :mail_partenaires => :environment do
      
 
     end 
+    
+  end
 
 end
