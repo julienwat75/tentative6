@@ -30,11 +30,14 @@ end
 task :mail_partenaires => :environment do
   #User.send_reminders
    @reservation=Reservation.all
-
+   
    @reservation.each do |t| 
+
+      t.update_attribute(:envoiemail, "false") 
+      
      if t.envoiemail
         if t.late(t.heuremailpartenaire)
-          
+
          t.update_attribute(:envoiemail, "false") 
         else
          t.update_attribute(:envoiemail, "false") 
