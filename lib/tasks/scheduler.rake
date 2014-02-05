@@ -29,6 +29,7 @@ end
 
 task :mail_partenaires => :environment do
   #User.send_reminders
+   puts "done."
    @reservation=Reservation.all
    
    @reservation.each do |t| 
@@ -45,7 +46,7 @@ task :mail_partenaires => :environment do
      
 
     end 
-    
+
   end
 
 end
