@@ -6,7 +6,7 @@ task :update_feed => :environment do
   
   puts "done."
   @authors=Author.find_by_id(3)
-  @authors.update_attribute(:prenom,"bibi")
+  @authors.update_attribute(:prenom,"boubou")
   #Notifier.send_signup_email(@authors).deliver
 
 
