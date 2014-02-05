@@ -1,5 +1,6 @@
 desc "This task is called by the Heroku scheduler add-on"
 
+
 task :update_feed => :environment do
   puts "Updating feed..."
   
@@ -20,6 +21,24 @@ task :reset_reservations => :environment do
 
      t.update_attribute(:limite, "false")
      t.update_attribute(:prenom,"patoch")
+
+    end 
+
+end
+
+
+task :mail_partenaires => :environment do
+  #User.send_reminders
+   @reservation=Reservation.all
+
+   @reservation.each do |t| 
+     if t.envoiemail
+        if t.late(t.heuremailpartenaire)
+        
+        else
+         t.update_attribute(:envoiemail, "false") 
+        end
+     
 
     end 
 
