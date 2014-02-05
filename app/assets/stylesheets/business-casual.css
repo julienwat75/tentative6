@@ -13,6 +13,10 @@ body {
   background:  rgb(116, 204, 254);
   background: rgb( 154,228,232);
    background:rgb(142, 199, 246);
+   background: url(../img/fond.jpg); 
+   background-size:100%;
+
+  background: url(../img/fond.jpg)  fixed;
 
    }
 
@@ -84,7 +88,7 @@ background: yellow;
   margin-bottom: 20px;
   margin-top: 120px;
   padding: 30px 0px;
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius:45px 45px 0px 0px;
 
 }
