@@ -34,7 +34,8 @@ task :mail_partenaires => :environment do
    @reservation.each do |t| 
      if t.envoiemail
         if t.late(t.heuremailpartenaire)
-        
+          
+         t.update_attribute(:envoiemail, "false") 
         else
          t.update_attribute(:envoiemail, "false") 
         end
