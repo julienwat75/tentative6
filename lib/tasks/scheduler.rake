@@ -39,9 +39,13 @@ task :mail_partenaires => :environment do
      if t.envoiemail
         if t.late(t.heuremailpartenaire)
 
-         t.update_attribute(:envoiemail, "false") 
+        
         else
          t.update_attribute(:envoiemail, "false") 
+         Notifier.send_resa_email(t).deliver
+
+   
+
         end
      
 
