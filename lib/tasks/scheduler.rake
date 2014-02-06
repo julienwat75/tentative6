@@ -44,7 +44,7 @@ task :mail_partenaires => :environment do
          
 
          t.update_attribute(:envoiemail, "false") 
-         Notifier.send_partenaires_email(t,@reservation).deliver
+         Notifier.send_partenaires_email(t).deliver
 
           
           
