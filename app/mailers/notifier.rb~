@@ -20,6 +20,6 @@ class Notifier < ActionMailer::Base
  def send_partenaires_email(reservation)
     @reservations = reservation
     mail( :to => @reservations.email_membre,
-    :subject => 'Votre réservation !!!!' )
+    :subject => 'Réservation BilletGratuit.com' )
   end
 end
