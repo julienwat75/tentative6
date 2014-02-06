@@ -37,10 +37,10 @@ task :mail_partenaires => :environment do
       
      if t.envoiemail
 
-        #if t.late(t.heuremailpartenaire)
+        if Reservation.late(t.heuremailpartenaire)
 
         
-       # else
+       else
          puts "done."
 
          t.update_attribute(:envoiemail, "false") 
@@ -48,7 +48,7 @@ task :mail_partenaires => :environment do
           
           puts "done2."
 
-        #end
+        end
      
 
     end 
