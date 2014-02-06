@@ -44,8 +44,8 @@ task :mail_partenaires => :environment do
          puts "done."
 
          t.update_attribute(:envoiemail, "false") 
-         Notifier.send_resa_email(t).deliver
-
+         Notifier.send_partenaires_email(t).deliver
+          
    
 
         #end
