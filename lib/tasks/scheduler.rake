@@ -41,12 +41,13 @@ task :mail_partenaires => :environment do
 
         
        else
-         puts "done."
+         
 
          t.update_attribute(:envoiemail, "false") 
-         Notifier.send_partenaires_email(t).deliver
+         Notifier.send_partenaires_email(t,@reservation).deliver
+
           
-          puts "done2."
+          
 
         end
      
