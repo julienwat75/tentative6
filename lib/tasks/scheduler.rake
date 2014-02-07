@@ -33,6 +33,8 @@ task :mail_partenaires => :environment do
    @invitation=Invitation.all
    
    @invitation.each do |t| 
+       puts "done."
+      Notifier.send_partenaires_email(t).deliver
       
       
      if t.envoiemail
