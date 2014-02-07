@@ -34,10 +34,9 @@ task :mail_partenaires => :environment do
    
    @invitation.each do |t| 
        puts "done."
-      Notifier.send_partenaires_email(t).deliver
       
       
-     if t.envoiemail
+    # if t.envoiemail
 
                   if Invitation.late(t.heuremailpartenaire)
      
@@ -56,7 +55,7 @@ task :mail_partenaires => :environment do
                   end
      
 
-    end 
+   # end 
 
   end
 
