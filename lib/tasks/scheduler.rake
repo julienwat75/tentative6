@@ -37,7 +37,7 @@ task :mail_partenaires => :environment do
       
      if t.envoiemail
 
-                  if invitation.late(t.heuremailpartenaire)
+                  if Invitation.late(t.heuremailpartenaire)
 
                   
                  else
