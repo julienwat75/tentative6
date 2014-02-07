@@ -30,26 +30,26 @@ end
 task :mail_partenaires => :environment do
   #User.send_reminders
    puts "done."
-   @reservation=Reservation.all
+   @invitation=Invitation.all
    
-   @reservation.each do |t| 
+   @invitation.each do |t| 
       
       
      if t.envoiemail
 
-        if Reservation.late(t.heuremailpartenaire)
+                  if invitation.late(t.heuremailpartenaire)
 
-        
-       else
-         
+                  
+                 else
+                   
 
-         t.update_attribute(:envoiemail, "false") 
-         Notifier.send_partenaires_email(t).deliver
+                   t.update_attribute(:envoiemail, "false") 
+                   Notifier.send_partenaires_email(t).deliver
 
-          
-          
+                    
+                    
 
-        end
+                  end
      
 
     end 

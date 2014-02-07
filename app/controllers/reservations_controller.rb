@@ -59,7 +59,9 @@ if current_user.limite
   return false
 
   end
-   
+
+
+
   
   code1=Invitation.aleatoire
   
@@ -95,6 +97,8 @@ if current_user.limite
 
 
   @invitation.update_attributes(place: places_restante)
+ 
+
 
  
   @reservations.nombreinvitations=params[:reservation][:nombreinvitations] 
@@ -104,6 +108,8 @@ if current_user.limite
   @reservations.vraiadresse=params[:vraiadresse]  
   @reservations.emailpartenaire=params[:emailpartenaire]  
   @reservations.author_id =current_user.id
+
+  @reservations.invitation_id =params[:idinvitation]
   @reservations.email_membre =current_user.username
   @reservations.pseudo =current_user.email
   @reservations.author_nom =current_user.nom

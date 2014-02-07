@@ -6,7 +6,7 @@ class CreateReservations < ActiveRecord::Migration
        t.string  :adresse
        t.datetime  :dateinvitation 
        t.string  :author_nom   
-       t.references :author, index: true
+       t.references :invitation, index: true
        t.timestamps
     end
   end

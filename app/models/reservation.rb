@@ -1,6 +1,6 @@
 class Reservation < ActiveRecord::Base
 
-belongs_to :author
+belongs_to :invitation
 
 attr_accessible :nombreinvitations,:pseudo
 

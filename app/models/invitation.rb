@@ -5,7 +5,7 @@ class Invitation < ActiveRecord::Base
 attr_accessible :validation, :titre, :description, :avatar, :dateinvitation, :place;
 
 belongs_to :author
-
+has_many :reservations
 
 
 has_attached_file :avatar,

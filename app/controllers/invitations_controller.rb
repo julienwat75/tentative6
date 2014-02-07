@@ -90,10 +90,11 @@ def create              # le submit va chercher la methode create
   @invitations.avatar = params[:invitation][:avatar]  # on reccupere le nom du form
   @invitations.emailpartenaire =  emailpartenaire
    @invitations.place = params[:place]
-  
-   
-  
   @invitations.author_id =current_user.id
+
+ 
+
+
   @invitations.save   #on sauvegarde
    redirect_to pageinvitations_path     # redirection vers l'index
 
@@ -123,6 +124,15 @@ def update
 #@invitation.update_attributes(description: params[:invitation][:description])
 #@invitation.update_attributes(avatar: params[:invitation][:avatar])
  #@invitation.update_attributes(avatar: params[:invitation][:datetime])
+
+
+  @invitation.update_attribute(:envoiemail, true)
+
+  heuremailpartenaire= @invitation.dateinvitation.to_datetime - (30.minutes)
+  
+
+  @invitation.update_attribute(:heuremailpartenaire,heuremailpartenaire) 
+  
 
  
  redirect_to webmasters_path 

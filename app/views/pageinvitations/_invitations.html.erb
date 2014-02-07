@@ -95,11 +95,11 @@
 
       
              <!--  -------------------------------- Invitations ---------------------------- --> 
-               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 fondgris hidden-xs" style=" border:1px solid rgba(0, 0, 0, 0.2);text-align:left;height:400px;overflow:hidden;"    >  <!-- debut premier div ---- -->
+               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 fondgris" style="text-align:left;height:400px;overflow:hidden;margin-bottom:10px;"    >  <!-- debut premier div ---- -->
                   <div align="center">
                 <!--  Version PC ------------------------------------------------------------------ -->
-                     <div  class=" " >
-                         <div> 
+                <div  class=" " style=";margin-bottom:35px;border-radius:0px 0px 10px 10px;border-radius:5px 5px 0px 0px;border:1px solid rgba(0, 0, 0, 0.2); ">
+                         <div style=""> 
                                    <a href="<%=  invitation_path(t.id) %>">  
                                    <div class="titre_vignette" style="font-family: Helvetica Neue,Arial,sans-serif;padding-left:10px;color:rgb(59, 89, 152);background:white;text-align:left;"> 
                                     <span class="glyphicon glyphicon-star"></span> 
@@ -144,7 +144,7 @@
                   <!-- Fin Version PC -------------------------------------------------  -->
 
                 <!--  Version Mobile -->  
-                <div  class="invitation hidden-sm hidden-md hidden-lg" style="background:white; border:1px solid rgba(0, 0, 0, 0.2);border-radius:15px 15px 0px 0px;margin-bottom:15px;">
+                <div  class="invitation hidden-sm hidden-md hidden-lg  hidden-xs" style="background:white; border:1px solid rgba(0, 0, 0, 0.2);border-radius:15px 15px 0px 0px;margin-bottom:5px;">
                         <a href="<%=  invitation_path(t.id) %>">
                           <div >
                             <img src="<%= var %>" alt="arobas" style="width:100%;border-radius:15px 15px 0px 0px;" />

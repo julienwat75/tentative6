@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204192701) do
+ActiveRecord::Schema.define(version: 20140207182612) do
 
   create_table "authors", force: true do |t|
     t.string   "username",            null: false
@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(version: 20140204192701) do
     t.string   "vraiadresse"
     t.boolean  "limite"
     t.string   "emailpartenaire"
+    t.boolean  "envoiemail"
+    t.datetime "heuremailpartenaire"
   end
 
   create_table "offres", force: true do |t|
@@ -102,7 +104,7 @@ ActiveRecord::Schema.define(version: 20140204192701) do
     t.string   "adresse"
     t.datetime "dateinvitation"
     t.string   "author_nom"
-    t.integer  "author_id"
+    t.integer  "invitation_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "code"
@@ -115,9 +117,10 @@ ActiveRecord::Schema.define(version: 20140204192701) do
     t.string   "emailpartenaire"
     t.boolean  "envoiemail"
     t.datetime "heuremailpartenaire"
+    t.integer  "author_id"
   end
 
-  add_index "reservations", ["author_id"], name: "index_reservations_on_author_id"
+  add_index "reservations", ["invitation_id"], name: "index_reservations_on_invitation_id"
 
   create_table "sas", force: true do |t|
     t.datetime "created_at"

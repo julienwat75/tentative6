@@ -86,8 +86,8 @@ background: yellow;
   /*background: #fff;*/
   /*background: rgba(255,255,255,0.9); */
   margin-bottom: 20px;
-  margin-top: 90px;
-  padding-top: 0px;
+  margin-top: 110px;
+  padding-top: 10px;
    padding-bottom: 30px ;
   background: rgb(255, 255, 255);
   border-radius:10px 10px 0px 0px;
@@ -216,6 +216,13 @@ footer p {
   min-height: 0;
 }
 
+
+.mabar{
+
+  padding-top: 5px;
+  font-size: 13px;
+}
+
 .navbar-default {
   color:white;
   background:none;
@@ -224,9 +231,10 @@ footer p {
 }
 
 .nav>li>a {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left:20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  
+   
 }
 
 .navbar-nav>li>a {
