@@ -3,18 +3,19 @@
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
-  <body>
+    <body>
    <h1>Reservation BilletGratuit.com</h1>
 
    Voici la lister des reservations pour le spectacle :<%=  @invitations.titre %> id: <%=  @invitations.id %>
 
-
+   <% @invitations.reservations.each do |resa| %>
   
-  <% @invitations.each do |invitation| %>
-  <%= invitation.reservation.author_nom %>
-<% end %>
+  
+   <%= resa.author_nom %>
+
+   <% end %>
 
 
-  </body>
+   </body>
 </html>
 
