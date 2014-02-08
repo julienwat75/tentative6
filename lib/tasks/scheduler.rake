@@ -33,7 +33,7 @@ task :mail_partenaires => :environment do
    @invitation=Invitation.all
    
    @invitation.each do |t| 
-       puts "cool"
+       
 
 
 
@@ -42,7 +42,7 @@ task :mail_partenaires => :environment do
 
 
 
-       if (t.envoiemail) && (@date.to_datetime > @envoiemail.to_datetime)
+       if (@date.to_datetime > @envoiemail.to_datetime)
 
         puts "on envoie le mail"
         Notifier.send_partenaires_email(t).deliver
