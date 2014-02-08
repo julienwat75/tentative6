@@ -42,12 +42,10 @@ task :mail_partenaires => :environment do
 
 
        @date= DateTime.now
-        @validation=t.envoiemail
-       if (@validation)
+       @validation=t.envoiemail
+       
        @envoiemail=t.heuremailpartenaire
-       else
-        @envoiemail= DateTime.now
-      end
+       
 
 
 
