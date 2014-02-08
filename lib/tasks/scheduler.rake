@@ -6,7 +6,7 @@ task :update_feed => :environment do
   
   puts "done."
   @authors=Author.find_by_id(3)
-  @authors.update_attribute(:prenom,"boubou")
+  
   #Notifier.send_signup_email(@authors).deliver
 
 
@@ -42,10 +42,12 @@ task :mail_partenaires => :environment do
 
 
 
-       if @date.to_datetime > @envoiemail.to_datetime
+       if (t.envoiemail) && (@date.to_datetime > @envoiemail.to_datetime)
 
         puts "on envoie le mail"
         Notifier.send_partenaires_email(t).deliver
+        t.update_attribute(:envoiemail, "false") 
+             
 
        end
   
