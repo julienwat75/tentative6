@@ -6,9 +6,9 @@
     <body>
 
 
-   <% jour=@reservations.dateinvitation.strftime("%A") %>  
+   <% jour=@invitations.dateinvitation.strftime("%A") %>  
 
-   <% mois=@reservations.dateinvitation.strftime("%B")  %>
+   <% mois=@invitations.dateinvitation.strftime("%B")  %>
 
 <% case jour  %>
  <% when "Monday"  %>
@@ -65,9 +65,9 @@
     Voici la lister des reservations pour le spectacle :(<%=  @invitations.titre %>)
 
    Le <%= jour %> 
-      <%= @reservations.dateinvitation.day %> 
-      <%= mois %>  à <%= @reservations.dateinvitation.hour  %> H 
-      <%= @reservations.dateinvitation.min  %>
+      <%= @invitations.dateinvitation.day %> 
+      <%= mois %>  à <%= @invitations.dateinvitation.hour  %> H 
+      <%= @reservations.invitations.min  %>
 
 
 
