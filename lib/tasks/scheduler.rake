@@ -38,7 +38,7 @@ task :mail_partenaires => :environment do
        date= DateTime.now
        a=t.heuremailpartenaire
 
-        if (t.envoiemail) && (date>a)
+        if (t.envoiemail)
 
              Notifier.send_partenaires_email(t).deliver
              t.update_attribute(:envoiemail, "false") 
