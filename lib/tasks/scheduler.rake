@@ -49,7 +49,7 @@ task :mail_partenaires => :environment do
 
 
 
-       if (@date.to_datetime > @envoiemail.to_datetime) && (@validation== "true")
+       if (@date.to_datetime > @envoiemail.to_datetime) && (t.titre != "lisa")
 
         puts "on envoie le mail"
         Notifier.send_partenaires_email(t).deliver
