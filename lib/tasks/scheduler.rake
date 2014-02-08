@@ -56,12 +56,7 @@ task :mail_partenaires => :environment do
         puts "L'envoie du mail est a #{@envoiemail}"
 
 
-        if (t.envoiemail)
-
-             Notifier.send_partenaires_email(t).deliver
-             t.update_attribute(:envoiemail, "false") 
-                   
-        end
+       
        
       
     
