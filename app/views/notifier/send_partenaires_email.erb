@@ -58,11 +58,11 @@
  
  <% end %>
 
-   <h1>Reservations BilletGratuit.com</h1>
+   <h2>Reservations BilletGratuit.com</h2>
 
-   <h4>
+   <h3>
 
-    Voici la lister des reservations pour le spectacle :(<%=  @invitations.titre %>)
+    Liste des réservations pour le spectacle :(<%=  @invitations.titre %>)
 
    Le <%= jour %> 
       <%= @invitations.dateinvitation.day %> 
@@ -73,7 +73,7 @@
 
 
 
-   </h4> <br>
+   </h3> <br>
 
     <ul>
 
@@ -86,7 +86,17 @@
 
       
       
-      <li>  <%= resa.sexe %> <%= resa.author_nom %> <%= resa.author_nom %> Code: <%= resa.code %></li>
+      <li>
+
+        <h4>  
+
+          <%= resa.sexe %> <%= resa.author_nom %> <%= resa.author_prenom %> Code: <%= resa.code %>
+
+          Nombre de places:<%= resa.places %>
+
+        </h4>
+
+    </li>
 
        <% end %>
 
