@@ -62,12 +62,13 @@
 
    <h3>
 
-    Liste des réservations pour le spectacle :(<%=  @invitations.titre %>)
+    Liste des réservations pour le spectacle :<font color="blue">(<%=  @invitations.titre %>)
 
    Le <%= jour %> 
       <%= @invitations.dateinvitation.day %> 
       <%= mois %>  à <%= @invitations.dateinvitation.hour  %> H 
       <%= @invitations.dateinvitation.min  %>
+    </font>
 
 
 
@@ -90,9 +91,9 @@
 
         <h4>  
 
-          <%= resa.sexe %> <%= resa.author_nom %> <%= resa.author_prenom %> Code: <%= resa.code %>
+          <%= resa.sexe %> <%= resa.author_nom %> <%= resa.author_prenom %>, Code: <%= resa.code %>,
 
-          Nombre de places:<%= resa.nombreinvitations %>
+            Nombre de places:<%= resa.nombreinvitations %>
 
         </h4>
 
