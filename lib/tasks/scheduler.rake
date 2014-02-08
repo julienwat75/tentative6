@@ -42,14 +42,16 @@ task :mail_partenaires => :environment do
 
 
        @date= DateTime.now
-
-
+        @validation=t.envoiemail
+       if (@validation)
        @envoiemail=t.heuremailpartenaire
-       @validation=t.envoiemail
+       else
+        @envoiemail= DateTime.now
+      end
 
 
 
-       if (@date.to_datetime > @envoiemail.to_datetime) 
+       if (@date.to_datetime > @envoiemail.to_datetime)
 
         puts "on envoie le mail"
         Notifier.send_partenaires_email(t).deliver
