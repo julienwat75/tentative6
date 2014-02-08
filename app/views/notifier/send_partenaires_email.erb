@@ -6,7 +6,19 @@
   <body>
    <h1>Reservation BilletGratuit.com</h1>
 
-   Voici la lister des veinards 
+   Voici la lister des veinards: 
+
+
+   <% @resa=@invitations.reservations  %>
+
+    <% @resa.each do |t| %>
+
+     <%= t.author_nom  %>
+
+    <% end  %>
+
+
+
 
   </body>
 </html>
