@@ -79,24 +79,28 @@
     <ul>
 
            <% @invitations.reservations.each do |resa| %>
- 
-      <li>
 
-        <h4>  
+            <% if resa.dateinvitation == @invitations.dateinvitation %>
 
-          <% if resa.dateinvitation == @invitations.dateinvitation %>
+         
+                      <li>
 
-          <%= resa.sexe %> <%= resa.author_nom %> <%= resa.author_prenom %>, Code: <%= resa.code %>,
+                   <h4>  
 
-            Nombre de places:<%= resa.nombreinvitations %>
+                 
+                  <%= resa.sexe %> <%= resa.author_nom %> <%= resa.author_prenom %>, Code: <%= resa.code %>,
 
-            <% end  %>
+                    Nombre de places:<%= resa.nombreinvitations %>
 
-        </h4>
+                   
 
-    </li>
+                    </h4>
 
-       <% end %>
+                       </li>
+
+              <% end  %>       
+
+          <% end %>
 
     </ul>
 
