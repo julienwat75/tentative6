@@ -38,16 +38,16 @@ task :mail_partenaires => :environment do
       
      if t.envoiemail
 
-                  if Invitation.late(t.heuremailpartenaire)
+                  if Invitation.late2(t.heuremailpartenaire)
      
                     
                   
-                 else
+                
                    
-                   puts "done222."
-                   t.update_attribute(:envoiemail, "false") 
                    Notifier.send_partenaires_email(t).deliver
 
+                   t.update_attribute(:envoiemail, "false") 
+                   
                     
                     
 
