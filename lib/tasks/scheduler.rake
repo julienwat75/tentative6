@@ -29,6 +29,8 @@ end
 
 task :mail_partenaires => :environment do
   #User.send_reminders
+
+  if (t.envoiemail)
    
    @invitation=Invitation.all
    
@@ -42,7 +44,7 @@ task :mail_partenaires => :environment do
 
 
 
-       if (t.envoiemail) && (@date.to_datetime > @envoiemail.to_datetime)
+       if (@date.to_datetime > @envoiemail.to_datetime)
 
         puts "on envoie le mail"
         Notifier.send_partenaires_email(t).deliver
@@ -63,6 +65,9 @@ task :mail_partenaires => :environment do
 
 
   end
+
+
+end
 
 
 end
