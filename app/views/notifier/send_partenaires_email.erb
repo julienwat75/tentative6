@@ -10,8 +10,9 @@
 
 
   
-  <%= render partial: 'resa', collection: @invitations.reservations %>
-
+  <% @invitations.each do |invitation| %>
+  <%= invitation.reservation.author_nom %>
+<% end %>
 
 
   </body>
