@@ -30,11 +30,13 @@ end
 task :mail_partenaires => :environment do
   #User.send_reminders
 
-  if (t.envoiemail)
+  
    
    @invitation=Invitation.all
    
    @invitation.each do |t| 
+
+    if (t.envoiemail)
        
 
 
