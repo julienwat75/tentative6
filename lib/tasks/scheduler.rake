@@ -38,9 +38,11 @@ task :mail_partenaires => :environment do
 
 
        @date= DateTime.now
-      
+       @envoiemail=t.heuremailpartenaire
 
        puts "il est #{@date}"
+        puts "L'envoie du mail est a #{@envoiemail}"
+
 
         if (t.envoiemail)
 
