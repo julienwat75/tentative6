@@ -36,7 +36,7 @@ task :mail_partenaires => :environment do
    
    @invitation.each do |t| 
 
-    if (t.envoiemail)
+    if (t.envoiemail==true)
        
 
 
