@@ -35,7 +35,7 @@ task :mail_partenaires => :environment do
    @invitation.each do |t| 
        puts "done."
 
-        if t.envoiemail && Invitation.late2(t.heuremailpartenaire)
+        if t.envoiemail 
 
              Notifier.send_partenaires_email(t).deliver
         end
