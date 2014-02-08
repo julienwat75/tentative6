@@ -42,15 +42,12 @@ task :mail_partenaires => :environment do
 
 
 
-       if t.envoiemail 
+       if (t.envoiemail) && (@date.to_datetime > @envoiemail.to_datetime)
 
-
-            if @date.to_datetime > @envoiemail.to_datetime
-
-            puts "on envoie le mail"
-            Notifier.send_partenaires_email(t).deliver
-            t.update_attribute(:envoiemail, "false") 
-            end     
+        puts "on envoie le mail"
+        Notifier.send_partenaires_email(t).deliver
+        t.update_attribute(:envoiemail, "false") 
+             
 
        end
   
