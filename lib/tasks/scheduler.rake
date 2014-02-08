@@ -29,14 +29,18 @@ end
 
 task :mail_partenaires => :environment do
   #User.send_reminders
-   puts "done."
+   
    @invitation=Invitation.all
    
    @invitation.each do |t| 
-       puts "done."
+       puts "cool"
 
-       date= DateTime.now
-       a=t.heuremailpartenaire
+
+
+       @date= DateTime.now
+      
+
+       puts "il est #{@date}"
 
         if (t.envoiemail)
 
