@@ -130,7 +130,7 @@ def create              # le submit va chercher la methode create
 
     @author=@authors
     
-    render :new, :layout => false
+    render :new
 
 
     end
