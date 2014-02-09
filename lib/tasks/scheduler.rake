@@ -49,7 +49,7 @@ task :mail_partenaires => :environment do
         
 
 
-       if (@date.to_datetime > @envoiemail.to_datetime)
+       #if @date.to_datetime > @envoiemail.to_datetime
 
        
         puts "on envoie le mail"
@@ -59,7 +59,7 @@ task :mail_partenaires => :environment do
          #Notifier.send_partenaires_email(t).deliver
              
 
-       end
+       #end
   
 
        puts "il est #{@date}"
