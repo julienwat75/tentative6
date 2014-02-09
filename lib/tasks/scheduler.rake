@@ -46,11 +46,11 @@ task :mail_partenaires => :environment do
        
        @envoiemail=t.heuremailpartenaire
        
-
+       t.update_attribute(:envoiemail, false) 
 
 
        if (@date.to_datetime > @envoiemail.to_datetime) && (t.envoiemail != "false")
-         t.update_attribute(:envoiemail, false)
+         
         puts "on envoie le mail"
         t.update_attribute(:envoiemail, false) 
          puts "on envoie le mail2"
