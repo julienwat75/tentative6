@@ -17,20 +17,22 @@ task :update_feed => :environment do
        vraidate=date1.to_datetime + (1.hours)
        
        
-       envoiemail=t.heuremailpartenaire
+       envoiemail=t.envoiemail
+       heuremail=t.heuremailpartenaire
         #newheure=  t.heuremailpartenaire.to_datetime + (5.year)  
 
 
        puts "il est #{vraidate}"
-        puts "L'envoie du mail est a #{envoiemail}"
+        puts "L'envoie du mail est a #{heuremail}"
 
            
         
 
 
-       if vraidate.to_datetime > envoiemail.to_datetime
+       if vraidate.to_datetime > heuremail.to_datetime
 
-        puts "il est #{titre}"
+        puts "le titre est #{titre}"
+         puts "autorisation #{envoiemail}"
        puts "on envoie le mail"
         #t.update_attribute(:heuremailpartenaire,newheure) 
         t.update_attribute(:envoiemail, "false") 
