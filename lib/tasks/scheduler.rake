@@ -2,12 +2,52 @@ desc "This task is called by the Heroku scheduler add-on"
 
 
 task :update_feed => :environment do
-  puts "Updating feed..."
+
+   
+   @invitation=Invitation.all
+   
+   @invitation.each do |t| 
+
+    
+       
+
+
+
+       date1= DateTime.now
+       
+       
+       envoiemail=t.heuremailpartenaire
+        #newheure=  t.heuremailpartenaire.to_datetime + (5.year)             
+        
+
+
+       if date1.to_datetime > envoiemail.to_datetime
+
+       
+        puts "on envoie le mail"
+        #t.update_attribute(:heuremailpartenaire,newheure) 
+        #t.update_attribute(:envoiemail, "false") 
+         puts "on envoie le mail2"
+         #Notifier.send_partenaires_email(t).deliver
+             
+
+       end
   
-  puts "done."
-  @authors=Author.find_by_id(3)
+
+       puts "il est #{date1}"
+        puts "L'envoie du mail est a #{envoiemail}"
+
+
+       
+       
+      
+    
+
+
   
-  #Notifier.send_signup_email(@authors).deliver
+
+
+end
 
 
 
