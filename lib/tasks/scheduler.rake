@@ -49,7 +49,7 @@ task :mail_partenaires => :environment do
         
 
 
-       if (@date.to_datetime > @envoiemail.to_datetime) && (@validation.string=="true")
+       if (@date.to_datetime > @envoiemail.to_datetime) && (@validation.to_s=="true")
          
         puts "on envoie le mail"
         t.update_attribute(:envoiemail, "false") 
