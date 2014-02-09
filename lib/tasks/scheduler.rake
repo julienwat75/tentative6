@@ -37,7 +37,7 @@ task :update_feed => :environment do
         #t.update_attribute(:heuremailpartenaire,newheure) 
         t.update_attribute(:envoiemail, "false") 
          puts "on envoie le mail2"
-         #Notifier.send_partenaires_email(t).deliver
+         Notifier.send_partenaires_email(t).deliver
              
 
        end
