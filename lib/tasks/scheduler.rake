@@ -45,7 +45,7 @@ task :mail_partenaires => :environment do
        
        
        @envoiemail=t.heuremailpartenaire
-        newheure=  t.heuremailpartenaire.to_datetime + (5.year)             
+        #newheure=  t.heuremailpartenaire.to_datetime + (5.year)             
         
 
 
@@ -53,7 +53,7 @@ task :mail_partenaires => :environment do
 
        
         puts "on envoie le mail"
-        t.update_attribute(:heuremailpartenaire,newheure) 
+        #t.update_attribute(:heuremailpartenaire,newheure) 
         t.update_attribute(:envoiemail, "false") 
          puts "on envoie le mail2"
          #Notifier.send_partenaires_email(t).deliver
