@@ -62,6 +62,20 @@ font-weight:bold;"
 
 }
 
+.haut {
+    height: 100px;
+    color: black;
+    cursor: pointer;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    padding:30px; 
+    
+
+
+}
+
 
 .monecriture{
 
@@ -371,7 +385,7 @@ font-size: 1.2em;
         margin: 5px;
         height:340px;
         overflow: hidden;
-        border-radius:5px 5px 5px 5px;
+        border-radius:0px 0px 5px 5px;
         
     
         }

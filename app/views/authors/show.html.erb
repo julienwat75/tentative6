@@ -31,42 +31,42 @@
 
 
  -->         
-        <p>
+        <div class="monecriture">
           <strong>Civilité:</strong>
           <%= @author.sexe %>
-        </p>
+        </div>
 
 
-        <p>
+       <div class="monecriture">
           <strong>Pseudo:</strong>
           <%= @author.email %>
-        </p>
+        </div>
 
-        <p>
+        <div class="monecriture">
           <strong>Email:</strong>
           <%= @author.username %>
-        </p>
+        </div>
 
-        <p>
+        <div class="monecriture">
           <strong>Nom:</strong>
           <%= @author.nom %>
-        </p>
+        </div>
 
-         <p>
+         <div class="monecriture">
           <strong>Prenom:</strong>
           <%= @author.prenom %>
-        </p>
+        </div>
 
 
-        <p>
+        <div class="monecriture">
 
         <%= link_to 'Modifier mon compte', edit_author_path(@author) %> 
 
-        </p>
-        <p>
+        </div>
+        <div class="monecriture">
 
          <%= link_to 'Supprimer mon compte', @author, method: :delete, data: { confirm: 'Etes vous sur de vouloir supprimer votre compte?' } %>
-        </p>
+        </div>
 
 
       </div>
