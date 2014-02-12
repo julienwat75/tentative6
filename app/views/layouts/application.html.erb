@@ -162,14 +162,23 @@
 
           
         <% end %>
-          
+
+         <% if current_user && current_user.id == 3  %>   <!--   Bouton webmaster -->  
+
+         <li><%= link_to "Membres", authors_path %></li>
 
           
-   
+        <% end %>
 
-     
+
+        <% if current_user && current_user.id == 3  %>   <!--   Bouton webmaster -->  
+
+         <li><%= link_to "Résas", reservations_path %></li>
+
+          
+        <% end %>
+          
       
-      </li>
     </ul>
     
     
