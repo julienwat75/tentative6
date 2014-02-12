@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
 
- #redirect_to "http://www.billetgratuit.com"
+ redirect_to "http://www.billetgratuit.com"
 
  #render :layout => true
 
