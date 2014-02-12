@@ -25,13 +25,13 @@ class MailgeneralsController < ApplicationController
 
     
     @author=Author.new
-    @author=Author.find_by_id(4)
+    @author=Author.all
 
 			    if @mailgenerals.save   #on sauvegarde
 
 			    
 			     
-			     Notifier.send_signup_email(@mailgenerals,@author).deliver
+			     Notifier.send_mail_general(@mailgenerals,@author).deliver
 
 
 			   

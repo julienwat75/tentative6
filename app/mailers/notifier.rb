@@ -28,13 +28,16 @@ class Notifier < ActionMailer::Base
 def send_mail_general(mailgeneral, authors)
     # can't send without a message, and an array of contacts 
     @mailgeneral = mailgeneral
-    @authors = author
+    @authors = authors
 
     # with variables set, let's create the loop to do its magic 
     @authors.each do |author|
+
+ if author.username == "stewfilm50@yahoo.fr" 
         mail = mail(
           :to => "#{author.username}",
           :subject => "Nouvelles invitations")
+end
          
     end # contacts.each loop
  end #blast 
