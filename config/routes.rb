@@ -2,6 +2,7 @@ MyApp::Application.routes.draw do
 
 
   resources :profils
+  resources :mailgenerals
   resources :offres
    resources :pagemembres
    resources :invitations

@@ -65,7 +65,7 @@ task :reset_reservations => :environment do
    @author.each do |t| 
 
      t.update_attribute(:limite, "false")
-     t.update_attribute(:prenom,"patoch")
+     
 
     end 
 

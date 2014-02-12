@@ -23,4 +23,22 @@ class Notifier < ActionMailer::Base
     mail( :to => @invitations.emailpartenaire,
     :subject => 'Réservation BilletGratuit.com' )
   end
+
+
+def send_mail_general(mailgeneral, authors)
+    # can't send without a message, and an array of contacts 
+    @mailgeneral = mailgeneral
+    @authors = author
+
+    # with variables set, let's create the loop to do its magic 
+    @authors.each do |author|
+        mail = mail(
+          :to => "#{author.email}",
+          :subject => "Nouvelles invitations")
+         
+    end # contacts.each loop
+ end #blast 
+
+
+
 end

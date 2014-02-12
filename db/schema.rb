@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140207182612) do
+ActiveRecord::Schema.define(version: 20140212171051) do
 
   create_table "authors", force: true do |t|
     t.string   "username",            null: false
@@ -67,6 +67,16 @@ ActiveRecord::Schema.define(version: 20140207182612) do
     t.string   "emailpartenaire"
     t.boolean  "envoiemail"
     t.datetime "heuremailpartenaire"
+  end
+
+  create_table "mailgenerals", force: true do |t|
+    t.string   "titre"
+    t.text     "body"
+    t.datetime "datemail"
+    t.boolean  "envoigeneral"
+    t.string   "maildestinataire"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "offres", force: true do |t|

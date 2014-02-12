@@ -1,0 +1,172 @@
+<% provide(:title, "Mail général") %>
+
+
+
+ <div class="row " >
+
+    
+
+
+
+
+
+     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center " >
+
+                
+            
+                      <h2 ><small><font color="white">Inscription</font></small></h2><br>
+
+                     
+                      
+                     <%= form_for(@mailgeneral) do |f| %>
+
+
+                  <% if @mailgeneral.errors.any? %>
+
+                      
+                        <div id="error_explanation">
+                                    <h4><font color="red"><%= pluralize(@mailgeneral.errors.count, "error") %> Erreurs de saisies:</font></h4>
+
+                                    <ul>
+                                    <% @mailgeneral.errors.full_messages.each do |msg| %>
+
+                                     
+                                      
+                                    <% end %>
+
+                                    <li>Pseudo(entre 5 et 9 caractères )</li>
+                                    <li>Password(min 5 caractères)</li>
+
+                                    </ul>
+                        </div>
+                <% end %>
+                      
+                     
+
+  
+
+
+
+
+   <div class="field" style="text-align:left;">
+ 
+    <%= f.label :titre %><br />
+    <%= f.text_field :titre %>
+  </div>
+
+  <br><br>
+
+
+  
+
+   <div class="field" style="text-align:left;">
+ 
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+
+  <br><br>
+
+   <!--  
+
+  <br><br>
+
+    <div class="field" style="text-align:left;">
+ 
+    <%= f.label :Date %><br />
+    <div class="input-append date datepicker" id="datetimepicker" value="2012-05-15 21:05"  data-date="12-12-2013" data-date-format="dd-mm-yyyy"   > 
+    <%= f.text_field :datemail  %>
+   
+    <span class="add-on"><i class="icon-th"></i></span></div>
+  </div>
+
+<br><br>
+
+
+
+ <div class="field" style="text-align:left;">
+ 
+ <%= f.label :Heure %><br />
+<SELECT name="heure1">
+    <OPTION VALUE="15">15</OPTION>
+    <OPTION VALUE="16">16</OPTION>
+    <OPTION VALUE="17">17</OPTION>
+    <OPTION VALUE="18">18</OPTION>
+    <OPTION VALUE="19">19</OPTION>
+    <OPTION VALUE="20">20</OPTION>
+    <OPTION VALUE="21">21</OPTION>
+    <OPTION VALUE="22">22</OPTION>
+    <OPTION VALUE="23">23</OPTION>
+  </SELECT>
+
+H
+
+
+
+<SELECT name="minute1">
+    <OPTION VALUE="00">00</OPTION>
+    <OPTION VALUE="15">15</OPTION>
+    <OPTION VALUE="30">30</OPTION>
+    <OPTION VALUE="45">45</OPTION>
+    
+  </SELECT>
+
+</div>
+
+-->
+    
+
+        
+<br><br>
+
+
+ <div class="field" style="text-align:left;">
+                        
+          
+                       Envoyer un mail général ?:
+                     
+                      <%= f.label :Non ,:style =>'color:black;' %> 
+                      <%= f.radio_button :envoigeneral, false , checked: true %> &nbsp
+                       <%= f.label :Oui,:style =>'color:black;' %> 
+                      <%= f.radio_button :envoigeneral, true %>
+
+                     </div>
+
+    <br><br>                 
+
+
+   <div class="field" style="text-align:left;">
+ 
+    <%= f.label :Destinataire  %><br />
+    <%= f.text_field :maildestinataire %>
+  </div>
+                     
+
+
+
+  
+    
+    <%= f.submit "valider" , :class => "grosbouton" %>
+  
+  
+<% end %>
+
+</div>  <!--   fin du div  -->
+
+
+
+
+
+
+   
+
+
+
+</div>  <!--   fin du row  -->
+
+
+<script type="text/javascript">
+  $('.datepicker').datepicker()
+  $('[data-behaviour~=datepicker]').datepicker();
+</script>
+
