@@ -26,12 +26,13 @@ class MailgeneralsController < ApplicationController
     
     @author=Author.new
     @author=Author.all
+    @invitations=Invitation.all
 
 			    if @mailgenerals.save   #on sauvegarde
 
 			    
 			     
-			     Notifier.send_mail_general(@mailgenerals,@author).deliver
+			     Notifier.send_mail_general(@mailgenerals,@author,@invitations).deliver
 
 
 			   

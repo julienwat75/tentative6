@@ -25,10 +25,11 @@ class Notifier < ActionMailer::Base
   end
 
 
-def send_mail_general(mailgeneral, authors)
+def send_mail_general(mailgeneral, authors, invitations)
     # can't send without a message, and an array of contacts 
     @mailgeneral = mailgeneral
     @authors = authors
+    @invitations = invitations
 
     # with variables set, let's create the loop to do its magic 
     @authors.each do |author|
