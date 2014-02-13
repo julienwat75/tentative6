@@ -6,26 +6,44 @@
     <body>
 
 
-   <h1>Ouverture proche de billetgratuit!!! </h1>
+  <!--  ------- logo --------------------------  -->
+
+
+<div class="row" style="background: none repeat scroll 0% 0% rgb(248, 248, 248);
+;border-radius:5px 5px 5px 5px;">
+
+ <div class="col-lg-12 hidden-xs"  style="margin-top:50px;">
+    
+
+
+             <div align="center">
+            
+                 <%= link_to image_tag('/images/logo.png', :height => 120 , :alt => '', :title => ''), 'http://www.billetgratuit.com', :target => :blank , :style => ''%>
+
+            
+            </div>
+
+           
+
+
+          
+
+ </div>
+
+
+</div>
 
 
 
-           <% @invitations.each do |invitations| %>
 
-           <%= invitations.titre %>
-
-
-            <% end %>
-
-
-            <!-- ------------------------------------------------------------  -->
+<!-- ------------------------------------------  -->
 
 
 
 <div class="container"   >
 
     
-        <div class="box"  style="background:pink" >
+        <div class="box"  style="background:pink;width:400px;" >
 
 
              <div class="row "  >
