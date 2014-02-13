@@ -14,8 +14,8 @@ task :update_feed => :environment do
 
        titre=t.titre 
        date1= DateTime.now
-       vraidate=date1.to_datetime + (1.hours)
-       
+       #vraidate=date1.to_datetime + (1.hours)
+       vraidate=date1
        
        envoiemail=t.envoiemail
        heuremail=t.heuremailpartenaire
