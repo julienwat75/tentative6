@@ -15,7 +15,7 @@
 	<div align="center">
             
               <a href="http://www.billetgratuit.com">
-              <img src="http://www.allocine.fr/film/fichefilm-169812/photos/detail/?cmediafile=21070431" alt="arobas" style="width:100%;text-align:left;float:left;margin-right:10px;" />
+              <img src="http://www.allocine.fr/film/fichefilm-169812/photos/detail/?cmediafile=21070431" />
                </a>
             
             </div>
@@ -110,12 +110,12 @@
 
       
              <!--  -------------------------------- Invitations ---------------------------- --> 
-               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 fondgris" style="text-align:left;height:450px;overflow:hidden;margin-bottom:10px;"    >  <!-- debut premier div ---- -->
+               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 fondgris" style="text-align:left;height:500px;overflow:hidden;margin-bottom:10px;margin-bottom:20px;"    >  <!-- debut premier div ---- -->
                   <div align="center">
                 <!--  Version PC ------------------------------------------------------------------ -->
                 <div  class=" " style=";margin-bottom:35px;border-radius:0px 0px 10px 10px;border-radius:5px 5px 0px 0px;border:1px solid rgba(0, 0, 0, 0.2); ">
                          <div style=""> 
-                                   <a href="<%=  invitation_path(t.id) %>">  
+                                   <a href="http://billetgratuit.herokuapp.com/invitations/<%= t.id %>">  
                                    <div class="titre_vignette" style="font-family: Helvetica Neue,Arial,sans-serif;padding-left:10px;color: rgb(104, 104, 104);background:white;text-align:left;font-size:22px;"> 
                                     <span class="glyphicon glyphicon-star"></span> 
                                     <%=  t.titre %> 
