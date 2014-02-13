@@ -9,13 +9,13 @@ task :update_feed => :environment do
    @invitation.each do |t| 
 
     
-     
+       
 
 
        titre=t.titre 
        date1= DateTime.now
-       #vraidate=date1.to_datetime + (1.hours)
-       vraidate=date1
+       vraidate=date1.to_datetime + (1.hours)
+       
        
        envoiemail=t.envoiemail
        heuremail=t.heuremailpartenaire
@@ -29,7 +29,7 @@ task :update_feed => :environment do
         
 
 
-       if (vraidate.to_datetime > heuremail.to_datetime) && (envoiemail)
+       if (envoiemail)  &&  (vraidate.to_datetime > heuremail.to_datetime)
 
         puts "le titre est #{titre}"
          puts "autorisation #{envoiemail}"
