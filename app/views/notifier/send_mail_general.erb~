@@ -12,7 +12,7 @@
 
            <% @invitations.each do |invitations| %>
 
-            invitation.titre
+           <%= invitation.titre %>
 
 
             <% end %>
