@@ -12,13 +12,18 @@
 <div class="container" style="background:blue;width:500px;padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;"   >
 
 
-	<div align="center">
-            
-              <a href="http://www.billetgratuit.com">
-              <img src="http://www.allocine.fr/film/fichefilm-169812/photos/detail/?cmediafile=21070431" />
-               </a>
-            
-            </div>
+	                        <div class="vignette" >
+
+                                <div >
+                                    <a href="http://billetgratuit.herokuapp.com/invitations/<%= t.id %>">
+                                   <img src="<%= var %>" alt="arobas" style="width:100%;text-align:left;float:left;margin-right:10px;" />
+                                    </a>
+                                 </div>
+                                  
+                                         
+                              </div>
+                         
+                              
 
 
 	
@@ -136,14 +141,15 @@
                          </div>
 
 
-                          <a href="http://billetgratuit.herokuapp.com/invitations/<%= t.id %>">
+                          
                              <div class="vignette" >
 
                                 <div >
                                     <a href="http://billetgratuit.herokuapp.com/invitations/<%= t.id %>">
                                    <img src="<%= var %>" alt="arobas" style="width:100%;text-align:left;float:left;margin-right:10px;" />
+                                    </a>
                                  </div>
-                                   </a>
+                                  
                                          
                               </div>
                          
