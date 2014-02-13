@@ -8,6 +8,16 @@
 
    <h1>Ouverture proche de billetgratuit!!! </h1>
 
+
+
+           <% @invitations.each do |invitations| %>
+
+            invitation.titre
+
+
+            <% end %>
+
+
    </body>
 </html>
 
