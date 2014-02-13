@@ -17,7 +17,7 @@
                                
                                 	
                                     <a href="http://billetgratuit.com">
-                                   <img src="<%= var2 %>" alt="arobas" style="width:100%;" />
+                                   <img src="<%= var2 %>" alt="arobas" style="width:60%;" />
                                     </a>
                                 
                                   
@@ -25,7 +25,7 @@
                               </div>
 
 
-                               <div style="background:background: none repeat scroll 0% 0% rgb(248, 248, 248);font-size: 22px;font-family: Arial,Verdana;text-decoration: none;color: rgb(79, 71, 71);margin-top:20px;text-align:center;margin-bottom:30px;" >
+                               <div style="background:background: none repeat scroll 0% 0% rgb(248, 248, 248);font-size: 22px;font-family: Arial,Verdana;text-decoration: none;color: rgb(79, 71, 71);margin-top:20px;text-align:center;margin-bottom:30px;padding-top:50px:paddind-bottom:50px;" >
 
                                
                                 	Nos dernières invitations 100% gratuites 
@@ -126,25 +126,30 @@
 
       
              <!--  -------------------------------- Invitations ---------------------------- --> 
-               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 fondgris" style="text-align:left;height:500px;overflow:hidden;margin-bottom:10px;margin-top:20px;border:1px solid rgba(0, 0, 0, 0.2);"    >  <!-- debut premier div ---- -->
+               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 fondgris" style="text-align:left;height:500px;overflow:hidden;margin-bottom:10px;margin-top:20px;border:1px solid grey;background:background: none repeat scroll 0% 0% rgb(248, 248, 248);"    >  <!-- debut premier div ---- -->
                   <div align="center">
                 <!--  Version PC ------------------------------------------------------------------ -->
                 
                          <div style=""> 
                                    <a href="http://billetgratuit.herokuapp.com/invitations/<%= t.id %>">  
-                                   <div  style="font-family: Helvetica Neue,Arial,sans-serif;padding-left:10px;color: rgb(104, 104, 104);background:white;text-align:left;font-size:22px;"> 
+                                   <div  style="font-family: Helvetica Neue,Arial,sans-serif;padding-left:10px;color: rgb(104, 104, 104);background:white;text-align:left;font-size:24px;"> 
                                    
                                     <%=  t.titre %> 
 
                                                 
                                     </div>
                                     </a>
-                                    <div style="padding-left:10px;text-align:left;font-size:18px;">
+                                    <div style="padding-left:10px;text-align:left;font-size:20px;">
                                                 <%= jour %> 
                                                 <%= t.dateinvitation.day %> 
                                                 <%= mois %>  à <%= t.dateinvitation.hour  %> H 
                                                 <%= t.dateinvitation.min  %>
+                                      </div>  
+                                      <div style="padding-left:10px;text-align:left;font-size:20px;">
+                                               
+                                                <%= t.adresse  %>
                                       </div>     
+                                        
                                      
 
 
