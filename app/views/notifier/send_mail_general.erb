@@ -18,6 +18,175 @@
             <% end %>
 
 
+            <!-- ------------------------------------------------------------  -->
+
+
+<div class="row "  >
+
+                
+        <% @invitations.each do |t| %>
+
+           <% if t.validation && Invitation.late(t.dateinvitation) %>
+
+
+        <!--  switch et variable --> 
+
+        <% jour=t.dateinvitation.strftime("%A") %>  
+
+  <% mois=t.dateinvitation.strftime("%B")  %>
+
+<% case jour  %>
+ <% when "Monday"  %>
+ <%  jour= "Lundi" %> 
+ <% when "Tuesday"  %>
+ <%  jour= "Mardi" %> 
+<% when "Wednesday"  %>
+ <%  jour= "Mercredi" %>
+  <% when "Thursday"  %>
+ <%  jour= "Jeudi" %>
+  <% when "Friday"  %>
+ <%  jour= "Vendredi" %>
+  <% when "Saturday"  %>
+ <%  jour= "Samedi" %> 
+  <% when "Sunday"  %>
+ <%  jour= "Dimanche" %> 
+<% else  %>              
+ <% puts 'Only single-digit numbers are allowed' %>
+ <% end %>
+
+ <% case mois  %>
+ <% when "January"  %>
+ <%  mois= "Janvier" %> 
+ <% when "February"  %>
+ <%  mois= "Février" %> 
+<% when "March"  %>
+ <%  mois= "Mars" %>
+  <% when "April"  %>
+ <%  mois= "Avril" %>
+  <% when "May"  %>
+ <%  mois= "Mai" %>
+  <% when "June"  %>
+ <%  mois= "Juin" %>
+  <% when "July"  %>
+ <%  mois= "Juillet" %>
+  <% when "August"  %>
+ <%  mois= "Aout" %>
+  <% when "September"  %>
+ <%  mois= "Septembre" %>
+  <% when "October"  %>
+ <%  mois= "Octobre" %>
+   <% when "November"  %>
+ <%  mois= "Novembre" %>
+  <% when "December"  %>
+ <%  mois= "Décembre" %>
+<% else  %>              
+ 
+ <% end %>
+
+
+<% var=t.avatar.url %>
+
+<% var[0,23] = "https://s3-eu-west-1.amazonaws.com" %>
+
+<% resume=t.description %>
+<% resume=resume[0...200]%>
+
+
+
+ 
+
+   
+
+
+        <!--  fin switch et variable -->
+
+          
+
+      
+             <!--  -------------------------------- Invitations ---------------------------- --> 
+               <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-4 fondgris" style="text-align:left;height:400px;overflow:hidden;margin-bottom:10px;"    >  <!-- debut premier div ---- -->
+                  <div align="center">
+                <!--  Version PC ------------------------------------------------------------------ -->
+                <div  class=" " style=";margin-bottom:35px;border-radius:0px 0px 10px 10px;border-radius:5px 5px 0px 0px;border:1px solid rgba(0, 0, 0, 0.2); ">
+                         <div style=""> 
+                                   <a href="<%=  invitation_path(t.id) %>">  
+                                   <div class="titre_vignette" style="font-family: Helvetica Neue,Arial,sans-serif;padding-left:10px;color: rgb(104, 104, 104);background:white;text-align:left;"> 
+                                    <span class="glyphicon glyphicon-star"></span> 
+                                    <%=  t.titre %> 
+
+                                                
+                                    </div>
+                                    </a>
+                                    <div style="padding-left:10px;text-align:left;">
+                                                <%= jour %> 
+                                                <%= t.dateinvitation.day %> 
+                                                <%= mois %>  à <%= t.dateinvitation.hour  %> H 
+                                                <%= t.dateinvitation.min  %>
+                                      </div>     
+                                     
+
+
+
+                         </div>
+
+
+                          <a href="<%=  invitation_path(t.id) %>">
+                             <div class="vignette" >
+
+                                <div >
+                                    <a href="<%=  invitation_path(t.id) %>">
+                                   <img src="<%= var %>" alt="arobas" style="width:100%;text-align:left;float:left;margin-right:10px;" />
+                                 </div>
+                                   </a>
+                                         
+                              </div>
+                         
+                              
+
+
+                      </div>
+
+                    </div>  
+                     
+                              
+              </div>
+                  <!-- Fin Version PC -------------------------------------------------  -->
+
+                <!--  Version Mobile -->  
+                <div  class="invitation hidden-sm hidden-md hidden-lg  hidden-xs" style="background:white; border:1px solid rgba(0, 0, 0, 0.2);border-radius:15px 15px 0px 0px;margin-bottom:5px;">
+                        <a href="<%=  invitation_path(t.id) %>">
+                          <div >
+                            <img src="<%= var %>" alt="arobas" style="width:100%;border-radius:15px 15px 0px 0px;" />
+                          </div>
+                        </a>
+                       <div align="center">
+                           <div class="titre_vignette" style="font-family:Helvetica Neue,Arial,sans-serif;">  <%=  t.titre %>  </div>
+                           <%= jour %> 
+                           <%= t.dateinvitation.day %> 
+                           <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
+                           </div>
+                   </div>
+                     <!--  Fin version Mobile -->
+
+
+
+           <% else %>
+   
+          
+
+           <% end %>  <!--  Fin du if  -->
+
+
+      <% end %>
+
+ </div>
+
+
+
+
+            <!-- ------------------------------------------------------------- -->
+
+
    </body>
 </html>
 
