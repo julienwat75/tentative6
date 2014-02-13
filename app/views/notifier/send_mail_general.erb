@@ -9,16 +9,22 @@
   
 <% var2="http://billetgratuit.herokuapp.com/images/logo.png"  %>
 
+<% var3="http://billetgratuit.herokuapp.com/assets/facebook-7b54e617b9f47c1dbad9e62f599fa5cd.png"  %>
+
+<% var4="http://billetgratuit.herokuapp.com/assets/twitter-f539c88b26a6b5454bdb9b089cf9c7d9.png"  %>
+
+
 <div class="container" style="width:500px;padding-right: 15px;padding-left: 15px;margin-right: auto;margin-left: auto;"   >
 
 
 	                        <div style="background:background: none repeat scroll 0% 0% rgb(248, 248, 248);" >
 
                                
-                                	
+                                	<div align="center">
                                     <a href="http://billetgratuit.com">
                                    <img src="<%= var2 %>" alt="arobas" style="width:50%;" />
                                     </a>
+                                    </div>
                                 
                                   
                                          
@@ -197,18 +203,22 @@
 
 
 
-  <footer style="align:center;">
+  <div style="align:center;">
+     <p>
+                                   <a href="http://billetgratuit.com">
+                                   <img src="<%= var3 %>" alt="arobas" style="width:100%;" />
+                                    </a>
+                                     <a href="http://billetgratuit.com">
+                                   <img src="<%= var4 %>" alt="arobas" style="width:100%;" />
+                                    </a>
+                          
+      </p> 
 
-           <p  class="couleurgrise fondgris">
-             <a href="#"> <font style="color:rgb(112, 191, 0);"><%= image_tag("facebook.png", :alt => "rss feed",:style => "height:40px;width:40px;") %></font></a>
-             <a href="#"> <font style="color:rgb(112, 191, 0);"><%= image_tag("twitter.png", :alt => "rss feed",:style => "height:40px;width:40px;") %></font></a>
-          
-           </p>
-          <p  class="couleurgrise fondgris"> Copyright &copy; Billetgratuit.com 2014 </p>
+       <p  class="couleurgrise fondgris" style="font-size:15px;"> Copyright &copy; Billetgratuit.com 2014 </p>
          
          
          
-    </footer>
+    </div>
 
 
 
