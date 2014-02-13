@@ -9,7 +9,7 @@ task :update_feed => :environment do
    @invitation.each do |t| 
 
     
-       
+       binding.pry
 
 
        titre=t.titre 
