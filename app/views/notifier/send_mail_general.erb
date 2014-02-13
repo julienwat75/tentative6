@@ -21,7 +21,14 @@
             <!-- ------------------------------------------------------------  -->
 
 
-<div class="row "  >
+
+<div class="container"   >
+
+    
+        <div class="box"  style="background:pink" >
+
+
+             <div class="row "  >
 
                 
         <% @invitations.each do |t| %>
@@ -152,22 +159,7 @@
               </div>
                   <!-- Fin Version PC -------------------------------------------------  -->
 
-                <!--  Version Mobile -->  
-                <div  class="invitation hidden-sm hidden-md hidden-lg  hidden-xs" style="background:white; border:1px solid rgba(0, 0, 0, 0.2);border-radius:15px 15px 0px 0px;margin-bottom:5px;">
-                        <a href="<%=  invitation_path(t.id) %>">
-                          <div >
-                            <img src="<%= var %>" alt="arobas" style="width:100%;border-radius:15px 15px 0px 0px;" />
-                          </div>
-                        </a>
-                       <div align="center">
-                           <div class="titre_vignette" style="font-family:Helvetica Neue,Arial,sans-serif;">  <%=  t.titre %>  </div>
-                           <%= jour %> 
-                           <%= t.dateinvitation.day %> 
-                           <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
-                           </div>
-                   </div>
-                     <!--  Fin version Mobile -->
-
+               
 
 
            <% else %>
@@ -180,6 +172,14 @@
       <% end %>
 
  </div>
+
+
+
+
+</div>    <!-- fin div row -->
+
+
+</div>  <!-- fin div container  -->
 
 
 
