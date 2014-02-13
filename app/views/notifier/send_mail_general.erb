@@ -25,7 +25,7 @@
                               </div>
 
 
-                               <div style="background:background: none repeat scroll 0% 0% rgb(248, 248, 248);font-size: 24px;font-family: Arial,Verdana;text-decoration: none;color: rgb(79, 71, 71);margin-top:20px;text-align:center;margin-bottom:30px;padding-top:100px:paddind-bottom:100px;" >
+                               <div style="font-size: 24px;font-family: Arial,Verdana;text-decoration: none;color: rgb(79, 71, 71);margin-top:20px;text-align:center;margin-bottom:30px;padding-top:100px:padding-bottom:100px;" >
 
                                
                                 	Nos dernières invitations 100% gratuites 
@@ -131,21 +131,21 @@
                 <!--  Version PC ------------------------------------------------------------------ -->
                 
                          <div style=""> 
-                                   <a href="http://billetgratuit.herokuapp.com/invitations/<%= t.id %>">  
-                                   <div  style="font-family: Helvetica Neue,Arial,sans-serif;padding-left:10px;color: rgb(104, 104, 104);text-align:left;font-size:24px;"> 
+                                   <a href="http://billetgratuit.herokuapp.com/invitations/<%= t.id %>" style="text-decoration:none;">  
+                                   <div  style="font-family: Helvetica Neue,Arial,sans-serif;padding:20px;color: rgb(104, 104, 104);text-align:left;font-size:24px;"> 
                                    
                                     <%=  t.titre %> 
 
                                                 
                                     </div>
                                     </a>
-                                    <div style="padding-left:10px;text-align:left;font-size:20px;">
+                                    <div style="padding:20px;text-align:left;font-size:20px;">
                                                 <%= jour %> 
                                                 <%= t.dateinvitation.day %> 
                                                 <%= mois %>  à <%= t.dateinvitation.hour  %> H 
                                                 <%= t.dateinvitation.min  %>
                                       </div>  
-                                      <div style="padding-left:10px;text-align:left;font-size:20px;">
+                                      <div style="padding:20px;text-align:left;font-size:20px;">
                                                
                                                 <%= t.adresse  %>
                                       </div>     
