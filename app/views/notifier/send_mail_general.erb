@@ -130,22 +130,22 @@
                   <div align="center">
                 <!--  Version PC ------------------------------------------------------------------ -->
                 
-                         <div style=""> 
+                         <div style="padding:20px;"> 
                                    <a href="http://billetgratuit.herokuapp.com/invitations/<%= t.id %>" style="text-decoration:none;">  
-                                   <div  style="font-family: Helvetica Neue,Arial,sans-serif;padding:20px;color: rgb(104, 104, 104);text-align:left;font-size:24px;"> 
+                                   <div  style="font-family: Helvetica Neue,Arial,sans-serif;color: rgb(104, 104, 104);text-align:left;font-size:24px;"> 
                                    
                                     <%=  t.titre %> 
 
                                                 
                                     </div>
                                     </a>
-                                    <div style="padding:20px;text-align:left;font-size:20px;">
+                                    <div style="text-align:left;font-size:20px;">
                                                 <%= jour %> 
                                                 <%= t.dateinvitation.day %> 
                                                 <%= mois %>  à <%= t.dateinvitation.hour  %> H 
                                                 <%= t.dateinvitation.min  %>
                                       </div>  
-                                      <div style="padding:20px;text-align:left;font-size:20px;">
+                                      <div style="text-align:left;font-size:20px;">
                                                
                                                 <%= t.adresse  %>
                                       </div>     
