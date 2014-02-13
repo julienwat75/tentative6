@@ -34,7 +34,7 @@ def send_mail_general(mailgeneral, authors, invitations)
     # with variables set, let's create the loop to do its magic 
     @authors.each do |author|
 
- if author.username == "stewfilm50@yahoo.fr" 
+ if author.username == "allal_saaid@hotmail.com" 
         mail = mail(
           :to => "#{author.username}",
           :subject => "Nouvelles invitations")
