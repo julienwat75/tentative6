@@ -1,0 +1,31 @@
+
+<% provide(:title, "Contact") %>
+
+
+<div class="row"  >
+
+  <div  class="col-xs-0  col-md-3 col-ls-3" ></div>
+
+
+
+<!-- --------------------  Partie PC --------------------------------------------  -->
+
+  <div  class="col-xs-12 col-md-6 col-ls-6 " style="margin-top:50px;" > 
+
+  <div class="monecriture">
+  
+  Les invitations sont pour le moment uniquement disponible par la newsletter
+
+ </div>
+
+
+
+
+
+  <div  class="col-xs-0  col-md-3 col-ls-3" ></div>
+
+
+
+   
+
+  </div>

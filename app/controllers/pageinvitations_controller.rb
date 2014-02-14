@@ -2,6 +2,12 @@ class PageinvitationsController < ApplicationController
 
 def index
 
+  if  current_user && current_user.id != 3
+
+   redirect_to "/pages/nondisponible"
+
+  end
+
 #a=1
 @user=current_user
  a=params[:id]
