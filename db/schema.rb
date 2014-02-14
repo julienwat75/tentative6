@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140212171051) do
+ActiveRecord::Schema.define(version: 20140214213735) do
 
   create_table "authors", force: true do |t|
-    t.string   "username",            null: false
+    t.string   "username",                        null: false
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
@@ -31,7 +31,12 @@ ActiveRecord::Schema.define(version: 20140212171051) do
     t.boolean  "limite"
     t.boolean  "newsletter"
     t.boolean  "partenaires"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_token_expires_at"
+    t.datetime "reset_password_email_sent_at"
   end
+
+  add_index "authors", ["reset_password_token"], name: "index_authors_on_reset_password_token"
 
   create_table "commentaires", force: true do |t|
     t.string   "author_name"

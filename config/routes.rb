@@ -1,6 +1,9 @@
 MyApp::Application.routes.draw do
 
 
+  get "password_resets/create"
+  get "password_resets/edit"
+  get "password_resets/update"
   resources :profils
   resources :mailgenerals
   resources :offres
@@ -11,6 +14,8 @@ MyApp::Application.routes.draw do
     resources :reservations 
     resources :detailresas
     resources :welcome
+    resources :password_resets
+
 
    resources :authors do
   resources :commentaires
@@ -22,7 +27,8 @@ MyApp::Application.routes.draw do
 
    get 'login'  => 'author_sessions#new'
    get 'logout' => 'author_sessions#destroy'
-
+  
+  get "pages/forgot_password"
   get "pages/nondisponible"
   get "pages/contact"
   get "pages/fonctionnement"
