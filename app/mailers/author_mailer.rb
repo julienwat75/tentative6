@@ -1,5 +1,5 @@
 class AuthorMailer < ActionMailer::Base
-  default from: "julien_wat@hotmail.fr"
+  default from: "billetgratuitparis@gmail.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -10,6 +10,6 @@ class AuthorMailer < ActionMailer::Base
     @author = author
   @url  = edit_password_reset_url(author.reset_password_token)
   mail(:to => author.username,
-       :subject => "Your password has been reset")
+       :subject => "Réinitialiser votre mot de passe")
   end
 end
