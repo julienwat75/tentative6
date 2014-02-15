@@ -1,10 +1,10 @@
 class Author < ActiveRecord::Base
 
-  attr_accessible :username, :email, :avatar, :nom, :prenom, :password, :password_confirmation, :sexe, :nom_resa, :limite
+  attr_accessible :username, :email, :avatar, :nom, :prenom, :password, :password_confirmation, :sexe, :nom_resa, :limite, :ville, :date_naissance
 
-  validates :email,  presence: true, length: { minimum: 5, maximum: 9 } 
+  validates :email,  presence: true, length: { minimum: 4, maximum: 15 } 
 
-  validates :password,  presence: true, length: { minimum: 5,maximum: 10 } 
+  validates :password,  presence: true, length: { minimum: 5,maximum: 12 } 
 
   validates :nom,  presence: true
 
