@@ -1,4 +1,12 @@
-<h1>Choose a new password</h1>
+
+
+<div class="row">
+    
+        <div class="col-lg-12" >
+     
+           <div align="center">
+
+<h1>Choisir un nouveau mot de passe</h1>
 <%= form_for @author, :url => password_reset_path(@author), :html => {:method => :put} do |f| %>
   <% if @author.errors.any? %>
     <div id="error_explanation">
@@ -29,4 +37,9 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+
+   </div>
+ </div>
+</div>   
 
