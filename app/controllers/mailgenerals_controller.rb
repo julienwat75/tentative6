@@ -23,7 +23,7 @@ class MailgeneralsController < ApplicationController
     @mailgenerals.envoigeneral = params[:mailgeneral][:envoigeneral]
     @mailgenerals.maildestinataire = params[:mailgeneral][:maildestinataire] 
 
-    
+    @destinataire=params[:mailgeneral][:maildestinataire]
     @author=Author.new
     @author=Author.all
     @invitations=Invitation.all

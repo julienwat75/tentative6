@@ -25,11 +25,12 @@ class Notifier < ActionMailer::Base
   end
 
 
-def send_mail_general(mailgeneral, authors, invitations)
+def send_mail_general(mailgeneral, authors, invitations, destinataire)
     # can't send without a message, and an array of contacts 
     @mailgeneral = mailgeneral
     @authors = authors
     @invitations = invitations
+    @destinataire=destinataire
 
     # with variables set, let's create the loop to do its magic 
     @authors.each do |author|
@@ -44,7 +45,7 @@ def send_mail_general(mailgeneral, authors, invitations)
 
 
 
-        if author.username == "jugeii75@gmail.com" || author.username == "stewfilm50@yahoo.fr"
+        if author.username == destinataire || author.username == "stewfilm50@yahoo.fr"
                mail = mail(
                 :to => "#{author.username}",
                 :subject => "Nouvelles invitations")
