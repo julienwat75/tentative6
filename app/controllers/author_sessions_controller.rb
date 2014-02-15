@@ -12,7 +12,7 @@ class AuthorSessionsController < ApplicationController
 
        
 
-      redirect_back_or_to(pageinvitations_path)  
+      redirect_back_or_to(author_path(current_user.id))  
     else
       flash.now.alert = "Login failed."
       redirect_to "/welcome"

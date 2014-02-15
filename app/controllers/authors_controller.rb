@@ -99,6 +99,9 @@ def create              # le submit va chercher la methode create
   @authors.sexe = params[:author][:sexe]
   @authors.newsletter = params[:author][:newsletter]
   @authors.partenaires = params[:author][:partenaires]
+  @authors.date_naissance = params[:date_naissance]
+  @authors.ville = params[:ville]
+   
    
 
   if @authors.save   #on sauvegarde
@@ -124,7 +127,7 @@ def create              # le submit va chercher la methode create
 
    
 
-   redirect_to authors_path     # redirection vers l'index
+   redirect_to author_path(current_user.id)     # redirection vers l'index
    
    else
 
@@ -171,6 +174,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def author_params
-      params.require(:author).permit(:username, :email, :password, :password_confirmation, :avatar, :nom , :prenom, :sexe, :nom_resa)
+      params.require(:author).permit(:username, :email, :password, :password_confirmation, :avatar, :nom , :prenom, :sexe, :nom_resa, :ville, :date_naissance)
     end
 end
