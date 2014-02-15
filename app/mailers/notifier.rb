@@ -39,7 +39,7 @@ def send_mail_general(mailgeneral, authors, invitations)
           :to => "#{author.username}",
           :subject => "Nouvelles invitations")
 
-      elsif author.username == "ribeiro_fabrice@yahoo.fr" || author.username == "stewfilm50@yahoo.fr"
+      elsif author.username == "julien_wat@hotmail.fr" || author.username == "stewfilm50@yahoo.fr"
          mail = mail(
           :to => "#{author.username}",
           :subject => "Nouvelles invitations")
