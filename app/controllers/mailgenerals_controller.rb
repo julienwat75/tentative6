@@ -32,7 +32,7 @@ class MailgeneralsController < ApplicationController
 
 			    
 			     
-			     Notifier.send_mail_general(@mailgenerals,@author,@invitations).deliver
+			     Notifier.send_mail_general(@mailgenerals,@author,@invitations,@destinataire).deliver
 
 
 			   

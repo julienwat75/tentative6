@@ -10,6 +10,17 @@
 
   <div   class="col-xs-12 col-md-6 col-lg-6  hidden-xs" >
 
+    <% if curren_user.id == 3 %>
+      
+      <div class="monecriture" style="font-size:22px;">
+
+       Total Membres: @authors.length
+
+       </div> 
+
+
+    <% end %> 
+
   
     <% @authors.each do |author| %>
 
