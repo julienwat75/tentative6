@@ -3,7 +3,7 @@ class PasswordResetsController < ApplicationController
 
   # request password   # you get here when the user entered his email in the reset password form and submitted it.
   def create 
-    @author = Author.find_by_id(3)
+    @author = Author.find_by_username(params[:username])
 
     
 
