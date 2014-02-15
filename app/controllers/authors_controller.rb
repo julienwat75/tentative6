@@ -145,9 +145,17 @@ end
   # PATCH/PUT /authors/1
   # PATCH/PUT /authors/1.json
   def update
+
+   ville = params[:ville]
+   naissance= params[:date_naissance]
+ 
+
     respond_to do |format|
       if @author.update(author_params)
-        format.html { redirect_to authors_path, notice: 'Author was successfully updated.' }
+         @author.update_attribute(:ville, ville)
+         @author.update_attribute(:date_naissance, naissance)
+ 
+        format.html { redirect_to author_path(current_user.id), notice: 'Author was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
