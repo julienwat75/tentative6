@@ -45,7 +45,7 @@ def send_mail_general(mailgeneral, authors, invitations, destinataire)
 
 
 
-        if author.username == destinataire || author.username == "stewfilm50@yahoo.fr"
+        if author.username == destinataire
                mail = mail(
                 :to => "#{author.username}",
                 :subject => "Nouvelles invitations")
