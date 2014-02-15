@@ -1,4 +1,5 @@
 
+<% provide(:title, "Choisir un nouveau mot de passe") %>
 
 <div class="row">
     
@@ -6,7 +7,7 @@
      
            <div align="center">
 
-<h1>Choisir un nouveau mot de passe</h1>
+
 <%= form_for @author, :url => password_reset_path(@author), :html => {:method => :put} do |f| %>
   <% if @author.errors.any? %>
     <div id="error_explanation">
@@ -34,7 +35,7 @@
     <%= hidden_field_tag :token, @token %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "valider" %>
   </div>
 <% end %>
 
