@@ -67,12 +67,12 @@ def create              # le submit va chercher la methode create
 
  case adresse1 
 
- when "comedie republique" 
+ when "La grande comedie" 
    vraiadresse= "1 Boulevard St Martin , 75003 Paris"
    emailpartenaire="comedierepubliquexxx@yahoo.fr"
- when "comedie contrescarpe" 
-  vraiadresse= "5 rue blainville, 75005 Paris Théâtre de 110 places environ" 
-  emailpartenaire="comediecontrescarpexxx@yahoo.fr"
+ when "La grande comedie" 
+  vraiadresse= "LA GRANDE COMEDIE 40 Rue Clichy, 75009 Paris" 
+  emailpartenaire="resa-comediesvardar@live.fr"
   end
 
   @invitations.vraiadresse=vraiadresse
