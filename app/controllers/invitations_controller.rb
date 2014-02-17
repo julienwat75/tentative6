@@ -67,10 +67,10 @@ def create              # le submit va chercher la methode create
 
  case adresse1 
 
- when "La grande comedie" 
+ when "comedie republique" 
    vraiadresse= "1 Boulevard St Martin , 75003 Paris"
    emailpartenaire="comedierepubliquexxx@yahoo.fr"
- when "La grande comedie" 
+ when "la grande comedie" 
   vraiadresse= "LA GRANDE COMEDIE 40 Rue Clichy, 75009 Paris" 
   emailpartenaire="resa-comediesvardar@live.fr"
   end
