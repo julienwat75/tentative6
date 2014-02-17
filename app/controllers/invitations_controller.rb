@@ -35,7 +35,15 @@ end
 
 def show
 
-   
+  token=params[:token]
+
+   @a=Author.find_by token:token
+
+   if @a
+
+     auto_login(@a)# login without credentials
+     
+   end 
 
 	@invitation=Invitation.find(params[:id])
 
