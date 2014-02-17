@@ -22,27 +22,7 @@
     <% end %> 
 
 
-    <!-- -----------------------------------------------------  -->
-
-     <% @authors.each do |t| %>
-
-
-
-    <% token = SecureRandom.urlsafe_base64(nil, false) %>
-
-    <% t.update_attribute(:token, token) %>
-
-
-      <% end  %>
-
-
-
-
-
-    <!--  ------------------------------------------------------>
-
-
-
+   
   
     <% @authors.each do |author| %>
 
