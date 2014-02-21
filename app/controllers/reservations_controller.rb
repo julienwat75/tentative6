@@ -38,8 +38,6 @@ def new
     @author=current_user
 
     @invitation=Invitation.find(params[:id])
-
-    @multidate=@invitation.multidates
     
     
 	end
@@ -57,13 +55,10 @@ def new
 
 if current_user.limite 
 
-  #redirect_to "/pages/limite"
-  #return false
+  redirect_to "/pages/limite"
+  return false
 
   end
-
-
-
 
 
 
@@ -74,21 +69,16 @@ if current_user.limite
  @reservations = Reservation.new(reservation_params)
  id=params[:idinvitation]
  @invitation=Invitation.find(params[:idinvitation])
-
-  @tabmulti=@invitation.multidates
-  @multi=@tabmulti.find_by_id(params[:idmulti])
-
     
   
   
   places_demander=params[:reservation][:nombreinvitations]
-  places_restante=(@multi.placex.to_i)-(places_demander.to_i)   # on soustrait le nombre de place
-
+  places_restante=(@invitation.place.to_i)-(places_demander.to_i)   # on soustrait le nombre de place
 
   if current_user.limite 
 
-  #redirect_to "/pages/limite"
-  #return false
+  redirect_to "/pages/limite"
+  return false
 
   end
 
@@ -101,14 +91,14 @@ if current_user.limite
 
   heuremailpartenaire= params[:dateinvitation] 
   heuremailpartenaire= heuremailpartenaire.to_datetime - (30.minutes) 
-  @multi.heuremailpartenaire= heuremailpartenaire
+
   
   current_user.update_attribute(:limite, true)
 
 
-  @multi.update_attribute(:placex, places_restante)
+  @invitation.update_attributes(place: places_restante)
  
-  
+
 
  
   @reservations.nombreinvitations=params[:reservation][:nombreinvitations] 
@@ -138,25 +128,6 @@ if current_user.limite
  end
 
 	end
-
-
-
-  def finalisation
-
-
-     
-     @invitation=Invitation.find_by_id(params[:id])
-     @reservation=Reservation.new
-     @author=current_user
-
-     @tabmulti=@invitation.multidates
-
-     @multi=@tabmulti.find_by_id(params[:idmulti])
-
- 
-
-
-  end
 
 
 

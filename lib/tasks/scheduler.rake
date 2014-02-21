@@ -5,9 +5,8 @@ task :update_feed => :environment do
 
    
    @invitation=Invitation.all
-   @multidate=Multidate.all
    
-   @multidate.each do |t| 
+   @invitation.each do |t| 
 
     
        
@@ -18,7 +17,7 @@ task :update_feed => :environment do
        vraidate=date1.to_datetime + (1.hours)
        
        
-       envoiemail=t.envoiemailx
+       envoiemail=t.envoiemail
        heuremail=t.heuremailpartenaire
         #newheure=  t.heuremailpartenaire.to_datetime + (5.year)  
 
@@ -30,13 +29,13 @@ task :update_feed => :environment do
         
 
 
-       if (envoiemailx)  &&  (vraidate.to_datetime > heuremail.to_datetime)
+       if (envoiemail)  &&  (vraidate.to_datetime > heuremail.to_datetime)
 
         puts "le titre est #{titre}"
          puts "autorisation #{envoiemail}"
        puts "on envoie le mail"
         #t.update_attribute(:heuremailpartenaire,newheure) 
-        t.update_attribute(:envoiemailx, "false") 
+        t.update_attribute(:envoiemail, "false") 
          puts "on envoie le mail2"
          Notifier.send_partenaires_email(t).deliver
              

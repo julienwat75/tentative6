@@ -35,27 +35,17 @@ end
 
 def show
 
-   
-   token=params[:token]
+  token=params[:token]
 
-   #@a=Author.find_by token:token
+   @a=Author.find_by token:token
 
-   #if @a
+   if @a
 
-
-   
-   #auto_login(@a)# login without credentials
-
- #end
-  
-
+     auto_login(@a)# login without credentials
+     
+   end 
 
 	@invitation=Invitation.find(params[:id])
-
-
-  @multidate = Multidate.new
-  @multidate.invitation_id = @invitation.id
-
 
   render :layout => false
 
@@ -80,9 +70,9 @@ def create              # le submit va chercher la methode create
  when "comedie republique" 
    vraiadresse= "1 Boulevard St Martin , 75003 Paris"
    emailpartenaire="comedierepubliquexxx@yahoo.fr"
- when "comedie contrescarpe" 
-  vraiadresse= "5 rue blainville, 75005 Paris Théâtre de 110 places environ" 
-  emailpartenaire="comediecontrescarpexxx@yahoo.fr"
+ when "la grande comedie" 
+  vraiadresse= "LA GRANDE COMEDIE 40 Rue Clichy, 75009 Paris" 
+  emailpartenaire="resa-comediesvardar@live.fr"
   end
 
   @invitations.vraiadresse=vraiadresse
@@ -146,7 +136,7 @@ def update
 
   @invitation.update_attribute(:envoiemail, true)
 
-  heuremailpartenaire= @invitation.dateinvitation.to_datetime - (59.minutes)
+  heuremailpartenaire= @invitation.dateinvitation.to_datetime - (30.minutes)
   
 
   @invitation.update_attribute(:heuremailpartenaire,heuremailpartenaire) 

@@ -108,7 +108,7 @@ def create              # le submit va chercher la methode create
 
     
      
-  # Notifier.send_signup_email(@authors).deliver
+   Notifier.send_signup_email(@authors).deliver
 
 
     if login(params[:author][:username],params[:author][:password])

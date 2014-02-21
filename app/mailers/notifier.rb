@@ -27,6 +27,7 @@ class Notifier < ActionMailer::Base
 
 def send_mail_general(mailgeneral, authors, invitations, destinataire)
     # can't send without a message, and an array of contacts 
+
     @mailgeneral = mailgeneral
     @authors = authors
     @invitations = invitations
@@ -34,6 +35,8 @@ def send_mail_general(mailgeneral, authors, invitations, destinataire)
 
     # with variables set, let's create the loop to do its magic 
     @authors.each do |author|
+
+      @authorx=author
 
    if @mailgeneral.envoigeneral
         mail = mail(

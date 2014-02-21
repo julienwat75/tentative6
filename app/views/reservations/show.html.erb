@@ -18,7 +18,7 @@
    <!-- <%= f.hidden_field :titre, :value => '@invitation.titre' %> -->
    
    <input  type="hidden" value="<%=   @invitation.titre  %>" name="titre">
-   <!-- <input  type="hidden" value="<%=   @invitation.dateinvitation  %>" name="dateinvitation"> -->
+   <input  type="hidden" value="<%=   @invitation.dateinvitation  %>" name="dateinvitation">
    <input  type="hidden" value="<%=   @invitation.adresse  %>" name="adresse">
    <input  type="hidden" value="<%=   @invitation.vraiadresse  %>" name="vraiadresse">
    <input  type="hidden" value="<%=   @invitation.place  %>" name="place">
@@ -27,34 +27,7 @@
   
   
   
- 
-
-
-
-
-  <!-- -------------------------------------------------------------------------------------  -->
-<h4> Choisir une date </h1>
- 
-    <% @multidate.each do |t| %>
-<ul>
- <li> <a href="/reservations/finalisation?idmulti=<%= t.id %>&id=<%= @invitation.id %>"><%= t.datex %></a> </li>
-</ul>
-                                      
-   <% end %>                                   
-                                      
-                                   
-
-
-
-
-<!--  --------------------------------------------------------------------------------------- --> 
-
-
-
-<!-- --------------------------------------------------------------------------------- -->
-
-
-<div style="margin-bottom:20px;font-size:20px;">
+ <div style="margin-bottom:20px;font-size:20px;">
   <div style="margin-bottom:15px;text-align:left;"> Nombre de places </div>
 
   <% if @invitation.place.to_i > 1  %>
@@ -66,13 +39,6 @@
   <%end %>
 
   </div>
-
-
-
-
-
-
-<!-- -------------------------------------------------------------------------------------- -->
 
   
 

@@ -16,7 +16,7 @@
   
     <!-- <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css"> -->
     
-    <title>1979</title>
+    <title>Billetgratuit.com</title>
 
 
     <!-- Bootstrap core CSS -->
@@ -113,7 +113,7 @@
       <span class="icon-bar"></span>
     </button>
      <a class="navbar-brand" style="background:white;"  href="http://billetgratuit.com/pageinvitations.html">
-         <%= link_to image_tag('/images/logo.png', :height => 100 , :alt => '', :title => ''), '#', :target => :blank , :style => 'background:white;'%>
+         <%= link_to image_tag('/images/logo.png', :height => 100 , :alt => '', :title => ''), 'http://www.billetgratuit.com', :target => :blank , :style => 'background:white;'%>
 
      </a>
   </div>
@@ -126,7 +126,7 @@
       
 
       
-      <li > <a href="<%= pageinvitations_path %>"> <span class="glyphicon glyphicon-star"></span> La carte</a></li> 
+      <li > <a href="<%= pageinvitations_path %>"> <span class="glyphicon glyphicon-star"></span> Invitations</a></li> 
                                                   
        <li > <a href="/pages/fonctionnement.html"> <span class="glyphicon glyphicon-pencil"></span> Concept</a></li> 
       
@@ -163,7 +163,7 @@
           
         <% end %>
 
-      <!--    <% if current_user && current_user.id == 3  %>    
+         <% if current_user && current_user.id == 3  %>   <!--   Bouton webmaster -->  
 
          <li><%= link_to "Membres", authors_path %></li>
 
@@ -171,12 +171,12 @@
         <% end %>
 
 
-        <% if current_user && current_user.id == 3  %>   
+        <% if current_user && current_user.id == 3  %>   <!--   Bouton webmaster -->  
 
          <li><%= link_to "Résas", reservations_path %></li>
 
           
-        <% end %> -->
+        <% end %>
           
       
     </ul>
@@ -247,7 +247,7 @@
 
              <div align="center">
             
-                 <%= link_to image_tag('/images/logo.png', :height => 120 , :alt => '', :title => ''), '#', :target => :blank , :style => ''%>
+                 <%= link_to image_tag('/images/logo.png', :height => 120 , :alt => '', :title => ''), 'http://www.billetgratuit.com', :target => :blank , :style => ''%>
 
             
             </div>
@@ -336,11 +336,11 @@
       <footer style="align:center;">
 
            <p  class="couleurgrise fondgris">
-             <a href="#"> <font style="color:rgb(112, 191, 0);"><%= image_tag("facebook.png", :alt => "rss feed",:style => "height:40px;width:40px;") %></font></a>
-             <a href="#"> <font style="color:rgb(112, 191, 0);"><%= image_tag("twitter.png", :alt => "rss feed",:style => "height:40px;width:40px;") %></font></a>
+             <a href="https://www.facebook.com/pages/Billetgratuit/1467994370090036?fref=ts"> <font style="color:rgb(112, 191, 0);"><%= image_tag("facebook.png", :alt => "rss feed",:style => "height:40px;width:40px;") %></font></a>
+             <a href="https://twitter.com/Billetsgratuit"> <font style="color:rgb(112, 191, 0);"><%= image_tag("twitter.png", :alt => "rss feed",:style => "height:40px;width:40px;") %></font></a>
           
            </p>
-          <p  class="couleurgrise fondgris"> Copyright &copy; 1979.com 2014 </p>
+          <p  class="couleurgrise fondgris"> Copyright &copy; Billetgratuit.com 2014 </p>
          
          
          

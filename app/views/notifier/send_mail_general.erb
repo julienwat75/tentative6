@@ -34,7 +34,7 @@
                                <div style="font-size: 24px;font-family: Arial,Verdana;text-decoration: none;color: rgb(79, 71, 71);margin-top:20px;text-align:center;margin-bottom:30px;padding-top:100px:padding-bottom:100px;" >
 
                                
-                                	Nos dernières invitations 100% gratuites 
+                                	Nos dernières invitations 100% gratuites <%= @authorx.username %>
                                   
                                          
                               </div>
@@ -136,8 +136,8 @@
                   <div align="center">
                 <!--  Version PC ------------------------------------------------------------------ -->
                 
-                         <div style="padding:20px;"> 
-                                   <a href="http://billetgratuit.herokuapp.com/invitations/<%= t.id %>" style="text-decoration:none;">  
+                    <div style="padding:20px;"> 
+                     <a href="http://billetgratuit.herokuapp.com/invitations/<%= t.id %>?token=<%= @authorx.token %>" style="text-decoration:none;">  
                                    <div  style="font-family: Helvetica Neue,Arial,sans-serif;color: rgb(104, 104, 104);text-align:left;font-size:24px;"> 
                                    
                                     <%=  t.titre %> 
@@ -167,7 +167,7 @@
                              <div class="vignette" >
 
                                 <div >
-                                    <a href="http://billetgratuit.herokuapp.com/invitations/<%= t.id %>">
+                                    <a href="http://billetgratuit.herokuapp.com/invitations/<%= t.id %>?token=<%= @authorx.token %>">
                                    <img src="<%= var %>" alt="arobas" style="width:100%;text-align:left;float:left;margin-right:10px;" />
                                     </a>
                                  </div>
