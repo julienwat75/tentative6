@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140221200536) do
+ActiveRecord::Schema.define(version: 20140221202308) do
 
   create_table "authors", force: true do |t|
     t.string   "username",                        null: false
@@ -90,10 +90,11 @@ ActiveRecord::Schema.define(version: 20140221200536) do
   create_table "multidates", force: true do |t|
     t.datetime "datex"
     t.integer  "placex"
+    t.datetime "heuremailpartenaire"
+    t.boolean  "envoiemailx"
     t.integer  "invitation_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "envoiemailx"
   end
 
   create_table "offres", force: true do |t|
