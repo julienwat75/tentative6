@@ -1,0 +1,2 @@
+module MultidatesHelper
+end

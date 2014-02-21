@@ -11,6 +11,8 @@ a=0
                       :order      =>  "id DESC",
                       :limit      =>  50,
                        :offset      =>  a*50)     # numero de page qu on souhaite afficher
+
+
  
 
 

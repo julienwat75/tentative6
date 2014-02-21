@@ -17,7 +17,7 @@ class Author < ActiveRecord::Base
 
   before_save { self.username = username.downcase }
 
-  before_create :generate_token
+   before_create :generate_token
 
   protected
 
@@ -28,7 +28,6 @@ class Author < ActiveRecord::Base
       break random_token unless Author.exists?(token: random_token)
     end
   end
-
 
   
 

@@ -1,0 +1,82 @@
+<h1>Ajouter une date  </h1>
+
+
+<%= form_for [ @invitation, @multidate ] do |f| %>
+   <%= f.label :Date %><br />
+                                     <div class="input-append date datepicker" id="datetimepicker" value="2012-05-15 21:05"  data-date="12-12-2013" data-date-format="dd-mm-yyyy"   > 
+                                      <%= f.text_field :datex  %>
+                                     
+                                      <span class="add-on"><i class="icon-th"></i></span></div>
+
+                                      <br><br>
+
+                                  <%= f.label :Heure %><br />
+                                  <SELECT name="heure1">
+                                    <OPTION VALUE="00">00</OPTION>
+                                      <OPTION VALUE="01">01</OPTION>
+                                      <OPTION VALUE="02">02</OPTION>
+                                      <OPTION VALUE="08">08</OPTION>
+                                      <OPTION VALUE="09">09</OPTION>
+                                      <OPTION VALUE="10">10</OPTION>
+                                      <OPTION VALUE="11">11</OPTION>
+                                      <OPTION VALUE="12">12</OPTION>
+                                      <OPTION VALUE="13">13</OPTION>
+                                      <OPTION VALUE="14">14</OPTION>
+                                      <OPTION VALUE="15">15</OPTION>
+                                      <OPTION VALUE="16">16</OPTION>
+                                      <OPTION VALUE="17">17</OPTION>
+                                      <OPTION VALUE="18">18</OPTION>
+                                      <OPTION VALUE="19">19</OPTION>
+                                      <OPTION VALUE="20">20</OPTION>
+                                      <OPTION VALUE="21">21</OPTION>
+                                      <OPTION VALUE="22">22</OPTION>
+                                      <OPTION VALUE="23">23</OPTION>
+                                    </SELECT>
+
+                                  H
+
+
+
+                                  <SELECT name="minute1">
+                                      <OPTION VALUE="00">00</OPTION>
+                                      <OPTION VALUE="15">15</OPTION>
+                                      <OPTION VALUE="30">30</OPTION>
+                                      <OPTION VALUE="45">45</OPTION>
+                                      
+                                    </SELECT>
+
+                                    <br><br>
+
+
+                                    <p>
+                                  <%= f.label :places %><br />
+                                  <SELECT name="place">
+                                     <OPTION VALUE="1">1</OPTION>
+                                      <OPTION VALUE="2">2</OPTION>
+                                      <OPTION VALUE="3">3</OPTION>
+                                      <OPTION VALUE="4">4</OPTION>
+                                      <OPTION VALUE="5">5</OPTION>
+                                      <OPTION VALUE="6">6</OPTION>
+                                      <OPTION VALUE="7">7</OPTION>
+                                      <OPTION VALUE="8">8</OPTION>
+                                      <OPTION VALUE="9">9</OPTION>
+                                      <OPTION VALUE="10">10</OPTION>
+                                      <OPTION VALUE="11">11</OPTION>
+                                      <OPTION VALUE="12">12</OPTION>
+                                      <OPTION VALUE="13">13</OPTION>
+                                      <OPTION VALUE="14">14</OPTION>
+                                      <OPTION VALUE="15">15</OPTION>
+                                      <OPTION VALUE="16">16</OPTION>
+                                      <OPTION VALUE="17">17</OPTION>
+                                      <OPTION VALUE="18">18</OPTION>
+                                      <OPTION VALUE="19">19</OPTION>
+                                      <OPTION VALUE="20">20</OPTION>
+                                    </SELECT> 
+                                  </p>
+                                      
+
+                                          
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>

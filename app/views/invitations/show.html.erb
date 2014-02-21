@@ -29,10 +29,8 @@
   
     <!-- <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css"> -->
     
-    <title>Billetgratuit.com</title>
+    <title>1979</title>
 
-
-   
 
     <!-- Bootstrap core CSS -->
     <!-- <link href="/css/bootstrap.css" rel="stylesheet"> -->
@@ -92,7 +90,7 @@
       <span class="icon-bar"></span>
     </button>
      <a class="navbar-brand" style="background:white;"  href="http://billetgratuit.com/pageinvitations.html">
-        <%= link_to image_tag('/images/logo.png', :height => 100 , :alt => '', :title => ''), 'http://www.billetgratuit.com', :target => :blank , :style => 'background:white;'%>
+        <%= link_to image_tag('/images/logo.png', :height => 100 , :alt => '', :title => ''), '#', :target => :blank , :style => 'background:white;'%>
 
      </a>
   </div>
@@ -102,7 +100,7 @@
     <ul class="nav navbar-nav" >
       <li class="active" style="color:black;font-style: oblique;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;"></li>
       
-      <li> <a href="<%= pageinvitations_path %>"> <span class="glyphicon glyphicon-star"></span> Invitations</a></li> 
+      <li> <a href="<%= pageinvitations_path %>"> <span class="glyphicon glyphicon-star"></span> La carte</a></li> 
                                                   
       <li> <a href="/pages/fonctionnement.html"> <span class="glyphicon glyphicon-pencil"></span> Concept</a></li> 
                                                   
@@ -394,7 +392,7 @@
 
              <div align="center">
             
-                 <%= link_to image_tag('/images/logo.png', :height => 120 , :alt => '', :title => ''), 'http://www.billetgratuit.com', :target => :blank , :style => ''%>
+                 <%= link_to image_tag('/images/logo.png', :height => 120 , :alt => '', :title => ''), '', :target => :blank , :style => ''%>
 
             
             </div>
@@ -647,6 +645,10 @@
 
 
 
+<%= render partial: 'form2' %>  
+
+
+
 <!--  --------------------------------------------------------------------------------------  -->
 
  </div>
@@ -679,7 +681,7 @@
              <a href="#"> <font style="color:rgb(112, 191, 0);"><%= image_tag("twitter.png", :alt => "rss feed",:style => "height:40px;width:40px;") %></font></a>
           
            </p>
-          <p class="couleurgrise fondgris"> Copyright &copy; Billetgratuit.com 2014 </p>
+          <p class="couleurgrise fondgris"> Copyright &copy; 1979.com 2014 </p>
 
          
     </footer>
