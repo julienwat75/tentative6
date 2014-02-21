@@ -6,9 +6,9 @@
     <body>
 
 
-   <% jour=@invitations.dateinvitation.strftime("%A") %>  
+   <% jour=@multi.datex.strftime("%A") %>  
 
-   <% mois=@invitations.dateinvitation.strftime("%B")  %>
+   <% mois=@multi.datex.strftime("%B")  %>
 
 <% case jour  %>
  <% when "Monday"  %>
@@ -65,9 +65,9 @@
     Liste des réservations pour le spectacle :<font color="blue">(<%=  @invitations.titre %>)
 
    Le <%= jour %> 
-      <%= @invitations.dateinvitation.day %> 
-      <%= mois %>  à <%= @invitations.dateinvitation.hour  %> H 
-      <%= @invitations.dateinvitation.min  %>
+      <%= @multi.datex.day %> 
+      <%= mois %>  à <%= @multi.datex.hour  %> H 
+      <%= @multi.datex.min  %>
     </font>
 
 
@@ -80,7 +80,8 @@
 
            <% @invitations.reservations.each do |resa| %>
 
-            <% if resa.dateinvitation == @invitations.dateinvitation %>
+
+            <% if resa.dateinvitation == @multi.datex %>
 
          
                       <li>
