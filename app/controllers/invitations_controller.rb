@@ -45,7 +45,12 @@ def show
      
    end 
 
-	@invitation=Invitation.find(params[:id])
+	 @invitation=Invitation.find(params[:id])
+
+
+   @multidate = Multidate.new
+   @multidate.invitation_id = @invitation.id
+
 
   render :layout => false
 

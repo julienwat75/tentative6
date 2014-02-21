@@ -1,7 +1,6 @@
 class MultidatesController < ApplicationController
 
-
-def create
+	def create
   @multidate = Multidate.new
   @multidate.invitation_id = params[:invitation_id]
    @multidate.datex = params[:datex]
@@ -26,7 +25,5 @@ end
 def multidate_params
   params.require(:multidate).permit(:datex, :placex)
 end
-
-
 
 end

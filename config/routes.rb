@@ -1,15 +1,15 @@
 MyApp::Application.routes.draw do
 
 
-  get "password_resets/create"
-  get "password_resets/edit"
-  get "password_resets/update"
-  resources :profils
-  resources :mailgenerals
-  resources :offres
-   resources :pagemembres
-   resources :invitations
-   resources :pageinvitations 
+    get "password_resets/create"
+    get "password_resets/edit"
+    get "password_resets/update"
+    get "reservations/finalisation"
+    resources :profils
+    resources :mailgenerals
+    resources :offres
+    resources :pagemembres
+    resources :pageinvitations 
     resources :webmasters
     resources :reservations 
     resources :detailresas
@@ -17,10 +17,17 @@ MyApp::Application.routes.draw do
     resources :password_resets
 
 
-   resources :authors do
-  resources :commentaires
-  resources :reservations 
+    resources :authors do
+    resources :commentaires
+    resources :reservations 
  end
+
+
+ resources :invitations do
+
+     resources :multidates
+
+   end
 
 
    resources :author_sessions, only: [ :new, :create, :destroy ]

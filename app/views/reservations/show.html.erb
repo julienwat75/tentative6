@@ -24,6 +24,16 @@
    <input  type="hidden" value="<%=   @invitation.place  %>" name="place">
    <input  type="hidden" value="<%=   @invitation.id  %>" name="idinvitation">
    <input  type="hidden" value="<%=   @invitation.emailpartenaire  %>" name="emailpartenaire">
+
+   <h4> Choisir une date </h1>
+ 
+    <% @multidate.each do |t| %>
+<ul>
+ <li> <a href="/reservations/finalisation?idmulti=<%= t.id %>&id=<%= @invitation.id %>"><%= t.datex %></a> </li>
+</ul>
+                                      
+   <% end %>                                   
+             
   
   
   
