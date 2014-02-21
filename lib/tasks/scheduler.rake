@@ -13,7 +13,7 @@ task :update_feed => :environment do
        
 
 
-       titre=t.titre 
+       #titre=t.titre 
        date1= DateTime.now
        vraidate=date1.to_datetime + (1.hours)
        
