@@ -6,7 +6,7 @@ attr_accessible :validation, :titre, :description, :avatar, :dateinvitation, :pl
 
 belongs_to :author
 has_many :reservations
-
+has_many :multidates
 
 has_attached_file :avatar,
   :content_type => :image, 
