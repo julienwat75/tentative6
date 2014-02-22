@@ -12,8 +12,19 @@ class MultidatesController < ApplicationController
   minute=params[:minute1]
   seconde="00"
   var3=var + " " + heure + ":" + minute + ":" + seconde 
+
+
+ 
   
    @multidate.datex = DateTime.parse(var3)
+
+    heuremailpartenaire= @multidate.datex
+
+    @multidate.heuremailpartenaire= heuremailpartenaire.to_datetime - (30.minutes) 
+ 
+
+
+
    @multidate.update_attribute(:envoiemailx, true)
 
 

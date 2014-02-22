@@ -40,7 +40,10 @@ def new
     @invitation=Invitation.find(params[:id])
 
      @multidate=@invitation.multidates
-   
+
+     @multidate = @multidate.order(:datex)
+
+    
     
     
 	end
@@ -100,9 +103,6 @@ if current_user.limite
 
   else
 
-  heuremailpartenaire= params[:dateinvitation] 
-  heuremailpartenaire= heuremailpartenaire.to_datetime - (30.minutes) 
-  @multi.heuremailpartenaire= heuremailpartenaire
   
   current_user.update_attribute(:limite, true)
 
@@ -139,7 +139,7 @@ if current_user.limite
  end
 
   end
-  
+
   def finalisation
 
 

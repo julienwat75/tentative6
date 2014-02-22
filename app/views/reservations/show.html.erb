@@ -1,5 +1,7 @@
 <% provide(:title, "Réservation de votre spéctacle") %>
 
+
+
 <div class="row" >
   <div  class="col-md-3"></div>
 
@@ -7,58 +9,87 @@
 
 <%= form_for [ @reservation ] do |f| %>
   <div style="margin-bottom:20px;font-size:24px;color:black">
-  <%= @invitation.titre %> <%= @aleatoir %>
+  <%= @invitation.titre %> 
   </div>
 
   
 
    
 
-   
-   <!-- <%= f.hidden_field :titre, :value => '@invitation.titre' %> -->
-   
-   <input  type="hidden" value="<%=   @invitation.titre  %>" name="titre">
-   <input  type="hidden" value="<%=   @invitation.dateinvitation  %>" name="dateinvitation">
-   <input  type="hidden" value="<%=   @invitation.adresse  %>" name="adresse">
-   <input  type="hidden" value="<%=   @invitation.vraiadresse  %>" name="vraiadresse">
-   <input  type="hidden" value="<%=   @invitation.place  %>" name="place">
-   <input  type="hidden" value="<%=   @invitation.id  %>" name="idinvitation">
-   <input  type="hidden" value="<%=   @invitation.emailpartenaire  %>" name="emailpartenaire">
-
-   <h4> Choisir une date </h1>
+   <h4> Choisir une date </h4> <br>
  
     <% @multidate.each do |t| %>
+
+      <% jour=t.datex.strftime("%A") %>  
+
+  <% mois=t.datex.strftime("%B")  %>
+
+<% case jour  %>
+ <% when "Monday"  %>
+ <%  jour= "Lundi" %> 
+ <% when "Tuesday"  %>
+ <%  jour= "Mardi" %> 
+<% when "Wednesday"  %>
+ <%  jour= "Mercredi" %>
+  <% when "Thursday"  %>
+ <%  jour= "Jeudi" %>
+  <% when "Friday"  %>
+ <%  jour= "Vendredi" %>
+  <% when "Saturday"  %>
+ <%  jour= "Samedi" %> 
+  <% when "Sunday"  %>
+ <%  jour= "Dimanche" %> 
+<% else  %>              
+ <% puts 'Only single-digit numbers are allowed' %>
+ <% end %>
+
+ <% case mois  %>
+ <% when "January"  %>
+ <%  mois= "Janvier" %> 
+ <% when "February"  %>
+ <%  mois= "Février" %> 
+<% when "March"  %>
+ <%  mois= "Mars" %>
+  <% when "April"  %>
+ <%  mois= "Avril" %>
+  <% when "May"  %>
+ <%  mois= "Mai" %>
+  <% when "June"  %>
+ <%  mois= "Juin" %>
+  <% when "July"  %>
+ <%  mois= "Juillet" %>
+  <% when "August"  %>
+ <%  mois= "Aout" %>
+  <% when "September"  %>
+ <%  mois= "Septembre" %>
+  <% when "October"  %>
+ <%  mois= "Octobre" %>
+   <% when "November"  %>
+ <%  mois= "Novembre" %>
+  <% when "December"  %>
+ <%  mois= "Décembre" %>
+<% else  %>              
+ 
+ <% end %>
+
+
 <ul>
- <li> <a href="/reservations/finalisation?idmulti=<%= t.id %>&id=<%= @invitation.id %>"><%= t.datex %></a> </li>
+ <li><h4 style="text-align:left"> 
+  <a href="/reservations/finalisation?idmulti=<%= t.id %>&id=<%= @invitation.id %>">
+
+  <%= jour %> 
+  <%= t.datex.day %> 
+  <%= mois %>  à <%= t.datex.hour  %> H 
+  <%= t.datex.min  %>
+
+
+
+ </a> </h4></li>
 </ul>
                                       
    <% end %>                                   
              
   
-  
-  
- <div style="margin-bottom:20px;font-size:20px;">
-  <div style="margin-bottom:15px;text-align:left;"> Nombre de places </div>
-
-  <% if @invitation.place.to_i > 1  %>
-
-  <%= f.select :nombreinvitations, [['1',1], 2] ,:style =>'text-align:center;width:100%;'  %>
-  <% else  %>
-
-  <%= f.select :nombreinvitations, [['1(Derniere place)',1]] ,:class =>'grandbouton'  %>
-  <%end %>
-
-  </div>
-
-  
-
-
-  <div style="font-size:22px;color:blue;">
-    <%= f.submit 'Commander',:class=>'btn btn-default btn-lg monbouton' %>
-  </div>
-  
-
-
 
 <% end %>
 </div>  
