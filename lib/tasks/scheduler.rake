@@ -32,8 +32,8 @@ task :update_feed => :environment do
 
        if (envoiemailx)  &&  (vraidate.to_datetime > heuremail.to_datetime)
 
-        puts "le titre est #{titre}"
-         puts "autorisation #{envoiemail}"
+        #puts "le titre est #{titre}"
+         puts "autorisation #{envoiemailx}"
        puts "on envoie le mail"
         #t.update_attribute(:heuremailpartenaire,newheure) 
         t.update_attribute(:envoiemailx, "false") 
