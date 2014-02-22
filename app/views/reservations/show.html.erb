@@ -8,15 +8,15 @@
   <div  class="col-md-6" style="text-align:center;padding:20px;">
 
 <%= form_for [ @reservation ] do |f| %>
-  <div style="margin-bottom:20px;font-size:24px;color:black">
+  <h4>
   <%= @invitation.titre %> 
-  </div>
+  </h4>
 
   
 
    
 
-   <h4> Choisir une date </h4> <br>
+    <div style="margin-bottom:15px;text-align:center;font-size:20px;">Choisir une date </div> <br>
  
     <% @multidate.each do |t| %>
 
@@ -72,7 +72,7 @@
  
  <% end %>
 
-
+<% if t.placex.to_i > 0  %>
 <ul>
  <li><h4 style="text-align:left"> 
   <a href="/reservations/finalisation?idmulti=<%= t.id %>&id=<%= @invitation.id %>">
@@ -86,6 +86,7 @@
 
  </a> </h4></li>
 </ul>
+<% end %>
                                       
    <% end %>                                   
              

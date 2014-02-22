@@ -1,23 +1,90 @@
-<h1>Finalisation </h1>
+<% provide(:title, "Finaliser votre commande") %>
+
+
+
+      <% jour=@multi.datex.strftime("%A") %>  
+
+  <% mois=@multi.datex.strftime("%B")  %>
+
+<% case jour  %>
+ <% when "Monday"  %>
+ <%  jour= "Lundi" %> 
+ <% when "Tuesday"  %>
+ <%  jour= "Mardi" %> 
+<% when "Wednesday"  %>
+ <%  jour= "Mercredi" %>
+  <% when "Thursday"  %>
+ <%  jour= "Jeudi" %>
+  <% when "Friday"  %>
+ <%  jour= "Vendredi" %>
+  <% when "Saturday"  %>
+ <%  jour= "Samedi" %> 
+  <% when "Sunday"  %>
+ <%  jour= "Dimanche" %> 
+<% else  %>              
+ <% puts 'Only single-digit numbers are allowed' %>
+ <% end %>
+
+ <% case mois  %>
+ <% when "January"  %>
+ <%  mois= "Janvier" %> 
+ <% when "February"  %>
+ <%  mois= "Février" %> 
+<% when "March"  %>
+ <%  mois= "Mars" %>
+  <% when "April"  %>
+ <%  mois= "Avril" %>
+  <% when "May"  %>
+ <%  mois= "Mai" %>
+  <% when "June"  %>
+ <%  mois= "Juin" %>
+  <% when "July"  %>
+ <%  mois= "Juillet" %>
+  <% when "August"  %>
+ <%  mois= "Aout" %>
+  <% when "September"  %>
+ <%  mois= "Septembre" %>
+  <% when "October"  %>
+ <%  mois= "Octobre" %>
+   <% when "November"  %>
+ <%  mois= "Novembre" %>
+  <% when "December"  %>
+ <%  mois= "Décembre" %>
+<% else  %>              
+ 
+ <% end %>
 
 
 
 
-<%= @invitation.id %>  <br>
+<div class="row" >
+  <div  class="col-xs-0 col-sm-3 col-md-3 col-lg-3"></div>
 
 
-<%= @multi.datex %> <br>
-
-<%= @multi.placex %>
 
 
+  <div  class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+
+
+ <% if @multi.placex.to_i > 0  %>
 
 
 
 <%= form_for [ @reservation ] do |f| %>
-  <div style="margin-bottom:20px;font-size:24px;color:black">
-  <%= @invitation.titre %> <%= @aleatoir %>
-  </div>
+<div align="center">
+
+
+  <h4>
+  <%= @invitation.titre %>
+  </h4>
+
+<h5>
+   <%= jour %> 
+  <%= @multi.datex.day %> 
+  <%= mois %>  à <%= @multi.datex.hour  %> H 
+  <%= @multi.datex.min  %>
+</h5>
 
   
 
@@ -34,17 +101,22 @@
    <input  type="hidden" value="<%=   @invitation.emailpartenaire  %>" name="emailpartenaire">
 
     <input  type="hidden" value="<%=   @multi.id  %>" name="idmulti">
+
+
+
+
+
   
   
-  
-  
- 
+   
   <div style="margin-bottom:20px;font-size:20px;">
-  <div style="margin-bottom:15px;text-align:left;"> Nombre de places </div>
+  <div style="margin-bottom:15px;text-align:center;"> Nombre de places </div>
 
   <% if @multi.placex.to_i > 1  %>
 
-  <%= f.select :nombreinvitations, [['1',1], 2] ,:style =>'text-align:center;width:100%;'  %>
+  
+<%= f.select :nombreinvitations, [['1',1], 2] ,:style =>'color:grey;width:100%;font-size:22px;text-align:center;' %>
+  
   <% else  %>
 
   <%= f.select :nombreinvitations, [['1(Derniere place)',1]] ,:class =>'grandbouton'  %>
@@ -59,5 +131,26 @@
     <%= f.submit 'Commander',:class=>'btn btn-default btn-lg monbouton' %>
   </div>
 
+
+  
+  
+ </div>
+    <% end %>
+
+
+ <% else %>
+   <div class="epuise" >
+    Invitations épuisés
+    </div>
+
+
+
+
   <% end %>
+</div>
+
+  <div  class="col-xs-0 col-sm-3 col-md-3 col-lg-3"></div>
+
+</div>
+
                          
