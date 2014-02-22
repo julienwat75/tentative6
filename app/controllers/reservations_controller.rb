@@ -128,7 +128,7 @@ if current_user.limite
   @reservations.sexe =current_user.sexe
   @reservations.code=code1
   @reservations.envoiemail = "true"
-  @reservations.heuremailpartenaire =  heuremailpartenaire
+  
   @reservations.save   #on sauvegarde
 
    Notifier.send_resa_email(@reservations).deliver
