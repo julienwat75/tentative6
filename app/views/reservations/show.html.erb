@@ -72,7 +72,8 @@
  
  <% end %>
 
-<% if t.placex.to_i > 0  %>
+<% if t.placex.to_i > 0 && Invitation.late(t.datex)  %>
+
 <ul>
  <li><h4 style="text-align:left"> 
   <a href="/reservations/finalisation?idmulti=<%= t.id %>&id=<%= @invitation.id %>">

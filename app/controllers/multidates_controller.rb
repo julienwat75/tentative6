@@ -13,6 +13,8 @@ class MultidatesController < ApplicationController
   seconde="00"
   var3=var + " " + heure + ":" + minute + ":" + seconde 
 
+  @invitation=Invitation.find_by_id(params[:invitation_id])
+
 
  
   
@@ -26,6 +28,9 @@ class MultidatesController < ApplicationController
 
 
    @multidate.update_attribute(:envoiemailx, true)
+
+   @invitation.update_attribute(:validation, true)
+ 
 
 
   @multidate.save

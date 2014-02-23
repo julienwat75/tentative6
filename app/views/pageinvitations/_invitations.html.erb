@@ -17,14 +17,14 @@
                 
         <% @invitations2.each do |t| %>
 
-           <% if t.validation && Invitation.late(t.dateinvitation) %>
+           <% if t.validation &&  Invitation.late(t.multidates.order(:datex).last.datex) %>
 
 
         <!--  switch et variable --> 
 
-        <% jour=t.dateinvitation.strftime("%A") %>  
+        <% jour=t.multidates.order(:datex).last.datex.strftime("%A") %>  
 
-  <% mois=t.dateinvitation.strftime("%B")  %>
+  <% mois=t.multidates.order(:datex).last.datex.strftime("%B")  %>
 
 <% case jour  %>
  <% when "Monday"  %>
@@ -95,7 +95,7 @@
 
       
              <!--  -------------------------------- Invitations ---------------------------- --> 
-               <div  class="col-xs-12  col-md-6 col-lg-4 hidden-md hidden-sm fondgris" style="text-align:left;height:430px;overflow:hidden;margin-bottom:10px;"    >  <!-- debut premier div ---- -->
+               <div  class="col-xs-12  col-md-6 col-lg-4 hidden-md hidden-sm fondgris" style="text-align:left;height:450px;overflow:hidden;margin-bottom:10px;"    >  <!-- debut premier div ---- -->
                   <div align="center">
                 <!--  Version PC ------------------------------------------------------------------ -->
                 <div  class=" " style=";margin-bottom:35px;border-radius:0px 0px 10px 10px;border-radius:5px 5px 0px 0px;border:1px solid rgba(0, 0, 0, 0.2); ">
@@ -108,17 +108,15 @@
                                                 
                                     </div>
                                     </a>
-                                    <div style="padding-left:10px;text-align:left;">
-                                                <%= jour %> 
-                                                <%= t.dateinvitation.day %> 
-                                                <%= mois %>  à <%= t.dateinvitation.hour  %> H 
-                                                <%= t.dateinvitation.min  %>
+                                    <div style="padding-left:10px;text-align:left;padding-bottom:10px;">
+                                                Actuellement 
                                       </div>     
                                      
 
 
 
                          </div>
+                        
 
 
                           <a href="<%=  invitation_path(t.id) %>">
@@ -158,11 +156,8 @@
                                                 
                                     </div>
                                     </a>
-                                    <div style="padding-left:10px;text-align:left;">
-                                                <%= jour %> 
-                                                <%= t.dateinvitation.day %> 
-                                                <%= mois %>  à <%= t.dateinvitation.hour  %> H 
-                                                <%= t.dateinvitation.min  %>
+                                    <div style="padding-left:10px;text-align:left;padding-bottom:10px;">
+                                               Actuellement 
                                       </div>     
                                      
 
@@ -210,11 +205,8 @@
                                                 
                                     </div>
                                     </a>
-                                    <div style="padding-left:10px;text-align:left;">
-                                                <%= jour %> 
-                                                <%= t.dateinvitation.day %> 
-                                                <%= mois %>  à <%= t.dateinvitation.hour  %> H 
-                                                <%= t.dateinvitation.min  %>
+                                    <div style="padding-left:10px;text-align:left;padding-bottom:10px;">
+                                               Actuellement 
                                       </div>     
                                      
 
