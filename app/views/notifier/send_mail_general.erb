@@ -54,14 +54,17 @@
                 
         <% @invitations.each do |t| %>
 
-           <% if t.validation && Invitation.late(t.dateinvitation) %>
+          
+            <% if t.validation &&  Invitation.late(t.multidates.order(:datex).last.datex) %>
+
+
 
 
         <!--  switch et variable --> 
 
-        <% jour=t.dateinvitation.strftime("%A") %>  
+        <% jour=t.multidates.order(:datex).last.datex.strftime("%A") %>  
 
-  <% mois=t.dateinvitation.strftime("%B")  %>
+  <% mois=t.multidates.order(:datex).last.datex.strftime("%B")  %>
 
 <% case jour  %>
  <% when "Monday"  %>
@@ -146,10 +149,7 @@
                                     </div>
                                     </a>
                                     <div style="text-align:left;font-size:20px;">
-                                                <%= jour %> 
-                                                <%= t.dateinvitation.day %> 
-                                                <%= mois %>  à <%= t.dateinvitation.hour  %> H 
-                                                <%= t.dateinvitation.min  %>
+                                                Actuellement 
                                       </div>  
                                       <div style="text-align:left;font-size:20px;">
                                                
