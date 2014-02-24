@@ -52,6 +52,18 @@
 
     <div class="invitation" style="border-radius:5px 5px 5px 5px;padding:15px;"> 
 
+
+       <% if current_user.id == 3 %>
+      
+      <div class="monecriture" style="font-size:22px;">
+
+       Total Membres:<%= @authors.length %>
+
+       </div> 
+
+
+    <% end %> 
+
   
     <% @authors.each do |author| %>
 
