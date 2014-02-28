@@ -30,16 +30,16 @@ def send_mail_general(mailgeneral, authors, invitations, destinataire)
     # can't send without a message, and an array of contacts 
 
     @mailgeneral = mailgeneral
-    @authors = authors
+    @authorx = authors
 
-   
+     
     
     @invitations = invitations
     @destinataire= destinataire
 
     # with variables set, let's create the loop to do its magic 
      mail = mail(
-                :to => @authors.username,
+                :to => @authorx.username,
                 :subject => "Nouvelles invitations")
 
  
