@@ -30,10 +30,19 @@ class MailgeneralsController < ApplicationController
 
 			    if @mailgenerals.save   #on sauvegarde
 
-			    
-			     
-			     Notifier.send_mail_general(@mailgenerals,@author,@invitations,@destinataire).deliver
+			               if @mailgenerals.envoigeneral
+							      @author.each do |author|
 
+							        Notifier.send_mail_general(@mailgenerals,author,@invitations,@destinataire).deliver
+
+                                   end
+                           else
+                              
+                              author=Author.find_by_username(@destinataire)     
+                              Notifier.send_mail_general(@mailgenerals,author,@invitations,@destinataire).deliver
+        
+
+                           end      
 
 			   
 

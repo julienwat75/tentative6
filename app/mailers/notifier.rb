@@ -35,31 +35,19 @@ def send_mail_general(mailgeneral, authors, invitations, destinataire)
     @destinataire=destinataire
 
     # with variables set, let's create the loop to do its magic 
-    @authors.each do |author|
-
-      @authorx=author
-
-   if @mailgeneral.envoigeneral
-        mail = mail(
-          :to => "#{author.username}",
-          :subject => "Nouvelles invitations")
-
-
-   else 
-
-
-
-        if author.username == destinataire
-               mail = mail(
-                :to => "#{author.username}",
+     mail = mail(
+                :to => @authors.username,
                 :subject => "Nouvelles invitations")
-         end      
+
+ 
 
 
-  end
+  
          
-    end # contacts.each loop
+    
  end #blast 
+
+
 
 
 
