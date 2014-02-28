@@ -38,9 +38,9 @@ class MailgeneralsController < ApplicationController
                                    end
                            else
                               
-                              @author2=Author.find_by_id(3) 
+                              author=Author.find_by_username(@destinataire) 
                              
-                              Notifier.send_mail_general(@mailgenerals,@author2,@invitations,@destinataire).deliver
+                              Notifier.send_mail_general(@mailgenerals,author,@invitations,@destinataire).deliver
         
 
                            end      
