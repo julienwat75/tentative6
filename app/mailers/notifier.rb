@@ -31,6 +31,9 @@ def send_mail_general(mailgeneral, authors, invitations, destinataire)
 
     @mailgeneral = mailgeneral
     @authors = authors
+
+   
+    
     @invitations = invitations
     @destinataire= destinataire
 

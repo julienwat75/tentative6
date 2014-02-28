@@ -38,7 +38,8 @@ class MailgeneralsController < ApplicationController
                                    end
                            else
                               
-                              author=Author.find_by_username(@destinataire)     
+                              author=Author.find_by_username("stewfilm50@yahoo.fr") 
+                               binding.pry    
                               Notifier.send_mail_general(@mailgenerals,author,@invitations,@destinataire).deliver
         
 
