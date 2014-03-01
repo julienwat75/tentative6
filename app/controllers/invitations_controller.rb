@@ -78,9 +78,9 @@ def create              # le submit va chercher la methode create
  when "la grande comedie" 
   vraiadresse= "LA GRANDE COMEDIE 40 Rue Clichy, 75009 Paris" 
   emailpartenaire="resa-comediesvardar@live.fr"
- when "Comedie Contrescarpe" 
-  vraiadresse= "LA GRANDE COMEDIE 40 Rue Clichy, 75009 Paris" 
-  emailpartenaire="resa-comediesvardar@live.fr"
+ when "comedie contrescarpe" 
+  vraiadresse= "Comedie Contrescarpe 5 Rue Blainville, 75005 Paris" 
+  emailpartenaire="comediecontrescarpe@gmail.com"
   end
 
   @invitations.vraiadresse=vraiadresse
