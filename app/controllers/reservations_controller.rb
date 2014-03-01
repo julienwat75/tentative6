@@ -61,8 +61,8 @@ def new
 
 if current_user.limite 
 
-  #redirect_to "/pages/limite"
-  #return false
+  redirect_to "/pages/limite"
+  return false
 
   end
 
