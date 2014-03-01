@@ -13,10 +13,11 @@ body {
   background:  rgb(116, 204, 254);
   background: rgb( 154,228,232);
    background:rgb(142, 199, 246);
-   background: url(../img/fond.jpg); 
-   background-size:100%;
-
+   
+   
   background: url(../img/fond.jpg)  fixed;
+  background-size:120%;
+
 
    }
 
