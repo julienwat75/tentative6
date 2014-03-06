@@ -44,6 +44,8 @@ gem 'turbolinks'
 gem 'less-rails'
 gem 'less-rails-fontawesome'
 
+gem 'stripe'
+
 
 
 

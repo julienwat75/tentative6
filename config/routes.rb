@@ -15,6 +15,7 @@ MyApp::Application.routes.draw do
     resources :detailresas
     resources :welcome
     resources :password_resets
+    resources :charges
 
 
     resources :authors do
