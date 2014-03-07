@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140221205057) do
+ActiveRecord::Schema.define(version: 20140307211739) do
 
   create_table "authors", force: true do |t|
     t.string   "username",                        null: false
@@ -75,6 +75,9 @@ ActiveRecord::Schema.define(version: 20140221205057) do
     t.string   "emailpartenaire"
     t.boolean  "envoiemail"
     t.datetime "heuremailpartenaire"
+    t.boolean  "gratuit"
+    t.float    "price"
+    t.float    "tva"
   end
 
   create_table "mailgenerals", force: true do |t|
