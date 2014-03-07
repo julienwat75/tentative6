@@ -23,7 +23,20 @@
                                       </div>
                                     <% end %>
 
-                                  
+
+                                           <div class="field" style="text-align:left;">
+                        
+          
+                        
+                                            <%= f.label :Gratuit ,:style =>'color:black;' %> 
+                                            <%= f.radio_button :gratuit, true, checked: true %> &nbsp
+                                            <%= f.label :Payant ,:style =>'color:black;' %> 
+                                            <%= f.radio_button :gratuit, false  %>
+
+                                           </div>
+                     
+
+                                                  
                                     <%= f.label :Date %><br />
                                      <div class="input-append date datepicker" id="datetimepicker" value="2012-05-15 21:05"  data-date="12-12-2013" data-date-format="dd-mm-yyyy"   > 
                                       
