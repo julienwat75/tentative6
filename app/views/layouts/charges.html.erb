@@ -1,12 +1,359 @@
 
 
 <!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-  <%= yield %>
-</body>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+     <%= csrf_meta_tags %>
+  
+    
+   
+  
+    <!-- <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css"> -->
+    
+    <title>Billetgratuit.com</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="/css/bootstrap.css" rel="stylesheet"> -->
+
+
+   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>   
+
+   <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">   -->
+
+<!-- Optional theme -->
+<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css"> -->
+
+<!-- Latest compiled and minified JavaScript -->
+<!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> -->
+
+
+
+    <!-- Add custom CSS here -->
+   <!--  <link href="/css/business-casual.css" rel="stylesheet">  -->
+
+    <%= javascript_include_tag "application" %>  
+  
+     
+
+      
+
+
+ 
+
+
+  </head>
+
+
+  <!--   <script src="http://code.jquery.com/jquery.min.js"></script>  
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> -->
+
+
+  
+   
+  <body>
+
+
+    <!--  Module face book like box -->
+
+   <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    
+
+
+
+    <!--  --------------------------------   -->
+
+
+     <!--  Bouton facebook partager box -->
+
+
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!--  --------------------------------   -->
+
+
+    
+    
+    
+
+    <!-- ---------------------------------- Menue  Version PC ----------------------------------------------- -->
+
+     
+   
+     
+   <nav class="navbar-fixed-top navbar-default " role="navigation" style="background-color:rgb(12, 169, 251);" >
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header" style="color:white;background:white;">
+    <button type="button" class="navbar-toggle"  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+     <a class="navbar-brand" style="background:white;"  href="http://billetgratuit.com/pageinvitations.html">
+         <%= link_to image_tag('/images/logo.png', :height => 100 , :alt => '', :title => ''), 'http://www.billetgratuit.com', :target => :blank , :style => 'background:white;'%>
+
+     </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse  fondblanc" id="bs-example-navbar-collapse-1" style="align:center;">
+    <ul class="nav navbar-nav" >
+      <li class="active" style="color:black;font-style: oblique;font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;"></li>
+
+      
+
+      
+      <li > <a href="<%= pageinvitations_path %>"> <span class="glyphicon glyphicon-star"></span> Invitations</a></li> 
+                                                  
+       <li > <a href="/pages/fonctionnement.html"> <span class="glyphicon glyphicon-pencil"></span> Concept</a></li> 
+      
+
+
+
+           <% unless logged_in? %>
+       
+     <li> <a href="<%= new_author_path %>"><span class="glyphicon glyphicon-home"></span> Inscription</span> </a></li>
+           <% end %>
+       <li><a href="/pages/contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>  
+       
+         
+
+          <% if logged_in? %>
+           <li> <a href="<%= logout_path %>"><span class="glyphicon glyphicon-cog"></span> Déconnexion </a></li>
+        <% end %>
+        
+
+        <% if logged_in? %>
+        <li><a href="<%= author_path(current_user.id) %>"><span class="glyphicon glyphicon-user"></span>
+ <%= current_user.email %></a></li>
+         
+        <!-- <li><%= link_to "(logout)", logout_path %> </li>  -->
+         <!--  <li> jkjkljkljl</li>  -->
+        <% else %>
+         <li> <a href="<%= root_path %>"><span class="glyphicon glyphicon-cog"></span> Connexion </a></li>
+          <% end %>
+
+          <% if current_user && current_user.id == 3  %>   <!--   Bouton webmaster -->  
+
+         <li><%= link_to "Créer", new_invitation_path %></li>
+
+          
+        <% end %>
+
+         <% if current_user && current_user.id == 3  %>   <!--   Bouton webmaster -->  
+
+         <li><%= link_to "Membres", authors_path %></li>
+
+          
+        <% end %>
+
+
+        <% if current_user && current_user.id == 3  %>   <!--   Bouton webmaster -->  
+
+         <li><%= link_to "Résas", reservations_path %></li>
+
+          
+        <% end %>
+          
+      
+    </ul>
+    
+    
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+
+
+
+
+
+   
+    
+     
+   
+
+
+
+    <!-- ----------------------------------------------- Container Format Mobile  -------------------------------- -->
+
+    <div class="container"   >
+
+      <div class="row">
+        <div class="box  hidden-sm hidden-md hidden-lg" >
+
+          <div class="col-lg-12">
+            <hr>
+
+            <h2 class="intro-text text-center " ><strong><%= yield(:title) %></strong></h2>
+            <hr>
+          </div>
+          <div class="col-lg-12 text-left">
+
+
+            <!-- <img class="img-responsive img-border img-full" src="/img/slide-1.jpg">  -->
+            
+            <%= yield %>
+            
+            
+          </div>
+          
+          
+          <div class="col-lg-12 text-center">
+            <ul class="pager">
+             <li class="previous"> <%= link_to "<  Invitations", pageinvitations_path ,:class => 'couleurnoir'  %> </li>
+              
+                <% if logged_in? && current_user.id == 3  %>
+                <li class="next"> <%= link_to "Filtre Invitations", webmasters_path ,:class => 'couleurnoir'  %> </li>
+              <% end %>
+              
+            </ul>
+          </div>
+        </div>
+
+<!--  ------------------------------------Container  Format PC -----------------------------------------------------------  -->
+
+<!--  ------- logo --------------------------  -->
+
+
+<div class="row" style="background: none repeat scroll 0% 0% rgb(248, 248, 248);
+;border-radius:5px 5px 5px 5px;">
+
+ <div class="col-lg-12 hidden-xs"  style="margin-top:50px;">
+    
+
+
+             <div align="center">
+            
+                 <%= link_to image_tag('/images/logo.png', :height => 140 , :alt => '', :title => ''), 'http://www.billetgratuit.com', :target => :blank , :style => ''%>
+
+            
+            </div>
+
+           
+
+
+          
+
+ </div>
+
+
+</div>
+
+
+
+
+<!-- ------------------------------------------  -->
+
+
+
+<div class="row">
+        <div class="box hidden-xs "  style="margin-top:20px;" >
+          <div class="col-lg-12" >
+            
+          </div>
+          <div class="col-lg-12 text-left">
+
+
+  <div class="row">
+      
+
+      <div class="col-lg-4" style="">
+
+       
+
+                    
+
+        </div>
+
+       
+
+
+
+
+
+
+      
+
+
+  </div>
+
+
+
+        <div class="montitre">  <%= yield(:title) %> </div>
+               
+            <!-- <img class="img-responsive img-border img-full" src="/img/slide-1.jpg">  -->
+            
+            <%= yield %>
+            
+            
+          </div>
+          
+          
+          <div class="col-lg-12 text-center">
+            <ul class="pager">
+             <li class="previous"> <%= link_to "<  Invitations", pageinvitations_path ,:class => 'couleurnoir'  %> </li>
+              
+                <% if logged_in? && current_user.id == 3  %>
+                <li class="next"> <%= link_to "Filtre Invitations", webmasters_path ,:class => 'couleurnoir'  %> </li>
+              <% end %>
+              
+            </ul>
+          </div>
+        </div>
+
+
+<!--  ------------------------------------fin  Format PC -----------------------------------------------------------  -->
+
+      </div>
+
+    </div><!-- /.container -->
+
+
+
+      <footer style="align:center;">
+
+           <p  class="couleurgrise fondgris">
+             <a href="https://www.facebook.com/pages/Billetgratuit/1467994370090036?fref=ts"> <font style="color:rgb(112, 191, 0);"><%= image_tag("facebook.png", :alt => "rss feed",:style => "height:40px;width:40px;") %></font></a>
+             <a href="https://twitter.com/Billetsgratuit"> <font style="color:rgb(112, 191, 0);"><%= image_tag("twitter.png", :alt => "rss feed",:style => "height:40px;width:40px;") %></font></a>
+          
+           </p>
+          <p  class="couleurgrise fondgris"> Copyright &copy; Billetgratuit.com 2014 </p>
+         
+         
+         
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="/js/bootstrap.js"></script>
+
+  </body>
+
+
+   
 </html>
-
-

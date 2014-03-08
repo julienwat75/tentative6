@@ -24,17 +24,16 @@
                                     <% end %>
 
 
-                                           <div class="field" style="text-align:left;">
-                        
-          
-                        
-                                            <%= f.label :Gratuit ,:style =>'color:black;' %> 
-                                            <%= f.radio_button :gratuit, true, checked: true %> &nbsp
-                                            <%= f.label :Payant ,:style =>'color:black;' %> 
-                                            <%= f.radio_button :gratuit, false  %>
+                                          
 
-                                           </div>
-                     
+
+                                     Gratuit  <input type="radio" name="gratuit" value="true" checked>
+                                     Payant <input type="radio" name="gratuit" value="false" > <br><br>
+
+                                    <%= f.label :Prix %>(€)<br />
+                                    <input type="text" name="price"> <br><br>
+
+                                          
 
                                                   
                                     <%= f.label :Date %><br />

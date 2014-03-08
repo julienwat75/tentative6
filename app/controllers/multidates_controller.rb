@@ -6,6 +6,12 @@ class MultidatesController < ApplicationController
   @multidate.datex = params[:datex]
   @multidate.placex = params[:placex]
   @multidate.gratuit = params[:gratuit]
+  x=100
+  @prix = params[:price]
+
+  
+
+  @multidate.price = @prix.to_f * x
 
 
 

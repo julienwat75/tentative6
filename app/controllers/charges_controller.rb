@@ -2,6 +2,13 @@ class ChargesController < ApplicationController
 
 
   def new
+
+     @invitation=Invitation.find(params[:idinvite])
+
+     @tabmulti=@invitation.multidates
+
+     @multi=@tabmulti.find_by_id(params[:idmulti])
+
 end
 
 def index
@@ -24,7 +31,7 @@ def create
     :customer    => customer.id,
     :amount      => @amount,
     :description => 'Rails Stripe customer',
-    :currency    => 'usd'
+    :currency    => 'eur'
     
   )
 

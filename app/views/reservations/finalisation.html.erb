@@ -67,7 +67,7 @@
 
 
 
- <% if @multi.placex.to_i > 0  %>
+ <% if @multi.placex.to_i > 0 && @multi.gratuit  %>
 
 
 
@@ -135,18 +135,109 @@
   
   
  </div>
-    <% end %>
+  <% end %>
 
 
- <% else %>
-   <div class="epuise" >
-    Invitations épuisés
-    </div>
+  
+
+  <% end %>
+
+  <!-- -------------------------if payant --------------------------------------------------- -->
+
+  <% if @multi.placex.to_i > 0 && @multi.gratuit==false  %>
+
+
+
+
+<div align="center">
+
+
+  <h4>
+  <%= @invitation.titre %>
+  </h4>
+
+<h5>
+   <%= jour %> 
+  <%= @multi.datex.day %> 
+  <%= mois %>  à <%= @multi.datex.hour  %> H 
+  <%= @multi.datex.min  %>
+</h5>
+
+  
+
+   
+
+   
+   
+   
+    
+
+
+
+
+  <% prix_eur= @multi.price.to_f / 100 %>
+  
+   
+  <div style="margin-bottom:20px;font-size:20px;">
+  <div style="margin-bottom:15px;text-align:center;"> Prix: <%= prix_eur %>€ </div>
+ 
+  <div style="margin-bottom:15px;text-align:center;"> Nombre de places </div>
+
+  <% if @multi.placex.to_i > 1  %>
+
+   <form action="/charges/new">
+
+    <SELECT name="nombreinvitations"  style="color:grey;width:100%;font-size:22px;">
+     
+    <option value="1">1</option>
+    <option value="2">2</option>                                  
+    </select>                                  
+   
+     <input  type="hidden" value="<%=  @multi.id  %>" name="idmulti">
+     <input  type="hidden" value="<%=  @invitation.id  %>" name="idinvite">
+     
+
+    </form>
+
+  <%else %>
+
+    <form action="/charges/new">
+
+    <SELECT name="nombreinvitations"  style="color:grey;font-size:22px;">
+     
+     <option value="1">1</option>
+     
+     </select>
+    
+     <input  type="hidden" value="<%=  @multi.id  %>" name="idmulti">
+     <input  type="hidden" value="<%=  @invitation.id  %>" name="idinvite">
+     
+     
+    
+     
+
+     <br><br>
+     <input type="submit" value="Continuer">
+     </form>
+  <% end %>
+
+  </div>
+
+ 
+
+  
+  
+ </div>
+  
+
 
 
 
 
   <% end %>
+
+
+  <!-- ------------------------------------------------------------------------------------------ -->
 </div>
 
   <div  class="col-xs-0 col-sm-3 col-md-3 col-lg-3"></div>

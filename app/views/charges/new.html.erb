@@ -1,31 +1,121 @@
+<% provide(:title, "Votre commande") %>
 
 
-<% amount=7000 %>
+<% nombre= params[:nombreinvitations] %>
+<% titre= @invitation.titre %>
+<% day= @multi.datex.day %>
+<% heure= @multi.datex.hour %>
+<% min= @multi.datex.min %>
+<% prix= @multi.price %>
+<% prix_eur= prix.to_f / 100 %>
+
+<% @amount= prix.to_i * nombre.to_i %>
+<% amount_eur=@amount.to_f / 100 %>
+
+
+
+
+  <% jour=@multi.datex.strftime("%A") %>  
+
+  <% mois=@multi.datex.strftime("%B")  %>
+
+<% case jour  %>
+ <% when "Monday"  %>
+ <%  jour= "Lundi" %> 
+ <% when "Tuesday"  %>
+ <%  jour= "Mardi" %> 
+<% when "Wednesday"  %>
+ <%  jour= "Mercredi" %>
+  <% when "Thursday"  %>
+ <%  jour= "Jeudi" %>
+  <% when "Friday"  %>
+ <%  jour= "Vendredi" %>
+  <% when "Saturday"  %>
+ <%  jour= "Samedi" %> 
+  <% when "Sunday"  %>
+ <%  jour= "Dimanche" %> 
+<% else  %>              
+ <% puts 'Only single-digit numbers are allowed' %>
+ <% end %>
+
+ <% case mois  %>
+ <% when "January"  %>
+ <%  mois= "Janvier" %> 
+ <% when "February"  %>
+ <%  mois= "Février" %> 
+<% when "March"  %>
+ <%  mois= "Mars" %>
+  <% when "April"  %>
+ <%  mois= "Avril" %>
+  <% when "May"  %>
+ <%  mois= "Mai" %>
+  <% when "June"  %>
+ <%  mois= "Juin" %>
+  <% when "July"  %>
+ <%  mois= "Juillet" %>
+  <% when "August"  %>
+ <%  mois= "Aout" %>
+  <% when "September"  %>
+ <%  mois= "Septembre" %>
+  <% when "October"  %>
+ <%  mois= "Octobre" %>
+   <% when "November"  %>
+ <%  mois= "Novembre" %>
+  <% when "December"  %>
+ <%  mois= "Décembre" %>
+<% else  %>              
+ 
+ <% end %>
+
+
+
+
+
+
+
 <% b="jamel@yahoo.fr" %>
 <% c="Spectacle de jamel" %>
 
+<div class="row" >
+  <div  class="col-md-3"></div>
 
+  <div  class="col-md-6" style="text-align:center;padding:20px;">
 
 <%= form_tag charges_path do %>
   <article>
     <label class="amount">
-      <span>Amount: $815.00</span>
+      <h4>
+      <%= titre %>
+      </h4>
+
+      <h5>
+      
+        <%= jour %> 
+        <%= day %>
+        <%= mois %>  à <%= heure %> H 
+        <%= min  %>
+      </h5>
+      <div style="font-size:20px;" > <%= nombre %> x <%= prix_eur %>€</div>
+      <div style="font-size:20px;">Prix Total: <%= amount_eur %>€</span>
     </label>
   </article>
+  <br><br>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
 
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="<%= c %>"
           data-email="<%= b %>"
-          data-label="le show super"
+          data-label="Acheter"
           data-billing-address="true"
-          data-amount="<%= amount %>"></script>
+          data-amount="<%= @amount %>"></script>
 
-          <SELECT name="heure1">
-    <OPTION VALUE="888815">888815</OPTION>
-    <OPTION VALUE="816">816</OPTION>
-    
-  </SELECT>
+         <input  type="hidden" value="<%=  @amount  %>" name="heure1" >
+
 
 <% end %>
+
+
+</div>
+  <div  class="col-md-3"></div>
+</div>
