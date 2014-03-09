@@ -3,9 +3,9 @@
 
 
 <div class="row" >
-  <div  class="col-md-3"></div>
+  <div  class="col-xs-0 col-md-2 col-lg-2"></div>
 
-  <div  class="col-md-6" style="text-align:center;padding:20px;">
+  <div  class="col-xs-12 col-md-8 col-lg-8" style="text-align:center;padding:20px;">
 
 <%= form_for [ @reservation ] do |f| %>
   <h4>
@@ -90,11 +90,11 @@
 <% if current_user.id==3 %>
 <% if t.gratuit %>
 
-<h5 style="text-align:left;">Invitation  <%= link_to 'Supprimer', reservation_path(t), method: :delete, data: { confirm: 'Are you sure?' } %> 
+<h5 style="text-align:left;">(Invitation) Places restante:<font color="red"><%= t.placex %></font>  <%= link_to 'Supprimer', reservation_path(t), method: :delete, data: { confirm: 'Are you sure?' } %> 
 </h5>
 <% else %>
 
-<h5 style="text-align:left;">Tarif préferentiel <%= link_to 'Supprimer', reservation_path(t), method: :delete, data: { confirm: 'Are you sure?' } %></h5>
+<h5 style="text-align:left;">Tarif préferentiel  Places restante:<font color="red"><%= t.placex %></font> <%= link_to 'Supprimer', reservation_path(t), method: :delete, data: { confirm: 'Are you sure?' } %></h5>
 <% end %>
 <% end %>
 
@@ -107,7 +107,7 @@
 <% end %>
 </div>  
 
-  <div  class="col-md-3"></div>
+  <div  class="col-xs-0 col-md-2 col-lg-2"></div>
 
 
 </div> <!-- fin du div row -->
