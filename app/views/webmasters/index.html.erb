@@ -138,6 +138,7 @@
              <%= jour %>  <%= t.dateinvitation.day %>  <%= mois %>  à <%= t.dateinvitation.hour  %> H <%= t.dateinvitation.min  %>
               <div >   <%= link_to 'Edit', edit_invitation_path(t) %> </div>
 
+              <%= link_to 'Destroy', t, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 
 

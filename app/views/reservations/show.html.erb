@@ -75,7 +75,7 @@
 <% if t.placex.to_i > 0 && Invitation.late(t.datex)  %>
 
 <ul>
- <li><h4 style="text-align:left"> 
+ <li><h4 style="text-align:left;"> 
   <a href="/reservations/finalisation?idmulti=<%= t.id %>&id=<%= @invitation.id %>&gratuit=<%= t.gratuit %>">
 
   <%= jour %> 
@@ -87,6 +87,17 @@
 
  </a> </h4></li>
 </ul>
+<% if current_user.id==3 %>
+<% if t.gratuit %>
+
+<h5 style="text-align:left;">Invitation  <%= link_to 'Supprimer', reservation_path(t), method: :delete, data: { confirm: 'Are you sure?' } %> 
+</h5>
+<% else %>
+
+<h5 style="text-align:left;">Tarif préferentiel <%= link_to 'Supprimer', reservation_path(t), method: :delete, data: { confirm: 'Are you sure?' } %></h5>
+<% end %>
+<% end %>
+
 <% end %>
                                       
    <% end %>                                   

@@ -19,6 +19,16 @@ def index
 
 end
 
+
+def destroy
+    @multi=Multidate.find_by_id(params[:id])
+    @multi.destroy
+    respond_to do |format|
+      format.html { redirect_to reservation_path(@multi.invitation_id) }
+      format.json { head :no_content }
+    end
+  end
+
 def new
 
 	@reservation=Reservation.new
