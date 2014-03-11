@@ -37,6 +37,7 @@ class Author < ActiveRecord::Base
    has_many :commentaires
    has_many :invitations
    has_many :reservations
+   has_many :paiments
    validates_confirmation_of :password, message: "should match confirmation", if: :password
    
 has_attached_file :avatar,

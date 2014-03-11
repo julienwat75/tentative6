@@ -21,6 +21,7 @@ MyApp::Application.routes.draw do
     resources :authors do
     resources :commentaires
     resources :reservations 
+    resources :paiments
  end
 
 

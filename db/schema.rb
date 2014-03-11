@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140307220419) do
+ActiveRecord::Schema.define(version: 20140311190334) do
 
   create_table "authors", force: true do |t|
     t.string   "username",                        null: false
@@ -121,6 +121,23 @@ ActiveRecord::Schema.define(version: 20140307220419) do
   end
 
   create_table "pagemembres", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "paiments", force: true do |t|
+    t.integer  "charge_id"
+    t.integer  "prix_ht"
+    t.integer  "prix_ttc"
+    t.integer  "nombre"
+    t.string   "titre"
+    t.datetime "date1"
+    t.string   "nom"
+    t.string   "prenom"
+    t.string   "adresse"
+    t.string   "postal"
+    t.string   "ville"
+    t.integer  "author_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
