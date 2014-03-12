@@ -11,6 +11,15 @@ class Notifier < ActionMailer::Base
   end
 
 
+  def send_facture_email(author,paiment)
+    @authors = author
+    @paiment = paiment
+    mail( :to => @authors.username,
+    :subject => 'Votre facture' )
+  end
+
+
+
    def send_resa_email(reservation)
     @reservations = reservation
     mail( :to => @reservations.email_membre,

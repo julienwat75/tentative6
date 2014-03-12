@@ -32,7 +32,7 @@ if current_user.limite
 
 
 
-  
+  @author=current_user
   code1=Invitation.aleatoire
   
   
@@ -87,7 +87,7 @@ if current_user.limite
   @reservations.save   #on sauvegarde
 
    Notifier.send_resa_email(@reservations).deliver
-
+  
     
    #redirect_to "/pages/confirmation"
 
@@ -127,6 +127,10 @@ if current_user.limite
   @paiment.charge_id2=charge.id
   @paiment.author_id=current_user.id
   @paiment.save
+
+
+   Notifier.send_facture_email(@author,@paiment).deliver
+
   
 
    end
