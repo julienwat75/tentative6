@@ -91,13 +91,14 @@ if current_user.limite
     
    #redirect_to "/pages/confirmation"
 
- end
+ 
 
 
   #--------------------------------
   
   @parametre=params
   @info=params[:stripeToken]
+
   @amount=params[:heure1]
 
   customer = Stripe::Customer.create(
@@ -114,8 +115,21 @@ if current_user.limite
   )
 
   #save_stripe_customer_id(user, customer.id)
+  @paiment=Paiment.new
+  @paiment.nom=charge.card.name
+  @paiment.adresse=charge.card.address_line1
+  @paiment.postal=charge.card.address_zip
+  @paiment.ville=charge.card.address_city 
+  @paiment.nombre=params[:nombreinvitations]  
+  @paiment.titre=params[:titre]
+  @paiment.date1=params[:dateinvitation]
+  @paiment.prix_ttc=@amount
+  @paiment.charge_id2=charge.id
+  @paiment.author_id=current_user.id
+  @paiment.save
+  
 
-  @chid=charge.id
+   end
 
 
 
