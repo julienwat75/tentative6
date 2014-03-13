@@ -113,8 +113,8 @@
 
 
 <% var2="http://billetgratuit.herokuapp.com/images/logo.png"  %>
-<% prix_ttc=@paiment.prix_ttc.to_f/100 %> 
- <% prix_total= @paiment.nombre * prix_ttc.to_f %> 
+<% prix_total=@paiment.prix_ttc.to_f/100 %> 
+ 
 
                           <div style="background:background: none repeat scroll 0% 0% rgb(248, 248, 248);" >
 
@@ -214,7 +214,7 @@
   </TR>
   <TR >
    <TD > Places</TD>
-   <TD> <%= @paiment.nombre %> x<%= prix_ttc %>€
+   <TD> <%= @paiment.nombre %> x<%= prix_unitaire %>€
    </TD>
    <TD>  <%= prix_total %>€</TD>
   </TR>
