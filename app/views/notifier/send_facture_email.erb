@@ -65,48 +65,48 @@
 
  <% case jour2  %>
  <% when "Monday"  %>
- <%  jour= "Lundi" %> 
+ <%  jour2= "Lundi" %> 
  <% when "Tuesday"  %>
- <%  jour= "Mardi" %> 
+ <%  jour2= "Mardi" %> 
 <% when "Wednesday"  %>
- <%  jour= "Mercredi" %>
+ <%  jour2= "Mercredi" %>
   <% when "Thursday"  %>
- <%  jour= "Jeudi" %>
+ <%  jour2= "Jeudi" %>
   <% when "Friday"  %>
- <%  jour= "Vendredi" %>
+ <%  jour2= "Vendredi" %>
   <% when "Saturday"  %>
- <%  jour= "Samedi" %> 
+ <%  jour2= "Samedi" %> 
   <% when "Sunday"  %>
- <%  jour= "Dimanche" %> 
+ <%  jour2= "Dimanche" %> 
 <% else  %>              
  <% puts 'Only single-digit numbers are allowed' %>
  <% end %>
 
  <% case mois2  %>
  <% when "January"  %>
- <%  mois= "Janvier" %> 
+ <%  mois2= "Janvier" %> 
  <% when "February"  %>
- <%  mois= "Février" %> 
+ <%  mois2= "Février" %> 
 <% when "March"  %>
- <%  mois= "Mars" %>
+ <%  mois2= "Mars" %>
   <% when "April"  %>
- <%  mois= "Avril" %>
+ <%  mois2= "Avril" %>
   <% when "May"  %>
- <%  mois= "Mai" %>
+ <%  mois2= "Mai" %>
   <% when "June"  %>
- <%  mois= "Juin" %>
+ <%  mois2= "Juin" %>
   <% when "July"  %>
- <%  mois= "Juillet" %>
+ <%  mois2= "Juillet" %>
   <% when "August"  %>
- <%  mois= "Aout" %>
+ <%  mois2= "Aout" %>
   <% when "September"  %>
- <%  mois= "Septembre" %>
+ <%  mois2= "Septembre" %>
   <% when "October"  %>
- <%  mois= "Octobre" %>
+ <%  mois2= "Octobre" %>
    <% when "November"  %>
- <%  mois= "Novembre" %>
+ <%  mois2= "Novembre" %>
   <% when "December"  %>
- <%  mois= "Décembre" %>
+ <%  mois2= "Décembre" %>
 <% else  %>              
  
  <% end %>
@@ -202,17 +202,17 @@
   <TR style="text-align:left;border-bottom:1px solid rgba(0, 0, 0, 0.2)">
    <TD> 
 
-    @paiment.titre<br>
+   <%= @paiment.titre %><br>
     <%= jour2 %> 
-    <%= @paiment.date1 %> 
-    <%= mois2 %>  à <%= @paiment.date1  %> H 
-    <%= @paiment.date1  %>
+    <%= @paiment.date1.day %> 
+    <%= mois2 %>  à <%= @paiment.date1.hour  %> H 
+    <%= @paiment.date1.min  %>
 
 
 
    </TD>
   </TR>
-  <TR style="text-align:left;border-bottom:1px solid rgba(0, 0, 0, 0.2)">
+  <TR style="text-align:left;border-bottom:1px solid red>
    <TD> Places</TD>
    <TD> 2 x 13€00
    </TD>
