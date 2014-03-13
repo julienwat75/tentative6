@@ -113,8 +113,8 @@
 
 
 <% var2="http://billetgratuit.herokuapp.com/images/logo.png"  %>
-<% prix_ttc=@paiment.prix_ttc/100 %> 
- <% prix_total= @paiment.nombre * prix_ttc %> 
+<% prix_ttc=@paiment.prix_ttc.to_f/100 %> 
+ <% prix_total= @paiment.nombre * prix_ttc.to_f %> 
 
                           <div style="background:background: none repeat scroll 0% 0% rgb(248, 248, 248);" >
 
@@ -246,11 +246,9 @@
 
 <p>Réglée par Carte Bancaire le 
 
- <%= @paiment.updated_at.day %>/
-  <%= @paiment.updated_at.month %>/
-   <%= @paiment.updated_at.year %> 
-   <%= @paiment.updated_at.hour  %> H 
-   <%= @paiment.updated_at.min   %>
+ <%=@paiment.updated_at.day%>/<%=@paiment.updated_at.month %>/<%=@paiment.updated_at.year%>
+ <%=@paiment.updated_at. hour%> H 
+ <%= @paiment.updated_at.min%>
 
 
 
