@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140311210834) do
+ActiveRecord::Schema.define(version: 20140313232717) do
 
   create_table "authors", force: true do |t|
     t.string   "username",                        null: false
@@ -141,6 +141,7 @@ ActiveRecord::Schema.define(version: 20140311210834) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "charge_id2"
+    t.integer  "prix_unitaire"
   end
 
   create_table "profils", force: true do |t|
