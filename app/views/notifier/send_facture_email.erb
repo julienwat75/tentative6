@@ -113,8 +113,8 @@
 
 
 <% var2="http://billetgratuit.herokuapp.com/images/logo.png"  %>
-
-
+<% prix_ttc=@paiment.prix_ttc/100 %> 
+ <% prix_total= @paiment.nombre * prix_ttc %> 
 
                           <div style="background:background: none repeat scroll 0% 0% rgb(248, 248, 248);" >
 
@@ -144,9 +144,9 @@
 
              <div   class="col-lg-12 fondgris " style="margin-top:30px;" >
 
-              Dupont Francois <br>
-              202 bv de Charonne <br>
-              75020 Paris
+              <%= @paiment.nom %> <%= @paiment.prenom %><br>
+              <%= @paiment.adresse %> <br>
+              <%= @paiment.postal %> <%= @paiment.ville %>
 
               </div>
 
@@ -201,33 +201,33 @@
   </TR>
   <TR style="text-align:left;border-bottom:1px solid rgba(0, 0, 0, 0.2)">
    <TD> 
-
+   <strong>
    <%= @paiment.titre %><br>
     <%= jour2 %> 
     <%= @paiment.date1.day %> 
     <%= mois2 %>  à <%= @paiment.date1.hour  %> H 
     <%= @paiment.date1.min  %>
-
+   <strong>
 
 
    </TD>
   </TR>
-  <TR style="text-align:left;border-bottom:1px solid red>
-   <TD> Places</TD>
-   <TD> 2 x 13€00
+  <TR style="text-align:left;border-bottom:1px solid red">
+   <TD style="text-align:left;border-bottom:1px solid red"> Places</TD>
+   <TD> <%= @paiment.nombre %> x<%= prix_ttc %>
    </TD>
-   <TD> 26€00</TD>
+   <TD>  <%= prix_total %></TD>
   </TR>
   <TR style="text-align:left;border-bottom:1px solid rgba(0, 0, 0, 0.2)">
    <TD> Frais Réservation</TD>
-   <TD> 2 x 0€00
+   <TD> <%= @paiment.nombre %> x 0€00
    </TD>
    <TD> 0€00</TD>
   </TR>
   <TR style="text-align:left;border-bottom:1px solid rgba(0, 0, 0, 0.2)">
    <TD> Total HT</TD>
    <TD> </TD>
-   <TD> 26€00</TD>
+   <TD> <%= prix_total %></TD>
   </TR>
   <TR style="text-align:left;border-bottom:1px solid rgba(0, 0, 0, 0.2)">
    <TD> Total TVA</TD>
@@ -237,7 +237,7 @@
   <TR style="text-align:left;">
    <TD> Total TTC</TD>
    <TD> </TD>
-   <TD> 26€00</TD>
+   <TD> <%= prix_total %></TD>
   </TR>
 </TABLE>
 
