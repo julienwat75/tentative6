@@ -174,7 +174,7 @@
               Paris le 
                <%= jour2 %> 
                <%= @paiment.updated_at.day %> 
-               <%= mois2 %>  à <%= @paiment.updated_at.hour  %> H 
+               <%= mois2 %>  à <%= @paiment.updated_at.hour + 1.hour  %> H 
                <%= @paiment.updated_at.min  %>
 
               </div>
@@ -191,7 +191,7 @@
 
 
 
-<TABLE frame="border" cellpadding="2" style="width:100%;text-align:left; border:1px solid rgba(0, 0, 0, 0.2);
+<TABLE frame="border" cellpadding="2" style="width:100%;text-align:left; border:1px solid grey;
        ">
   <TR style="text-align:left;border-bottom:1px solid rgba(0, 0, 0, 0.2)">
    <TH  style="width:50%;"> Libelle</TH>
@@ -203,16 +203,16 @@
    <TD> 
    <strong>
    <%= @paiment.titre %><br>
-    <%= jour2 %> 
+    <%= jour %> 
     <%= @paiment.date1.day %> 
-    <%= mois2 %>  à <%= @paiment.date1.hour  %> H 
+    <%= mois %>  à <%= @paiment.date1.hour  %> H 
     <%= @paiment.date1.min  %>
    <strong>
 
 
    </TD>
   </TR>
-  <TR style="text-align:left;border-bottom:1px solid red">
+  <TR >
    <TD style="text-align:left;border-bottom:1px solid red"> Places</TD>
    <TD> <%= @paiment.nombre %> x<%= prix_ttc %>
    </TD>
@@ -246,8 +246,8 @@
 
 <p>Réglée par Carte Bancaire le 
 
- <%= @paiment.updated_at.day %> /
-  <%= @paiment.updated_at.month %> /
+ <%= @paiment.updated_at.day %>/
+  <%= @paiment.updated_at.month %>/
    <%= @paiment.updated_at.year %> 
    <%= @paiment.updated_at.hour  %> H 
    <%= @paiment.updated_at.min  %>
