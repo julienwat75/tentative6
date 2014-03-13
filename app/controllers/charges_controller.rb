@@ -124,7 +124,7 @@ if current_user.limite
   @paiment.titre=params[:titre]
   @paiment.date1=params[:dateinvitation]
   @paiment.prix_ttc=@amount
-  @paiment.prix_unitaire=@amount / @paiment.nombre
+  @paiment.prix_unitaire=@amount.to_i / @paiment.nombre.to_i
   @paiment.charge_id2=charge.id
   @paiment.author_id=current_user.id
   @paiment.save
