@@ -9,6 +9,11 @@
 
    <% mois=@paiment.date1.strftime("%B")  %>
 
+   <% jour2=@paiment.updated_at.strftime("%A") %>  
+
+   <% mois2=@paiment.updated_at.strftime("%B")  %>
+
+
 <% case jour  %>
  <% when "Monday"  %>
  <%  jour= "Lundi" %> 
@@ -102,7 +107,7 @@
 
 <div class="row" >
 
-             <div   class="col-lg-12 fondgris " style="margin-top:30px;" >
+             <div   class="col-lg-12 fondgris "  >
 
               <strong>PAYEE<strong>
               </div>
@@ -115,9 +120,14 @@
 
 <div class="row" >
 
-             <div   class="col-lg-12 fondgris " style="margin-top:30px;" >
+             <div   class="col-lg-12 fondgris " >
 
               Paris le <%= @paiment.updated_at  %>
+               <%= jour2 %> 
+               <%= @paiment.updated_at.day %> 
+               <%= mois2 %>  à <%= @paiment.updated_at.hour  %> H 
+               <%= @paiment.updated_at.day.min  %>
+
               </div>
 
    </div>
@@ -174,7 +184,17 @@
 <br><br>
 
 
-<p>Réglée par Carte Bancaire le 20/01/2014 </p>
+<p>Réglée par Carte Bancaire le 
+
+ <%= @paiment.updated_at.day %> /
+  <%= @paiment.updated_at.month %> /
+   <%= @paiment.updated_at.year %> 
+   <%= @paiment.updated_at.hour  %> H 
+   <%= @paiment.updated_at.day.min  %>
+
+
+
+ </p>
 
 <br><br>
 
