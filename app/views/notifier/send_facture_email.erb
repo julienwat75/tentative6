@@ -63,6 +63,55 @@
  <% end %>
 
 
+ <% case jour2  %>
+ <% when "Monday"  %>
+ <%  jour= "Lundi" %> 
+ <% when "Tuesday"  %>
+ <%  jour= "Mardi" %> 
+<% when "Wednesday"  %>
+ <%  jour= "Mercredi" %>
+  <% when "Thursday"  %>
+ <%  jour= "Jeudi" %>
+  <% when "Friday"  %>
+ <%  jour= "Vendredi" %>
+  <% when "Saturday"  %>
+ <%  jour= "Samedi" %> 
+  <% when "Sunday"  %>
+ <%  jour= "Dimanche" %> 
+<% else  %>              
+ <% puts 'Only single-digit numbers are allowed' %>
+ <% end %>
+
+ <% case mois2  %>
+ <% when "January"  %>
+ <%  mois= "Janvier" %> 
+ <% when "February"  %>
+ <%  mois= "Février" %> 
+<% when "March"  %>
+ <%  mois= "Mars" %>
+  <% when "April"  %>
+ <%  mois= "Avril" %>
+  <% when "May"  %>
+ <%  mois= "Mai" %>
+  <% when "June"  %>
+ <%  mois= "Juin" %>
+  <% when "July"  %>
+ <%  mois= "Juillet" %>
+  <% when "August"  %>
+ <%  mois= "Aout" %>
+  <% when "September"  %>
+ <%  mois= "Septembre" %>
+  <% when "October"  %>
+ <%  mois= "Octobre" %>
+   <% when "November"  %>
+ <%  mois= "Novembre" %>
+  <% when "December"  %>
+ <%  mois= "Décembre" %>
+<% else  %>              
+ 
+ <% end %>
+
+
 <% var2="http://billetgratuit.herokuapp.com/images/logo.png"  %>
 
 
@@ -151,7 +200,17 @@
    
   </TR>
   <TR style="text-align:left;border-bottom:1px solid rgba(0, 0, 0, 0.2)">
-   <TD> Mustafa El Atrassi</TD>
+   <TD> 
+
+    @paiment.titre<br>
+    <%= jour2 %> 
+    <%= @paiment.date1 %> 
+    <%= mois2 %>  à <%= @paiment.date1  %> H 
+    <%= @paiment.date1  %>
+
+
+
+   </TD>
   </TR>
   <TR style="text-align:left;border-bottom:1px solid rgba(0, 0, 0, 0.2)">
    <TD> Places</TD>
