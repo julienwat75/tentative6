@@ -174,7 +174,7 @@
               Paris le 
                <%= jour2 %> 
                <%= @paiment.updated_at.day %> 
-               <%= mois2 %>  à <%= @paiment.updated_at.hour + 1.hour  %> H 
+               <%= mois2 %>  à <%= @paiment.updated_at.hour + (1.hours)  %> H 
                <%= @paiment.updated_at.min  %>
 
               </div>
@@ -191,7 +191,7 @@
 
 
 
-<TABLE frame="border" cellpadding="2" style="width:100%;text-align:left; border:1px solid grey;
+<TABLE frame="border" cellpadding="2" style="width:100%;text-align:left;;
        ">
   <TR style="text-align:left;border-bottom:1px solid grey">
    <TH  style="width:50%;"> Libelle</TH>
@@ -199,7 +199,7 @@
    <TH > Montant</TH>
    
   </TR>
-  <TR style="text-align:left;border-bottom:1px solid rgba(0, 0, 0, 0.2)">
+  <TR style="text-align:left;">
    <TD> 
    <strong>
    <%= @paiment.titre %><br>
@@ -214,9 +214,9 @@
   </TR>
   <TR >
    <TD > Places</TD>
-   <TD> <%= @paiment.nombre %> x<%= prix_ttc %>
+   <TD> <%= @paiment.nombre %> x<%= prix_ttc %>€
    </TD>
-   <TD>  <%= prix_total %></TD>
+   <TD>  <%= prix_total %>€</TD>
   </TR>
   <TR style="text-align:left;border-bottom:1px solid rgba(0, 0, 0, 0.2)">
    <TD> Frais Réservation</TD>
@@ -227,7 +227,7 @@
   <TR style="text-align:left;border-bottom:1px solid rgba(0, 0, 0, 0.2)">
    <TD> Total HT</TD>
    <TD> </TD>
-   <TD> <%= prix_total %></TD>
+   <TD> <%= prix_total %>€</TD>
   </TR>
   <TR style="text-align:left;border-bottom:1px solid rgba(0, 0, 0, 0.2)">
    <TD> Total TVA</TD>
@@ -237,7 +237,7 @@
   <TR style="text-align:left;">
    <TD> Total TTC</TD>
    <TD> </TD>
-   <TD> <%= prix_total %></TD>
+   <TD> <%= prix_total %>€</TD>
   </TR>
 </TABLE>
 
@@ -249,8 +249,8 @@
  <%= @paiment.updated_at.day %>/
   <%= @paiment.updated_at.month %>/
    <%= @paiment.updated_at.year %> 
-   <%= @paiment.updated_at.hour  %> H 
-   <%= @paiment.updated_at.min  %>
+   <%= @paiment.updated_at.hour + (1.hours) %> H 
+   <%= @paiment.updated_at.min   %>
 
 
 
