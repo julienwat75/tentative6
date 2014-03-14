@@ -114,7 +114,7 @@
 
 <% var2="http://billetgratuit.herokuapp.com/images/logo.png"  %>
 <% prix_total=@paiment.prix_ttc.to_f/100 %> 
-<% prix_unitaire=@paiment.prix_unitaire %>
+<% prix_unitaire=@paiment.prix_unitaire.to_f/100 %>
 
                           <div style="background:background: none repeat scroll 0% 0% rgb(248, 248, 248);" >
 
