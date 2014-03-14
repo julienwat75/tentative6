@@ -198,10 +198,10 @@
    <TH > Montant</TH>
    
   </TR>
-  <TR style="text-align:left;">
+  <TR>
    <TD> 
    
-   <b><%= @paiment.titre %> <b> <br>
+   <%= @paiment.titre %> <br>
 
     <%= jour %> 
     <%= @paiment.date1.day %> 
@@ -209,32 +209,33 @@
     <%= @paiment.date1.min  %>
   
 
-
-   </TD>
+  </TD>
   </TR>
   <TR >
    <TD > Places</TD>
-   <TD>  €
+   <TD> 
+    <%= @paiment.nombre %> x
+    <%=  prix_unitaire %> €
    </TD>
    <TD>  <%= prix_total %>€</TD>
   </TR>
-  <TR style="text-align:left;">
+  <TR >
    <TD> Frais Réservation</TD>
    <TD> <%= @paiment.nombre %> x 0€00
    </TD>
    <TD> 0€00</TD>
   </TR>
-  <TR style="text-align:left;">
+  <TR >
    <TD> Total HT</TD>
    <TD> </TD>
    <TD> <%= prix_total %>€</TD>
   </TR>
-  <TR style="text-align:left;">
+  <TR>
    <TD> Total TVA</TD>
    <TD> </TD>
    <TD> 0€00</TD>
   </TR>
-  <TR style="text-align:left;">
+  <TR>
    <TD> Total TTC</TD>
    <TD> </TD>
    <TD> <%= prix_total %>€</TD>
